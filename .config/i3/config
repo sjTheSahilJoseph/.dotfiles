@@ -220,3 +220,6 @@ no_focus [title="^join\?action=join.*$"]
 
 # For For Zoom, When start just move to the Work Space 5
 for_window [class="^zoom\s?$"] move to workspace $ws5
+
+# Flashes to flash the current working window.
+bindsym $mod+BackSpace exec --no-startup-id bash ~/.config/Scripts/flashes.sh
