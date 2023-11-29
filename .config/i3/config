@@ -217,3 +217,6 @@ no_focus [title="^zoom\s?$"]
 # For meetings that you have joined via a link
 for_window [title="^join\?action=join.*$"] floating enable
 no_focus [title="^join\?action=join.*$"]
+
+# For For Zoom, When start just move to the Work Space 5
+for_window [class="^zoom\s?$"] move to workspace $ws5
