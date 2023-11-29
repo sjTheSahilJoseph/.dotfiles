@@ -223,3 +223,6 @@ for_window [class="^zoom\s?$"] move to workspace $ws5
 
 # Flashes to flash the current working window.
 bindsym $mod+BackSpace exec --no-startup-id bash ~/.config/Scripts/flashes.sh
+
+# Screen Keys.
+bindsym Ctrl+$mod+s exec --no-startup-id ~/.config/Scripts/showMeWhichKeyAreYouPressing.sh
