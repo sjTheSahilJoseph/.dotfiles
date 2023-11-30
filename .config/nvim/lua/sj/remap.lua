@@ -16,4 +16,12 @@ vim.api.nvim_set_keymap(
 	{ noremap = true, silent = false }
 )
 
-vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle)
+vim.api.nvim_set_keymap("n", "<leader>ut", ":UndotreeToggle<CR>", { noremap = true, silent = false })
+
+vim.api.nvim_set_keymap("n", "J", "mzJ`z", { noremap = true, silent = false })
+
+vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true, silent = false })
+
+vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true, silent = false })
+
+vim.api.nvim_set_keymap("x", "<leader>pd", '"_dP', { noremap = true, silent = false })

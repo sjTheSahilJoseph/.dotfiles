@@ -12,7 +12,7 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
-vim.opt.incsearch = true
+vim.opt.incsearch = false
 vim.opt.hlsearch = true
 
 vim.opt.termguicolors = true
@@ -32,6 +32,8 @@ vim.opt.spell = true
 vim.g.mapleader = " "
 
 vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undofile = true
 
 vim.opt.clipboard = "unnamedplus"
 
