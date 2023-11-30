@@ -46,8 +46,6 @@ return require("packer").startup(function(use)
 
 	use("folke/neodev.nvim")
 
-	use("nvimdev/lspsaga.nvim")
-
 	use({ "norcalli/nvim-colorizer.lua" })
 
 	use("mbbill/undotree")

@@ -33,7 +33,4 @@ vim.keymap.set("n", "<leader>fh", require("telescope.builtin").help_tags, {})
 
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
-vim.keymap.set("n", "<A-d>", "<cmd>Lspsaga hover_doc <CR>")
-vim.keymap.set("n", "<A-t>", "<cmd>Lspsaga term_toggle <CR>")
-
 vim.keymap.set("n", "<A-s>", "<cmd>CloakToggle <CR>")
