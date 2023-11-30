@@ -119,8 +119,11 @@ fi
 # Kitty Update Alias
 alias kittyupdate='curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin'
 
-# Only Directories FuzzyFind (fzf)
-alias fzfdir='cd $(find . -maxdepth 1 -type d | fzf)'
+# Cd Directories FuzzyFind (fzf)
+alias cdfzf='cd $(find . -maxdepth 1 -type d | fzf)'
+
+# Nvim Directories FuzzyFind (fzf)
+alias nvimfzf='nvim $(find . -maxdepth 1 -type d | fzf)'
 
 # For maintaining dotfiles 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
