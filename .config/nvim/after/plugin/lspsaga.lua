@@ -17,6 +17,3 @@ require("lspsaga").setup({
 		enable = false,
 	},
 })
-
-vim.keymap.set("n", "<A-d>", "<cmd>Lspsaga hover_doc <CR>")
-vim.keymap.set("n", "<A-t>", "<cmd>Lspsaga term_toggle <CR>")

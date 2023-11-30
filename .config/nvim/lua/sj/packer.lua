@@ -48,10 +48,8 @@ return require("packer").startup(function(use)
 
 	use("nvimdev/lspsaga.nvim")
 
-	use({
-		"windwp/nvim-autopairs",
-	})
 	use({ "norcalli/nvim-colorizer.lua" })
 
 	use("mbbill/undotree")
+	use("laytan/cloak.nvim")
 end)

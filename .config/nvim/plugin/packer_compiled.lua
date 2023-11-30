@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["cloak.nvim"] = {
+    loaded = true,
+    path = "/home/sj/.local/share/nvim/site/pack/packer/start/cloak.nvim",
+    url = "https://github.com/laytan/cloak.nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -114,11 +119,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/neodev.nvim",
     url = "https://github.com/folke/neodev.nvim"
-  },
-  ["nvim-autopairs"] = {
-    loaded = true,
-    path = "/home/sj/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
-    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,

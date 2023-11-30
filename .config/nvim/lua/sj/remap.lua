@@ -25,3 +25,13 @@ vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true, silent = fals
 vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true, silent = false })
 
 vim.api.nvim_set_keymap("x", "<leader>pd", '"_dP', { noremap = true, silent = false })
+
+vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files, {})
+vim.keymap.set("n", "<leader>fg", require("telescope.builtin").live_grep, {})
+vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers, {})
+vim.keymap.set("n", "<leader>fh", require("telescope.builtin").help_tags, {})
+
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+
+vim.keymap.set("n", "<A-d>", "<cmd>Lspsaga hover_doc <CR>")
+vim.keymap.set("n", "<A-t>", "<cmd>Lspsaga term_toggle <CR>")
