@@ -50,4 +50,6 @@ return require("packer").startup(function(use)
 
 	use("mbbill/undotree")
 	use("laytan/cloak.nvim")
+
+	use("folke/zen-mode.nvim")
 end)

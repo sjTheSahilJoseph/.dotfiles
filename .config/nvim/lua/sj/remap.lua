@@ -34,3 +34,5 @@ vim.keymap.set("n", "<leader>fh", require("telescope.builtin").help_tags, {})
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
 vim.keymap.set("n", "<A-s>", "<cmd>CloakToggle <CR>")
+
+vim.keymap.set("n", "<A-z>", "<cmd>ZenMode <CR>")
