@@ -2,7 +2,6 @@ vim.g.mapleader = " "
 
 vim.api.nvim_set_keymap("n", "<leader>pv", ":Ex<CR>", { noremap = true, silent = false })
 
-
 vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = false })
 vim.api.nvim_set_keymap("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = false })
 
@@ -17,4 +16,4 @@ vim.api.nvim_set_keymap(
 	{ noremap = true, silent = false }
 )
 
-
+vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle)

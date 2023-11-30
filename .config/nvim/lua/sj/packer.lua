@@ -52,4 +52,6 @@ return require("packer").startup(function(use)
 		"windwp/nvim-autopairs",
 	})
 	use({ "norcalli/nvim-colorizer.lua" })
+
+	use("mbbill/undotree")
 end)
