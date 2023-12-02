@@ -210,17 +210,6 @@ exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 
 bindsym $mod+Z exec i3lock -i image.png
 
-# Set Zoom notification window to floating with no focus
-for_window [title="^zoom\s?$"] floating enable
-no_focus [title="^zoom\s?$"]
-
-# For meetings that you have joined via a link
-for_window [title="^join\?action=join.*$"] floating enable
-no_focus [title="^join\?action=join.*$"]
-
-# For For Zoom, When start just move to the Work Space 5
-for_window [class="^zoom\s?$"] move to workspace $ws5
-
 # Flashes to flash the current working window.
 bindsym $mod+BackSpace exec --no-startup-id bash ~/.config/Scripts/flashes.sh
 
