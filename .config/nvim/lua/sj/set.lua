@@ -43,3 +43,5 @@ vim.opt.smartcase = true
 vim.opt.ignorecase = true
 
 vim.opt.mouse = "a"
+
+vim.opt.wrapmargin = 8
