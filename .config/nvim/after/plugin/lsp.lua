@@ -21,6 +21,7 @@ require("mason-lspconfig").setup({
 require("lspconfig").lua_ls.setup({})
 
 require("lspconfig").pyright.setup({})
+
 require("lspconfig").tsserver.setup({})
 require("lspconfig").eslint.setup({})
 require("lspconfig").html.setup({})
@@ -30,3 +31,4 @@ require("lspconfig").emmet_ls.setup({
 })
 require("lspconfig").clangd.setup({})
 require("lspconfig").emmet_language_server.setup({})
+require("lspconfig").tailwindcss.setup({})

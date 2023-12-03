@@ -127,3 +127,4 @@ alias nvimfzf='nvim $(find . -maxdepth 1 -type d | fzf)'
 
 # For maintaining dotfiles 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
