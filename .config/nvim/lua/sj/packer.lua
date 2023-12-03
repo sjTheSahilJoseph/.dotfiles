@@ -52,4 +52,5 @@ return require("packer").startup(function(use)
 	use("laytan/cloak.nvim")
 
 	use("folke/zen-mode.nvim")
+	use("folke/trouble.nvim")
 end)
