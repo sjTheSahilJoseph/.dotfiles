@@ -189,12 +189,6 @@ bar {
         status_command i3status
 }
 
-
-
-exec --no-startup-id xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55
-
-exec --no-startup-id nitrogen --restore
-
 ## Screenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
 bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
@@ -217,4 +211,6 @@ bindsym $mod+BackSpace exec --no-startup-id bash ~/.config/Scripts/flashes.sh
 bindsym Ctrl+$mod+s exec --no-startup-id ~/.config/Scripts/showMeWhichKeyAreYouPressing.sh
 
 exec --no-startup-id compton --config ~/.config/compton.conf
+
+for_window [title="^Zoom$"] move to workspace 5, floating enable, resize set 800px 600px, move position center
 
