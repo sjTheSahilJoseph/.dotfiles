@@ -8,23 +8,13 @@ end)
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
-	ensure_installed = {},
+	ensure_installed = {
+
+        "lua_ls"
+    },
 	handlers = {
 		lsp_zero.default_setup,
 	},
 })
 
 require("lspconfig").lua_ls.setup({})
-
-require("lspconfig").pyright.setup({})
-
-require("lspconfig").tsserver.setup({})
-require("lspconfig").eslint.setup({})
-require("lspconfig").html.setup({})
-require("lspconfig").cssls.setup({})
-require("lspconfig").emmet_ls.setup({
-	filetypes = { "html", "javascript", "javascriptreact", "typescript", "typescriptreact" },
-})
-require("lspconfig").clangd.setup({})
-require("lspconfig").emmet_language_server.setup({})
-require("lspconfig").tailwindcss.setup({})

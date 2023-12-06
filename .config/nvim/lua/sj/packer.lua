@@ -6,7 +6,6 @@ return require("packer").startup(function(use)
 		"nvim-telescope/telescope.nvim",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
-	use({ "rose-pine/neovim", as = "rose-pine" })
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 	use({
 		"VonHeikemen/lsp-zero.nvim",
@@ -25,4 +24,5 @@ return require("packer").startup(function(use)
 	use("laytan/cloak.nvim")
 	use("folke/zen-mode.nvim")
 	use("folke/trouble.nvim")
+    use { "ellisonleao/gruvbox.nvim" }
 end)

@@ -12,7 +12,7 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
-vim.opt.incsearch = false
+vim.opt.incsearch = true
 vim.opt.hlsearch = true
 
 vim.opt.termguicolors = true
@@ -22,7 +22,7 @@ vim.opt.sidescrolloff = 8
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "100"
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number,line"
 
