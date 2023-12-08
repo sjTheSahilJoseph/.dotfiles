@@ -26,8 +26,8 @@ vim.opt.colorcolumn = "100"
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number,line"
 
-vim.opt.spelllang = "en_us"
-vim.opt.spell = true
+--vim.opt.spelllang = "en_us"
+--vim.opt.spell = true
 
 vim.g.mapleader = " "
 
@@ -44,4 +44,3 @@ vim.opt.ignorecase = true
 
 vim.opt.mouse = "a"
 
-vim.opt.wrapmargin = 8
