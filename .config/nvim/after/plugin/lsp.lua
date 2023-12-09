@@ -42,15 +42,3 @@ lspconfig.tsserver.setup({
 lspconfig.clangd.setup({
     filetypes = { "c", "cpp" }
 })
-lsp_zero.format_mapping('<F3>', {
-    format_opts = {
-        async = false,
-        timeout_ms = 10000,
-    },
-    servers = {
-        ['lua_ls'] = { 'lua' },
-        ['rust_analyzer'] = { 'rust' },
-        ['pyright'] = { 'python' },
-        ['clangd'] = { 'c' },
-    }
-})
