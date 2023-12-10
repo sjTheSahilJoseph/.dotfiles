@@ -200,6 +200,8 @@ bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewi
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 
+bindsym $mod+Shift+minus scratchpad show
+
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 
 bindsym $mod+Z exec i3lock -i image.png
@@ -212,5 +214,10 @@ bindsym Ctrl+$mod+s exec --no-startup-id ~/.config/Scripts/showMeWhichKeyAreYouP
 
 exec --no-startup-id compton --config ~/.config/compton.conf
 
-for_window [title="^Zoom$"] move to workspace 5, floating enable, resize set 800px 600px, move position center
+# Assign Zoom windows to workspace 5
+for_window [class="zoom"] move container to workspace 5
+
+# Assign Zoom screen sharing window to scratchpad
+for_window [class="zoom" title=".*Zoom Meeting ID:.*"] scratchpad show
+
 
