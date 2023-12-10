@@ -27,4 +27,5 @@ return require("packer").startup(function(use)
     use { "ellisonleao/gruvbox.nvim" }
     use ("stevearc/conform.nvim")
 use 'mfussenegger/nvim-lint'
+use 'eandrju/cellular-automaton.nvim' 
 end)

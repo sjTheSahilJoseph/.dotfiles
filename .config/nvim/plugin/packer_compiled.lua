@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["cellular-automaton.nvim"] = {
+    loaded = true,
+    path = "/home/sj/.local/share/nvim/site/pack/packer/start/cellular-automaton.nvim",
+    url = "https://github.com/eandrju/cellular-automaton.nvim"
+  },
   ["cloak.nvim"] = {
     loaded = true,
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/cloak.nvim",
