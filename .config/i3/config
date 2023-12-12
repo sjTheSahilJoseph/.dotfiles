@@ -214,10 +214,7 @@ bindsym Ctrl+$mod+s exec --no-startup-id ~/.config/Scripts/showMeWhichKeyAreYouP
 
 exec --no-startup-id compton --config ~/.config/compton.conf
 
-# Assign Zoom windows to workspace 5
-for_window [class="zoom"] move container to workspace 5
 
-# Assign Zoom screen sharing window to scratchpad
-for_window [class="zoom" title=".*Zoom Meeting ID:.*"] scratchpad show
-
-
+for_window [class="(.*join\?action\=join.*|.*zoom.*)"] floating enable
+for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom - Licensed Account"] floating disable
+for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom Meeting"] floating disable
