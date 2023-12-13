@@ -22,10 +22,10 @@ vim.opt.sidescrolloff = 8
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "100"
+vim.opt.colorcolumn = "80"
 
---vim.opt.spelllang = "en_us"
---vim.opt.spell = true
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true
 
 vim.g.mapleader = " "
 
@@ -40,7 +40,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
 
-vim.opt.mouse = "a"
+vim.opt.mouse = ""
 
 
 
