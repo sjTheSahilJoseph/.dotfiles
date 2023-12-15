@@ -1,1 +1,1 @@
-vim.cmd("colorscheme colors")
+vim.cmd("colorscheme sjneovimtheme")
