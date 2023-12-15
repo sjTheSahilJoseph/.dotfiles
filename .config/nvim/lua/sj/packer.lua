@@ -31,9 +31,6 @@ return require("packer").startup(function(use)
         "danymat/neogen",
         requires = "nvim-treesitter/nvim-treesitter",
     }
-
-
     use { "ellisonleao/gruvbox.nvim" }
-
-
+    use { "sjTheSahilJoseph/sjneovimtheme.nvim" }
 end)
