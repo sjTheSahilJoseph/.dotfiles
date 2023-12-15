@@ -24,7 +24,6 @@ return require("packer").startup(function(use)
     use("laytan/cloak.nvim")
     use("folke/zen-mode.nvim")
     use("folke/trouble.nvim")
-    use { "ellisonleao/gruvbox.nvim" }
     use("stevearc/conform.nvim")
     use 'mfussenegger/nvim-lint'
     use 'eandrju/cellular-automaton.nvim'
@@ -32,4 +31,9 @@ return require("packer").startup(function(use)
         "danymat/neogen",
         requires = "nvim-treesitter/nvim-treesitter",
     }
+
+
+    use { "ellisonleao/gruvbox.nvim" }
+
+
 end)
