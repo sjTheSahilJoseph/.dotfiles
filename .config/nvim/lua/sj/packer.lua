@@ -31,7 +31,7 @@ return require("packer").startup(function(use)
         "danymat/neogen",
         requires = "nvim-treesitter/nvim-treesitter",
     }
-    use { "sjTheSahilJoseph/sjneovimtheme.nvim" }
+    use { "sjTheSahilJoseph/loveisanillusion.nvim" }
     use 'norcalli/nvim-colorizer.lua'
     use {
         'numToStr/Comment.nvim',

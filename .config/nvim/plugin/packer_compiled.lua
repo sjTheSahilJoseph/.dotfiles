@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/conform.nvim",
     url = "https://github.com/stevearc/conform.nvim"
   },
+  ["loveisanillusion.nvim"] = {
+    loaded = true,
+    path = "/home/sj/.local/share/nvim/site/pack/packer/start/loveisanillusion.nvim",
+    url = "https://github.com/sjTheSahilJoseph/loveisanillusion.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -163,11 +168,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["sjneovimtheme.nvim"] = {
-    loaded = true,
-    path = "/home/sj/.local/share/nvim/site/pack/packer/start/sjneovimtheme.nvim",
-    url = "https://github.com/sjTheSahilJoseph/sjneovimtheme.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
