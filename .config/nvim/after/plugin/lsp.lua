@@ -1,7 +1,6 @@
 -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
 require("neodev").setup({
-  -- add any options here, or leave empty to use the default settings
-  library = { plugins = { "nvim-dap-ui" }, types = true },
+
 })
 
 local lsp_zero = require('lsp-zero')
@@ -28,7 +27,7 @@ local cmp = require('cmp')
 cmp.setup({
     mapping = cmp.mapping.preset.insert({
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ['<C-B>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
     }),
