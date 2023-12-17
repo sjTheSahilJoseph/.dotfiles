@@ -33,10 +33,10 @@ return require("packer").startup(function(use)
     }
     use { "sjTheSahilJoseph/sjneovimtheme.nvim" }
     use 'norcalli/nvim-colorizer.lua'
-use {
-    'numToStr/Comment.nvim',
-    config = function()
-        require('Comment').setup()
-    end
-}
+    use {
+        'numToStr/Comment.nvim',
+    }
+
+use 'folke/neodev.nvim'
+
 end)

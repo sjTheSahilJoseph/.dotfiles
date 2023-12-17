@@ -1,4 +1,11 @@
+-- IMPORTANT: make sure to setup neodev BEFORE lspconfig
+require("neodev").setup({
+  -- add any options here, or leave empty to use the default settings
+  library = { plugins = { "nvim-dap-ui" }, types = true },
+})
+
 local lsp_zero = require('lsp-zero')
+
 
 lsp_zero.on_attach(function(client, bufnr)
     lsp_zero.default_keymaps({ buffer = bufnr })
