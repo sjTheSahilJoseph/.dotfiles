@@ -37,8 +37,4 @@ return require("packer").startup(function(use)
         'numToStr/Comment.nvim',
     }
     use 'folke/neodev.nvim'
-    use 'mfussenegger/nvim-dap'
-
-    use"jay-babu/mason-nvim-dap.nvim"
-use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 end)
