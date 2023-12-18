@@ -69,3 +69,4 @@ end)
 vim.keymap.set("n", "<leader>ut", ":UndotreeToggle<CR>")
 
 vim.keymap.set("n", "<A-z>", "<cmd>ZenMode <CR>")
+
