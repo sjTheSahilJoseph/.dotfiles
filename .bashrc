@@ -128,9 +128,16 @@ alias nvimfzf='nvim $(find . -maxdepth 1 -type d | fzf)'
 # For maintaining dotfiles 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+alias vim='nvim'
 
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 
 set -o vi
+
+export PATH=$PATH:/opt/idea-IC-233.11799.300/bin
+
+source /etc/profile.d/bash_completion.sh
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
