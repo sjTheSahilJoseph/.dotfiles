@@ -141,3 +141,5 @@ export PATH=$PATH:/opt/idea-IC-233.11799.300/bin
 source /etc/profile.d/bash_completion.sh
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
+
+alias alertcritical="notify-send -u critical -t 1000 -a 'SJ' 'Hello from SJ'"
