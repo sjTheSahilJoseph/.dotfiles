@@ -136,7 +136,7 @@ source <(ng completion script)
 
 set -o vi
 
-export PATH=$PATH:/opt/idea-IC-233.11799.300/bin
+export PATH=$PATH:/opt/idea-IC-233.11799.300/bin:~/.local/bin/genymotion
 
 source /etc/profile.d/bash_completion.sh
 bind 'set show-all-if-ambiguous on'
