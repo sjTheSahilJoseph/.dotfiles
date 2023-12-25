@@ -22,8 +22,8 @@ vim.opt.sidescrolloff = 8
 
 vim.opt.updatetime = 50
 
-vim.opt.spelllang = "en"
-vim.opt.spell = true
+-- vim.opt.spelllang = "en"
+-- vim.opt.spell = true
 
 vim.g.mapleader = " "
 
