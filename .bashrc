@@ -143,3 +143,4 @@ bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
 alias alertcritical="notify-send -u critical -t 1000 -a 'SJ' 'Hello from SJ'"
+. "$HOME/.cargo/env"
