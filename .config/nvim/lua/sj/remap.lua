@@ -22,6 +22,10 @@ vim.keymap.set("n", "<C-l>", "<C-w>l")
 vim.keymap.set("n", "<C-o>", "<C-w>o")
 vim.keymap.set("n", "<leader>|", ":vsp<CR>")
 vim.keymap.set("n", "<leader>-", ":sp<CR>")
+vim.keymap.set("n", "<UP>", ":resize +2<cr>")
+vim.keymap.set("n", "<DOWN>", ":resize -2<cr>")
+vim.keymap.set("n", "<LEFT>", ":vertical resize +2<cr>")
+vim.keymap.set("n", "<RIGHT>", ":vertical resize -2<cr>")
 
 vim.keymap.set("n", "<A-s>", "<cmd>CloakToggle <CR>")
 
