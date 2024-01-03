@@ -37,4 +37,5 @@ return require("packer").startup(function(use)
         'numToStr/Comment.nvim',
     }
     use 'folke/neodev.nvim'
+    use 'barrett-ruth/live-server.nvim'
 end)
