@@ -120,7 +120,7 @@ fi
 alias kittyupdate='curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin'
 
 # Cd Directories FuzzyFind (fzf)
-alias cdfzf='cd $(find . -maxdepth 1 -type d | fzf)'
+alias cdf='cd $(find . -maxdepth 1 -type d | fzf)'
 
 # Nvim Directories FuzzyFind (fzf)
 alias nvimfzf='nvim $(find . -maxdepth 1 -type d | fzf)'
@@ -129,6 +129,7 @@ alias nvimfzf='nvim $(find . -maxdepth 1 -type d | fzf)'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 alias vim='nvim'
+alias neovim='nvim'
 
 
 # Load Angular CLI autocompletion.
