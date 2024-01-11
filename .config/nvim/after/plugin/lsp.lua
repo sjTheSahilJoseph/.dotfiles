@@ -49,12 +49,12 @@ lspconfig.clangd.setup({
     filetypes = { "c", "cpp" }
 })
 lspconfig.emmet_language_server.setup({
-    filetypes = { "html", "css", "jsx", "tsx", "javascript", "typescript", "javascriptreact", "typescriptreact" }
+    filetypes = { "html", "css" }
 })
 lspconfig.cssls.setup({
-    filetypes = { "html", "css", "jsx", "tsx", "javascript", "typescript", "javascriptreact", "typescriptreact" }
+    filetypes = {"css" }
 })
 lspconfig.tailwindcss.setup({
-    filetypes = { "html", "css", "jsx", "tsx", "javascript", "typescript", "javascriptreact", "typescriptreact" }
+    filetypes = { "html", "jsx", "tsx", "javascript", "typescript", "javascriptreact", "typescriptreact" }
 })
 require'lspconfig'.intelephense.setup{}

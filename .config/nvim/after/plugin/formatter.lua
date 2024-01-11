@@ -22,6 +22,7 @@ conform.setup({
         lua = { "stylua" },
         python = { "isort", "black" },
         php = {"pretty-php"},
+        rust= {"rustfmt"},
     },
 })
 
