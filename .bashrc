@@ -121,6 +121,7 @@ alias kittyupdate='curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /de
 
 # Cd Directories FuzzyFind (fzf)
 alias cdf='cd $(find . -maxdepth 1 -type d | fzf)'
+alias cdff='cd $(find . -maxdepth 2 -type d | fzf)'
 
 # Nvim Directories FuzzyFind (fzf)
 alias nvimfzf='nvim $(find . -maxdepth 1 -type d | fzf)'
