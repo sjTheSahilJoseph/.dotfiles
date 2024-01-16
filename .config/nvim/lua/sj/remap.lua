@@ -32,6 +32,8 @@ vim.keymap.set("n", "<A-s>", "<cmd>CloakToggle <CR>")
 vim.keymap.set("n", "<leader>fmr", "<cmd>CellularAutomaton make_it_rain<CR>")
 vim.keymap.set("n", "<leader>fml", "<cmd>CellularAutomaton game_of_life<CR>")
 
+vim.keymap.set("n", "<leader>Gp", ":Git push<CR>")
+
 vim.keymap.set("n", "<F3>", function()
     require('conform').format({
         lsp_fallback = true,
