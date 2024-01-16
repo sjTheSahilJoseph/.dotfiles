@@ -37,4 +37,10 @@ return require("packer").startup(function(use)
         'numToStr/Comment.nvim',
     }
     use 'folke/neodev.nvim'
+    use "nvim-lua/plenary.nvim"
+    use {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { { "nvim-lua/plenary.nvim" } }
+    }
 end)
