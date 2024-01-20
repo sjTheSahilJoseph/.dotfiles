@@ -122,6 +122,7 @@ alias kittyupdate='curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /de
 # Cd Directories FuzzyFind (fzf)
 alias cdf='cd $(find . -maxdepth 1 -type d | fzf)'
 alias cdff='cd $(find . -maxdepth 2 -type d | fzf)'
+alias cdfff='cd $(find . -maxdepth 3 -type d | fzf)'
 
 # Nvim Directories FuzzyFind (fzf)
 alias nvimfzf='nvim $(find . -maxdepth 1 -type d | fzf)'
@@ -146,3 +147,11 @@ bind 'TAB:menu-complete'
 
 alias alertcritical="notify-send -u critical -t 1000 -a 'SJ' 'Hello from SJ'"
 . "$HOME/.cargo/env"
+
+# pnpm
+export PNPM_HOME="/home/sj/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
