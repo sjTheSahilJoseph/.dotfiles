@@ -1,4 +1,3 @@
--- IMPORTANT: make sure to setup neodev BEFORE lspconfig
 require("neodev").setup({
 
 })
@@ -55,6 +54,6 @@ lspconfig.cssls.setup({
     filetypes = {"css" }
 })
 lspconfig.tailwindcss.setup({
-    filetypes = { "html", "jsx", "tsx", "javascript", "typescript", "javascriptreact", "typescriptreact" }
+    filetypes = { "html",}
 })
 require'lspconfig'.intelephense.setup{}
