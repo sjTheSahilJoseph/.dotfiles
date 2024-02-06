@@ -14,7 +14,8 @@ local lspconfig = require('lspconfig')
 require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = {
-        "lua_ls", "pyright", "rust_analyzer", "clangd"
+        "lua_ls", "pyright", "rust_analyzer", "clangd",
+        "emmet_language_server", "tsserver"
     },
     handlers = {
         lsp_zero.default_setup,
