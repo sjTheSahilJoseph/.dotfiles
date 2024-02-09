@@ -204,7 +204,7 @@ bindsym $mod+Shift+minus scratchpad show
 
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 
-bindsym $mod+Z exec i3lock -i image.png
+bindsym $mod+Z exec i3lock -b -i image.png
 
 # Flashes to flash the current working window.
 bindsym $mod+BackSpace exec --no-startup-id bash ~/.config/Scripts/flashes.sh
