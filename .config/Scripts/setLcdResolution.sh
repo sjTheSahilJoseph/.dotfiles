@@ -12,6 +12,9 @@ xrandr --output LVDS-1 --off --output VGA-1 --mode "1920x1080_60.00"
 xset s off
 xset -dpms
 
+# Background normalize.
+nitrogen --restore
+
 # Turn on the laptop's screen.
 # xrandr --output LVDS-1 --auto --output VGA-1 --off
 
