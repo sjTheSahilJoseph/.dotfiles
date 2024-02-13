@@ -8,5 +8,10 @@ xrandr --addmode VGA-1 "1920x1080_60.00"
 
 xrandr --output LVDS-1 --off --output VGA-1 --mode "1920x1080_60.00"
 
+# turn off screen sleep stuff.
+xset s off
+xset -dpms
+
+# Turn on the laptop's screen.
 # xrandr --output LVDS-1 --auto --output VGA-1 --off
 
