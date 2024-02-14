@@ -15,7 +15,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = {
         "lua_ls", "pyright", "rust_analyzer", "clangd",
-        "emmet_language_server", "tsserver"
+        "emmet_language_server", "tsserver", "cssls", "tailwindcss", "intelephense"
     },
     handlers = {
         lsp_zero.default_setup,
