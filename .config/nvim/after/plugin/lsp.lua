@@ -55,6 +55,6 @@ lspconfig.cssls.setup({
     filetypes = {"css" }
 })
 lspconfig.tailwindcss.setup({
-    filetypes = { "html",}
+    filetypes = { "html" }
 })
 require'lspconfig'.intelephense.setup{}
