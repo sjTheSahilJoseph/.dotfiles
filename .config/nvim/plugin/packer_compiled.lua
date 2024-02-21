@@ -184,6 +184,11 @@ _G.packer_plugins = {
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
   },
+  ["typewriter.vim"] = {
+    loaded = true,
+    path = "/home/sj/.local/share/nvim/site/pack/packer/start/typewriter.vim",
+    url = "https://github.com/AndrewRadev/typewriter.vim"
+  },
   undotree = {
     loaded = true,
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/undotree",
