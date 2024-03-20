@@ -214,6 +214,9 @@ bindsym Ctrl+$mod+s exec --no-startup-id ~/.config/Scripts/showMeWhichKeyAreYouP
 
 exec --no-startup-id compton --config ~/.config/compton.conf
 
+# Startup Scripts
+exec --no-startup-id bash ~/.config/Scripts/start_scripts.sh
+
 # Zoom Meeting
 for_window [class="zoom"] move container to workspace 5
 for_window [class="(.*join\?action\=join.*|.*zoom.*)"] floating enable
