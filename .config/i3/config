@@ -210,7 +210,7 @@ bindsym $mod+Z exec i3lock -b -i image.png
 bindsym $mod+BackSpace exec --no-startup-id bash ~/.config/Scripts/flashes.sh
 
 # Screen Keys.
-bindsym Ctrl+$mod+s exec --no-startup-id ~/.config/Scripts/showMeWhichKeyAreYouPressing.sh
+bindsym Ctrl+$mod+s exec --no-startup-id bash ~/.config/Scripts/showMeWhichKeyAreYouPressing.sh
 
 exec --no-startup-id compton --config ~/.config/compton.conf
 
