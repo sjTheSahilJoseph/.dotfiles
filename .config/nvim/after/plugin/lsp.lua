@@ -49,13 +49,13 @@ lspconfig.clangd.setup({
     filetypes = { "c", "cpp" }
 })
 lspconfig.emmet_language_server.setup({
-    filetypes = { "html", "css", "javascript", "typescript" }
+    filetypes = { "html", "css", }
 })
 lspconfig.cssls.setup({
-    filetypes = {"css", "html", "javascript", "typescript" }
+    filetypes = { "html", "css", }
 })
 lspconfig.tailwindcss.setup({
-    filetypes = { "html", "javascript", "typescript" }
+    filetypes = { "html", }
 })
 require'lspconfig'.intelephense.setup{
     filetypes = {"php"}
