@@ -123,22 +123,9 @@ alias cdfff='cd $(find . -maxdepth 3 -type d | fzf)'
 # Nvim Directories FuzzyFind (fzf)
 alias nvimfzf='nvim $(find . -maxdepth 1 -type d | fzf)'
 
-# For maintaining dotfiles 
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-
 set -o vi
 
-export PATH=$PATH:/opt/idea-IC-233.11799.300/bin:~/.local/bin/genymotion
-
-source /etc/profile.d/bash_completion.sh
-bind 'set show-all-if-ambiguous on'
-bind 'TAB:menu-complete'
-
 alias alertcritical="notify-send -u critical -t 1000 -a 'SJ' 'Hello from SJ'"
-. "$HOME/.cargo/env"
 
 # pnpm
 export PNPM_HOME="/home/sj/.local/share/pnpm"

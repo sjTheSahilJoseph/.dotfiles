@@ -42,14 +42,14 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+#floating_modifier $mod
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
+#tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec kitty bash ~/.config/Scripts/openTerminal.sh
+bindsym $mod+Return exec kitty bash ~/.dotfiles/Scripts/openTerminal.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -207,15 +207,15 @@ exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 bindsym $mod+Z exec i3lock -b -i image.png
 
 # Flashes to flash the current working window.
-bindsym $mod+BackSpace exec --no-startup-id bash ~/.config/Scripts/flashes.sh
+bindsym $mod+BackSpace exec --no-startup-id bash ~/.dotfiles/Scripts/flashes.sh
 
 # Screen Keys.
-bindsym Ctrl+$mod+s exec --no-startup-id bash ~/.config/Scripts/showMeWhichKeyAreYouPressing.sh
+bindsym Ctrl+$mod+s exec --no-startup-id bash ~/.dotfiles/Scripts/showMeWhichKeyAreYouPressing.sh
 
 exec --no-startup-id compton --config ~/.config/compton.conf
 
 # Startup Scripts
-exec --no-startup-id bash ~/.config/Scripts/start_scripts.sh
+exec --no-startup-id bash ~/.dotfiles/Scripts/start_scripts.sh
 
 # Zoom Meeting
 for_window [class="zoom"] move container to workspace 5
@@ -225,7 +225,7 @@ for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom - Free Account
 for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom Meeting"] floating disable
 
 # Set Screen Resolution
-bindsym Ctrl+$mod+p exec --no-startup-id bash ~/.config/Scripts/setLcdResolution.sh
+bindsym Ctrl+$mod+p exec --no-startup-id bash ~/.dotfiles/Scripts/setLcdResolution.sh
 
 bindsym $mod+n exec --no-startup-id emoji-picker
 
