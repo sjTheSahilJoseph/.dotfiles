@@ -15,7 +15,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = {
         "lua_ls", "pyright", "rust_analyzer", "clangd",
-        "emmet_language_server", "tsserver", "cssls", "tailwindcss", "intelephense"
+        "emmet_language_server", "tsserver", "cssls", "intelephense"
     },
     handlers = {
         lsp_zero.default_setup,
@@ -52,10 +52,7 @@ lspconfig.emmet_language_server.setup({
     filetypes = { "html", "css", }
 })
 lspconfig.cssls.setup({
-    filetypes = { "html", "css", }
-})
-lspconfig.tailwindcss.setup({
-    filetypes = { "html", }
+    filetypes = { "css", }
 })
 require'lspconfig'.intelephense.setup{
     filetypes = {"php"}
