@@ -79,30 +79,10 @@ _G.packer_plugins = {
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
-  LuaSnip = {
-    loaded = true,
-    path = "/home/sj/.local/share/nvim/site/pack/packer/start/LuaSnip",
-    url = "https://github.com/L3MON4D3/LuaSnip"
-  },
-  ["cellular-automaton.nvim"] = {
-    loaded = true,
-    path = "/home/sj/.local/share/nvim/site/pack/packer/start/cellular-automaton.nvim",
-    url = "https://github.com/eandrju/cellular-automaton.nvim"
-  },
   ["cloak.nvim"] = {
     loaded = true,
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/cloak.nvim",
     url = "https://github.com/laytan/cloak.nvim"
-  },
-  ["cmp-nvim-lsp"] = {
-    loaded = true,
-    path = "/home/sj/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
-    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
-  },
-  ["conform.nvim"] = {
-    loaded = true,
-    path = "/home/sj/.local/share/nvim/site/pack/packer/start/conform.nvim",
-    url = "https://github.com/stevearc/conform.nvim"
   },
   harpoon = {
     loaded = true,
@@ -114,50 +94,10 @@ _G.packer_plugins = {
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/loveisanillusion.nvim",
     url = "https://github.com/sjTheSahilJoseph/loveisanillusion.nvim"
   },
-  ["lsp-zero.nvim"] = {
-    loaded = true,
-    path = "/home/sj/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
-    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
-  },
-  ["mason-lspconfig.nvim"] = {
-    loaded = true,
-    path = "/home/sj/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
-    url = "https://github.com/williamboman/mason-lspconfig.nvim"
-  },
-  ["mason.nvim"] = {
-    loaded = true,
-    path = "/home/sj/.local/share/nvim/site/pack/packer/start/mason.nvim",
-    url = "https://github.com/williamboman/mason.nvim"
-  },
-  ["neodev.nvim"] = {
-    loaded = true,
-    path = "/home/sj/.local/share/nvim/site/pack/packer/start/neodev.nvim",
-    url = "https://github.com/folke/neodev.nvim"
-  },
-  neogen = {
-    loaded = true,
-    path = "/home/sj/.local/share/nvim/site/pack/packer/start/neogen",
-    url = "https://github.com/danymat/neogen"
-  },
-  ["nvim-cmp"] = {
-    loaded = true,
-    path = "/home/sj/.local/share/nvim/site/pack/packer/start/nvim-cmp",
-    url = "https://github.com/hrsh7th/nvim-cmp"
-  },
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
-  },
-  ["nvim-lint"] = {
-    loaded = true,
-    path = "/home/sj/.local/share/nvim/site/pack/packer/start/nvim-lint",
-    url = "https://github.com/mfussenegger/nvim-lint"
-  },
-  ["nvim-lspconfig"] = {
-    loaded = true,
-    path = "/home/sj/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
-    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -179,11 +119,6 @@ _G.packer_plugins = {
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["trouble.nvim"] = {
-    loaded = true,
-    path = "/home/sj/.local/share/nvim/site/pack/packer/start/trouble.nvim",
-    url = "https://github.com/folke/trouble.nvim"
-  },
   undotree = {
     loaded = true,
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/undotree",
@@ -193,11 +128,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["zen-mode.nvim"] = {
-    loaded = true,
-    path = "/home/sj/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
-    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 

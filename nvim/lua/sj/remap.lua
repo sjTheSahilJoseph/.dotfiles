@@ -29,50 +29,14 @@ vim.keymap.set("n", "<RIGHT>", ":vertical resize -2<cr>")
 
 vim.keymap.set("n", "<A-s>", "<cmd>CloakToggle <CR>")
 
-vim.keymap.set("n", "<leader>fmr", "<cmd>CellularAutomaton make_it_rain<CR>")
-vim.keymap.set("n", "<leader>fml", "<cmd>CellularAutomaton game_of_life<CR>")
 
 vim.keymap.set("n", "<leader>Gp", ":Git push<CR>")
-
-vim.keymap.set("n", "<F3>", function()
-    require('conform').format({
-        lsp_fallback = true,
-        async = false,
-        timeout_ms = 5000,
-    })
-end, { desc = "Format file" })
-
-vim.keymap.set("n", "<leader>ln", function()
-    require("lint").try_lint()
-end, { desc = "Lint the File" })
-
-vim.keymap.set("n", "<leader>ng", ":lua require('neogen').generate()<CR>")
 
 vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files, {})
 vim.keymap.set("n", "<leader>fg", require("telescope.builtin").live_grep, {})
 vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers, {})
 vim.keymap.set("n", "<leader>fh", require("telescope.builtin").help_tags, {})
 
-vim.keymap.set("n", "<leader>xx", function()
-	require("trouble").toggle()
-end)
-vim.keymap.set("n", "<leader>xw", function()
-	require("trouble").toggle("workspace_diagnostics")
-end)
-vim.keymap.set("n", "<leader>xd", function()
-	require("trouble").toggle("document_diagnostics")
-end)
-vim.keymap.set("n", "<leader>xq", function()
-	require("trouble").toggle("quickfix")
-end)
-vim.keymap.set("n", "<leader>xl", function()
-	require("trouble").toggle("loclist")
-end)
-vim.keymap.set("n", "gR", function()
-	require("trouble").toggle("lsp_references")
-end)
-
 vim.keymap.set("n", "<leader>ut", ":UndotreeToggle<CR>")
 
-vim.keymap.set("n", "<A-z>", "<cmd>ZenMode <CR>")
 
