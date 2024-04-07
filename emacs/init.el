@@ -6,8 +6,8 @@
 
 ;; Set default font
 (set-face-attribute 'default nil
-                    :family "DejaVu Sans Mono"
-                    :height 120
+                    :family "Monaspace Neon"
+                    :height 100
                     :weight 'normal
                     :width 'normal)
 
