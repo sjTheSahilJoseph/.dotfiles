@@ -247,5 +247,3 @@ for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom Meeting"] floa
 # Set Screen Resolution
 bindsym Ctrl+$mod+p exec --no-startup-id bash ~/.dotfiles/Scripts/setLcdResolution.sh
 
-bindsym $mod+n exec --no-startup-id emoji-picker
-
