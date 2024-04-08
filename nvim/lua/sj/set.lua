@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 
-vim.opt.guicursor = ""
+vim.opt.guicursor = 'n-v-c:ver20,i-ci-ve:ver20,r-cr:ver20,o:ver20,sm:ver20'
 
 vim.opt.mouse = ""
 
@@ -9,9 +9,9 @@ vim.opt.relativenumber = true
 
 vim.opt.wrap = false
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 8
+vim.opt.softtabstop = 8
+vim.opt.shiftwidth = 8
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
@@ -20,8 +20,8 @@ vim.opt.hlsearch = true
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 8
-vim.opt.sidescrolloff = 8
+vim.opt.scrolloff = 10
+vim.opt.sidescrolloff = 10
 
 vim.opt.updatetime = 50
 
