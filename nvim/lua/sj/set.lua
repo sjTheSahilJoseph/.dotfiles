@@ -40,3 +40,4 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 vim.g.netrw_banner = 0
+
