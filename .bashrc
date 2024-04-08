@@ -120,6 +120,9 @@ alias cdf='cd $(find . -maxdepth 1 -type d | fzf)'
 alias cdff='cd $(find . -maxdepth 2 -type d | fzf)'
 alias cdfff='cd $(find . -maxdepth 3 -type d | fzf)'
 
+# Dotfiles Edit
+alias dotfiles='cd ~/.dotfiles'
+
 # Nvim Directories FuzzyFind (fzf)
 alias nvimfzf='nvim $(find . -maxdepth 1 -type d | fzf)'
 
