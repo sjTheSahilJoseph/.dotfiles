@@ -8,7 +8,6 @@ return require("packer").startup(function(use)
     })
     use("tpope/vim-fugitive")
     use("mbbill/undotree")
-    use("laytan/cloak.nvim")
     use { "sjTheSahilJoseph/loveisanillusion.nvim" }
     use 'norcalli/nvim-colorizer.lua'
     use {
