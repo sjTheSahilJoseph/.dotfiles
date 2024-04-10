@@ -34,8 +34,6 @@ vim.keymap.set("n", "<leader>0", ":tabfirst<cr>")
 vim.keymap.set("n", "<leader>bs", ":bnext<cr>")
 vim.keymap.set("n", "<leader>bS", ":bprev<cr>")
 
-vim.keymap.set("n", "<A-s>", "<cmd>CloakToggle <CR>")
-
 vim.keymap.set("n", "<leader>Gp", ":Git push<CR>")
 
 vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files, {})
