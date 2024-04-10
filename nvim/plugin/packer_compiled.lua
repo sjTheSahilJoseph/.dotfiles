@@ -97,7 +97,7 @@ _G.packer_plugins = {
   ["loveisanillusion.nvim"] = {
     loaded = true,
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/loveisanillusion.nvim",
-    url = "https://github.com/sjTheSahilJoseph/loveisanillusion.nvim"
+    url = "/home/sj/Projects/loveisanillusion.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -128,6 +128,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/sj/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["packer.nvim"] = {
     loaded = true,

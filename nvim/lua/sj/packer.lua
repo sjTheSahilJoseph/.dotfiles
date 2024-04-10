@@ -6,9 +6,12 @@ return require("packer").startup(function(use)
         "nvim-telescope/telescope.nvim",
         requires = { { "nvim-lua/plenary.nvim" } },
     })
+
+    use 'nvim-treesitter/nvim-treesitter' 
+
     use("tpope/vim-fugitive")
     use("mbbill/undotree")
-    use { "sjTheSahilJoseph/loveisanillusion.nvim" }
+    use { "~/Projects/loveisanillusion.nvim" }
     use 'norcalli/nvim-colorizer.lua'
     use {
         'numToStr/Comment.nvim',
