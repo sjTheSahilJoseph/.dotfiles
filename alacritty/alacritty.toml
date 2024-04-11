@@ -1,10 +1,10 @@
 [font]
-	normal = { family = "monospace", style = "Regular" }
+	normal = { family = "IBM plex mono", style = "Medium" }
 	bold = { style = "Bold" }
 	italic = { style = "Italic" }
 	bold_italic = { style = "Bold Italic" }
 	size = 10
-	offset = {x= 1, y= 1}
+	offset = {x= 1, y= 0}
 	builtin_box_drawing = true 
 
 
