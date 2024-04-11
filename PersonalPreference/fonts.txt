@@ -1,1 +1,1 @@
-Monospace
+IBM Plex Mono
