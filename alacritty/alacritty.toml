@@ -1,50 +1,50 @@
 [font]
-	normal = { family = "IBM plex mono", style = "Medium" }
+	normal = { family = "victor mono", style = "SemiBold" }
 	bold = { style = "Bold" }
 	italic = { style = "Italic" }
 	bold_italic = { style = "Bold Italic" }
 	size = 10
-	offset = {x= 1, y= 0}
-	builtin_box_drawing = true 
+	offset = {x= 0, y= 0}
+	builtin_box_drawing = false 
 
 
 [colors]
-	primary = {foreground = "#d8d8d8", background = "#000000", dim_foreground = "#828482", bright_foreground = "None"}
-	cursor = {text = "#000000", cursor = "#1dc40c"}
+	primary = {foreground = "#cec9c9", background = "#000000", dim_foreground = "#dddddd", bright_foreground = "None"}
+	cursor = {text = "#000000", cursor = "#21eb10"}
 
 [cursor]
 	style = { shape = "Beam", blinking = "Always" }
 	blink_interval = 500
 	blink_timeout = 0
-	thickness = 0.17
+	thickness = 0.19
 
 
 [colors.normal]
     black = "#000000"
     red = "#ff0000"
     green = "#00ff00"
-    yellow = "#d47c02"
-    blue = "#0c6bbc"
+    yellow = "#f39207"
+    blue = "#096dc1"
     magenta = "#ff00ff"
     cyan = "#00ffff"
-    white = "#999999"
+    white = "#ffffff"
 
 [colors.bright]
     black = "#000000"
     red = "#ff0000"
     green = "#00ff00"
-    yellow = "#d47c02"
-    blue = "#0c6bbc"
+    yellow = "#f39207"
+    blue = "#096dc1"
     magenta = "#ff00ff"
     cyan = "#00ffff"
-    white = "#999999"
+    white = "#ffffff"
 
 [colors.dim]
     black = "#000000"
-    red = "#540408"
-    green = "#1dc40c"
-    yellow = "#d47c02"
-    blue = "#0c6bbc"
+    red = "#ff0000"
+    green = "#00ff00"
+    yellow = "#f39207"
+    blue = "#096dc1"
     magenta = "#ff00ff"
     cyan = "#00ffff"
     white = "#999999"
