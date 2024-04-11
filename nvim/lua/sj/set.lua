@@ -4,14 +4,14 @@ vim.opt.guicursor = 'n:ver20,v:ver20,c:ver20,i:ver20,ve:ver20,r:ver20,cr:ver20,o
 
 vim.opt.mouse = ""
 
-vim.opt.nu = false
-vim.opt.relativenumber = false
+vim.opt.nu = true
+vim.opt.relativenumber = true
 
 vim.opt.wrap = false
 
-vim.opt.tabstop = 8
-vim.opt.softtabstop = 8
-vim.opt.shiftwidth = 8
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = false
 vim.opt.smartindent = true
 
