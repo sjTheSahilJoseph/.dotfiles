@@ -1,0 +1,18 @@
+[font]
+	normal = { family = "monaspace neon", style = "Regular" }
+	bold = { style = "Bold" }
+	italic = { style = "Italic" }
+	bold_italic = { style = "Bold Italic" }
+	size = 10
+	offset = {x= 1, y= 1}
+	builtin_box_drawing = true 
+
+
+[colors]
+	primary = {foreground = "#d8d8d8", background = "#000000", dim_foreground = "#828482", bright_foreground = "None"}
+	cursor = {text = "#000000", cursor = "#ffffff"}
+
+[cursor]
+	style = { shape = "Beam", blinking = "Always" }
+	blink_interval = 500
+	blink_timeout = 0
