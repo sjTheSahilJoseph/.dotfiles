@@ -112,8 +112,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Kitty Update Alias
-alias kittyupdate='curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin'
 
 # Cd Directories FuzzyFind (fzf)
 alias cdf='cd $(find . -maxdepth 1 -type d | fzf)'
@@ -148,4 +146,3 @@ export NVM_DIR="$HOME/.nvm"
 
 clear
 . "$HOME/.cargo/env"
-source /home/sj/alacritty/extra/completions/alacritty.bash
