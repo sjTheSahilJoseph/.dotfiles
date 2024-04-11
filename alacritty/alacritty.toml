@@ -17,3 +17,36 @@
 	blink_interval = 500
 	blink_timeout = 0
 	thickness = 0.17
+
+
+[colors.normal]
+    black = "#000000"
+    red = "#ff0000"
+    green = "#00ff00"
+    yellow = "#d47c02"
+    blue = "#0c6bbc"
+    magenta = "#ff00ff"
+    cyan = "#00ffff"
+    white = "#999999"
+
+[colors.bright]
+    black = "#000000"
+    red = "#ff0000"
+    green = "#00ff00"
+    yellow = "#d47c02"
+    blue = "#0c6bbc"
+    magenta = "#ff00ff"
+    cyan = "#00ffff"
+    white = "#999999"
+
+[colors.dim]
+    black = "#000000"
+    red = "#540408"
+    green = "#1dc40c"
+    yellow = "#d47c02"
+    blue = "#0c6bbc"
+    magenta = "#ff00ff"
+    cyan = "#00ffff"
+    white = "#999999"
+
+
