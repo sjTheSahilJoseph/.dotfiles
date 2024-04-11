@@ -1,5 +1,5 @@
 [font]
-	normal = { family = "monaspace neon", style = "Regular" }
+	normal = { family = "monospace", style = "Regular" }
 	bold = { style = "Bold" }
 	italic = { style = "Italic" }
 	bold_italic = { style = "Bold Italic" }
@@ -10,9 +10,10 @@
 
 [colors]
 	primary = {foreground = "#d8d8d8", background = "#000000", dim_foreground = "#828482", bright_foreground = "None"}
-	cursor = {text = "#000000", cursor = "#ffffff"}
+	cursor = {text = "#000000", cursor = "#1dc40c"}
 
 [cursor]
 	style = { shape = "Beam", blinking = "Always" }
 	blink_interval = 500
 	blink_timeout = 0
+	thickness = 0.17
