@@ -94,10 +94,10 @@ _G.packer_plugins = {
     path = "/home/sj/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
-  ["loveisanillusion.nvim"] = {
+  ["loveisanillusion.vim"] = {
     loaded = true,
-    path = "/home/sj/.local/share/nvim/site/pack/packer/start/loveisanillusion.nvim",
-    url = "/home/sj/Projects/loveisanillusion.nvim"
+    path = "/home/sj/.local/share/nvim/site/pack/packer/start/loveisanillusion.vim",
+    url = "/home/sj/Projects/loveisanillusion.vim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
