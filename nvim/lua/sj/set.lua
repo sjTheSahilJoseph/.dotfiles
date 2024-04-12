@@ -29,6 +29,8 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = true
 
+vim.opt.showmode = false
+
 vim.opt.clipboard = "unnamedplus"
 
 vim.opt.signcolumn = "yes"

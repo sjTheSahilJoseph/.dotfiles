@@ -145,7 +145,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 clear
-<<<<<<< HEAD
 . "$HOME/.cargo/env"
-=======
->>>>>>> parent of 2b81477 (...)
