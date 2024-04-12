@@ -3,7 +3,7 @@
 	bold = { style = "Bold" }
 	italic = { style = "Italic" }
 	bold_italic = { style = "Bold Italic" }
-	size = 11
+	size = 10.5
 	offset = {x= 0, y= 0}
 	builtin_box_drawing = false 
 
