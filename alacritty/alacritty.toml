@@ -1,5 +1,5 @@
 [font]
-	normal = { family = "victor mono", style = "SemiBold" }
+	normal = { family = "Fira Code", style = "Medium" }
 	bold = { style = "Bold" }
 	italic = { style = "Italic" }
 	bold_italic = { style = "Bold Italic" }
