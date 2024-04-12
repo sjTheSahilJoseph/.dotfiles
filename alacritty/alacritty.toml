@@ -1,12 +1,11 @@
 [font]
-	normal = { family = "Fira Code", style = "Medium" }
+	normal = { family = "Liberation Mono", style = "Regular" }
 	bold = { style = "Bold" }
 	italic = { style = "Italic" }
 	bold_italic = { style = "Bold Italic" }
-	size = 10
+	size = 11
 	offset = {x= 0, y= 0}
 	builtin_box_drawing = false 
-
 
 [colors]
 	primary = {foreground = "#cec9c9", background = "#000000", dim_foreground = "#dddddd", bright_foreground = "None"}
