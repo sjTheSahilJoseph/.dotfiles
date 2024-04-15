@@ -8,15 +8,21 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {
     "tsserver",
+    "clangd",
   },
   handlers = {
     lsp_zero.default_setup,
 
     tsserver = function()
-
       require('lspconfig').tsserver.setup({
       })
     end,
+
+    clangd = function()
+      require('lspconfig').clangd.setup({
+      })
+    end,
+
   },
 })
 
