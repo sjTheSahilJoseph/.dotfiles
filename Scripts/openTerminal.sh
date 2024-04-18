@@ -1,12 +1,13 @@
+
 #!/bin/bash
 
-tmux new-session -d -s primary -n "code"
+for i in {1..3}; do
+    session="s$i"
+    tmux new-session -d -s $session -n "nvim"
+    tmux new-window -t $session: -n "run"
+    tmux new-window -t $session: -n "auxiliary"
+    tmux new-window -t $session: -n "music"
+    tmux new-window -t $session: -n "temp"
+done
 
-tmux new-window -t primary: -n "run"
-tmux new-window -t primary: -n "auxiliary"
-tmux new-window -t primary: -n "music"
-tmux new-window -t primary: -n "temp"
-
-tmux attach-session -t primary
-
-tmux select-window -t primary:code
+tmux attach-session -t s1
