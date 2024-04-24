@@ -6,7 +6,7 @@
 
 ;; Set default font
 ;;(set-face-attribute 'default nil :family "Liberation Mono" :height 100)
-(set-frame-font "Liberation Mono-9.5:antialias=1")
+(set-frame-font "Liberation Mono-9.5:weight=bold:antialias=1")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
