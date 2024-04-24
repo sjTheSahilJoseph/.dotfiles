@@ -5,7 +5,8 @@
 (global-hl-line-mode t)
 
 ;; Set default font
-(set-face-attribute :family "Liberation Mono")
+;;(set-face-attribute 'default nil :family "Liberation Mono" :height 100)
+(set-frame-font "Liberation Mono-9.5:antialias=1")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -16,12 +17,7 @@
  '(custom-safe-themes
    '("2bd78b9484f58c804bd490edbd268d177e3a36d03a0b6db133f6d3ac1a2282d5" default))
  '(ispell-dictionary nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
 
 (scroll-bar-mode -1)
 (setq-default cursor-type 'bar)
