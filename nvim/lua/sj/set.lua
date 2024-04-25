@@ -4,8 +4,8 @@ vim.opt.guicursor = 'a:ver25'
 
 vim.opt.mouse = ""
 
-vim.opt.nu = true
-vim.opt.relativenumber = true
+vim.opt.nu = false
+vim.opt.relativenumber = false
 
 vim.opt.wrap = false
 
@@ -33,7 +33,7 @@ vim.opt.showmode = false
 
 vim.opt.clipboard = "unnamedplus"
 
-vim.opt.signcolumn = "no"
+vim.opt.signcolumn = "yes"
 
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
