@@ -1,1 +1,4 @@
-./vim/autoload/plug.vim
+/vim/autoload/plug.vim
+/emacs/elpa
+/emacs/auto-save-list
+
