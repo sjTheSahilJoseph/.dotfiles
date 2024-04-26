@@ -12,12 +12,14 @@
 ;; Window UI changes
 (setq window-divider-default-right-width 0)
 (setq window-divider-default-left-width 0)
-(setq window-divider-default-left-width 0)
 (setq window-divider-default-bottom-width 0)
 
 ;; Frame UI changes
-(setq default-frame-alist '((internal-border-width . 2)))
-(setq default-frame-alist '((left-fringe . 5) (right-fringe . 5)))
+(setq default-frame-alist
+      '((internal-border-width . 2)
+        (left-fringe . 5)
+        (right-fringe . 5)))
+
 (window-divider-mode)
 
 ;; Setting Fonts for Frame
@@ -29,7 +31,6 @@
  '(custom-safe-themes
    '("2bd78b9484f58c804bd490edbd268d177e3a36d03a0b6db133f6d3ac1a2282d5" default))
  '(ispell-dictionary nil))
-
 
 ;; Character Encoding Settings
 (set-language-environment "UTF-8")
@@ -75,20 +76,11 @@
 (use-package lsp-mode
   :init
   (setq lsp-keymap-prefix "C-c l")
-  :hook (
-         (python-mode . lsp)
-         (typescript-mode . lsp)
-         (
-  :commands lsp)
+  :hook ((python-mode . lsp)
+         (typescript-mode . lsp))
+  :commands (lsp))
 
-(use-package lsp-ui :commands lsp-ui-mode)
-
-
-
-
-
-
-
-
+(use-package lsp-ui
+  :commands lsp-ui-mode)
 
 
