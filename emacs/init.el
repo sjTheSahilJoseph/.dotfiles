@@ -75,14 +75,12 @@
 (use-package lsp-mode
   :init
   (setq lsp-keymap-prefix "C-c l")
-  :hook ((python-mode . lsp)
-         (typescript-mode . lsp))
-  :commands (lsp)
-  :config
-  (setq lsp-ui-doc-enable t
-        lsp-ui-doc-position 'top
-        lsp-ui-doc-side 'right
-        lsp-ui-doc-delay 0.5
-        lsp-ui-doc-show-with-cursor t
-        lsp-ui-doc-show-with-mouse t))
+  :hook (
+         (python-mode . lsp)
+         (typescript-mode . lsp)
+         (javascript-mode . lsp)
+         (javascriptreact-mode . lsp)
+         (typescriptreact-mode . lsp)
+         )
+  :commands (lsp))
 
