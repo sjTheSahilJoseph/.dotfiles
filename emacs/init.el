@@ -59,15 +59,14 @@
 (setq-default indent-tabs-mode nil)
 (setq-default electric-indent-inhibit t)
 
-;; Package Manager Setup
+;; Configure package.el to include MELPA.
+(require 'package)
+(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/") t)
 (package-initialize)
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-(setq package-selected-packages '(lsp-mode json-mode))
-(when (cl-find-if-not #'package-installed-p package-selected-packages)
-  (package-refresh-contents)
-  (mapc #'package-install package-selected-packages))
 
-
+(defun package--save-selected-packages (&rest opt) nil)
 
 
 
