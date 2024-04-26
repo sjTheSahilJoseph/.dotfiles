@@ -49,7 +49,6 @@
 ;; Autosave
 (setq auto-save-default nil)
 (setq make-backup-files nil)
-(setq backup-directory-alist (quote (("." . "~/.emacs.d/.backups"))))
 (setq backup-directory-alist (expand-file-name ".backups" user-emacs-directory))
 
 ;; Tab & Indent
