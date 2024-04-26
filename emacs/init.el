@@ -50,13 +50,12 @@
 ;; Autosave
 (setq auto-save-default nil)
 (setq make-backup-files nil)
-(setq backup-directory-alist (expand-file-name ".backups" user-emacs-directory))
 
 ;; Tab & Indent
 (setq tab-width 4)
 (setq-default tab-width 4)
 (setq-default indent-line-function 4)
-(setq-default indent-tabs-mode nil)
+(setq-default indent-tabs-mode t)
 (setq-default electric-indent-inhibit t)
 
 ;; Configure package.el to include MELPA.
@@ -78,9 +77,25 @@
   (setq lsp-keymap-prefix "C-c l")
   :hook ((python-mode . lsp)
          (typescript-mode . lsp))
+  :commands (lsp)
+  :config
+  (setq lsp-ui-doc-enable t
+        lsp-ui-doc-position 'top
+        lsp-ui-doc-side 'right
+        lsp-ui-doc-delay 0.1
+        lsp-ui-doc-show-with-cursor t
+        lsp-ui-doc-show-with-mouse t))
+
+(use-package lsp-ui
+  :commands lsp-ui-mode)(eval-when-compile
+  (require 'use-package))
+
+(use-package lsp-mode
+  :init
+  (setq lsp-keymap-prefix "C-c l")
+  :hook ((python-mode . lsp)
+         (typescript-mode . lsp))
   :commands (lsp))
 
 (use-package lsp-ui
   :commands lsp-ui-mode)
-
-
