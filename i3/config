@@ -248,3 +248,6 @@ for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom Meeting"] floa
 # Set Screen Resolution
 bindsym Ctrl+$mod+p exec --no-startup-id bash ~/.dotfiles/Scripts/setLcdResolution.sh
 
+# Scratchpad Text Editor
+exec --no-startup-id gnome-text-editor
+for_window [class="Gedit"] move scratchpad
