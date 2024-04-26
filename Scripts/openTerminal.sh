@@ -9,7 +9,7 @@
     tmux new-window -t $session: -n "temp"
 
     session="work1"
-    tmux new-session -d -s $session -n "vim"
+    tmux new-session -d -s $session -n "emacs/vim"
     tmux new-window -t $session: -n "run"
     tmux new-window -t $session: -n "auxiliary"
     tmux new-window -t $session: -n "music"
@@ -17,7 +17,7 @@
     tmux new-window -t $session: -n "temp"
 
     session="work2"
-    tmux new-session -d -s $session -n "vim"
+    tmux new-session -d -s $session -n "emacs/vim"
     tmux new-window -t $session: -n "run"
     tmux new-window -t $session: -n "auxiliary"
     tmux new-window -t $session: -n "music"
@@ -25,7 +25,7 @@
     tmux new-window -t $session: -n "temp"
 
     session="work3"
-    tmux new-session -d -s $session -n "vim"
+    tmux new-session -d -s $session -n "emacs/vim"
     tmux new-window -t $session: -n "run"
     tmux new-window -t $session: -n "auxiliary"
     tmux new-window -t $session: -n "music"
@@ -33,7 +33,7 @@
     tmux new-window -t $session: -n "temp"
 
     session="teaching"
-    tmux new-session -d -s $session -n "vim"
+    tmux new-session -d -s $session -n "emacs/vim"
     tmux new-window -t $session: -n "run"
     tmux new-window -t $session: -n "auxiliary"
     tmux new-window -t $session: -n "music"

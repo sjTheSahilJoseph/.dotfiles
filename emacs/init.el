@@ -60,15 +60,12 @@
 (setq-default electric-indent-inhibit t)
 
 ;; Package Manager Setup
-(setq package-archives
-      '(("gnu" . "https://elpa.gnu.org/packages/")
-        ("melpa" . "https://melpa.org/packages/")
-        ("gnu-devel" . "https://elpa.gnu.org/devel/")
-        ("melpa-stable" . "https://stable.melpa.org/packages/")))
-
-(unless package-archive-contents
-  (package-refresh-contents))
-
+(package-initialize)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+(setq package-selected-packages '(lsp-mode json-mode))
+(when (cl-find-if-not #'package-installed-p package-selected-packages)
+  (package-refresh-contents)
+  (mapc #'package-install package-selected-packages))
 
 
 
