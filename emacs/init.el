@@ -38,21 +38,7 @@
 
 ;; Set the external border width (space between frame and window manager's decorations)
 (setq default-frame-alist '((left-fringe . 5) (right-fringe . 5))) ; Adjust the value as needed
-(require 'package)
-(if (boundp 'package-archives-spec)
-    (setq package-archives package-archives-spec)
-  (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-                           ("melpa" . "https://melpa.org/packages/")
-                           ("gnu-devel" . "https://elpa.gnu.org/devel/")
-                           ;;  ("org" . "https://orgmode.org/elpa/")
-                           ;;  ("melpa-stable" . "https://stable.melpa.org/packages/")
-                           ))
-  )
-(unless (bound-and-true-p package--initialized)
-  (package-initialize))
 
-(unless package-archive-contents
-  (package-refresh-contents))
 (set-language-environment "UTF-8")
 ;; (setq locale-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
@@ -70,11 +56,11 @@
 
 (setq-default pathname-coding-system 'utf-8)
 (set-file-name-coding-system 'utf-8)
+
 (setq auto-save-default nil)
 ;;(setq make-backup-files nil)
 (setq backup-directory-alist (quote (("." . "~/.emacs.d/.backups"))))
 ;;(setq backup-directory-alist (expand-file-name ".backups" user-emacs-directory))
-
 
 (setq tab-width 4)
 (setq-default tab-width 4)
@@ -84,5 +70,4 @@
 (setq c-basic-offset 4)
 ;; (setq tab-always-indent)
 (setq-default indent-tabs-mode nil)
-
 (setq-default electric-indent-inhibit t)
