@@ -1,3 +1,6 @@
+;; Default directory
+(setq default-directory "C:/Users/sjthe/") 
+
 ;; Startup Screen
 (setq inhibit-startup-message t)
 
