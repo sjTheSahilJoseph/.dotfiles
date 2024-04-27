@@ -24,7 +24,7 @@
 (window-divider-mode)
 
 ;; Setting Fonts for Frame
-(set-frame-font "Liberation Mono-9.5:weight=bold:antialias=1")
+(set-frame-font "Inconsolata Medium-13")
 
 ;; Theme Stuff
 (custom-set-variables
@@ -63,25 +63,10 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (package-initialize)
-
 (defun package--save-selected-packages (&rest opt) nil)
-
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
-
 (eval-when-compile
   (require 'use-package))
-
-(use-package lsp-mode
-  :init
-  (setq lsp-keymap-prefix "C-c l")
-  :hook (
-         (python-mode . lsp)
-         (typescript-mode . lsp)
-         (javascript-mode . lsp)
-         (javascriptreact-mode . lsp)
-         (typescriptreact-mode . lsp)
-         )
-  :commands (lsp))
 

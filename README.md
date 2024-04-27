@@ -33,6 +33,10 @@ This is my style of working with computers.
 4. Common
     - ...
 
+# Fonts
+1. Emacs/Vim/NeoVim/Terminal
+    - Inconsolata
+
 ## Feel Free to use them If you want to.
 Have a great day.
 
