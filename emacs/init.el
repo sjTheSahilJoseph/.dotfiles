@@ -8,6 +8,7 @@
 (setq-default cursor-type 'bar)
 (set-cursor-color "#26d726")
 (global-hl-line-mode -1)
+(split-window-horizontally)
 
 ;; Window UI changes
 (setq window-divider-default-right-width 0)
