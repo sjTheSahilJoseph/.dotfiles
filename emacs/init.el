@@ -4,6 +4,22 @@
 ;; Startup Screen
 (setq inhibit-startup-message t)
 
+;; Scratch Buffer Message
+(setq initial-scratch-message "\
+;; SJ's Emacs
+
+")
+
+;; Start in maximized mode
+(defun maximize-frame ()
+  "Maximizes the active frame in Windows"
+  (interactive)
+  ;; Send a `WM_SYSCOMMAND' message to the active frame with the
+  ;; `SC_MAXIMIZE' parameter.
+  (when (eq system-type 'windows-nt)
+    (w32-send-sys-command 61488)))
+(add-hook 'window-setup-hook 'maximize-frame t)
+
 ;; Basic UI changes
 (tool-bar-mode -1)
 (menu-bar-mode -1)
@@ -69,9 +85,4 @@
 (eval-when-compile
   (require 'use-package))
 
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
