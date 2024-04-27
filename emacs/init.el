@@ -24,18 +24,10 @@
 (window-divider-mode)
 
 ;; Setting Fonts for Frame
-(set-frame-font "Inconsolata Medium-13")
+(set-frame-font "Inconsolata Bold-10")
 
 ;; Theme Stuff
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(loveisanillusion.emacs))
- '(custom-safe-themes
-   '("b88914d156d1c487ef27de29998fd30e43763a39cb67d99b0615f0c90f8feb27" "2bd78b9484f58c804bd490edbd268d177e3a36d03a0b6db133f6d3ac1a2282d5" default))
- '(ispell-dictionary nil))
+(load-theme 'loveisanillusion.emacs t)
 
 ;; Character Encoding Settings
 (set-language-environment "UTF-8")

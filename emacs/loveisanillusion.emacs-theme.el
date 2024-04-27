@@ -1,3 +1,4 @@
+
 (deftheme loveisanillusion.emacs
   "Created 2024-04-02.")
 (custom-theme-set-faces
@@ -38,3 +39,4 @@
  )
 
 (provide-theme 'loveisanillusion.emacs)
+
