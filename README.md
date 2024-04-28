@@ -31,11 +31,11 @@ This is my style of working with computers.
     - Emacs - Code Editor
     - Firefox - Browser
 4. Common
-    - ...
+    - First thing - turn off all animations
 
 # Fonts
 1. Emacs/Vim/NeoVim/Terminal
-    - Inconsolata
+    - Liberation Mono - Size = 11.5
 
 ## Feel Free to use them If you want to.
 Have a great day.

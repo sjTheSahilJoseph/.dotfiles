@@ -43,7 +43,7 @@
 (window-divider-mode)
 
 ;; Setting Fonts for Frame
-(set-frame-font "Inconsolata Bold-10")
+(set-frame-font "Liberation Mono-11.5")
 
 ;; Theme Stuff
 (load-theme 'loveisanillusion.emacs t)
