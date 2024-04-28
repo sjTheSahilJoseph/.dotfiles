@@ -74,6 +74,29 @@
 (setq-default indent-tabs-mode t)
 (setq-default electric-indent-inhibit t)
 
+;; Open dotfiles
+(defun open-dotfiles ()
+  "Open /.dotfiles in a new window."
+  (interactive)
+  (find-file-other-window "c:/users/sjthe/.dotfiles"))
+
+;; Sj's Keymaps
+(defun setup-my-keybindings ()
+  "Set up personal keybindings."
+  (interactive)
+  
+  (defvar my-prefix-map (make-sparse-keymap)
+    "My personal prefix keymap.")
+  
+  (define-key my-prefix-map (kbd "d") 'open-dotfiles)
+  (global-set-key (kbd "C-c m") my-prefix-map)
+  )
+
+(setup-my-keybindings)
+
+
+;; Package Stuff ... coming ...
+
 ;; Configure package.el to include MELPA.
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
@@ -85,4 +108,22 @@
 (eval-when-compile
   (require 'use-package))
 
+;; TypeScript setup
+(use-package typescript-mode
+  :ensure t
+  :config
+  (setq typescript-indent-level 4))
+(use-package typescript-mode)
 
+;; JavaScript setup
+(use-package js2-mode
+  :ensure t
+  :mode "\\.js\\'"
+  :config
+  (setq-default js2-basic-offset 2))
+
+;; React setup
+(use-package rjsx-mode
+  :ensure t
+  :mode ("\\.jsx\\'" "\\.tsx\\'")
+)
