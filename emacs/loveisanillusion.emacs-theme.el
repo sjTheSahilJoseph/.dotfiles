@@ -36,6 +36,8 @@
  '(vertical-border ((t (:foreground "#181717"))))
  ;; Search match
  '(match ((t (:background "#540408"))))
+ ;; Selection
+ (set-face-attribute 'region nil :background "#540408")
  )
 
 (provide-theme 'loveisanillusion.emacs)
