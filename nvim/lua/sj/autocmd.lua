@@ -10,3 +10,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.cmd([[
   autocmd VimEnter * ++nested vsplit
 ]])
+vim.cmd("cd C:/Users/sjthe")
