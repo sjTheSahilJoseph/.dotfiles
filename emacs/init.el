@@ -67,12 +67,10 @@
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
-;; Tab & Indent
-(setq tab-width 4)
+;; Tabs and indent
+(setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
-(setq-default indent-line-function 4)
-(setq-default indent-tabs-mode t)
-(setq-default electric-indent-inhibit t)
+(global-set-key (kbd "TAB") 'self-insert-command)
 
 ;; Open dotfiles
 (defun open-dotfiles ()
