@@ -42,8 +42,11 @@
 
 (window-divider-mode)
 
-;; Setting Fonts for Frame
-(set-frame-font "Liberation Mono-10:semibold")
+;; Setting Fonts
+(set-face-attribute 'default nil
+                    :family "Liberation Mono"
+                    :height 100
+                    :weight 'semibold)
 
 ;; Theme Stuff
 (load-theme 'loveisanillusion.emacs t)
@@ -106,22 +109,3 @@
 (eval-when-compile
   (require 'use-package))
 
-;; TypeScript setup
-(use-package typescript-mode
-  :ensure t
-  :config
-  (setq typescript-indent-level 4))
-(use-package typescript-mode)
-
-;; JavaScript setup
-(use-package js2-mode
-  :ensure t
-  :mode "\\.js\\'"
-  :config
-  (setq-default js2-basic-offset 2))
-
-;; React setup
-(use-package rjsx-mode
-  :ensure t
-  :mode ("\\.jsx\\'" "\\.tsx\\'")
-)
