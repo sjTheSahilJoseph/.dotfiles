@@ -42,4 +42,4 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 vim.g.netrw_banner = 0
-vim.cmd("set guifont=Liberation\\ Mono:h11:b")
+vim.cmd("set guifont=Liberation\\ Mono:h11")
