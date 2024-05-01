@@ -45,8 +45,8 @@
 ;; Setting Fonts
 (set-face-attribute 'default nil
                     :family "Liberation Mono"
-                    :height 100
-                    :weight 'semibold)
+                    :height 110
+                    :weight 'normal)
 
 ;; Theme Stuff
 (load-theme 'loveisanillusion.emacs t)
