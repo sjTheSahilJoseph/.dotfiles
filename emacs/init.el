@@ -45,7 +45,7 @@
 ;; Setting Fonts
 (set-face-attribute 'default nil
                     :family "Liberation Mono"
-                    :height 110
+                    :height 100
                     :weight 'normal)
 
 ;; Theme Stuff
@@ -70,10 +70,17 @@
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
-;; Tabs and indent
+;; Indent
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
-(global-set-key (kbd "TAB") 'self-insert-command)
+(setq-default c-basic-offset 4)
+(setq-default sh-basic-offset 4)
+(setq-default python-indent-offset 4)
+(defun insert-tab-char ()
+  "Indent."
+  (interactive)
+  (insert "    "))
+(global-set-key (kbd "TAB") 'insert-tab-char)
 
 ;; Open dotfiles
 (defun open-dotfiles ()
