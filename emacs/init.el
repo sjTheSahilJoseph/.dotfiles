@@ -26,10 +26,8 @@
 (scroll-bar-mode -1)
 (setq-default cursor-type 'bar)
 (set-cursor-color "#26d726")
-(blink-cursor-mode t)
-(setq blink-cursor-interval 0.5)
-(setq blink-cursor-blinks 0)
-(global-hl-line-mode -1)
+(blink-cursor-mode 0)
+(global-hl-line-mode 1)
 (split-window-horizontally)
 
 ;; Window UI changes
