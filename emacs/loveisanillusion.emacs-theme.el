@@ -43,7 +43,7 @@
  `(region ((t (:background "#444444"))))
 
  ;; Minibuffer prompt
- `(minibuffer-prompt ((t (:foreground ,color_6))))
+ `(minibuffer-prompt ((t (:foreground ,color_5))))
 
  ;; Line numbers
  `(line-number ((t (:foreground ,color_3))))
