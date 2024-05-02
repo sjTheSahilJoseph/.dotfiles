@@ -45,7 +45,7 @@
 ;; Setting Fonts
 (set-face-attribute 'default nil
                     :family "Liberation Mono"
-                    :height 100
+                    :height 110
                     :weight 'normal)
 
 ;; Theme Stuff
