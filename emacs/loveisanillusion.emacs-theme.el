@@ -46,7 +46,7 @@
 
 ;; Setting Fonts
 (set-face-attribute 'default nil
-                    :family "Inconsolata SemiExpanded"
+                    :family "Inconsolata"
                     :height 120
                     :weight 'semibold)
 
