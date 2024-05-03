@@ -27,7 +27,7 @@
 (setq-default cursor-type 'bar)
 (set-cursor-color "#26d726")
 (blink-cursor-mode 0)
-(global-hl-line-mode 1)
+(global-hl-line-mode 0)
 (split-window-horizontally)
 
 ;; Window UI changes
