@@ -46,9 +46,9 @@
 
 ;; Setting Fonts
 (set-face-attribute 'default nil
-                    :family "Liberation Mono"
-                    :height 110
-                    :weight 'normal)
+                    :family "Inconsolata SemiExpanded"
+                    :height 120
+                    :weight 'semibold)
 
 
 
