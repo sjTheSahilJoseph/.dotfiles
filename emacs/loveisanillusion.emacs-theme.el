@@ -46,7 +46,7 @@
 
 ;; Setting Fonts
 (set-face-attribute 'default nil
-                    :family "Azeret Mono"
+                    :family "Cousine"
                     :height 110
                     :weight 'regular)
 
