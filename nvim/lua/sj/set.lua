@@ -42,4 +42,4 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 vim.g.netrw_banner = 0
-vim.cmd("set guifont=Inconsolata:h12")
+vim.cmd("set guifont=Cousine:h12")
