@@ -46,9 +46,9 @@
 
 ;; Setting Fonts
 (set-face-attribute 'default nil
-                    :family "Inconsolata"
-                    :height 120
-                    :weight 'semibold)
+                    :family "Azeret Mono"
+                    :height 110
+                    :weight 'regular)
 
 
 
