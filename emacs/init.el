@@ -2,6 +2,7 @@
 (setq default-directory "C:/Users/sjthe/") 
 
 ;; Theme Stuff
+(add-to-list 'custom-theme-load-path "C:/Users/sjthe/.dotfiles/emacs/themes/")
 (load-theme 'loveisanillusion.emacs t)
 
 ;; Character Encoding Settings
