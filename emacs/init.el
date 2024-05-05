@@ -1,3 +1,49 @@
+
+;; Startup Screen
+(setq inhibit-startup-message t)
+
+;; Scratch Buffer Message
+(setq initial-scratch-message "\
+;; SJ's Emacs
+
+")
+
+;; Start in maximized mode
+(defun maximize-frame ()
+  "Maximizes the active frame in Windows"
+  (interactive)
+  (when (eq system-type 'windows-nt)
+    (w32-send-sys-command 61488)))
+(add-hook 'window-setup-hook 'maximize-frame t)
+
+;; Basic UI changes
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(setq-default cursor-type 'bar)
+(set-cursor-color "#26d726")
+(blink-cursor-mode 0)
+(global-hl-line-mode 0)
+(split-window-horizontally)
+
+;; Window UI changes
+(setq window-divider-default-right-width 0)
+(setq window-divider-default-left-width 0)
+(setq window-divider-default-bottom-width 0)
+
+;; Frame UI changes
+(setq default-frame-alist
+      '((internal-border-width . 2)
+        (left-fringe . 5)
+        (right-fringe . 5)))
+(window-divider-mode)
+
+;; Setting Fonts
+(set-face-attribute 'default nil
+                    :family "Cousine"
+                    :height 110
+                    :weight 'regular)
+
 ;; Default directory
 (setq default-directory "C:/Users/sjthe/") 
 
