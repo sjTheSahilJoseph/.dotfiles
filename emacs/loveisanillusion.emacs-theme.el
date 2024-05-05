@@ -79,8 +79,8 @@
  `(font-lock-preprocessor-face ((t (:foreground ,color_9))))
 
  ;; Mode-line
- `(mode-line ((t (:foreground ,color_3 :background ,color_10))))
- `(mode-line-inactive ((t (:foreground ,color_3 :background ,color_10))))
+ `(mode-line ((t (:foreground ,color_2 :background ,color_10))))
+ `(mode-line-inactive ((t (:foreground ,color_2 :background ,color_10))))
 
  ;; Parenthesis matching
  `(show-paren-match ((t (:background ,color_2))))
