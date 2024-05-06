@@ -35,7 +35,14 @@ This is my style of working with computers.
 
 # Fonts
 1. Emacs/Vim/NeoVim/Terminal
-    - Liberation Mono - Size = 11.5
+    - Cousine - Size = 12pt
+
+# Personal Points
+    - In code writing, I don't like heavy syntax highliting.
+    - Don't use Code auto completion, etc.. (Use documentation).
+    - I like beam cursor, no need to enable blinking, just turn off blinking.
+    - Turn of all animations, and sounds, etc...
+    
 
 ## Feel Free to use them If you want to.
 Have a great day.
