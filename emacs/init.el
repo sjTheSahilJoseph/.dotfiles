@@ -125,3 +125,4 @@
 (use-package rainbow-mode
   :ensure t
   :hook (prog-mode . rainbow-mode))
+
