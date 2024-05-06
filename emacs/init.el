@@ -26,6 +26,7 @@
 (global-hl-line-mode 0)
 (split-window-horizontally)
 (show-paren-mode t)
+(column-number-mode t)
 
 ;; Window UI changes
 (setq window-divider-default-right-width 0)
@@ -83,6 +84,9 @@
   (insert "    "))
 (global-set-key (kbd "TAB") 'insert-tab-char)
 
+;; Sound
+(set-message-beep 'silent)
+
 ;; Open dotfiles
 (defun open-dotfiles ()
   "Open /.dotfiles in a new window."
@@ -117,5 +121,7 @@
   (setq use-package-always-ensure t
         use-package-expand-minimally t))
 
-(use-package typescript-mode
-  :mode ("\\.tsx?\\'" . typescript-mode))
+;; Rainbow Mode
+(use-package rainbow-mode
+  :ensure t
+  :hook (prog-mode . rainbow-mode))
