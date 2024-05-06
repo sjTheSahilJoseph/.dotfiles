@@ -25,6 +25,7 @@
 (blink-cursor-mode 0)
 (global-hl-line-mode 0)
 (split-window-horizontally)
+(show-paren-mode t)
 
 ;; Window UI changes
 (setq window-divider-default-right-width 0)
