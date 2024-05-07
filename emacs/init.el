@@ -126,3 +126,6 @@
   :ensure t
   :hook (prog-mode . rainbow-mode))
 
+(require 'org)
+
+
