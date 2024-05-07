@@ -27,6 +27,7 @@
 (split-window-horizontally)
 (show-paren-mode t)
 (column-number-mode t)
+(setq-default truncate-lines t)
 
 ;; Window UI changes
 (setq window-divider-default-right-width 0)
