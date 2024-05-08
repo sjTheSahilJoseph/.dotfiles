@@ -121,7 +121,9 @@
   (package-install 'use-package))
 (eval-and-compile
   (setq use-package-always-ensure t
-        use-package-expand-minimally t))
+        use-package-expand-minimally t
+        warning-minimum-level :error)
+  )
 
 (use-package rainbow-mode
   :ensure t
@@ -131,6 +133,10 @@
 
 
 (use-package json-mode
+  :ensure t
+  :defer t)
+
+(use-package typescript-mode
   :ensure t
   :defer t)
 
