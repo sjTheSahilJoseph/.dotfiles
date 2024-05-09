@@ -21,10 +21,10 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (setq-default cursor-type 'bar)
+(set-cursor-color "#26d726")
 (blink-cursor-mode 0)
 (global-hl-line-mode 0)
 (split-window-horizontally)
-(show-paren-mode nil)
 (column-number-mode t)
 (setq-default truncate-lines t)
 
