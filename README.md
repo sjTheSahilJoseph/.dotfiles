@@ -35,7 +35,7 @@ This is my style of working with computers.
 
 # Fonts
 1. Emacs/Vim/NeoVim/Terminal
-    - Cousine - Size = 12pt
+    - Consolas - Size = 11pt
 
 # Personal Points
     - In code writing, I don't like heavy syntax highliting.

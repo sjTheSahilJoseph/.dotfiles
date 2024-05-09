@@ -43,7 +43,7 @@
 
 ;; Setting Fonts
 (set-face-attribute 'default nil
-                    :family "Cousine"
+                    :family "Consolas"
                     :height 110
                     :weight 'regular)
 
@@ -129,8 +129,6 @@
   :ensure t
   :hook (prog-mode . rainbow-mode))
 
-(require 'org)
-
 
 (use-package json-mode
   :ensure t
@@ -139,6 +137,41 @@
 (use-package typescript-mode
   :ensure t
   :defer t)
+
+;; ORG MODE
+(require 'org)
+(setq org-log-done 'time)
+(setq org-return-follows-link  t)
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+(add-hook 'org-mode-hook 'org-indent-mode)
+(setq org-hide-emphasis-markers t)
+(add-hook 'org-mode-hook 'visual-line-mode)
+
+(let* ((variable-tuple
+        (cond ((x-list-fonts "Cousine")         '(:font "Cousine"))
+              ((x-list-fonts "Cousine") '(:font "Cousine"))
+              ((x-list-fonts "Cousine")   '(:font "Cousine"))
+              ((x-list-fonts "Cousine")         '(:font "Cousine"))
+              ((x-family-fonts "Cousine")    '(:family "Cousine"))
+              (nil (warn "Cannot find font."))))
+       (base-font-color     (face-foreground 'default nil 'default))
+       (headline           `(:inherit default :weight bold :foreground ,base-font-color)))
+
+  (custom-theme-set-faces
+   'user
+   `(org-level-8 ((t (,@headline ,@variable-tuple))))
+   `(org-level-7 ((t (,@headline ,@variable-tuple))))
+   `(org-level-6 ((t (,@headline ,@variable-tuple))))
+   `(org-level-5 ((t (,@headline ,@variable-tuple))))
+   `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.1))))
+   `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.2))))
+   `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.3))))
+   `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.5))))
+   `(org-document-title ((t (,@headline ,@variable-tuple :height 1.6 :underline nil))))))
+
+
+
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
