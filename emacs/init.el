@@ -78,9 +78,11 @@
 (setq indent-line-function 'insert-tab)
 (setq electric-indent-mode nil)
 (defun insert-tab ()
-  "Insert a tab at point."
+  "Insert a tab at point, unless in minibuffer."
   (interactive)
-  (insert "\t"))
+  (if (minibufferp)
+      (call-interactively 'minibuffer-complete)
+    (insert "\t")))
 (global-set-key (kbd "<tab>") 'insert-tab)
 
 ;; Sound
