@@ -73,16 +73,15 @@
 (setq make-backup-files nil)
 
 ;; Indent
-(setq-default indent-tabs-mode nil)
+(setq-default indent-tabs-mode t)
 (setq-default tab-width 4)
-(setq-default c-basic-offset 4)
-(setq-default sh-basic-offset 4)
-(setq-default python-indent-offset 4)
-(defun insert-tab-char ()
-  "Indent."
+(setq indent-line-function 'insert-tab)
+(setq electric-indent-mode nil)
+(defun insert-tab ()
+  "Insert a tab at point."
   (interactive)
-  (insert "    "))
-(global-set-key (kbd "TAB") 'insert-tab-char)
+  (insert "\t"))
+(global-set-key (kbd "<tab>") 'insert-tab)
 
 ;; Sound
 (set-message-beep 'silent)
