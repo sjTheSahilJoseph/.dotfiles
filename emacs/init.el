@@ -73,7 +73,11 @@
 (setq make-backup-files nil)
 
 ;; Compile
-
+(defun run-build-script ()
+  "Run the build.bat"
+  (interactive)
+  (compile "build.bat"))
+(global-set-key (kbd "<f5>") 'run-build-script)
 
 ;; Indent
 (setq electric-indent-mode t)
@@ -213,5 +217,5 @@
  '(org-level-4 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas" :height 1.1))))
  '(org-level-5 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas"))))
  '(org-level-6 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas"))))
- '(org-level-7 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas"))))
+0 '(org-level-7 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas"))))
  '(org-level-8 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas")))))
