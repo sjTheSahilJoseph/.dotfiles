@@ -147,11 +147,11 @@
 (add-hook 'org-mode-hook 'visual-line-mode)
 
 (let* ((variable-tuple
-        (cond ((x-list-fonts "Cousine")         '(:font "Cousine"))
-              ((x-list-fonts "Cousine") '(:font "Cousine"))
-              ((x-list-fonts "Cousine")   '(:font "Cousine"))
-              ((x-list-fonts "Cousine")         '(:font "Cousine"))
-              ((x-family-fonts "Cousine")    '(:family "Cousine"))
+        (cond ((x-list-fonts "Consolas")         '(:font "Consolas"))
+              ((x-list-fonts "Consolas") '(:font "Consolas"))
+              ((x-list-fonts "Consolas")   '(:font "Consolas"))
+              ((x-list-fonts "Consolas")         '(:font "Consolas"))
+              ((x-family-fonts "Consolas")    '(:family "Consolas"))
               (nil (warn "Cannot find font."))))
        (base-font-color     (face-foreground 'default nil 'default))
        (headline           `(:inherit default :weight bold :foreground ,base-font-color)))
