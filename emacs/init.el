@@ -107,6 +107,22 @@
 ;; Sound
 (set-message-beep 'silent)
 
+;; Delete Inside
+(defun seek-backward-to-char (chr)
+  "Seek backwards to a character"
+  (interactive "cSeek back to char: ")
+  (while (not (= (char-after) chr))
+    (forward-char -1)))
+(defun delete-between-pair (char)
+  "Delete in between the given pair"
+  (interactive "cDelete between char: ")
+  (seek-backward-to-char char)
+  (forward-char 1)
+  (zap-to-char 1 char)
+  (insert char)
+  (forward-char -1))
+
+
 ;; Open dotfiles
 (defun open-dotfiles ()
   "Open /.dotfiles in a new window."
@@ -122,10 +138,13 @@
     "My personal prefix keymap.")
   
   (define-key my-prefix-map (kbd "d") 'open-dotfiles)
+  (define-key my-prefix-map (kbd "i") 'delete-between-pair)
   (global-set-key (kbd "C-c m") my-prefix-map)
   )
 
 (setup-my-keybindings)
+
+
 
 
 ;; Package Stuff ... coming ...
@@ -219,3 +238,5 @@
  '(org-level-6 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas"))))
 0 '(org-level-7 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas"))))
  '(org-level-8 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas")))))
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
