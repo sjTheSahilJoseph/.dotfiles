@@ -161,6 +161,13 @@
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (setq web-mode-enable-auto-pairing nil)
 
+(use-package emmet-mode
+  :ensure t
+  :hook ((sgml-mode html-mode css-mode web-mode) . emmet-mode)
+  :config
+  (define-key emmet-mode-keymap (kbd "C-j") 'emmet-expand-line))
+
+
 ;; ORG MODE
 (require 'org)
 (setq org-log-done 'time)
