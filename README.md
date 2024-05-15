@@ -22,19 +22,17 @@ This is my style of working with computers.
     - Kitty - Terminal
     - Tmux - Terminal Multiplexer
     - Emacs - Code Editor
-    - Vim - Code Editor
-    - NeoVim - Code Editor
     - Firefox - Browser
 3. On Windows
     - Windows 11
     - Command Prompt - Terminal
     - Emacs - Code Editor
-    - Firefox - Browser
+    - Google Chrome - Browser
 4. Common
     - First thing - turn off all animations
 
 # Fonts
-1. Emacs/Vim/NeoVim/Terminal
+1. Emacs
     - Consolas - Size = 11pt
 
 # Personal Points
