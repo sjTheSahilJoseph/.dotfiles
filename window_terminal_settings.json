@@ -3,37 +3,15 @@
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": 
     [
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+c"
-        },
-        {
-            "command": "paste",
-            "keys": "ctrl+v"
-        },
-        {
-            "command": "find",
-            "keys": "ctrl+shift+f"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "keys": "alt+shift+d"
-        }
-    ],
-    "alwaysShowNotificationIcon": false,
+            ],
+    "alwaysShowNotificationIcon": true,
+    "centerOnLaunch": true,
+    "confirmCloseAllTabs": false,
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "defaultProfile": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
     "disableAnimations": true,
+    "experimental.detectURLs": false,
     "initialCols": 100,
     "initialRows": 40,
     "launchMode": "default",
@@ -87,31 +65,34 @@
     },
     "schemes": 
     [
-        {
+        
+               {
             "background": "#0E0E0E",
             "black": "#0E0E0E",
             "blue": "#00ACFF",
             "brightBlack": "#00ACFF",
             "brightBlue": "#00ACFF",
             "brightCyan": "#1AFC0E",
-            "brightGreen": "#00FF00",
-            "brightPurple": "#B4009E",
+            "brightGreen": "#26D726",
+            "brightPurple": "#26D726",
             "brightRed": "#FF0000",
             "brightWhite": "#C6C6C6",
             "brightYellow": "#FF9900",
             "cursorColor": "#26D726",
             "cyan": "#1AFC0E",
             "foreground": "#C6C6C6",
-            "green": "#1AFC0E",
+            "green": "#26D726",
             "name": "Love Is An Illusion",
-            "purple": "#881798",
+            "purple": "#26D726",
             "red": "#FF0000",
             "selectionBackground": "#AA0000",
             "white": "#C6C6C6",
             "yellow": "#FF9900"
         },
-    ],
-    "startOnUserLogin": false,
-    "theme": "system",
-    "themes": []
+            ],
+    "startOnUserLogin": true,
+    "tabSwitcherMode": "disabled",
+    "theme": "dark",
+    "themes": [],
+    "useAcrylicInTabRow": true
 }
