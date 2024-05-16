@@ -43,7 +43,7 @@
 ;; Setting Fonts
 (set-face-attribute 'default nil
                     :family "Consolas"
-                    :height 125
+                    :height 120
                     :weight 'regular)
 
 ;; Default directory
