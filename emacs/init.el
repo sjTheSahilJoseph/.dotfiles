@@ -28,6 +28,9 @@
 (column-number-mode t)
 (setq-default truncate-lines t)
 
+;; Scroll
+(setq scroll-conservatively 101)
+
 ;; Window UI changes
 (setq window-divider-default-right-width 0)
 (setq window-divider-default-left-width 0)
