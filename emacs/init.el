@@ -22,14 +22,11 @@
 (scroll-bar-mode -1)
 (setq-default cursor-type 'bar)
 (set-cursor-color "#26d726")
-(blink-cursor-mode 0)
+(blink-cursor-mode t)
 (global-hl-line-mode 0)
 (split-window-horizontally)
 (column-number-mode t)
 (setq-default truncate-lines t)
-
-;; Scroll
-(setq scroll-conservatively 101)
 
 ;; Window UI changes
 (setq window-divider-default-right-width 0)
