@@ -12,7 +12,7 @@
     "experimental.detectURLs": false,
     "initialCols": 100,
     "initialRows": 40,
-    "launchMode": "maximizedFocus",
+    "launchMode": "maximized",
     "newTabMenu": 
     [
         {
