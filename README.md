@@ -30,8 +30,9 @@ This is my style of working with computers.
 		- For Web Development keep open Visual Studio Code
 		- For Python Development keep open PyCharm
 		But use Emacs for writing code
-    - I like beam cursor, no need to enable blinking, just turn off blinking.
-    - Turn of all animations, and sounds, etc...
+    - I like fat box cursor, 500ms Blinking
+	(complete one blink in 1 sec, 500ms off 500ms on).
+    - Turn off almost all animations in Operating System.
     
 
 ## Feel Free to use them If you want to.

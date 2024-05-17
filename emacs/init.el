@@ -20,7 +20,7 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
-(setq-default cursor-type 'bar)
+(setq-default cursor-type 'box)
 (set-cursor-color "#26d726")
 (blink-cursor-mode t)
 (global-hl-line-mode 0)
