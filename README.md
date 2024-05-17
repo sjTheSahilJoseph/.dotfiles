@@ -8,36 +8,28 @@ This is my style of working with computers.
 ## Philosophy
 1. Use computer 100% powerfully, productively, and fastly.
     - Do what is needed, don't waste time in doing unnecessary stuff.
-2. ...
+		- I mean create your own tools and utilities.
+2. Customize almost all things.
+	- But make sure to not change the whole meaning of that thing.
+		- For example, Emacs, don't just create unnecessary keybindings.
+		- But create own keymaps to work faster.
 
 ## Tools I use
-1. I use Linux & Windows
-    - I've configured 2 SSDs on my computer, one where I put my Windows (Secondary OS)
-        - I use Windows for gaming and game development / Graphic Design / Video Editing, etc...
-    - Second one for Linux (My primary OS)
-        - I use Linux for Programming stuff & Using overall computer
-2. On Linux
-    - Fedora - All time favorite
-    - I use i3wm as tiling window manager
-    - Kitty - Terminal
-    - Tmux - Terminal Multiplexer
-    - Emacs - Code Editor
-    - Firefox - Browser
-3. On Windows
-    - Windows 11
-    - Command Prompt - Terminal
-    - Emacs - Code Editor
-    - Google Chrome - Browser
-4. Common
-    - First thing - turn off all animations
-
+1. I use Microsoft Windows 11
+	- Windows 11
+	
 # Fonts
 1. Emacs
-    - Consolas - Size = 11pt
+    - Consolas - Size = 12pt
 
 # Personal Points
     - In code writing, I don't like heavy syntax highliting.
     - Don't use Code auto completion, etc.. (Use documentation).
+		- Text editor should be Emacs
+		- For C/C++ Development keep open Visual Studio (IDE)
+		- For Web Development keep open Visual Studio Code
+		- For Python Development keep open PyCharm
+		But use Emacs for writing code
     - I like beam cursor, no need to enable blinking, just turn off blinking.
     - Turn of all animations, and sounds, etc...
     
