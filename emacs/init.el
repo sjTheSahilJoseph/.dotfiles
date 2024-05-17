@@ -23,6 +23,7 @@
 (setq-default cursor-type 'box)
 (set-cursor-color "#26d726")
 (blink-cursor-mode t)
+(setq blink-cursor-blinks 0)
 (global-hl-line-mode 0)
 (split-window-horizontally)
 (column-number-mode t)
