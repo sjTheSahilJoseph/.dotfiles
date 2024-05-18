@@ -114,6 +114,12 @@
   (interactive)
   (find-file-other-window "c:/users/sjthe/.dotfiles"))
 
+;; Open Projects
+(defun open-projects ()
+  "Open /Projects."
+  (interactive)
+  (find-file-other-window "c:/users/sjthe/Projects"))
+
 ;; Sj's Keymaps
 (defun setup-my-keybindings ()
   "Set up personal keybindings."
@@ -121,6 +127,7 @@
   (defvar my-prefix-map (make-sparse-keymap)
     "My personal prefix keymap.")
   (define-key my-prefix-map (kbd "d") 'open-dotfiles)
+    (define-key my-prefix-map (kbd "p") 'open-projects)
   (global-set-key (kbd "C-c m") my-prefix-map)
   )
 (setup-my-keybindings)
@@ -198,7 +205,7 @@
    `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.2))))
    `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.3))))
    `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.5))))
-   `(org-document-title ((t (,@headline ,@variable-tuple :height 1.6 :underline nil))))))
+   `(org-document-title ((t (,@headline ,@variable-tuple :height 1.6 :underline t))))))
 
 
 
@@ -215,7 +222,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-document-title ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas" :height 1.6 :underline nil))))
+ '(org-document-title ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas" :height 1.6 :underline t))))
  '(org-level-1 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas" :height 1.5))))
  '(org-level-2 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas" :height 1.3))))
  '(org-level-3 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas" :height 1.2))))
