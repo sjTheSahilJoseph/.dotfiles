@@ -108,9 +108,18 @@
 ;; Sound
 (set-message-beep 'silent)
 
+;; Some navigation stuff
+(defun open-line-below ()
+  "New Line below"
+  (interactive)
+  (end-of-line)
+  (newline-and-indent))
+
+(global-set-key (kbd "C-<return>") 'open-line-below)
+
 ;; Open dotfiles
 (defun open-dotfiles ()
-  "Open /.dotfiles in a new window."
+  "Open /.dotfiles."
   (interactive)
   (find-file-other-window "c:/users/sjthe/.dotfiles"))
 
@@ -120,13 +129,21 @@
   (interactive)
   (find-file-other-window "c:/users/sjthe/Projects"))
 
-;; Sj's Keymaps
+;; Open Init file
+(defun open-init-file ()
+  "Open init file."
+  (interactive)
+  (find-file-other-window "c:/users/sjthe/.dotfiles/emacs/init.el"))
+
+
+;; Quick Open Directories Keymaps
 (defun setup-my-keybindings ()
-  "Set up personal keybindings."
+  "Open Directories."
   (interactive)
   (defvar my-prefix-map (make-sparse-keymap)
     "My personal prefix keymap.")
   (define-key my-prefix-map (kbd "d") 'open-dotfiles)
+  (define-key my-prefix-map (kbd "e") 'open-init-file)
     (define-key my-prefix-map (kbd "p") 'open-projects)
   (global-set-key (kbd "C-c m") my-prefix-map)
   )
