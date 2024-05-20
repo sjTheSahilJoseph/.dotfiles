@@ -8,6 +8,7 @@
 
 ")
 
+
 ;; Start in maximized mode
 (defun maximize-frame ()
   "Maximizes the active frame in Windows"
@@ -28,6 +29,7 @@
 (split-window-horizontally)
 (column-number-mode t)
 (setq-default truncate-lines t)
+(transient-mark-mode 0)
 
 ;; Window UI changes
 (setq window-divider-default-right-width 0)
