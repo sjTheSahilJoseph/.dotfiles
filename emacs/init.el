@@ -8,7 +8,6 @@
 
 ")
 
-
 ;; Start in maximized mode
 (defun maximize-frame ()
   "Maximizes the active frame in Windows"
@@ -159,7 +158,6 @@
   :hook ((sgml-mode html-mode css-mode web-mode) . emmet-mode)
   :config
   (define-key emmet-mode-keymap (kbd "C-j") 'emmet-expand-line))
-
 
 ;; Indents
 (use-package aggressive-indent
