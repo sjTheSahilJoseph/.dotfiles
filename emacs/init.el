@@ -80,31 +80,6 @@
   (compile "build.bat"))
 (global-set-key (kbd "<f5>") 'run-build-script)
 
-;; Indent
-(setq electric-indent-mode t)
-(setq-default tab-width 4)
-(defun insert-tab ()
-  "Insert a tab at point, unless in minibuffer."
-  (interactive)
-  (if (minibufferp)
-      (call-interactively 'minibuffer-complete)
-    (insert "\t")))
-(defun delete-tab-or-char-backward ()
-  "Delete the preceding tab or one character if no tabs are present."
-  (interactive)
-  (if (minibufferp)
-      (call-interactively 'delete-backward-char)
-    (if (not (bolp))
-        (if (char-equal (char-before) ?\t)
-            (delete-char -1)
-          (backward-delete-char 1))
-      (backward-delete-char 1))))
-(global-set-key (kbd "<tab>") 'insert-tab)
-(global-set-key (kbd "<backspace>") 'delete-tab-or-char-backward)
-(setq-default c-basic-offset tab-width)
-(setq-default js-indent-level tab-width)
-(setq-default css-indent-offset tab-width)
-
 ;; Sound
 (set-message-beep 'silent)
 
@@ -183,12 +158,38 @@
   :config
   (define-key emmet-mode-keymap (kbd "C-j") 'emmet-expand-line))
 
+
+;; Indents
 (use-package aggressive-indent
   :ensure t
   :config
   (global-aggressive-indent-mode 1)
   (dolist (mode '(python-mode))
     (add-to-list 'aggressive-indent-excluded-modes mode)))
+
+(setq electric-indent-mode nil)
+(setq-default tab-width 4)
+(defun insert-tab ()
+  "Insert a tab at point, unless in minibuffer."
+  (interactive)
+  (if (minibufferp)
+      (call-interactively 'minibuffer-complete)
+    (insert "\t")))
+(defun delete-tab-or-char-backward ()
+  "Delete the preceding tab or one character if no tabs are present."
+  (interactive)
+  (if (minibufferp)
+      (call-interactively 'delete-backward-char)
+    (if (not (bolp))
+        (if (char-equal (char-before) ?\t)
+            (delete-char -1)
+          (backward-delete-char 1))
+      (backward-delete-char 1))))
+(global-set-key (kbd "<tab>") 'insert-tab)
+(global-set-key (kbd "<backspace>") 'delete-tab-or-char-backward)
+(setq-default c-basic-offset tab-width)
+(setq-default js-indent-level tab-width)
+(setq-default css-indent-offset tab-width)
 
 
 ;; ORG MODE
