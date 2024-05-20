@@ -108,16 +108,6 @@
 ;; Sound
 (set-message-beep 'silent)
 
-;; Some navigation stuff
-(defun open-line-below ()
-  "New Line below"
-  (interactive)
-  (end-of-line)
-  (newline-and-indent))
-
-(global-set-key (kbd "C-<return>") 'open-line-below)
-
-
 ;; Open dotfiles
 (defun open-dotfiles ()
   "Open /.dotfiles."
@@ -193,9 +183,12 @@
   :config
   (define-key emmet-mode-keymap (kbd "C-j") 'emmet-expand-line))
 
-
-;; Package Keymaps
-;;;;;;
+(use-package aggressive-indent
+  :ensure t
+  :config
+  (global-aggressive-indent-mode 1)
+  (dolist (mode '(python-mode))
+    (add-to-list 'aggressive-indent-excluded-modes mode)))
 
 
 ;; ORG MODE
