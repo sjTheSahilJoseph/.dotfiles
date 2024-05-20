@@ -159,21 +159,13 @@
   :config
   (define-key emmet-mode-keymap (kbd "C-j") 'emmet-expand-line))
 
-;; Indents
-(use-package aggressive-indent
-  :ensure t
-  :config
-  (global-aggressive-indent-mode 1)
-  (add-hook 'python-mode-hook (lambda () (aggressive-indent-mode -1)))
-  )
-(setq electric-indent-mode nil)
+;; Indent
+(setq electric-indent-mode t)
 (setq-default tab-width 4)
 (setq-default c-basic-offset tab-width)
 (setq-default js-indent-level tab-width)
 (setq-default css-indent-offset tab-width)
 (setq-default python-indent-offset tab-width)
-(add-hook 'python-mode-hook (lambda () (electric-indent-mode 1)))
-
 
 ;; ORG MODE
 (require 'org)
