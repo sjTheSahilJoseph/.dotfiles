@@ -164,32 +164,15 @@
   :ensure t
   :config
   (global-aggressive-indent-mode 1)
-  (dolist (mode '(python-mode))
-    (add-to-list 'aggressive-indent-excluded-modes mode)))
-
+  (add-hook 'python-mode-hook (lambda () (aggressive-indent-mode -1)))
+  )
 (setq electric-indent-mode nil)
 (setq-default tab-width 4)
-(defun insert-tab ()
-  "Insert a tab at point, unless in minibuffer."
-  (interactive)
-  (if (minibufferp)
-      (call-interactively 'minibuffer-complete)
-    (insert "\t")))
-(defun delete-tab-or-char-backward ()
-  "Delete the preceding tab or one character if no tabs are present."
-  (interactive)
-  (if (minibufferp)
-      (call-interactively 'delete-backward-char)
-    (if (not (bolp))
-        (if (char-equal (char-before) ?\t)
-            (delete-char -1)
-          (backward-delete-char 1))
-      (backward-delete-char 1))))
-(global-set-key (kbd "<tab>") 'insert-tab)
-(global-set-key (kbd "<backspace>") 'delete-tab-or-char-backward)
 (setq-default c-basic-offset tab-width)
 (setq-default js-indent-level tab-width)
 (setq-default css-indent-offset tab-width)
+(setq-default python-indent-offset tab-width)
+(add-hook 'python-mode-hook (lambda () (electric-indent-mode 1)))
 
 
 ;; ORG MODE
