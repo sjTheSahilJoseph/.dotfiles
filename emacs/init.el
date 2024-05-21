@@ -108,6 +108,11 @@
   (interactive)
   (find-file-other-window "c:/users/sjthe/.dotfiles/emacs/init.el"))
 
+;; Open Theme File
+(defun open-theme-file ()
+  "Open theme file."
+  (interactive)
+  (find-file-other-window "C:/Users/sjthe/.dotfiles/emacs/themes/loveisanillusion.emacs-theme.el"))
 
 ;; Quick Open Directories Keymaps
 (defun setup-my-keybindings ()
@@ -117,7 +122,8 @@
     "My personal prefix keymap.")
   (define-key my-prefix-map (kbd "d") 'open-dotfiles)
   (define-key my-prefix-map (kbd "e") 'open-init-file)
-    (define-key my-prefix-map (kbd "p") 'open-projects)
+  (define-key my-prefix-map (kbd "p") 'open-projects)
+  (define-key my-prefix-map (kbd "t") 'open-theme-file)
   (global-set-key (kbd "C-c m") my-prefix-map)
   )
 (setup-my-keybindings)
