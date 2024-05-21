@@ -24,6 +24,7 @@
 (set-cursor-color "#26d726")
 (blink-cursor-mode t)
 (setq blink-cursor-blinks 0)
+(setq blink-cursor-interval 0.5)
 (global-hl-line-mode 0)
 (split-window-horizontally)
 (column-number-mode t)
