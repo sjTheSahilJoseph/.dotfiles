@@ -1,4 +1,4 @@
-
+ 
 ;; Startup Screen
 (setq inhibit-startup-message t)
 
@@ -28,7 +28,7 @@
 (split-window-horizontally)
 (column-number-mode t)
 (setq-default truncate-lines t)
-(transient-mark-mode 0)
+(transient-mark-mode -1)
 
 ;; Window UI changes
 (setq window-divider-default-right-width 0)
@@ -102,6 +102,12 @@
   (interactive)
   (find-file-other-window "c:/users/sjthe/.dotfiles/emacs/init.el"))
 
+;; Open Init file
+(defun open-init-file ()
+  "Open init file."
+  (interactive)
+  (find-file-other-window "c:/users/sjthe/.dotfiles/emacs/init.el"))
+
 
 ;; Quick Open Directories Keymaps
 (defun setup-my-keybindings ()
@@ -161,6 +167,7 @@
 
 ;; Indent
 (setq electric-indent-mode t)
+(setq-default indent-tabs-mode t)
 (setq-default tab-width 4)
 (setq-default c-basic-offset tab-width)
 (setq-default js-indent-level tab-width)
