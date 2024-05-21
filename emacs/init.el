@@ -181,6 +181,9 @@
 (setq-default css-indent-offset tab-width)
 (setq-default python-indent-offset tab-width)
 
+;; Some keybinds
+(global-set-key (kbd "C-c r") 'replace-string)
+
 ;; ORG MODE
 (require 'org)
 (setq org-log-done 'time)
