@@ -28,7 +28,7 @@
 (split-window-horizontally)
 (column-number-mode t)
 (setq-default truncate-lines t)
-(transient-mark-mode -1)
+(transient-mark-mode t)
 
 ;; Window UI changes
 (setq window-divider-default-right-width 0)
