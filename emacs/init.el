@@ -90,21 +90,30 @@
 
 ;; Buffer Navigation
 (defun next-file-buffer ()
-  "Switch to the next file buffer."
+  "Switch to the next file buffer. Do nothing if the current buffer is not a file buffer."
   (interactive)
-  (next-buffer)
-  (while (not (and (buffer-file-name) (file-readable-p (buffer-file-name))))
-    (next-buffer)))
+  (if (and (buffer-file-name) (file-readable-p (buffer-file-name)))
+      (let ((start-buffer (current-buffer)))
+        (next-buffer)
+        (while (and (not (eq (current-buffer) start-buffer))
+                    (not (and (buffer-file-name) (file-readable-p (buffer-file-name)))))
+          (next-buffer)))
+    (message "Current buffer is not a file buffer.")))
 
 (defun previous-file-buffer ()
-  "Switch to the previous file buffer."
+  "Switch to the previous file buffer. Do nothing if the current buffer is not a file buffer."
   (interactive)
-  (previous-buffer)
-  (while (not (and (buffer-file-name) (file-readable-p (buffer-file-name))))
-    (previous-buffer)))
+  (if (and (buffer-file-name) (file-readable-p (buffer-file-name)))
+      (let ((start-buffer (current-buffer)))
+        (previous-buffer)
+        (while (and (not (eq (current-buffer) start-buffer))
+                    (not (and (buffer-file-name) (file-readable-p (buffer-file-name)))))
+          (previous-buffer)))
+    (message "Current buffer is not a file buffer.")))
 
 (global-set-key (kbd "<left>") 'previous-file-buffer)
 (global-set-key (kbd "<right>") 'next-file-buffer)
+
 
 ;; Open dotfiles
 (defun open-dotfiles ()
