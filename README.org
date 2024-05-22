@@ -1,28 +1,26 @@
-# SJ's Dotfiles
-These are my .dotfiles
+* SJ's Dotfiles
+***** Everyone has different way of using computers, It's my way.
+***** Feel free to use if you want.
 
-# Computer Style
-Everyone has different style of using computer, or working on computer.
-This is my style of working with computers.
-
-## Philosophy
+* Computer Style
+** Philosophy
 1. Use computer 100% powerfully, productively, and fastly.
     - Do what is needed, don't waste time in doing unnecessary stuff.
-		- I mean create your own tools and utilities.
+		- Create your own tools and utilities.
 2. Customize almost all things.
 	- But make sure to not change the whole meaning of that thing.
 		- For example, Emacs, don't just create unnecessary keybindings.
 		- But create own keymaps to work faster.
 
-## Tools I use
-1. I use Microsoft Windows 11
-	- Windows 11
+** Tools I use
+**** Operating System
+Windows 11 - x64
 	
-# Fonts
+** Fonts
 1. Emacs
     - Consolas - Size = 13pt
 
-# Personal Points
+** Personal Points:
     - In code writing, I don't like heavy syntax highliting.
     - Don't use Code auto completion, etc.. (Use documentation).
 		- Text editor should be Emacs
@@ -33,10 +31,4 @@ This is my style of working with computers.
     - I like fat box cursor, 500ms Blinking
 	(complete one blink in 1 sec, 500ms off 500ms on).
     - Turn off almost all animations in Operating System.
-    
-
-## Feel Free to use them If you want to.
-Have a great day.
-
-
 
