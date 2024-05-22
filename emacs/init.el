@@ -88,6 +88,24 @@
 ;; Sound
 (set-message-beep 'silent)
 
+;; Buffer Navigation
+(defun next-file-buffer ()
+  "Switch to the next file buffer."
+  (interactive)
+  (next-buffer)
+  (while (not (and (buffer-file-name) (file-readable-p (buffer-file-name))))
+    (next-buffer)))
+
+(defun previous-file-buffer ()
+  "Switch to the previous file buffer."
+  (interactive)
+  (previous-buffer)
+  (while (not (and (buffer-file-name) (file-readable-p (buffer-file-name))))
+    (previous-buffer)))
+
+(global-set-key (kbd "<left>") 'previous-file-buffer)
+(global-set-key (kbd "<right>") 'next-file-buffer)
+
 ;; Open dotfiles
 (defun open-dotfiles ()
 	"Open /.dotfiles."
