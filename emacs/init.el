@@ -1,4 +1,4 @@
- 
+
 ;; Startup Screen
 (setq inhibit-startup-message t)
 
@@ -10,10 +10,10 @@
 
 ;; Start in maximized mode
 (defun maximize-frame ()
-  "Maximizes the active frame in Windows"
-  (interactive)
-  (when (eq system-type 'windows-nt)
-    (w32-send-sys-command 61488)))
+	"Maximizes the active frame in Windows"
+	(interactive)
+	(when (eq system-type 'windows-nt)
+		(w32-send-sys-command 61488)))
 (add-hook 'window-setup-hook 'maximize-frame t)
 
 ;; Basic UI changes
@@ -38,16 +38,16 @@
 
 ;; Frame UI changes
 (setq default-frame-alist
-      '((internal-border-width . 2)
-        (left-fringe . 5)
-        (right-fringe . 5)))
+    '((internal-border-width . 2)
+         (left-fringe . 5)
+         (right-fringe . 5)))
 (window-divider-mode)
 
 ;; Setting Fonts
 (set-face-attribute 'default nil
-                    :family "Consolas"
-                    :height 130
-                    :weight 'regular)
+    :family "Consolas"
+    :height 130
+    :weight 'regular)
 
 ;; Default directory
 (setq default-directory "C:/Users/sjthe/") 
@@ -80,9 +80,9 @@
 
 ;; Compile
 (defun run-build-script ()
-  "Run the build.bat"
-  (interactive)
-  (compile "build.bat"))
+	"Run the build.bat"
+	(interactive)
+	(compile "build.bat"))
 (global-set-key (kbd "<f5>") 'run-build-script)
 
 ;; Sound
@@ -90,42 +90,41 @@
 
 ;; Open dotfiles
 (defun open-dotfiles ()
-  "Open /.dotfiles."
-  (interactive)
-  (find-file-other-window "c:/users/sjthe/.dotfiles"))
+	"Open /.dotfiles."
+	(interactive)
+	(find-file-other-window "c:/users/sjthe/.dotfiles"))
 
 ;; Open Projects
 (defun open-projects ()
-  "Open /Projects."
-  (interactive)
-  (find-file-other-window "c:/users/sjthe/Projects"))
+	"Open /Projects."
+	(interactive)
+	(find-file-other-window "c:/users/sjthe/Projects"))
 
 ;; Open Init file
 (defun open-init-file ()
-  "Open init file."
-  (interactive)
-  (find-file-other-window "c:/users/sjthe/.dotfiles/emacs/init.el"))
+	"Open init file."
+	(interactive)
+	(find-file-other-window "c:/users/sjthe/.dotfiles/emacs/init.el"))
 
 ;; Open Theme File
 (defun open-theme-file ()
-  "Open theme file."
-  (interactive)
-  (find-file-other-window "C:/Users/sjthe/.dotfiles/emacs/themes/loveisanillusion.emacs-theme.el"))
+	"Open theme file."
+	(interactive)
+	(find-file-other-window "C:/Users/sjthe/.dotfiles/emacs/themes/loveisanillusion.emacs-theme.el"))
 
 ;; Quick Open Directories Keymaps
 (defun setup-directories-keybindings ()
-  "Open Directories."
-  (interactive)
-  (defvar my-prefix-map (make-sparse-keymap)
-    "My personal prefix keymap.")
-  (define-key my-prefix-map (kbd "d") 'open-dotfiles)
-  (define-key my-prefix-map (kbd "e") 'open-init-file)
-  (define-key my-prefix-map (kbd "p") 'open-projects)
-  (define-key my-prefix-map (kbd "t") 'open-theme-file)
-  (global-set-key (kbd "C-c m") my-prefix-map)
-  )
+	"Open Directories."
+	(interactive)
+	(defvar my-prefix-map (make-sparse-keymap)
+		"My personal prefix keymap.")
+	(define-key my-prefix-map (kbd "d") 'open-dotfiles)
+	(define-key my-prefix-map (kbd "e") 'open-init-file)
+	(define-key my-prefix-map (kbd "p") 'open-projects)
+	(define-key my-prefix-map (kbd "t") 'open-theme-file)
+	(global-set-key (kbd "C-c m") my-prefix-map)
+	)
 (setup-directories-keybindings)
-
 
 ;; Package Stuff ... coming ...
 (require 'package)
@@ -135,26 +134,26 @@
 (package-initialize)
 
 (unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
+	(package-refresh-contents)
+	(package-install 'use-package))
 (eval-and-compile
-  (setq use-package-always-ensure t
+	(setq use-package-always-ensure t
         use-package-expand-minimally t
         warning-minimum-level :error)
-  )
+	)
 
 (use-package rainbow-mode
-  :ensure t
-  :hook (prog-mode . rainbow-mode))
+	:ensure t
+	:hook (prog-mode . rainbow-mode))
 
 
 (use-package json-mode
-  :ensure t
-  :defer t)
+	:ensure t
+	:defer t)
 
 (use-package typescript-mode
-  :ensure t
-  :defer t)
+	:ensure t
+	:defer t)
 
 (use-package web-mode
 	:ensure t
@@ -164,10 +163,10 @@
 (setq web-mode-enable-auto-pairing nil)
 
 (use-package emmet-mode
-  :ensure t
-  :hook ((sgml-mode html-mode css-mode web-mode) . emmet-mode)
-  :config
-  (define-key emmet-mode-keymap (kbd "C-j") 'emmet-expand-line))
+	:ensure t
+	:hook ((sgml-mode html-mode css-mode web-mode) . emmet-mode)
+	:config
+	(define-key emmet-mode-keymap (kbd "C-j") 'emmet-expand-line))
 
 
 ;; Indent
@@ -178,6 +177,16 @@
 (setq-default js-indent-level tab-width)
 (setq-default css-indent-offset tab-width)
 (setq-default python-indent-offset tab-width)
+(setq lisp-indent-offset 4)
+(setq lisp-body-indent 4)
+
+(defun indent-whole-buffer ()
+	"Indent the entire buffer."
+	(interactive)
+	(save-excursion
+		(indent-region (point-min) (point-max) nil)))
+
+(global-set-key (kbd "<f8>") 'indent-whole-buffer)
 
 ;; ORG MODE
 (require 'org)
@@ -189,50 +198,50 @@
 (add-hook 'org-mode-hook 'visual-line-mode)
 
 (let* ((variable-tuple
-        (cond ((x-list-fonts "Consolas")         '(:font "Consolas"))
-              ((x-list-fonts "Consolas") '(:font "Consolas"))
-              ((x-list-fonts "Consolas")   '(:font "Consolas"))
-              ((x-list-fonts "Consolas")         '(:font "Consolas"))
-              ((x-family-fonts "Consolas")    '(:family "Consolas"))
-              (nil (warn "Cannot find font."))))
-       (base-font-color     (face-foreground 'default nil 'default))
-       (headline           `(:inherit default :weight bold :foreground ,base-font-color)))
+           (cond ((x-list-fonts "Consolas")         '(:font "Consolas"))
+               ((x-list-fonts "Consolas") '(:font "Consolas"))
+               ((x-list-fonts "Consolas")   '(:font "Consolas"))
+               ((x-list-fonts "Consolas")         '(:font "Consolas"))
+               ((x-family-fonts "Consolas")    '(:family "Consolas"))
+               (nil (warn "Cannot find font."))))
+		  (base-font-color     (face-foreground 'default nil 'default))
+		  (headline           `(:inherit default :weight bold :foreground ,base-font-color)))
 
-  (custom-theme-set-faces
-   'user
-   `(org-level-8 ((t (,@headline ,@variable-tuple))))
-   `(org-level-7 ((t (,@headline ,@variable-tuple))))
-   `(org-level-6 ((t (,@headline ,@variable-tuple))))
-   `(org-level-5 ((t (,@headline ,@variable-tuple))))
-   `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.1))))
-   `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.2))))
-   `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.3))))
-   `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.5))))
-   `(org-document-title ((t (,@headline ,@variable-tuple :height 1.6 :underline t))))))
+	(custom-theme-set-faces
+		'user
+		`(org-level-8 ((t (,@headline ,@variable-tuple))))
+		`(org-level-7 ((t (,@headline ,@variable-tuple))))
+		`(org-level-6 ((t (,@headline ,@variable-tuple))))
+		`(org-level-5 ((t (,@headline ,@variable-tuple))))
+		`(org-level-4 ((t (,@headline ,@variable-tuple :height 1.1))))
+		`(org-level-3 ((t (,@headline ,@variable-tuple :height 1.2))))
+		`(org-level-2 ((t (,@headline ,@variable-tuple :height 1.3))))
+		`(org-level-1 ((t (,@headline ,@variable-tuple :height 1.5))))
+		`(org-document-title ((t (,@headline ,@variable-tuple :height 1.6 :underline t))))))
 
 
 
 
 
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages '(json-mode rainbow-mode)))
+	;; custom-set-variables was added by Custom.
+	;; If you edit it by hand, you could mess it up, so be careful.
+	;; Your init file should contain only one such instance.
+	;; If there is more than one, they won't work right.
+	'(package-selected-packages '(json-mode rainbow-mode)))
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(org-document-title ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas" :height 1.6 :underline t))))
- '(org-level-1 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas" :height 1.5))))
- '(org-level-2 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas" :height 1.3))))
- '(org-level-3 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas" :height 1.2))))
- '(org-level-4 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas" :height 1.1))))
- '(org-level-5 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas"))))
- '(org-level-6 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas"))))
-0 '(org-level-7 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas"))))
- '(org-level-8 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas")))))
+	;; custom-set-faces was added by Custom.
+	;; If you edit it by hand, you could mess it up, so be careful.
+	;; Your init file should contain only one such instance.
+	;; If there is more than one, they won't work right.
+	'(org-document-title ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas" :height 1.6 :underline t))))
+	'(org-level-1 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas" :height 1.5))))
+	'(org-level-2 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas" :height 1.3))))
+	'(org-level-3 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas" :height 1.2))))
+	'(org-level-4 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas" :height 1.1))))
+	'(org-level-5 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas"))))
+	'(org-level-6 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas"))))
+	0 '(org-level-7 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas"))))
+	'(org-level-8 ((t (:inherit default :weight bold :foreground "#c6c6c6" :font "Consolas")))))
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
