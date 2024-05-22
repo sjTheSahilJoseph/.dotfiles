@@ -75,6 +75,9 @@
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
+;; Auto load changed file
+(global-auto-revert-mode t)
+
 ;; Compile
 (defun run-build-script ()
   "Run the build.bat"
@@ -165,6 +168,7 @@
   :hook ((sgml-mode html-mode css-mode web-mode) . emmet-mode)
   :config
   (define-key emmet-mode-keymap (kbd "C-j") 'emmet-expand-line))
+
 
 ;; Indent
 (setq electric-indent-mode t)
