@@ -5,7 +5,6 @@
 ;; Stop Messages
 (setq inhibit-message t)
 
-
 ;; Scratch Buffer Message
 (setq initial-scratch-message "\
 ;; SJ's Emacs
