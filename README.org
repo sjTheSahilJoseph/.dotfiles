@@ -15,20 +15,41 @@
 ** Tools I use
 **** Operating System
 Windows 11 - x64
+**** Code Editor
+Emacs
+**** IDEs
+- I write code in Emacs but I like to keep IDE open while writing code.
+  And also I code on VS Code for Frontend Development with Emacs Bindings.
+***** C/C++
+- Visual Studio (IDE)
+***** Web Development
+- Visual Studio Code
+***** Python
+- No IDE, just basic Emacs with Terminal
+- Or Jupyter Notebook
+***** Android Development
+- Andriod Studio (with emacs bindings)
+***** Game Development
+- Visual Studio IDE
+- Unity 3d
+- Unreal Engine
+**** Browser
+***** Google Chrome
+- Sync across all devices
+- Google's Products
+**** Office Tools
+***** Microsoft Office
+- Almost for everything professionally
+***** Google Docs, Spreadsheet, Keep Notes
+- Personal Stuff
+    
 	
 ** Fonts
-1. Emacs
-    - Consolas - Size = 13pt
+***** Consolas - Size = 13pt
 
 ** Personal Points:
-    - In code writing, I don't like heavy syntax highliting.
+    - I don't like heavy syntax highliting.
     - Don't use Code auto completion, etc.. (Use documentation).
-		- Text editor should be Emacs
-		- For C/C++ Development keep open Visual Studio (IDE)
-		- For Web Development keep open Visual Studio Code
-		- For Python Development keep open PyCharm
-		But use Emacs for writing code
-    - I like fat box cursor, 500ms Blinking
-	(complete one blink in 1 sec, 500ms off 500ms on).
+    - I like fat box cursor, 500ms Blinking	(complete one blink in 1 sec, 500ms off 500ms on).
     - Turn off almost all animations in Operating System.
 
