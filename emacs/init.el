@@ -2,6 +2,10 @@
 ;; Startup Screen
 (setq inhibit-startup-message t)
 
+;; Stop Messages
+(setq inhibit-message t)
+
+
 ;; Scratch Buffer Message
 (setq initial-scratch-message "\
 ;; SJ's Emacs
