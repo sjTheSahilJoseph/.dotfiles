@@ -179,11 +179,6 @@
         warning-minimum-level :error)
 	)
 
-(use-package rainbow-mode
-	:ensure t
-	:hook (prog-mode . rainbow-mode))
-
-
 (use-package json-mode
 	:ensure t
 	:defer t)
@@ -192,19 +187,13 @@
 	:ensure t
 	:defer t)
 
-(use-package web-mode
+(use-package cc-mode
 	:ensure t
 	:defer t)
 
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-(setq web-mode-enable-auto-pairing nil)
-
-(use-package emmet-mode
+(use-package python-mode
 	:ensure t
-	:hook ((sgml-mode html-mode css-mode web-mode) . emmet-mode)
-	:config
-	(define-key emmet-mode-keymap (kbd "C-j") 'emmet-expand-line))
-
+	:defer t)
 
 ;; Indent
 (setq electric-indent-mode t)
@@ -212,7 +201,6 @@
 (setq-default tab-width 4)
 (setq-default c-basic-offset tab-width)
 (setq-default js-indent-level tab-width)
-(setq-default css-indent-offset tab-width)
 (setq-default python-indent-offset tab-width)
 (setq lisp-indent-offset 4)
 (setq lisp-body-indent 4)
