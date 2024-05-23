@@ -4,6 +4,18 @@
 
 ;; Stop Messages
 (setq inhibit-message t)
+;; Beginning and End of Buffer Message
+(defadvice previous-line (around silencer activate)
+  (condition-case nil
+    ad-do-it
+      ((beginning-of-buffer))))
+
+(defadvice next-line (around silencer activate)
+  (condition-case nil
+    ad-do-it
+      ((end-of-buffer))))
+
+
 
 ;; Scratch Buffer Message
 (setq initial-scratch-message "\
