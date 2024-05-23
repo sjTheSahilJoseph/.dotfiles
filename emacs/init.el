@@ -29,7 +29,17 @@
 (split-window-horizontally)
 (column-number-mode t)
 (setq-default truncate-lines t)
-(transient-mark-mode 1)
+
+;; Marking
+(setq mark-even-if-inactive nil)
+(transient-mark-mode 0)
+(defun my-copy-region-as-kill-no-move (beg end)
+  "Copy the region as kill without moving the cursor."
+  (interactive "r")
+  (let ((deactivate-mark nil))
+    (save-excursion
+      (copy-region-as-kill beg end))))
+(global-set-key (kbd "M-w") 'my-copy-region-as-kill-no-move)
 
 ;; Window UI changes
 (setq window-divider-default-right-width 0)
