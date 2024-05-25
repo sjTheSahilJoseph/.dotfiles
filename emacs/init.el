@@ -75,7 +75,7 @@
     :weight 'regular)
 
 ;; Default directory
-(setq default-directory "C:/Users/sjthe/") 
+(setq default-directory "W:/") 
 
 ;; Theme Stuff
 (add-to-list 'custom-theme-load-path "C:/Users/sjthe/.dotfiles/emacs/themes/")
@@ -150,7 +150,7 @@
 (defun open-projects ()
 	"Open /Projects."
 	(interactive)
-	(find-file-other-window "c:/users/sjthe/Projects"))
+	(find-file-other-window "W:/"))
 
 ;; Open Init file
 (defun open-init-file ()
