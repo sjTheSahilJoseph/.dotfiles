@@ -6,14 +6,14 @@
 (setq inhibit-message t)
 ;; Beginning and End of Buffer Message
 (defadvice previous-line (around silencer activate)
-  (condition-case nil
-    ad-do-it
-      ((beginning-of-buffer))))
+	(condition-case nil
+		ad-do-it
+		((beginning-of-buffer))))
 
 (defadvice next-line (around silencer activate)
-  (condition-case nil
-    ad-do-it
-      ((end-of-buffer))))
+	(condition-case nil
+		ad-do-it
+		((end-of-buffer))))
 
 
 
@@ -47,13 +47,13 @@
 
 ;; Marking
 (setq mark-even-if-inactive nil)
-(transient-mark-mode 0)
+(transient-mark-mode -1)
 (defun my-copy-region-as-kill-no-move (beg end)
-  "Copy the region as kill without moving the cursor."
-  (interactive "r")
-  (let ((deactivate-mark nil))
-    (save-excursion
-      (copy-region-as-kill beg end))))
+	"Copy the region as kill without moving the cursor."
+	(interactive "r")
+	(let ((deactivate-mark nil))
+		(save-excursion
+			(copy-region-as-kill beg end))))
 (global-set-key (kbd "M-w") 'my-copy-region-as-kill-no-move)
 
 ;; Window UI changes
@@ -115,26 +115,26 @@
 
 ;; Buffer Navigation
 (defun next-file-buffer ()
-  "Switch to the next file buffer. Do nothing if the current buffer is not a file buffer."
-  (interactive)
-  (if (and (buffer-file-name) (file-readable-p (buffer-file-name)))
-      (let ((start-buffer (current-buffer)))
-        (next-buffer)
-        (while (and (not (eq (current-buffer) start-buffer))
-                    (not (and (buffer-file-name) (file-readable-p (buffer-file-name)))))
-          (next-buffer)))
-    (message "Current buffer is not a file buffer.")))
+	"Switch to the next file buffer. Do nothing if the current buffer is not a file buffer."
+	(interactive)
+	(if (and (buffer-file-name) (file-readable-p (buffer-file-name)))
+		(let ((start-buffer (current-buffer)))
+			(next-buffer)
+			(while (and (not (eq (current-buffer) start-buffer))
+                       (not (and (buffer-file-name) (file-readable-p (buffer-file-name)))))
+				(next-buffer)))
+		(message "Current buffer is not a file buffer.")))
 
 (defun previous-file-buffer ()
-  "Switch to the previous file buffer. Do nothing if the current buffer is not a file buffer."
-  (interactive)
-  (if (and (buffer-file-name) (file-readable-p (buffer-file-name)))
-      (let ((start-buffer (current-buffer)))
-        (previous-buffer)
-        (while (and (not (eq (current-buffer) start-buffer))
-                    (not (and (buffer-file-name) (file-readable-p (buffer-file-name)))))
-          (previous-buffer)))
-    (message "Current buffer is not a file buffer.")))
+	"Switch to the previous file buffer. Do nothing if the current buffer is not a file buffer."
+	(interactive)
+	(if (and (buffer-file-name) (file-readable-p (buffer-file-name)))
+		(let ((start-buffer (current-buffer)))
+			(previous-buffer)
+			(while (and (not (eq (current-buffer) start-buffer))
+                       (not (and (buffer-file-name) (file-readable-p (buffer-file-name)))))
+				(previous-buffer)))
+		(message "Current buffer is not a file buffer.")))
 
 (global-set-key (kbd "<left>") 'previous-file-buffer)
 (global-set-key (kbd "<right>") 'next-file-buffer)
@@ -231,37 +231,37 @@
 
 ;; Transpose Lines and Regions
 (defun move-text-internal (arg)
-  "Move the region (if active) or the current line by ARG lines."
-  (cond
-   ((and mark-active transient-mark-mode)
-    (let ((region-start (region-beginning))
-          (region-end (region-end)))
-      (let ((text (delete-and-extract-region region-start region-end)))
-        (forward-line arg)
-        (insert text)
-        ;; Adjust mark to new region
-        (set-mark (point))
-        (exchange-point-and-mark)
-        (setq deactivate-mark nil))))
-   (t
-    (let ((column (current-column)))
-      (beginning-of-line)
-      (when (or (> arg 0) (not (bobp)))
-        (forward-line)
-        (when (or (< arg 0) (not (eobp)))
-          (transpose-lines arg))
-        (forward-line -1))
-      (move-to-column column t)))))
+	"Move the region (if active) or the current line by ARG lines."
+	(cond
+		((and mark-active transient-mark-mode)
+			(let ((region-start (region-beginning))
+					 (region-end (region-end)))
+				(let ((text (delete-and-extract-region region-start region-end)))
+					(forward-line arg)
+					(insert text)
+					;; Adjust mark to new region
+					(set-mark (point))
+					(exchange-point-and-mark)
+					(setq deactivate-mark nil))))
+		(t
+			(let ((column (current-column)))
+				(beginning-of-line)
+				(when (or (> arg 0) (not (bobp)))
+					(forward-line)
+					(when (or (< arg 0) (not (eobp)))
+						(transpose-lines arg))
+					(forward-line -1))
+				(move-to-column column t)))))
 
 (defun move-text-down (arg)
-  "Move region (transient-mark-mode active) or current line by ARG lines down."
-  (interactive "*p")
-  (move-text-internal arg))
+	"Move region (transient-mark-mode active) or current line by ARG lines down."
+	(interactive "*p")
+	(move-text-internal arg))
 
 (defun move-text-up (arg)
-  "Move region (transient-mark-mode active) or current line by ARG lines up."
-  (interactive "*p")
-  (move-text-internal (- arg)))
+	"Move region (transient-mark-mode active) or current line by ARG lines up."
+	(interactive "*p")
+	(move-text-internal (- arg)))
 
 (global-set-key (kbd "M-<up>") 'move-text-up)
 (global-set-key (kbd "M-<down>") 'move-text-down)
