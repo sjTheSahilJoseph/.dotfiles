@@ -25,13 +25,15 @@
         {
             "colorScheme": "Love Is An Illusion",
             "cursorShape": "filledBox",
+            "elevate": true,
             "experimental.retroTerminalEffect": true,
             "font": 
             {
                 "face": "Consolas",
                 "size": 13.0,
                 "weight": "normal"
-            }
+            },
+            "startingDirectory": "W:\\"
         },
         "list": 
         [
