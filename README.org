@@ -15,11 +15,11 @@
 ** Tools I use
 **** Operating System
 Windows 11 - x64
+Linux - Fedora
 **** Code Editor
 Emacs
 **** IDEs
 - I write code in Emacs but I like to keep IDE open while writing code.
-  And also I code on VS Code for Frontend Development with Emacs Bindings.
 ***** C/C++
 - Visual Studio (IDE)
 ***** Web Development
@@ -40,12 +40,12 @@ Emacs
 **** Office Tools
 ***** Microsoft Office
 - Almost for everything professionally
-***** Google Docs, Spreadsheet, Keep Notes
+***** Google Docs, Spreadsheet, Keep Notes, Org Mode
 - Personal Stuff
     
 	
 ** Fonts
-***** Consolas - Size = 13pt
+***** Consolas - Size = 13pt / 17px
 
 ** Personal Points:
     - I don't like heavy syntax highliting.
