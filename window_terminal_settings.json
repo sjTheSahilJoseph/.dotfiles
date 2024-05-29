@@ -24,7 +24,7 @@
         "defaults": 
         {
             "colorScheme": "Love Is An Illusion",
-            "cursorShape": "vintage",
+            "cursorShape": "filledBox",
             "elevate": false,
             "experimental.retroTerminalEffect": true,
             "font": 
