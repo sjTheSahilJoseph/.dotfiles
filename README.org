@@ -2,6 +2,9 @@
 ***** Everyone has different way of using computers, It's my way.
 ***** Feel free to use if you want.
 
+* Setup:
+*** mklink -> Windows
+
 * Computer Style
 ** Philosophy
 1. Use computer 100% powerfully, productively, and fastly.
