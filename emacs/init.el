@@ -272,7 +272,6 @@
 (global-set-key (kbd "M-<down>") 'move-text-down)
 
 
-
 ;; ORG MODE
 (require 'org)
 (setq org-log-done 'time)
@@ -282,8 +281,6 @@
 (setq org-hide-emphasis-markers t)
 (add-hook 'org-mode-hook 'visual-line-mode)
 (setq org-hide-leading-stars t)
-
-
 
 
 
