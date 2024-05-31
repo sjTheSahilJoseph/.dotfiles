@@ -198,10 +198,17 @@
 	:bind (:map company-active-map
 			  ("C-n" . company-select-next)
 			  ("C-p" . company-select-previous))
+	:hook
+	(eglot-managed-mode . company-mode)
+	(company-mode . (lambda () (flymake-mode -1)))
 	:config
-	(setq company-idle-delay 0.1)
-	(global-company-mode t)
+	(setq company-idle-delay 0.2)
+	(setq company-minimum-prefix-length 1)
 	)
+
+
+
+
 
 ;; Indent
 (setq electric-indent-mode t)
