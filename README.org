@@ -52,10 +52,8 @@ Emacs
 
 ** Personal Points:
     - I don't like heavy syntax highliting.
-    - Use LSP, Code auto completion, but errors on editor disable.. (Use documentation).
-      - LSP as Eglot, Company Mode for Suggestions
-      - LSP primarily for good experience, but don't use auto complete too much.
-        - Use documentation
+    - Use LSP, but don't use autocomplete, suggestions, or flymake or flycheck stuff (Use documentation) for code, and terminal for errors.
+      - LSP manager as Eglot
     - I like fat box cursor, 500ms Blinking	(complete one blink in 1 sec, 500ms off 500ms on).
     - Turn off almost all animations in Operating System.
 

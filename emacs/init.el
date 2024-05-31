@@ -193,25 +193,6 @@
 	:bind (:map eglot-mode-map
               ("C-c r" . eglot-rename)))
 
-(use-package company
-	:ensure t
-	:bind (:map company-active-map
-              ("M-n" . company-select-next)
-              ("M-p" . company-select-previous))
-	:hook
-	(eglot-managed-mode . company-mode)
-	(company-mode . (lambda () (flymake-mode -1)))
-	(company-mode . (lambda () 
-                          (define-key company-active-map (kbd "C-n") 'next-line)
-                          (define-key company-active-map (kbd "C-p") 'previous-line)))
-	:config
-	(setq company-idle-delay 0.2)
-	(setq company-minimum-prefix-length 1)
-	)
-
-
-
-
 
 ;; Indent
 (setq electric-indent-mode t)
@@ -262,17 +243,3 @@
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
-
-(custom-set-variables
-	;; custom-set-variables was added by Custom.
-	;; If you edit it by hand, you could mess it up, so be careful.
-	;; Your init file should contain only one such instance.
-	;; If there is more than one, they won't work right.
-	'(package-selected-packages
-		 '(company company-mode typescript-mode python-mode json-mode)))
-(custom-set-faces
-	;; custom-set-faces was added by Custom.
-	;; If you edit it by hand, you could mess it up, so be careful.
-	;; Your init file should contain only one such instance.
-	;; If there is more than one, they won't work right.
-	)
