@@ -192,7 +192,7 @@
 	(add-to-list 'eglot-server-programs '(csharp-mode . ("omnisharp")))
 	:bind (:map eglot-mode-map
               ("C-c r" . eglot-rename)))
-
+(setq eglot-stay-out-of '(flymake))
 
 ;; Indent
 (setq electric-indent-mode t)
