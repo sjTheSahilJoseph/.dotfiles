@@ -196,11 +196,14 @@
 (use-package company
 	:ensure t
 	:bind (:map company-active-map
-			  ("C-n" . company-select-next)
-			  ("C-p" . company-select-previous))
+              ("M-n" . company-select-next)
+              ("M-p" . company-select-previous))
 	:hook
 	(eglot-managed-mode . company-mode)
 	(company-mode . (lambda () (flymake-mode -1)))
+	(company-mode . (lambda () 
+                          (define-key company-active-map (kbd "C-n") 'next-line)
+                          (define-key company-active-map (kbd "C-p") 'previous-line)))
 	:config
 	(setq company-idle-delay 0.2)
 	(setq company-minimum-prefix-length 1)
