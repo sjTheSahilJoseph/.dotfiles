@@ -4,18 +4,6 @@
 
 ;; Stop Messages
 (setq inhibit-message t)
-;; Beginning and End of Buffer Message
-(defadvice previous-line (around silencer activate)
-	(condition-case nil
-		ad-do-it
-		((beginning-of-buffer))))
-
-(defadvice next-line (around silencer activate)
-	(condition-case nil
-		ad-do-it
-		((end-of-buffer))))
-
-
 
 ;; Scratch Buffer Message
 (setq initial-scratch-message "\
@@ -114,31 +102,8 @@
 (set-message-beep 'silent)
 
 ;; Buffer Navigation
-(defun next-file-buffer ()
-	"Switch to the next file buffer. Do nothing if the current buffer is not a file buffer."
-	(interactive)
-	(if (and (buffer-file-name) (file-readable-p (buffer-file-name)))
-		(let ((start-buffer (current-buffer)))
-			(next-buffer)
-			(while (and (not (eq (current-buffer) start-buffer))
-                       (not (and (buffer-file-name) (file-readable-p (buffer-file-name)))))
-				(next-buffer)))
-		(message "Current buffer is not a file buffer.")))
-
-(defun previous-file-buffer ()
-	"Switch to the previous file buffer. Do nothing if the current buffer is not a file buffer."
-	(interactive)
-	(if (and (buffer-file-name) (file-readable-p (buffer-file-name)))
-		(let ((start-buffer (current-buffer)))
-			(previous-buffer)
-			(while (and (not (eq (current-buffer) start-buffer))
-                       (not (and (buffer-file-name) (file-readable-p (buffer-file-name)))))
-				(previous-buffer)))
-		(message "Current buffer is not a file buffer.")))
-
-(global-set-key (kbd "<left>") 'previous-file-buffer)
-(global-set-key (kbd "<right>") 'next-file-buffer)
-
+(global-set-key (kbd "<left>") 'previous-buffer)
+(global-set-key (kbd "<right>") 'next-buffer)
 
 ;; Open dotfiles
 (defun open-dotfiles ()
@@ -215,6 +180,29 @@
 	:defer t
 	:mode "\\.cs\\'")
 
+(use-package eglot
+	:ensure t
+	:hook ((python-mode . eglot-ensure)
+			  (c-mode . eglot-ensure)
+			  (c++-mode . eglot-ensure)
+			  (csharp-mode . eglot-ensure))
+	:config
+	(add-to-list 'eglot-server-programs '(python-mode . ("pyright-langserver" "--stdio")))
+	(add-to-list 'eglot-server-programs '((c-mode c++-mode) . ("clangd")))
+	(add-to-list 'eglot-server-programs '(csharp-mode . ("omnisharp")))
+	:bind (:map eglot-mode-map
+              ("C-c r" . eglot-rename)))
+
+(use-package company
+	:ensure t
+	:bind (:map company-active-map
+			  ("C-n" . company-select-next)
+			  ("C-p" . company-select-previous))
+	:config
+	(setq company-idle-delay 0.1)
+	(global-company-mode t)
+	)
+
 ;; Indent
 (setq electric-indent-mode t)
 (setq-default indent-tabs-mode t)
@@ -235,41 +223,21 @@
 
 
 ;; Transpose Lines and Regions
-(defun move-text-internal (arg)
-	"Move the region (if active) or the current line by ARG lines."
-	(cond
-		((and mark-active transient-mark-mode)
-			(let ((region-start (region-beginning))
-					 (region-end (region-end)))
-				(let ((text (delete-and-extract-region region-start region-end)))
-					(forward-line arg)
-					(insert text)
-					;; Adjust mark to new region
-					(set-mark (point))
-					(exchange-point-and-mark)
-					(setq deactivate-mark nil))))
-		(t
-			(let ((column (current-column)))
-				(beginning-of-line)
-				(when (or (> arg 0) (not (bobp)))
-					(forward-line)
-					(when (or (< arg 0) (not (eobp)))
-						(transpose-lines arg))
-					(forward-line -1))
-				(move-to-column column t)))))
+(defun my-transpose-line-up ()
+	"Transpose the current line with the line above."
+	(interactive)
+	(transpose-lines 1)
+	(forward-line -2))
 
-(defun move-text-down (arg)
-	"Move region (transient-mark-mode active) or current line by ARG lines down."
-	(interactive "*p")
-	(move-text-internal arg))
+(defun my-transpose-line-down ()
+	"Transpose the current line with the line below."
+	(interactive)
+	(forward-line 1)
+	(transpose-lines 1)
+	(forward-line -1))
 
-(defun move-text-up (arg)
-	"Move region (transient-mark-mode active) or current line by ARG lines up."
-	(interactive "*p")
-	(move-text-internal (- arg)))
-
-(global-set-key (kbd "M-<up>") 'move-text-up)
-(global-set-key (kbd "M-<down>") 'move-text-down)
+(global-set-key (kbd "M-<up>") 'my-transpose-line-up)
+(global-set-key (kbd "M-<down>") 'my-transpose-line-down)
 
 
 ;; ORG MODE
@@ -282,15 +250,19 @@
 (add-hook 'org-mode-hook 'visual-line-mode)
 (setq org-hide-leading-stars t)
 
-
-
-
-
-
-
-
-
-
-
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
+
+(custom-set-variables
+	;; custom-set-variables was added by Custom.
+	;; If you edit it by hand, you could mess it up, so be careful.
+	;; Your init file should contain only one such instance.
+	;; If there is more than one, they won't work right.
+	'(package-selected-packages
+		 '(company company-mode typescript-mode python-mode json-mode)))
+(custom-set-faces
+	;; custom-set-faces was added by Custom.
+	;; If you edit it by hand, you could mess it up, so be careful.
+	;; Your init file should contain only one such instance.
+	;; If there is more than one, they won't work right.
+	)
