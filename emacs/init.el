@@ -65,7 +65,7 @@
 ;; Default directory
 (setq default-directory "W:/") 
 
-;; Theme Stuff
+;; Theme
 (add-to-list 'custom-theme-load-path "C:/Users/sjthe/.dotfiles/emacs/themes/")
 (load-theme 'loveisanillusion.emacs t)
 
@@ -223,7 +223,7 @@
 (global-set-key (kbd "C-<tab>") 'indent-whole-buffer)
 
 
-;; Transpose Lines and Regions
+;; Transpose Lines
 (defun my-transpose-line-up ()
 	"Transpose the current line with the line above."
 	(interactive)
@@ -253,6 +253,22 @@
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 (custom-set-variables
 	;; custom-set-variables was added by Custom.
 	;; If you edit it by hand, you could mess it up, so be careful.
