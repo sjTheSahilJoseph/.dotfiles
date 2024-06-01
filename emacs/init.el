@@ -1,4 +1,5 @@
 
+
 ;; Startup Screen
 (setq inhibit-startup-message t)
 
