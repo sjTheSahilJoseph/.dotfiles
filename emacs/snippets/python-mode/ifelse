@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: if-else
+# key: ifelse
+# --
+if (${1:condition}):
+    ${2:code block}
+else:
+    ${3:alternative code block}
