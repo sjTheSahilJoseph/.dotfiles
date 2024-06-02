@@ -8,7 +8,7 @@
 
 ;; Scratch Buffer Message
 (setq initial-scratch-message "\
-;; SJ's Emacs
+;; SJ Emacs
 
 ")
 
@@ -36,14 +36,9 @@
 
 ;; Marking
 (setq mark-even-if-inactive nil)
-(transient-mark-mode -1)
-(defun my-copy-region-as-kill-no-move (beg end)
-	"Copy the region as kill without moving the cursor."
-	(interactive "r")
-	(let ((deactivate-mark nil))
-		(save-excursion
-			(copy-region-as-kill beg end))))
-(global-set-key (kbd "M-w") 'my-copy-region-as-kill-no-move)
+
+;; Find and Replace
+(global-set-key (kbd "<f7>") 'replace-string)
 
 ;; Window UI changes
 (setq window-divider-default-right-width 0)
