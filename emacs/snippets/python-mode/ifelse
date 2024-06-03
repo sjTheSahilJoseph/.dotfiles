@@ -3,6 +3,6 @@
 # key: ifelse
 # --
 if (${1:condition}):
-    ${2:code block}
+    ${2:#code}
 else:
-    ${3:alternative code block}
+    ${3:#code}
