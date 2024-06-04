@@ -3,6 +3,7 @@
 # key: ifelse
 # --
 if (${1:condition}):
-    ${2:}
+    ${2:code}
 else:
-    ${3:}
+    ${3:code}
+
