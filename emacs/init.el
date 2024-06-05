@@ -101,6 +101,9 @@
 (global-set-key (kbd "<left>") 'previous-buffer)
 (global-set-key (kbd "<right>") 'next-buffer)
 
+;; Window Navigatin
+(global-set-key (kbd "<up>") 'next-window-any-frame)
+
 ;; Open dotfiles
 (defun open-dotfiles ()
 	"Open /.dotfiles."
