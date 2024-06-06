@@ -3,5 +3,5 @@
 /emacs/auto-save-list
 /emacs/org*
 /emacs/eshell
-
-
+/emacs/projects
+/emacs/transient
