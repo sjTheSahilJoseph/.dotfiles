@@ -37,9 +37,8 @@ Emacs
 - Unity 3d
 - Unreal Engine
 **** Browser
-***** Google Chrome
+***** Opera
 - Sync across all devices
-- Google's Products
 **** Office Tools
 ***** Microsoft Office
 - Almost for everything professionally
