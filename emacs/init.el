@@ -25,7 +25,7 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (setq-default cursor-type 'box)
-(set-cursor-color "#f20c0c")
+(set-cursor-color "#ff0000")
 (blink-cursor-mode t)
 (setq blink-cursor-blinks 0)
 (setq blink-cursor-interval 0.5)
