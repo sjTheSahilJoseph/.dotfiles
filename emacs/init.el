@@ -200,17 +200,6 @@
 ;; (setq eglot-stay-out-of '(flymake))
 
 
-(use-package corfu
-	:ensure t
-	:defer t
-	:demand t
-	:custom
-	(corfu-cycle t)
-	(corfu-auto t)
-	(corfu-scroll-margin 5)
-	:init
-	(global-corfu-mode 1))
-
 (use-package yasnippet
 	:config
 	(setq yas-snippet-dirs '("C:/Users/sjthe/.dotfiles/emacs/snippets"))
@@ -266,16 +255,3 @@
 (put 'upcase-region 'disabled nil)
 
 
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages '(yasnippet typescript-mode json-mode csharp-mode corfu)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
