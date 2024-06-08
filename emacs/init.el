@@ -176,9 +176,25 @@
 	:defer t
 	:mode "\\.cs\\'")
 
+(use-package company
+  :ensure t
+  :config
+  (setq company-idle-delay 0.2)
+  (setq company-minimum-prefix-length 1)
+  (global-company-mode 1))
+
 (use-package omnisharp
-	:ensure t
-	:defer t)
+  :ensure t
+  :hook (csharp-mode . omnisharp-mode)
+  :init
+  (setq omnisharp-server-executable-path "C:/Users/sjthe/omnisharp-win-x64")
+  :config
+  (use-package company
+    :ensure t
+    :config
+    (add-to-list 'company-backends 'company-omnisharp)
+    (add-hook 'csharp-mode-hook 'company-mode))
+
 
 (use-package eglot
 	:ensure t
@@ -194,6 +210,8 @@
               ("C-c r" . eglot-rename)))
 (setq eglot-stay-out-of '(flymake))
 
+
+	
 (use-package yasnippet
 	:ensure t
 	:config
