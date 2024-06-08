@@ -139,6 +139,7 @@
 	(define-key my-prefix-map (kbd "d") 'open-dotfiles)
 	(define-key my-prefix-map (kbd "e") 'open-init-file)
 	(define-key my-prefix-map (kbd "p") 'open-projects)
+	(define-key my-prefix-map (kbd "m") 'open-temporary-directory)
 	(define-key my-prefix-map (kbd "t") 'open-theme-file)
 	(global-set-key (kbd "C-c m") my-prefix-map))
 (setup-directories-keybindings)
