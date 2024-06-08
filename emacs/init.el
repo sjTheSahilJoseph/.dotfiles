@@ -1,5 +1,4 @@
 
-
 ;; Startup Screen
 (setq inhibit-startup-message t)
 
@@ -125,6 +124,12 @@
 	(interactive)
 	(find-file-other-window "C:/Users/sjthe/.dotfiles/emacs/themes/loveisanillusion.emacs-theme.el"))
 
+;; Open Temporary Directory
+(defun open-temporary-directory ()
+	"Open Temporary Directory."
+	(interactive)
+	(find-file-other-window "W:/temporary"))
+
 ;; Quick Open Directories Keymaps
 (defun setup-directories-keybindings ()
 	"Open Directories."
@@ -135,12 +140,12 @@
 	(define-key my-prefix-map (kbd "e") 'open-init-file)
 	(define-key my-prefix-map (kbd "p") 'open-projects)
 	(define-key my-prefix-map (kbd "t") 'open-theme-file)
-	(global-set-key (kbd "C-c m") my-prefix-map)
-	)
+	(global-set-key (kbd "C-c m") my-prefix-map))
 (setup-directories-keybindings)
 
-;; Package Stuff ... coming ...
+;; Package Setup
 (require 'package)
+(setq package-enable-at-startup nil)
 (add-to-list 'package-archives '("gnu"   . "https://elpa.gnu.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/"))
@@ -149,55 +154,33 @@
 (unless (package-installed-p 'use-package)
 	(package-refresh-contents)
 	(package-install 'use-package))
+
 (eval-and-compile
 	(setq use-package-always-ensure t
         use-package-expand-minimally t
-        warning-minimum-level :error)
-	)
+        warning-minimum-level :error))
 
-(use-package json-mode
-	:ensure t
-	:defer t)
-
-(use-package typescript-mode
-	:ensure t
-	:defer t)
-
-(use-package cc-mode
-	:ensure t
-	:defer t)
-
-(use-package python-mode
-	:ensure t
-	:defer t)
-
-(use-package csharp-mode
-	:ensure t
-	:defer t
-	:mode "\\.cs\\'")
+(use-package json-mode :defer t)
+(use-package typescript-mode :defer t)
+(use-package cc-mode :defer t)
+(use-package python-mode :defer t)
+(use-package csharp-mode :mode "\\.cs\\'")
 
 (use-package company
-  :ensure t
-  :config
-  (setq company-idle-delay 0.2)
-  (setq company-minimum-prefix-length 1)
-  (global-company-mode 1))
+	:config
+	(setq company-idle-delay 0.2
+        company-minimum-prefix-length 1)
+	(global-company-mode 1))
 
 (use-package omnisharp
-  :ensure t
-  :hook (csharp-mode . omnisharp-mode)
-  :init
-  (setq omnisharp-server-executable-path "C:/Users/sjthe/omnisharp-win-x64")
-  :config
-  (use-package company
-    :ensure t
-    :config
-    (add-to-list 'company-backends 'company-omnisharp)
-    (add-hook 'csharp-mode-hook 'company-mode))
-
+	:hook (csharp-mode . omnisharp-mode)
+	:init
+	(setq omnisharp-server-executable-path "C:/Users/sjthe/omnisharp-win-x64/OmniSharp.exe")
+	:config
+	(add-to-list 'company-backends 'company-omnisharp)
+	(add-hook 'csharp-mode-hook 'company-mode))
 
 (use-package eglot
-	:ensure t
 	:hook ((python-mode . eglot-ensure)
 			  (c-mode . eglot-ensure)
 			  (c++-mode . eglot-ensure)
@@ -205,22 +188,16 @@
 	:config
 	(add-to-list 'eglot-server-programs '(python-mode . ("pyright-langserver" "--stdio")))
 	(add-to-list 'eglot-server-programs '((c-mode c++-mode) . ("clangd")))
-	(add-to-list 'eglot-server-programs '(csharp-mode . ("omnisharp")))
+	(add-to-list 'eglot-server-programs '(csharp-mode . ("C:/Users/sjthe/omnisharp-win-x64/OmniSharp.exe")))
 	:bind (:map eglot-mode-map
               ("C-c r" . eglot-rename)))
-(setq eglot-stay-out-of '(flymake))
 
-
-	
 (use-package yasnippet
-	:ensure t
 	:config
 	(setq yas-snippet-dirs '("C:/Users/sjthe/.dotfiles/emacs/snippets"))
 	(yas-reload-all)
 	(yas-global-mode 1)
 	(add-hook 'python-mode-hook #'yas-minor-mode))
-
-
 
 ;; Indent
 (setq electric-indent-mode t)
@@ -237,9 +214,7 @@
 	(interactive)
 	(save-excursion
 		(indent-region (point-min) (point-max) nil)))
-
 (global-set-key (kbd "C-<tab>") 'indent-whole-buffer)
-
 
 ;; Transpose Lines
 (defun my-transpose-line-up ()
@@ -258,11 +233,10 @@
 (global-set-key (kbd "M-<up>") 'my-transpose-line-up)
 (global-set-key (kbd "M-<down>") 'my-transpose-line-down)
 
-
 ;; ORG MODE
 (require 'org)
 (setq org-log-done 'time)
-(setq org-return-follows-link  t)
+(setq org-return-follows-link t)
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 (add-hook 'org-mode-hook 'org-indent-mode)
 (setq org-hide-emphasis-markers t)
@@ -271,29 +245,3 @@
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages '(yasnippet typescript-mode python-mode json-mode)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
