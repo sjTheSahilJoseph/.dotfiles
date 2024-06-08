@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: for
+# key: for
+# --
+for i in range(${1:start_end_step}):
+    ${2:code}
+
+
