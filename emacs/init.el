@@ -178,6 +178,22 @@
 	:bind (:map eglot-mode-map
               ("C-c r" . eglot-rename)))
 
+(use-package corfu
+	:ensure t
+	:defer t
+	:demand t
+	:custom
+	(corfu-cycle t)
+	(corfu-auto t)
+	;; (corfu-separator ?\s)          ;; Orderless field separator
+	;; (corfu-quit-at-boundary nil)   ;; Never quit at completion boundary
+	;; (corfu-quit-no-match nil)      ;; Never quit, even if there is no match
+	;; (corfu-preview-current nil)    ;; Disable current candidate preview
+	;; (corfu-preselect 'prompt)      ;; Preselect the prompt
+	;; (corfu-on-exact-match nil)     ;; Configure handling of exact matches
+	(corfu-scroll-margin 5)
+	:init
+	(global-corfu-mode 1))
 
 (use-package yasnippet
 	:config
@@ -239,3 +255,16 @@
 
 
 
+(custom-set-variables
+	;; custom-set-variables was added by Custom.
+	;; If you edit it by hand, you could mess it up, so be careful.
+	;; Your init file should contain only one such instance.
+	;; If there is more than one, they won't work right.
+	'(package-selected-packages
+		 '(corfu yasnippet typescript-mode python-mode json-mode csharp-mode)))
+(custom-set-faces
+	;; custom-set-faces was added by Custom.
+	;; If you edit it by hand, you could mess it up, so be careful.
+	;; Your init file should contain only one such instance.
+	;; If there is more than one, they won't work right.
+	)
