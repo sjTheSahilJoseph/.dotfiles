@@ -207,12 +207,6 @@
 	:custom
 	(corfu-cycle t)
 	(corfu-auto t)
-    (corfu-separator ?\s)
-	(corfu-quit-at-boundary nil)
-	(corfu-quit-no-match nil)
-	(corfu-preview-current nil)
-	(corfu-preselect 'prompt)
-	(corfu-on-exact-match nil)
 	(corfu-scroll-margin 5)
 	:init
 	(global-corfu-mode 1))
