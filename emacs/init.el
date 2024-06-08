@@ -161,13 +161,32 @@
         use-package-expand-minimally t
         warning-minimum-level :error))
 
-(use-package json-mode :defer t)
-(use-package typescript-mode :defer t)
-(use-package cc-mode :defer t)
-(use-package python-mode :defer t)
-(use-package csharp-mode :mode "\\.cs\\'")
+
+
+
+(use-package json-mode
+	:ensure t
+	:defer t)
+
+(use-package typescript-mode
+	:ensure t
+	:defer t)
+
+(use-package cc-mode
+	:ensure t
+	:defer t)
+
+(use-package python-mode
+	:ensure t
+	:defer t)
+
+(use-package csharp-mode
+	:ensure t
+	:defer t
+	:mode "\\.cs\\'")
 
 (use-package eglot
+	:ensure t
 	:hook ((python-mode . eglot-ensure)
 			  (c-mode . eglot-ensure)
 			  (c++-mode . eglot-ensure)
@@ -175,8 +194,11 @@
 	:config
 	(add-to-list 'eglot-server-programs '(python-mode . ("pyright-langserver" "--stdio")))
 	(add-to-list 'eglot-server-programs '((c-mode c++-mode) . ("clangd")))
+	(add-to-list 'eglot-server-programs '(csharp-mode . ("omnisharp")))
 	:bind (:map eglot-mode-map
               ("C-c r" . eglot-rename)))
+(setq eglot-stay-out-of '(flymake))
+
 
 (use-package corfu
 	:ensure t
@@ -185,12 +207,12 @@
 	:custom
 	(corfu-cycle t)
 	(corfu-auto t)
-	;; (corfu-separator ?\s)          ;; Orderless field separator
-	;; (corfu-quit-at-boundary nil)   ;; Never quit at completion boundary
-	;; (corfu-quit-no-match nil)      ;; Never quit, even if there is no match
-	;; (corfu-preview-current nil)    ;; Disable current candidate preview
-	;; (corfu-preselect 'prompt)      ;; Preselect the prompt
-	;; (corfu-on-exact-match nil)     ;; Configure handling of exact matches
+    (corfu-separator ?\s)
+	(corfu-quit-at-boundary nil)
+	(corfu-quit-no-match nil)
+	(corfu-preview-current nil)
+	(corfu-preselect 'prompt)
+	(corfu-on-exact-match nil)
 	(corfu-scroll-margin 5)
 	:init
 	(global-corfu-mode 1))
@@ -251,20 +273,3 @@
 
 
 
-
-
-
-
-(custom-set-variables
-	;; custom-set-variables was added by Custom.
-	;; If you edit it by hand, you could mess it up, so be careful.
-	;; Your init file should contain only one such instance.
-	;; If there is more than one, they won't work right.
-	'(package-selected-packages
-		 '(corfu yasnippet typescript-mode python-mode json-mode csharp-mode)))
-(custom-set-faces
-	;; custom-set-faces was added by Custom.
-	;; If you edit it by hand, you could mess it up, so be careful.
-	;; Your init file should contain only one such instance.
-	;; If there is more than one, they won't work right.
-	)
