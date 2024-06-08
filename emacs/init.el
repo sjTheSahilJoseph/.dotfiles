@@ -167,20 +167,6 @@
 (use-package python-mode :defer t)
 (use-package csharp-mode :mode "\\.cs\\'")
 
-(use-package company
-	:config
-	(setq company-idle-delay 0.2
-        company-minimum-prefix-length 1)
-	(global-company-mode 1))
-
-(use-package omnisharp
-	:hook (csharp-mode . omnisharp-mode)
-	:init
-	(setq omnisharp-server-executable-path "C:/Users/sjthe/omnisharp-win-x64/OmniSharp.exe")
-	:config
-	(add-to-list 'company-backends 'company-omnisharp)
-	(add-hook 'csharp-mode-hook 'company-mode))
-
 (use-package eglot
 	:hook ((python-mode . eglot-ensure)
 			  (c-mode . eglot-ensure)
@@ -189,9 +175,9 @@
 	:config
 	(add-to-list 'eglot-server-programs '(python-mode . ("pyright-langserver" "--stdio")))
 	(add-to-list 'eglot-server-programs '((c-mode c++-mode) . ("clangd")))
-	(add-to-list 'eglot-server-programs '(csharp-mode . ("C:/Users/sjthe/omnisharp-win-x64/OmniSharp.exe")))
 	:bind (:map eglot-mode-map
               ("C-c r" . eglot-rename)))
+
 
 (use-package yasnippet
 	:config
@@ -246,3 +232,15 @@
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages '(yasnippet typescript-mode python-mode json-mode)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
