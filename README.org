@@ -4,6 +4,9 @@
 
 * Setup:
 *** mklink -> Windows
+*** symlink -> Linux
+*** Install all the tools and stuff
+*** 
 
 * Computer Style
 ** Philosophy
@@ -24,18 +27,24 @@ Emacs
 **** IDEs
 - I write code in Emacs but I like to keep IDE open while writing code.
 ***** C/C++
-- Visual Studio (IDE)
+- Visual Studio (IDE) as kind of debugger and more information about project.
+- Emacs for writing code
+- Just keep open Visual Studio and Emacs, use both
 ***** Web Development
-- Visual Studio Code
+- Visual Studio Code for Frontend Development
+- Emacs for Writing Logic Code
+- Keep VS Code and Emacs open, use both
 ***** Python
 - No IDE, just basic Emacs with Terminal
 - Or Jupyter Notebook
 ***** Android Development
 - Andriod Studio (with emacs bindings)
+  - Here write code in Android Studio for better code writing experience
 ***** Game Development
-- Visual Studio IDE
-- Unity 3d
-- Unreal Engine
+- Visual Studio IDE just keep open for more informations
+- Emacs for Writing Code
+- Unity Engine for Game Creation
+- Unreal Engine for Game Creation
 **** Browser
 ***** Opera
 - Sync across all devices
@@ -51,8 +60,9 @@ Emacs
 
 ** Personal Points:
     - I don't like heavy syntax highliting.
-    - Use LSP, but don't use autocomplete, suggestions, or flymake or flycheck stuff (Use documentation) for code, and terminal for errors.
+    - Use LSP, but don't use autocomplete, suggestions, or flymake or flycheck stuff (Use documentation) for code, and terminal for errors and IDE for linting stuff.
+      Emacs just to write code.
       - LSP manager as Eglot
     - I like fat box cursor, 500ms Blinking	(complete one blink in 1 sec, 500ms off 500ms on).
-    - Turn off almost all animations in Operating System.
+    - No major problem with software animations, until and unless these are too slow.
 
