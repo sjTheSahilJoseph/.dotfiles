@@ -241,6 +241,8 @@
 (global-set-key (kbd "M-<up>") 'my-transpose-line-up)
 (global-set-key (kbd "M-<down>") 'my-transpose-line-down)
 
+
+
 ;; ORG MODE
 (require 'org)
 (setq org-log-done 'time)
