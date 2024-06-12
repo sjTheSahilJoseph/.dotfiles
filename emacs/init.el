@@ -232,6 +232,10 @@
 ;; Marking
 (transient-mark-mode 1)
 
+;; Expanding and Completion
+;; m-/ -> dabrev complete
+;; c-m=/ -> dabrev expand
+
 ;; Transpose Lines
 (defun my-transpose-line-up ()
 	"Transpose the current line with the line above."
@@ -257,9 +261,9 @@
 (setq org-return-follows-link t)
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 (add-hook 'org-mode-hook 'org-indent-mode)
-(setq org-hide-emphasis-markers t)
+(setq org-hide-emphasis-markers nil)
 (add-hook 'org-mode-hook 'visual-line-mode)
-(setq org-hide-leading-stars t)
+(setq org-hide-leading-stars nil)
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
