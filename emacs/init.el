@@ -185,6 +185,10 @@
 	:defer t
 	:mode "\\.cs\\'")
 
+(use-package php-mode
+	:ensure t
+	:defer t)
+
 (use-package eglot
 	:ensure t
 	:hook ((python-mode . eglot-ensure)
