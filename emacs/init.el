@@ -217,9 +217,10 @@
 (setq-default tab-width 4)
 (setq-default c-basic-offset tab-width)
 (setq-default js-indent-level tab-width)
+(setq-default php-indent-level tab-width)
 (setq-default python-indent-offset tab-width)
-(setq lisp-indent-offset 4)
-(setq lisp-body-indent 4)
+(setq lisp-indent-offset tab-width)
+(setq lisp-body-indent tab-width)
 
 (defun indent-whole-buffer ()
 	"Indent the entire buffer."
@@ -227,6 +228,9 @@
 	(save-excursion
 		(indent-region (point-min) (point-max) nil)))
 (global-set-key (kbd "C-<tab>") 'indent-whole-buffer)
+
+;; Marking
+(transient-mark-mode 1)
 
 ;; Transpose Lines
 (defun my-transpose-line-up ()
@@ -261,15 +265,36 @@
 (put 'upcase-region 'disabled nil)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages '(yasnippet typescript-mode python-mode json-mode)))
+	;; custom-set-variables was added by Custom.
+	;; If you edit it by hand, you could mess it up, so be careful.
+	;; Your init file should contain only one such instance.
+	;; If there is more than one, they won't work right.
+	'(package-selected-packages '(yasnippet typescript-mode python-mode json-mode)))
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+	;; custom-set-faces was added by Custom.
+	;; If you edit it by hand, you could mess it up, so be careful.
+	;; Your init file should contain only one such instance.
+	;; If there is more than one, they won't work right.
+	)
