@@ -104,31 +104,31 @@
 (defun open-dotfiles ()
 	"Open /.dotfiles."
 	(interactive)
-	(find-file-other-window "c:/users/sjthe/.dotfiles"))
+	(find-file-other-window "c:/users/sjthesahiljoseph/.dotfiles"))
 
 ;; Open Projects
 (defun open-projects ()
 	"Open /Projects."
 	(interactive)
-	(find-file-other-window "W:/"))
+	(find-file-other-window "D:/"))
 
 ;; Open Init file
 (defun open-init-file ()
 	"Open init file."
 	(interactive)
-	(find-file-other-window "c:/users/sjthe/.dotfiles/emacs/init.el"))
+	(find-file-other-window "c:/users/sjthesahiljoseph/.dotfiles/emacs/init.el"))
 
 ;; Open Theme File
 (defun open-theme-file ()
 	"Open theme file."
 	(interactive)
-	(find-file-other-window "C:/Users/sjthe/.dotfiles/emacs/themes/loveisanillusion.emacs-theme.el"))
+	(find-file-other-window "C:/Users/sjthesahiljoseph/.dotfiles/emacs/themes/loveisanillusion.emacs-theme.el"))
 
 ;; Open Temporary Directory
 (defun open-temporary-directory ()
 	"Open Temporary Directory."
 	(interactive)
-	(find-file-other-window "W:/temporary"))
+	(find-file-other-window "D:/temporary"))
 
 ;; Quick Open Directories Keymaps
 (defun setup-directories-keybindings ()
@@ -202,7 +202,7 @@
 
 (use-package yasnippet
 	:config
-	(setq yas-snippet-dirs '("C:/Users/sjthe/.dotfiles/emacs/snippets"))
+	(setq yas-snippet-dirs '("C:/Users/sjthesahiljoseph/.dotfiles/emacs/snippets"))
 	(yas-reload-all)
 	(yas-global-mode 1)
 	(add-hook 'python-mode-hook #'yas-minor-mode))
