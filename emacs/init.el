@@ -33,8 +33,7 @@
 (column-number-mode t)
 (setq-default truncate-lines t)
 
-;; Marking
-(setq mark-even-if-inactive nil)
+
 
 ;; Find and Replace
 (global-set-key (kbd "<f7>") 'replace-string)
@@ -231,6 +230,8 @@
 
 ;; Marking
 (transient-mark-mode 1)
+(setq mark-even-if-inactive nil)
+
 
 ;; Expanding and Completion
 ;; m-/ -> dabrev complete
