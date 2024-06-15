@@ -57,7 +57,7 @@
     :weight 'regular)
 
 ;; Default directory
-(setq default-directory "W:/") 
+(setq default-directory "D:/") 
 
 ;; Theme
 (add-to-list 'custom-theme-load-path "C:/Users/sjthesahiljoseph/.dotfiles/emacs/themes/")
