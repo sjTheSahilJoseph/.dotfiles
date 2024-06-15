@@ -270,6 +270,23 @@
 (put 'upcase-region 'disabled nil)
 
 
+;; Header
+(defun insert-custom-header ()
+	"Insert a custom header at the top of the file."
+	(interactive)
+	(let ((header (concat
+					  "/*\n\n"
+					  "*==================================================\n"
+					  "*\tName: \n"
+					  "*\tDate: " (format-time-string "%d-%m-%Y") "\n"
+					  "*\tPurpose: \n"
+					  "*\tAuthor: \n"
+					  "*==================================================\n"
+					  "*/\n\n")))
+		(goto-char (point-min))
+		(insert header)))
+
+(global-set-key (kbd "C-c h") 'insert-custom-header)
 
 
 
