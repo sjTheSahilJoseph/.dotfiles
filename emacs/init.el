@@ -275,13 +275,15 @@
 	"Insert a custom header at the top of the file."
 	(interactive)
 	(let ((header (concat
-					  "/*\n\n"
-					  "*==================================================\n"
-					  "*\tName: \n"
-					  "*\tDate: " (format-time-string "%d-%m-%Y") "\n"
-					  "*\tPurpose: \n"
-					  "*\tAuthor: \n"
-					  "*==================================================\n"
+					  "/*\n"
+					  "============================================================================\n"
+					  "============================================================================\n"
+					  "\tFile Name: \n"
+					  "\tCreated at - (Date & Time): " (format-time-string "%d-%m-%Y %H:%M") "\n"
+					  "\tPurpose of this file: \n"
+					  "\tAuthor | Writer: SJ the Sahil Joseph\n"
+					  "============================================================================\n"
+					  "============================================================================\n"
 					  "*/\n\n")))
 		(goto-char (point-min))
 		(insert header)))
