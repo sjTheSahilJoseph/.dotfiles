@@ -188,6 +188,15 @@
 	:ensure t
 	:defer t)
 
+(use-package emmet-mode
+	:ensure t
+	:config
+	(setq emmet-move-cursor-between-quotes t)
+	
+	:bind (:map emmet-mode
+			  ("C-j" . emmet-expand-line))
+	:defer t)
+
 (use-package eglot
 	:ensure t
 	:hook ((python-mode . eglot-ensure)
