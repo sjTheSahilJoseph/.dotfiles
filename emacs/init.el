@@ -24,7 +24,7 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (setq-default cursor-type 'box)
-(set-cursor-color "#ff0000")
+(set-cursor-color "#cccccc")
 (blink-cursor-mode t)
 (setq blink-cursor-blinks 0)
 (setq blink-cursor-interval 0.5)
@@ -142,6 +142,19 @@
 	(define-key my-prefix-map (kbd "t") 'open-theme-file)
 	(global-set-key (kbd "C-c m") my-prefix-map))
 (setup-directories-keybindings)
+
+;; Emacs Config Easy
+(defun setup-emacs-config-easy-keybindings ()
+	"Emacs Config Easy"
+	(interactive)
+	(defvar my-prefix-map (make-sparse-keymap)
+		"Emacs Config Easy Keymaps.")
+	(define-key my-prefix-map (kbd "r") 'eval-region)
+	(define-key my-prefix-map (kbd "l") 'global-hl-line-mode)
+	(define-key my-prefix-map (kbd "n") 'global-display-line-numbers-mode)
+	(global-set-key (kbd "C-c e") my-prefix-map))
+(setup-emacs-config-easy-keybindings)
+
 
 ;; Package Setup
 (require 'package)
