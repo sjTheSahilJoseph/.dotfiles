@@ -45,8 +45,9 @@ Emacs
 - Emacs for Writing Code
 - Unity Engine for Game Creation
 - Unreal Engine for Game Creation
+- Custom Engine for Game Creation
 **** Browser
-***** Opera
+***** Microsoft Edge
 - Sync across all devices
 **** Office Tools
 ***** Microsoft Office
