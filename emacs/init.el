@@ -234,7 +234,7 @@
 
 ;; Indent
 (setq electric-indent-mode t)
-(setq-default indent-tabs-mode t)
+(setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq-default c-basic-offset tab-width)
 (setq-default js-indent-level tab-width)
