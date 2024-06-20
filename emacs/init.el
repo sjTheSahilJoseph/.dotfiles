@@ -96,8 +96,8 @@
 (set-message-beep 'silent)
 
 ;; Buffer Navigation
-(global-set-key (kbd "<left>") 'previous-buffer)
-(global-set-key (kbd "<right>") 'next-buffer)
+(global-set-key (kbd "C-S-P") 'previous-buffer)
+(global-set-key (kbd "C-S-N") 'next-buffer)
 
 ;; Open dotfiles
 (defun open-dotfiles ()
