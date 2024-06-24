@@ -305,6 +305,7 @@
 					  "\tCreated at - (Date & Time): " (format-time-string "%d-%m-%Y %H:%M") "\n"
 					  "\tPurpose of this file: \n"
 					  "\tAuthor | Writer: SJ the Sahil Joseph\n"
+                      "\tSJ's Github: sjTheSahilJoseph\n"
 					  "============================================================================\n"
 					  "============================================================================\n"
 					  "*/\n\n")))
