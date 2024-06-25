@@ -1,8 +1,9 @@
 # -*- mode: snippet -*-
-# name: multilinecomment
-# key: multilinecomment
+# name: mc
+# key: mc
 # --
 
-/*\n
-    $1\n
-*/\n
+/*
+    $1
+*/
+
