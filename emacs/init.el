@@ -2,8 +2,8 @@
 ;; Startup Screen
 (setq inhibit-startup-message t)
 
-;; Stop Messages
-(setq inhibit-message t)
+;; Messages
+(setq inhibit-message nil)
 
 ;; Scratch Buffer Message
 (setq initial-scratch-message "\
