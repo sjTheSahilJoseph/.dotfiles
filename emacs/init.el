@@ -3,7 +3,7 @@
 (setq inhibit-startup-message t)
 
 ;; Messages
-(setq inhibit-message nil)
+(setq inhibit-message t)
 
 ;; Scratch Buffer Message
 (setq initial-scratch-message "\
@@ -220,7 +220,7 @@
 			  (c++-mode . eglot-ensure)
 			  (csharp-mode . eglot-ensure))
 	:config
-	(add-to-list 'eglot-server-programs '(python-mode . ("pyright-langserver" "--stdio")))
+	(add-to-list 'eglot-server-programs '(python-mode . ("pylsp")))
 	(add-to-list 'eglot-server-programs '((c-mode c++-mode) . ("clangd")))
 	(add-to-list 'eglot-server-programs '(csharp-mode . ("omnisharp")))
 	:bind (:map eglot-mode-map
