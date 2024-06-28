@@ -6,7 +6,6 @@
 *** mklink -> Windows
 *** symlink -> Linux
 *** Install all the tools and stuff
-*** 
 
 * Computer Style
 ** Philosophy
