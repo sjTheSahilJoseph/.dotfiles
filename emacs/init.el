@@ -158,6 +158,15 @@
 	(global-set-key (kbd "C-c e") my-prefix-map))
 (setup-emacs-config-easy-keybindings)
 
+;; Emacs Important Buffers Navigation Keymaps
+(defun setup-emacs-important-buffer-navigation ()
+  "Emacs Important Buffers Navigation Keymaps."
+  (interactive)
+  (defvar my-prefix-map (make-sparse-keymap)
+    "Emacs Config Easy Keymaps.")
+  (define-key my-prefix-map (kbd "m") (lambda () (interactive) (switch-to-buffer-other-window "*Messages*")))
+  (global-set-key (kbd "C-c b") my-prefix-map))
+(setup-emacs-important-buffer-navigation)
 
 ;; Package Setup
 (require 'package)
