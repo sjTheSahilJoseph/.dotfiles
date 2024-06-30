@@ -39,8 +39,6 @@
 (global-set-key (kbd "<f7>") 'replace-string)
 
 
-
-
 ;; Window UI changes
 (setq window-divider-default-right-width 0)
 (setq window-divider-default-left-width 0)
