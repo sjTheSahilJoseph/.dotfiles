@@ -242,6 +242,10 @@
 	(yas-global-mode 1)
 	(add-hook 'python-mode-hook #'yas-minor-mode))
 
+
+
+
+
 ;; Indent
 (setq electric-indent-mode t)
 (setq-default indent-tabs-mode nil)
