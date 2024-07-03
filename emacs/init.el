@@ -183,9 +183,6 @@
         use-package-expand-minimally t
         warning-minimum-level :error))
 
-
-
-
 (use-package json-mode
 	:ensure t
 	:defer t)
@@ -234,17 +231,12 @@
               ("C-c r" . eglot-rename)))
 (setq eglot-stay-out-of '(flymake))
 
-
 (use-package yasnippet
 	:config
 	(setq yas-snippet-dirs '("C:/Users/sjthesahiljoseph/.dotfiles/emacs/snippets"))
 	(yas-reload-all)
 	(yas-global-mode 1)
 	(add-hook 'python-mode-hook #'yas-minor-mode))
-
-
-
-
 
 ;; Indent
 (setq electric-indent-mode t)
@@ -268,11 +260,9 @@
 (transient-mark-mode 1)
 (setq mark-even-if-inactive nil)
 
-
 ;; Expanding and Completion
 ;; m-/ -> dabrev complete
 ;; c-m=/ -> dabrev expand
-
 
 ;; Transpose Lines
 (defun my-transpose-line-up ()
@@ -291,8 +281,6 @@
 (global-set-key (kbd "M-<up>") 'my-transpose-line-up)
 (global-set-key (kbd "M-<down>") 'my-transpose-line-down)
 
-
-
 ;; ORG MODE
 (require 'org)
 (setq org-log-done 'time)
@@ -306,7 +294,6 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
-
 ;; Header
 (defun insert-custom-header ()
 	"Insert a custom header at the top of the file."
@@ -319,7 +306,6 @@
 					  "\tCreated at - (Date & Time): " (format-time-string "%d-%m-%Y %H:%M") "\n"
 					  "\tPurpose of this file: \n"
 					  "\tAuthor | Writer: SJ the Sahil Joseph\n"
-                      "\tSJ's Github: sjTheSahilJoseph\n"
 					  "============================================================================\n"
 					  "============================================================================\n"
 					  "*/\n\n")))
