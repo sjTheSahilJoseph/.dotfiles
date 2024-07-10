@@ -243,6 +243,8 @@
 	(yas-global-mode 1)
 	(add-hook 'python-mode-hook #'yas-minor-mode))
 
+
+
 ;; Indent
 (setq electric-indent-mode t)
 (setq-default indent-tabs-mode nil)
@@ -348,14 +350,14 @@
 
 
 (custom-set-variables
-    ;; custom-set-variables was added by Custom.
-    ;; If you edit it by hand, you could mess it up, so be careful.
-    ;; Your init file should contain only one such instance.
-    ;; If there is more than one, they won't work right.
-    '(package-selected-packages '(yasnippet typescript-mode json-mode)))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages '(yasnippet typescript-mode json-mode)))
 (custom-set-faces
-    ;; custom-set-faces was added by Custom.
-    ;; If you edit it by hand, you could mess it up, so be careful.
-    ;; Your init file should contain only one such instance.
-    ;; If there is more than one, they won't work right.
-    )
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
