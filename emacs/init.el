@@ -218,6 +218,8 @@
     :config
     (add-to-list 'auto-mode-alist '("\\.jsx?$" . web-mode))
     (add-to-list 'auto-mode-alist '("\\.tsx?$" . web-mode))
+    (setq web-mode-content-types-alist '(("jsx" . "\\.js[x]?\\'")))
+    (setq web-mode-content-types-alist '(("tsx" . "\\.ts[x]?\\'")))
     )
 
 (use-package eglot
