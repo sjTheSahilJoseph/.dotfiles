@@ -158,12 +158,12 @@
 
 ;; Emacs Important Buffers Navigation Keymaps
 (defun setup-emacs-important-buffer-navigation ()
-  "Emacs Important Buffers Navigation Keymaps."
-  (interactive)
-  (defvar my-prefix-map (make-sparse-keymap)
-    "Emacs Config Easy Keymaps.")
-  (define-key my-prefix-map (kbd "m") (lambda () (interactive) (switch-to-buffer-other-window "*Messages*")))
-  (global-set-key (kbd "C-c b") my-prefix-map))
+    "Emacs Important Buffers Navigation Keymaps."
+    (interactive)
+    (defvar my-prefix-map (make-sparse-keymap)
+        "Emacs Config Easy Keymaps.")
+    (define-key my-prefix-map (kbd "m") (lambda () (interactive) (switch-to-buffer-other-window "*Messages*")))
+    (global-set-key (kbd "C-c b") my-prefix-map))
 (setup-emacs-important-buffer-navigation)
 
 ;; Package Setup
@@ -204,10 +204,6 @@
 	:defer t
 	:mode "\\.cs\\'")
 
-(use-package php-mode
-	:ensure t
-	:defer t)
-
 (use-package emmet-mode
 	:ensure t
 	:config
@@ -216,6 +212,13 @@
 	:bind (:map emmet-mode
 			  ("C-j" . emmet-expand-line))
 	:defer t)
+
+(use-package web-mode
+    :ensure t
+    :config
+    (add-to-list 'auto-mode-alist '("\\.jsx?$" . web-mode))
+    (add-to-list 'auto-mode-alist '("\\.tsx?$" . web-mode))
+    )
 
 (use-package eglot
 	:ensure t
@@ -343,14 +346,14 @@
 
 
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages '(yasnippet typescript-mode json-mode)))
+    ;; custom-set-variables was added by Custom.
+    ;; If you edit it by hand, you could mess it up, so be careful.
+    ;; Your init file should contain only one such instance.
+    ;; If there is more than one, they won't work right.
+    '(package-selected-packages '(yasnippet typescript-mode json-mode)))
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+    ;; custom-set-faces was added by Custom.
+    ;; If you edit it by hand, you could mess it up, so be careful.
+    ;; Your init file should contain only one such instance.
+    ;; If there is more than one, they won't work right.
+    )
