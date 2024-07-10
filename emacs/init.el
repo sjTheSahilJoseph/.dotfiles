@@ -214,13 +214,30 @@
 	:defer t)
 
 (use-package web-mode
-    :ensure t
-    :config
-    (add-to-list 'auto-mode-alist '("\\.jsx?$" . web-mode))
-    (add-to-list 'auto-mode-alist '("\\.tsx?$" . web-mode))
-    (setq web-mode-content-types-alist '(("jsx" . "\\.js[x]?\\'")))
-    (setq web-mode-content-types-alist '(("tsx" . "\\.ts[x]?\\'")))
-    )
+  :ensure t
+)
+
+
+
+(add-to-list 'eglot-server-programs '(typescript-mode . ("typescript-language-server" "--stdio")))
+
+(add-hook 'typescript-mode-hook 'eglot-ensure)
+(add-hook 'web-mode-hook 'eglot-ensure)
+
+(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tsx?\\'" . web-mode))
+
+(defun my-web-mode-hook ()
+    "Hooks for Web mode."
+    (setq web-mode-enable-auto-quoting nil)
+    (setq web-mode-enable-auto-pairing nil)
+    (setq web-mode-content-types-alist
+        '(("jsx" . "\\.js[x]?\\'")
+             ("tsx" . "\\.ts[x]?\\'"))))
+
+(add-hook 'web-mode-hook  'my-web-mode-hook)
+
+
 
 (use-package eglot
 	:ensure t
@@ -350,14 +367,14 @@
 
 
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages '(yasnippet typescript-mode json-mode)))
+    ;; custom-set-variables was added by Custom.
+    ;; If you edit it by hand, you could mess it up, so be careful.
+    ;; Your init file should contain only one such instance.
+    ;; If there is more than one, they won't work right.
+    '(package-selected-packages '(yasnippet typescript-mode json-mode)))
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+    ;; custom-set-faces was added by Custom.
+    ;; If you edit it by hand, you could mess it up, so be careful.
+    ;; Your init file should contain only one such instance.
+    ;; If there is more than one, they won't work right.
+    )
