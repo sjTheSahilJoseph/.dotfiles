@@ -53,7 +53,7 @@
 
 ;; Setting Fonts
 (set-face-attribute 'default nil
-	:family "Consolas"
+	:family "Liberation Mono"
 	:height 130
     :weight 'regular)
 
