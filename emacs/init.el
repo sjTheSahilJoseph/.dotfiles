@@ -213,45 +213,6 @@
 			  ("C-j" . emmet-expand-line))
 	:defer t)
 
-(use-package web-mode
-  :ensure t
-)
-
-
-
-(add-to-list 'eglot-server-programs '(typescript-mode . ("typescript-language-server" "--stdio")))
-
-(add-hook 'typescript-mode-hook 'eglot-ensure)
-(add-hook 'web-mode-hook 'eglot-ensure)
-
-(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tsx?\\'" . web-mode))
-
-(defun my-web-mode-hook ()
-    "Hooks for Web mode."
-    (setq web-mode-enable-auto-quoting nil)
-    (setq web-mode-enable-auto-pairing nil)
-    (setq web-mode-content-types-alist
-        '(("jsx" . "\\.js[x]?\\'")
-             ("tsx" . "\\.ts[x]?\\'"))))
-
-(add-hook 'web-mode-hook  'my-web-mode-hook)
-
-
-
-(use-package eglot
-	:ensure t
-	:hook ((python-mode . eglot-ensure)
-			  (c-mode . eglot-ensure)
-			  (c++-mode . eglot-ensure)
-			  (csharp-mode . eglot-ensure))
-	:config
-	(add-to-list 'eglot-server-programs '(python-mode . ("pylsp")))
-	(add-to-list 'eglot-server-programs '((c-mode c++-mode) . ("clangd")))
-	(add-to-list 'eglot-server-programs '(csharp-mode . ("omnisharp")))
-	:bind (:map eglot-mode-map
-              ("C-c r" . eglot-rename)))
-(setq eglot-stay-out-of '(flymake))
 
 (use-package yasnippet
 	:config
@@ -261,14 +222,12 @@
 	(add-hook 'python-mode-hook #'yas-minor-mode))
 
 
-
 ;; Indent
 (setq electric-indent-mode t)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq-default c-basic-offset tab-width)
 (setq-default js-indent-level tab-width)
-(setq-default php-indent-level tab-width)
 (setq-default python-indent-offset tab-width)
 (setq lisp-indent-offset tab-width)
 (setq lisp-body-indent tab-width)
@@ -283,10 +242,6 @@
 ;; Marking
 (transient-mark-mode 1)
 (setq mark-even-if-inactive nil)
-
-;; Expanding and Completion
-;; m-/ -> dabrev complete
-;; c-m=/ -> dabrev expand
 
 ;; Transpose Lines
 (defun my-transpose-line-up ()

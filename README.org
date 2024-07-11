@@ -19,23 +19,22 @@
 
 ** Tools I use
 **** Operating System
-Windows 11 - x64
-Linux - Fedora
+Windows 10 - x64
+Linux - Fedora - x64
 **** Code Editor
 Emacs
 **** IDEs
 - I write code in Emacs but I like to keep IDE open while writing code.
 ***** C/C++/C#
-- Visual Studio (IDE) as kind of debugger and more information about project.
-- Emacs for writing code
-- Just keep open Visual Studio and Emacs, use both
+- Visual Studio as IDE.
+- Emacs for writing code.
 ***** Web Development
-- Visual Studio Code as IDE kind of.
+- Visual Studio Code as IDE.
 - Emacs for Writing Code.
-- Keep VS Code and Emacs open, use both.
 ***** Data Science, Machine Learning, Artificial Intelligence, Deep Learning
-- No IDE, just basic Emacs with Terminal
-- Or Jupyter Notebook
+- PyCharm as IDE.
+- Emacs for Code writing.
+- Jupyter Notebook
 ***** Game Development
 - Visual Studio IDE just keep open for more informations
 - Emacs for Writing Code
@@ -57,9 +56,7 @@ Emacs
 
 ** Personal Points:
     - I don't like heavy syntax highliting.
-    - Use LSP, but don't use autocomplete, suggestions, or flymake or flycheck stuff (Use documentation) for code, and terminal for errors and IDE for linting stuff.
-      Emacs just to write code.
-      - LSP manager as Eglot
-    - I like bar, like normal thin line cursor, 500ms Blinking	(complete one blink in 1 sec, 500ms off 500ms on).
+    - I don't use LSP in Emacs. I use emacs just to write code. Other stuff on IDE.
+    - I like box, like normal box cursor, 500ms Blinking	(complete one blink in 1 sec, 500ms off 500ms on).
     - No major problem with software animations, until and unless they are too slow.
 
