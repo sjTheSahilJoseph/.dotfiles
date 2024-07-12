@@ -12,10 +12,9 @@
 1. Use computer 100% powerfully, productively, and fastly.
     - Do what is needed, don't waste time in doing unnecessary stuff.
 		- Create your own tools and utilities.
-2. Customize almost all things.
+2. Only customize those things that matters, don't waste time.
 	- But make sure to not change the whole meaning of that thing.
 		- For example, Emacs, don't just create unnecessary keybindings.
-		- But create own keymaps to work faster.
 
 ** Tools I use
 **** Operating System
@@ -25,7 +24,7 @@ Linux - Fedora - x64
 Emacs
 **** IDEs
 - I write code in Emacs but I like to keep IDE open while writing code.
-***** C/C++/C#
+***** C/C++
 - Visual Studio as IDE.
 - Emacs for writing code.
 ***** Web Development
@@ -38,7 +37,6 @@ Emacs
 ***** Game Development
 - Visual Studio IDE just keep open for more informations
 - Emacs for Writing Code
-- Unity Engine for Game Creation
 - Unreal Engine for Game Creation
 - Custom Engine for Game Creation
 **** Browser
@@ -55,8 +53,11 @@ Emacs
 ***** Liberation Mono - Size = 13pt / 17px / 130 emacs height
 
 ** Personal Points:
-    - I don't like heavy syntax highliting.
-    - I don't use LSP in Emacs. I use emacs just to write code. Other stuff on IDE.
-    - I like box, like normal box cursor, 500ms Blinking	(complete one blink in 1 sec, 500ms off 500ms on).
     - No major problem with software animations, until and unless they are too slow.
+    - I use Dark Theme for almost everything, But for emacs, I use light theme.
 
+** Emacs Points:
+- No LSP, No code suggestion, no linting, no fancy stuff.
+- Use IDE for these kind of things, use Emacs as a plain code editor.
+- Use light theme for emacs. (loveisanillusion by sjthesahiljoseph).
+  
