@@ -3,7 +3,7 @@
 (setq inhibit-startup-message t)
 
 ;; Messages
-(setq inhibit-message t)
+(setq inhibit-message nil)
 
 ;; Scratch Buffer Message
 (setq initial-scratch-message "\
@@ -33,11 +33,8 @@
 (column-number-mode t)
 (setq-default truncate-lines t)
 
-
-
 ;; Find and Replace
 (global-set-key (kbd "<f7>") 'replace-string)
-
 
 ;; Window UI changes
 (setq window-divider-default-right-width 0)
@@ -56,9 +53,6 @@
 	:family "Liberation Mono"
 	:height 130
     :weight 'regular)
-
-;; Default directory
-(setq default-directory "D:/") 
 
 ;; Theme
 (add-to-list 'custom-theme-load-path "C:/Users/sjthesahiljoseph/.dotfiles/emacs/themes/")
@@ -100,18 +94,6 @@
 (global-set-key (kbd "C-S-P") 'previous-buffer)
 (global-set-key (kbd "C-S-N") 'next-buffer)
 
-;; Open dotfiles
-(defun open-dotfiles ()
-	"Open /.dotfiles."
-	(interactive)
-	(find-file-other-window "c:/users/sjthesahiljoseph/.dotfiles"))
-
-;; Open Projects
-(defun open-projects ()
-	"Open /Projects."
-	(interactive)
-	(find-file-other-window "D:/"))
-
 ;; Open Init file
 (defun open-init-file ()
 	"Open init file."
@@ -124,25 +106,16 @@
 	(interactive)
 	(find-file-other-window "C:/Users/sjthesahiljoseph/.dotfiles/emacs/themes/loveisanillusion.emacs-theme.el"))
 
-;; Open Temporary Directory
-(defun open-temporary-directory ()
-	"Open Temporary Directory."
-	(interactive)
-	(find-file-other-window "D:/temporary"))
-
-;; Quick Open Directories Keymaps
-(defun setup-directories-keybindings ()
-	"Open Directories."
+;; Quick Open Files Keymaps
+(defun setup-files-keybindings ()
+	"Open Files."
 	(interactive)
 	(defvar my-prefix-map (make-sparse-keymap)
 		"My personal prefix keymap.")
-	(define-key my-prefix-map (kbd "d") 'open-dotfiles)
 	(define-key my-prefix-map (kbd "e") 'open-init-file)
-	(define-key my-prefix-map (kbd "p") 'open-projects)
-	(define-key my-prefix-map (kbd "m") 'open-temporary-directory)
 	(define-key my-prefix-map (kbd "t") 'open-theme-file)
 	(global-set-key (kbd "C-c m") my-prefix-map))
-(setup-directories-keybindings)
+(setup-files-keybindings)
 
 ;; Emacs Config Easy
 (defun setup-emacs-config-easy-keybindings ()
@@ -156,15 +129,6 @@
 	(global-set-key (kbd "C-c e") my-prefix-map))
 (setup-emacs-config-easy-keybindings)
 
-;; Emacs Important Buffers Navigation Keymaps
-(defun setup-emacs-important-buffer-navigation ()
-    "Emacs Important Buffers Navigation Keymaps."
-    (interactive)
-    (defvar my-prefix-map (make-sparse-keymap)
-        "Emacs Config Easy Keymaps.")
-    (define-key my-prefix-map (kbd "m") (lambda () (interactive) (switch-to-buffer-other-window "*Messages*")))
-    (global-set-key (kbd "C-c b") my-prefix-map))
-(setup-emacs-important-buffer-navigation)
 
 ;; Package Setup
 (require 'package)
@@ -199,32 +163,10 @@
 	:ensure t
 	:defer t)
 
-(use-package csharp-mode
-	:ensure t
-	:defer t
-	:mode "\\.cs\\'")
-
-(use-package emmet-mode
-	:ensure t
-	:config
-	(setq emmet-move-cursor-between-quotes t)
-	
-	:bind (:map emmet-mode
-			  ("C-j" . emmet-expand-line))
-	:defer t)
-
-
-(use-package yasnippet
-	:config
-	(setq yas-snippet-dirs '("C:/Users/sjthesahiljoseph/.dotfiles/emacs/snippets"))
-	(yas-reload-all)
-	(yas-global-mode 1)
-	(add-hook 'python-mode-hook #'yas-minor-mode))
-
 
 ;; Indent
 (setq electric-indent-mode t)
-(setq-default indent-tabs-mode nil)
+(setq-default indent-tabs-mode t)
 (setq-default tab-width 4)
 (setq-default c-basic-offset tab-width)
 (setq-default js-indent-level tab-width)
@@ -243,23 +185,6 @@
 (transient-mark-mode 1)
 (setq mark-even-if-inactive nil)
 
-;; Transpose Lines
-(defun my-transpose-line-up ()
-	"Transpose the current line with the line above."
-	(interactive)
-	(transpose-lines 1)
-	(forward-line -2))
-
-(defun my-transpose-line-down ()
-	"Transpose the current line with the line below."
-	(interactive)
-	(forward-line 1)
-	(transpose-lines 1)
-	(forward-line -1))
-
-(global-set-key (kbd "M-<up>") 'my-transpose-line-up)
-(global-set-key (kbd "M-<down>") 'my-transpose-line-down)
-
 ;; ORG MODE
 (require 'org)
 (setq org-log-done 'time)
@@ -273,25 +198,6 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
-;; Header
-(defun insert-custom-header ()
-	"Insert a custom header at the top of the file."
-	(interactive)
-	(let ((header (concat
-					  "/*\n"
-					  "============================================================================\n"
-					  "============================================================================\n"
-					  "\tFile Name: \n"
-					  "\tCreated at - (Date & Time): " (format-time-string "%d-%m-%Y %H:%M") "\n"
-					  "\tPurpose of this file: \n"
-					  "\tAuthor | Writer: SJ the Sahil Joseph\n"
-					  "============================================================================\n"
-					  "============================================================================\n"
-					  "*/\n\n")))
-		(goto-char (point-min))
-		(insert header)))
-
-(global-set-key (kbd "C-c h") 'insert-custom-header)
 
 
 
@@ -300,36 +206,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-(custom-set-variables
-    ;; custom-set-variables was added by Custom.
-    ;; If you edit it by hand, you could mess it up, so be careful.
-    ;; Your init file should contain only one such instance.
-    ;; If there is more than one, they won't work right.
-    '(package-selected-packages '(yasnippet typescript-mode json-mode)))
-(custom-set-faces
-    ;; custom-set-faces was added by Custom.
-    ;; If you edit it by hand, you could mess it up, so be careful.
-    ;; Your init file should contain only one such instance.
-    ;; If there is more than one, they won't work right.
-    )
