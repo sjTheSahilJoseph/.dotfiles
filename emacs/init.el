@@ -164,8 +164,8 @@
 	:defer t)
 
 (use-package rainbow-mode
-	:ensure t
-	:defer t)
+  :ensure t
+  :hook (prog-mode . rainbow-mode))
 
 
 ;; Indent
