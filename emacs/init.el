@@ -129,7 +129,6 @@
 	(global-set-key (kbd "C-c e") my-prefix-map))
 (setup-emacs-config-easy-keybindings)
 
-
 ;; Package Setup
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -189,16 +188,7 @@
 (transient-mark-mode 1)
 (setq mark-even-if-inactive nil)
 
-;; ORG MODE
-(require 'org)
-(setq org-log-done 'time)
-(setq org-return-follows-link t)
-(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
-(add-hook 'org-mode-hook 'org-indent-mode)
-(setq org-hide-emphasis-markers nil)
-(add-hook 'org-mode-hook 'visual-line-mode)
-(setq org-hide-leading-stars nil)
-
+;; Case Conversion
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
