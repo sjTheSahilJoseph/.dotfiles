@@ -24,12 +24,11 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (setq-default cursor-type 'box)
-(set-cursor-color "#ffffff")
+(set-cursor-color "#f3f4f6")
 (blink-cursor-mode t)
 (setq blink-cursor-blinks 0)
 (setq blink-cursor-interval 0.5)
 (global-hl-line-mode 0)
-;; (split-window-horizontally)
 (column-number-mode t)
 (setq-default truncate-lines t)
 
