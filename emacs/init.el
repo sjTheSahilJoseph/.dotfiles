@@ -1,24 +1,4 @@
 
-;; Startup Screen
-(setq inhibit-startup-message t)
-
-;; Messages
-(setq inhibit-message nil)
-
-;; Scratch Buffer Message
-(setq initial-scratch-message "\
-;; SJ Joseph
-
-")
-
-;; Start in maximized mode
-(defun maximize-frame ()
-	"Maximizes the active frame in Windows"
-	(interactive)
-	(when (eq system-type 'windows-nt)
-		(w32-send-sys-command 61488)))
-(add-hook 'window-setup-hook 'maximize-frame t)
-
 ;; Basic UI changes
 (tool-bar-mode -1)
 (menu-bar-mode -1)
@@ -31,9 +11,6 @@
 (global-hl-line-mode 0)
 (column-number-mode t)
 (setq-default truncate-lines t)
-
-;; Find and Replace
-(global-set-key (kbd "<f7>") 'replace-string)
 
 ;; Window UI changes
 (setq window-divider-default-right-width 0)
@@ -56,6 +33,25 @@
 ;; Theme
 (add-to-list 'custom-theme-load-path "C:/Users/sjthesahiljoseph/.dotfiles/emacs/themes/")
 (load-theme 'loveisanillusion.emacs t)
+
+;; Startup Screen
+(setq inhibit-startup-message t)
+
+;; Messages
+(setq inhibit-message nil)
+
+;; Scratch Buffer Message
+(setq initial-scratch-message "\
+;; SJ Joseph
+
+")
+
+;; Marking
+(transient-mark-mode 1)
+(setq mark-even-if-inactive nil)
+
+;; Find and Replace
+(global-set-key (kbd "<f7>") 'replace-string)
 
 ;; Character Encoding Settings
 (set-language-environment "UTF-8")
@@ -88,45 +84,6 @@
 
 ;; Sound
 (set-message-beep 'silent)
-
-;; Buffer Navigation
-(global-set-key (kbd "C-S-P") 'previous-buffer)
-(global-set-key (kbd "C-S-N") 'next-buffer)
-
-;; Open Init file
-(defun open-init-file ()
-	"Open init file."
-	(interactive)
-	(find-file-other-window "c:/users/sjthesahiljoseph/.dotfiles/emacs/init.el"))
-
-;; Open Theme File
-(defun open-theme-file ()
-	"Open theme file."
-	(interactive)
-	(find-file-other-window "C:/Users/sjthesahiljoseph/.dotfiles/emacs/themes/loveisanillusion.emacs-theme.el"))
-
-;; Quick Open Files Keymaps
-(defun setup-files-keybindings ()
-	"Open Files."
-	(interactive)
-	(defvar my-prefix-map (make-sparse-keymap)
-		"My personal prefix keymap.")
-	(define-key my-prefix-map (kbd "e") 'open-init-file)
-	(define-key my-prefix-map (kbd "t") 'open-theme-file)
-	(global-set-key (kbd "C-c m") my-prefix-map))
-(setup-files-keybindings)
-
-;; Emacs Config Easy
-(defun setup-emacs-config-easy-keybindings ()
-	"Emacs Config Easy"
-	(interactive)
-	(defvar my-prefix-map (make-sparse-keymap)
-		"Emacs Config Easy Keymaps.")
-	(define-key my-prefix-map (kbd "r") 'eval-region)
-	(define-key my-prefix-map (kbd "l") 'global-hl-line-mode)
-	(define-key my-prefix-map (kbd "n") 'global-display-line-numbers-mode)
-	(global-set-key (kbd "C-c e") my-prefix-map))
-(setup-emacs-config-easy-keybindings)
 
 ;; Package Setup
 (require 'package)
@@ -165,16 +122,10 @@
 	:ensure t
 	:hook (prog-mode . rainbow-mode))
 
-
 ;; Indent
 (setq electric-indent-mode t)
 (setq-default indent-tabs-mode t)
 (setq-default tab-width 4)
-(setq-default c-basic-offset tab-width)
-(setq-default js-indent-level tab-width)
-(setq-default python-indent-offset tab-width)
-(setq lisp-indent-offset tab-width)
-(setq lisp-body-indent tab-width)
 
 (defun indent-whole-buffer ()
 	"Indent the entire buffer."
@@ -183,9 +134,6 @@
 		(indent-region (point-min) (point-max) nil)))
 (global-set-key (kbd "C-<tab>") 'indent-whole-buffer)
 
-;; Marking
-(transient-mark-mode 1)
-(setq mark-even-if-inactive nil)
 
 ;; Case Conversion
 (put 'downcase-region 'disabled nil)
