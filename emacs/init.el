@@ -19,16 +19,16 @@
 
 ;; Frame UI changes
 (setq default-frame-alist
-    '((internal-border-width . 2)
-         (left-fringe . 5)
-         (right-fringe . 5)))
+      '((internal-border-width . 2)
+        (left-fringe . 5)
+        (right-fringe . 5)))
 (window-divider-mode)
 
 ;; Setting Fonts
 (set-face-attribute 'default nil
-	:family "Liberation Mono"
-	:height 130
-    :weight 'regular)
+					:family "Liberation Mono"
+					:height 130
+					:weight 'regular)
 
 ;; Theme
 (add-to-list 'custom-theme-load-path "C:/Users/sjthesahiljoseph/.dotfiles/emacs/themes/")
@@ -77,9 +77,9 @@
 
 ;; Compile
 (defun run-build-script ()
-	"Run the build.bat"
-	(interactive)
-	(compile "build.bat"))
+  "Run the build.bat"
+  (interactive)
+  (compile "build.bat"))
 (global-set-key (kbd "<f5>") 'run-build-script)
 
 ;; Sound
@@ -94,33 +94,33 @@
 (package-initialize)
 
 (unless (package-installed-p 'use-package)
-	(package-refresh-contents)
-	(package-install 'use-package))
+  (package-refresh-contents)
+  (package-install 'use-package))
 
 (eval-and-compile
-	(setq use-package-always-ensure t
+  (setq use-package-always-ensure t
         use-package-expand-minimally t
         warning-minimum-level :error))
 
 (use-package json-mode
-	:ensure t
-	:defer t)
+  :ensure t
+  :defer t)
 
 (use-package typescript-mode
-	:ensure t
-	:defer t)
+  :ensure t
+  :defer t)
 
 (use-package cc-mode
-	:ensure t
-	:defer t)
+  :ensure t
+  :defer t)
 
 (use-package python-mode
-	:ensure t
-	:defer t)
+  :ensure t
+  :defer t)
 
 (use-package rainbow-mode
-	:ensure t
-	:hook (prog-mode . rainbow-mode))
+  :ensure t
+  :hook (prog-mode . rainbow-mode))
 
 ;; Indent
 (setq electric-indent-mode t)
@@ -128,10 +128,10 @@
 (setq-default tab-width 4)
 
 (defun indent-whole-buffer ()
-	"Indent the entire buffer."
-	(interactive)
-	(save-excursion
-		(indent-region (point-min) (point-max) nil)))
+  "Indent the entire buffer."
+  (interactive)
+  (save-excursion
+	(indent-region (point-min) (point-max) nil)))
 (global-set-key (kbd "C-<tab>") 'indent-whole-buffer)
 
 
