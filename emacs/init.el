@@ -3,13 +3,17 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
+
+;; Cusror Customization
 (setq-default cursor-type 'box)
 (set-cursor-color "#ff4040")
 (blink-cursor-mode t)
 (setq blink-cursor-blinks 0)
 (setq blink-cursor-interval 0.5)
+
 (global-hl-line-mode 0)
 (column-number-mode t)
+
 (setq-default truncate-lines t)
 
 ;; Window UI changes
