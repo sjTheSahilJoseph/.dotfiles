@@ -60,6 +60,9 @@
 ;; Count Words
 (global-set-key (kbd "<f6>") 'count-words)
 
+;; Eval Region
+(global-set-key (kbd "<f8>") 'eval-region)
+
 ;; Character Encoding Settings
 (set-language-environment "UTF-8")
 (setq locale-coding-system 'utf-8)
