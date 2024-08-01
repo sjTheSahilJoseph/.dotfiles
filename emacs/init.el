@@ -57,6 +57,9 @@
 ;; Find and Replace
 (global-set-key (kbd "<f7>") 'replace-string)
 
+;; Count Words
+(global-set-key (kbd "<f6>") 'count-words)
+
 ;; Character Encoding Settings
 (set-language-environment "UTF-8")
 (setq locale-coding-system 'utf-8)
