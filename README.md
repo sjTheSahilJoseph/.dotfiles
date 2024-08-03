@@ -9,4 +9,7 @@
    - Mouse (Wired)
    - Computer Table (Custom Made)
    - Chair (Custom Made)
+
+## Software:
+   - Windows 10 x64
    
