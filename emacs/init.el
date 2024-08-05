@@ -54,21 +54,21 @@
 (transient-mark-mode 1)
 (setq mark-even-if-inactive nil)
 
-;; Find and Replace
-(global-set-key (kbd "<f7>") 'replace-string)
-
-;; Count Words
-(global-set-key (kbd "<f6>") 'count-words)
-
-;; Eval Region
-(global-set-key (kbd "<f8>") 'eval-region)
-
 ;; Compile
 (defun run-build-script ()
   "Run the build.bat"
   (interactive)
   (compile "build.bat"))
 (global-set-key (kbd "<f5>") 'run-build-script)
+
+;; Count Words
+(global-set-key (kbd "<f6>") 'count-words)
+
+;; Find and Replace
+(global-set-key (kbd "<f7>") 'replace-string)
+
+;; Eval Region
+(global-set-key (kbd "<f8>") 'eval-region)
 
 ;; Character Encoding Settings
 (set-language-environment "UTF-8")
