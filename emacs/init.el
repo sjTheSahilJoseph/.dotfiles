@@ -63,6 +63,13 @@
 ;; Eval Region
 (global-set-key (kbd "<f8>") 'eval-region)
 
+;; Compile
+(defun run-build-script ()
+  "Run the build.bat"
+  (interactive)
+  (compile "build.bat"))
+(global-set-key (kbd "<f5>") 'run-build-script)
+
 ;; Character Encoding Settings
 (set-language-environment "UTF-8")
 (setq locale-coding-system 'utf-8)
@@ -85,12 +92,6 @@
 ;; Auto load changed file
 (global-auto-revert-mode t)
 
-;; Compile
-(defun run-build-script ()
-  "Run the build.bat"
-  (interactive)
-  (compile "build.bat"))
-(global-set-key (kbd "<f5>") 'run-build-script)
 
 ;; Sound
 (set-message-beep 'silent)
