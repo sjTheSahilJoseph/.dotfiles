@@ -6,7 +6,7 @@
 
 ;; Cusror Customization
 (setq-default cursor-type 'box)
-(set-cursor-color "#ff4040")
+(set-cursor-color "#00ee00")
 (blink-cursor-mode t)
 (setq blink-cursor-blinks 0)
 (setq blink-cursor-interval 0.5)
