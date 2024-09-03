@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 
-vim.opt.guicursor = 'a:ver25'
+vim.opt.guicursor = ''
 
 vim.opt.mouse = ""
 
