@@ -35,6 +35,5 @@ vim.keymap.set("n", "<leader>bS", ":bprev<cr>")
 
 vim.keymap.set("n", "<leader>Gp", ":Git push<CR>")
 
-vim.keymap.set("n", "<leader>ut", ":UndotreeToggle<CR>")
 
 
