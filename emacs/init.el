@@ -137,6 +137,10 @@
   :ensure t
   :defer t)
 
+(use-package lua-mode
+  :ensure t
+  :defer t)
+
 (use-package rainbow-mode
   :ensure t
   :hook (prog-mode . rainbow-mode))
@@ -165,7 +169,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(rustic-mode rust-mode rainbow-mode python-mode typescript-mode json-mode)))
+   '(lua-mode rustic-mode rust-mode rainbow-mode python-mode typescript-mode json-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
