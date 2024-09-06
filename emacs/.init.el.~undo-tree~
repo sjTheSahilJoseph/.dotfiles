@@ -1,0 +1,46 @@
+(undo-tree-save-format-version . 1)
+"a85961def2a581cd0625e3bdab4c046bfcdb1015"
+[nil nil nil nil (26331 17692 532067 0) 1 nil]
+([nil nil ((5034 . 5035)) ((#("k" 0 1 (fontified t)) . 5034) (undo-tree-id29 . -1) (undo-tree-id30 . -1)) (26331 17686 892826 0) 0 nil] [nil nil ((5510 . 5749) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 19 (fontified t) 19 22 (face font-lock-comment-delimiter-face fontified t) 22 60 (face font-lock-comment-face fontified t) 60 61 (fontified t) 61 64 (face font-lock-comment-delimiter-face fontified t) 64 125 (face font-lock-comment-face fontified t) 125 126 (fontified t) 126 129 (face font-lock-comment-delimiter-face fontified t) 129 183 (face font-lock-comment-face fontified t) 183 184 (fontified t) 184 187 (face font-lock-comment-delimiter-face fontified t) 187 237 (face font-lock-comment-face fontified t) 237 239 (fontified t)) . 5510) (5507 . 5509) (#("
+" 0 1 (fontified nil)) . 5507) (5309 . 5508) (#(" " 0 1 (fontified nil)) . 5309) (5036 . 5310) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(which-key typescript-mode treemacs-tab-bar treemacs-projectile treemacs-icons-dired rust-mode rainbow-mode python-mode lua-mode lsp-ui lsp-treemacs lsp-ivy json-mode helm-lsp flycheck company)))" 0 23 (fontified t) 23 26 (face font-lock-comment-delimiter-face fontified t) 26 68 (face font-lock-comment-face fontified t) 68 69 (fontified t) 69 72 (face font-lock-comment-delimiter-face fontified t) 72 133 (face font-lock-comment-face fontified t) 133 134 (fontified t) 134 137 (face font-lock-comment-delimiter-face fontified t) 137 191 (face font-lock-comment-face fontified t) 191 192 (fontified t) 192 195 (face font-lock-comment-delimiter-face fontified t) 195 245 (face font-lock-comment-face fontified t) 245 473 (fontified t)) . 5036)) ((5036 . 5509) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages " 0 23 (fontified t) 23 26 (face font-lock-comment-delimiter-face fontified t) 26 68 (face font-lock-comment-face fontified t) 68 69 (fontified t) 69 72 (face font-lock-comment-delimiter-face fontified t) 72 133 (face font-lock-comment-face fontified t) 133 134 (fontified t) 134 137 (face font-lock-comment-delimiter-face fontified t) 137 191 (face font-lock-comment-face fontified t) 191 192 (fontified t) 192 195 (face font-lock-comment-delimiter-face fontified t) 195 245 (face font-lock-comment-face fontified t) 245 273 (fontified nil) 273 274 (fontified nil)) . 5036) (5309 . 5310) (#("
+   '(which-key typescript-mode treemacs-tab-bar treemacs-projectile treemacs-icons-dired rust-mode rainbow-mode python-mode lua-mode lsp-ui lsp-treemacs lsp-ivy json-mode helm-lsp flycheck company)
+" 0 1 (fontified t) 1 198 (fontified nil) 198 199 (fontified nil)) . 5309) (5507 . 5508) (#("))" 0 2 (fontified t)) . 5507) (5510 . 5749) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 19 (fontified t) 19 22 (face font-lock-comment-delimiter-face fontified t) 22 60 (face font-lock-comment-face fontified t) 60 61 (fontified t) 61 64 (face font-lock-comment-delimiter-face fontified t) 64 125 (face font-lock-comment-face fontified t) 125 126 (fontified t) 126 129 (face font-lock-comment-delimiter-face fontified t) 129 183 (face font-lock-comment-face fontified t) 183 184 (fontified t) 184 187 (face font-lock-comment-delimiter-face fontified t) 187 237 (face font-lock-comment-face fontified t) 237 239 (fontified t)) . 5510)) (26331 17694 180362 0) 0 nil])
+([nil nil ((#("k" 0 1 (fontified t)) . 5034) (undo-tree-id27 . -1) (undo-tree-id28 . -1)) ((5034 . 5035) (t 26331 17674 0 0)) (26331 17685 827965 0) 0 nil])
+([nil current ((#("
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(which-key typescript-mode treemacs-tab-bar treemacs-projectile treemacs-icons-dired rust-mode rainbow-mode python-mode lua-mode lsp-ui lsp-treemacs lsp-ivy json-mode helm-lsp flycheck company)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+" 0 1 (fontified t) 1 24 (fontified t) 24 27 (face font-lock-comment-delimiter-face fontified t) 27 69 (face font-lock-comment-face fontified t) 69 70 (fontified t) 70 73 (face font-lock-comment-delimiter-face fontified t) 73 134 (face font-lock-comment-face fontified t) 134 135 (fontified t) 135 138 (face font-lock-comment-delimiter-face fontified t) 138 192 (face font-lock-comment-face fontified t) 192 193 (fontified t) 193 196 (face font-lock-comment-delimiter-face fontified t) 196 246 (face font-lock-comment-face fontified t) 246 274 (fontified t) 274 275 (fontified t) 275 472 (fontified t) 472 474 (fontified t) 474 475 (fontified t) 475 494 (fontified t) 494 497 (face font-lock-comment-delimiter-face fontified t) 497 535 (face font-lock-comment-face fontified t) 535 536 (fontified t) 536 539 (face font-lock-comment-delimiter-face fontified t) 539 600 (face font-lock-comment-face fontified t) 600 601 (fontified t) 601 604 (face font-lock-comment-delimiter-face fontified t) 604 658 (face font-lock-comment-face fontified t) 658 659 (fontified t) 659 662 (face font-lock-comment-delimiter-face fontified t) 662 712 (face font-lock-comment-face fontified t) 712 714 (fontified t) 714 715 (fontified t)) . -5035) (undo-tree-id31 . -475) (undo-tree-id32 . -715) (undo-tree-id33 . -475) (undo-tree-id34 . -475) (undo-tree-id35 . -475) (undo-tree-id36 . -475) (undo-tree-id37 . -715) 5750 (t 26331 17698 0 0)) nil (26331 17702 914778 0) 0 nil])
+nil
+nil
