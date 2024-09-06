@@ -230,7 +230,6 @@
 (lsp-treemacs-sync-mode 1)
 
 
-
 ;; Language Modes
 (use-package json-mode
   :ensure t
