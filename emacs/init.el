@@ -157,7 +157,7 @@
           treemacs-goto-tag-strategy               'refetch-index
           treemacs-header-scroll-indicators        '(nil . "^^^^^^")
           treemacs-hide-dot-git-directory          t
-          treemacs-indentation                     2
+          treemacs-indentation                     4
           treemacs-indentation-string              " "
           treemacs-is-never-other-window           nil
           treemacs-max-git-entries                 5000
@@ -185,14 +185,14 @@
           treemacs-select-when-already-in-treemacs 'move-back
           treemacs-space-between-root-nodes        t
           treemacs-tag-follow-cleanup              t
-          treemacs-tag-follow-delay                1.5
+          treemacs-tag-follow-delay                0
           treemacs-text-scale                      nil
           treemacs-user-mode-line-format           nil
           treemacs-user-header-line-format         nil
           treemacs-wide-toggle-width               70
-          treemacs-width                           35
+          treemacs-width                           30
           treemacs-width-increment                 1
-          treemacs-width-is-initially-locked       t
+          treemacs-width-is-initially-locked       nil
           treemacs-workspace-switch-cleanup        nil)
 
     (treemacs-follow-mode t)
