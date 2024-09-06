@@ -124,6 +124,10 @@
          (typescript-mode . lsp)
 		 (rust-mode . lsp)
 		 (python-mode . lsp)
+		 (cc-mode . lsp)
+		 (csharp-mode . lsp)
+		 (json-mode . lsp)
+		 (lua-mode . lsp)
          )
   :commands lsp)
 
