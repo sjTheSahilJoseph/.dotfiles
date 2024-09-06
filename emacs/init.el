@@ -113,25 +113,6 @@
         use-package-expand-minimally t
         warning-minimum-level :error))
 
-;; LSP
-(use-package lsp-mode
-  :ensure t
-  :defer t
-  :init
-  (setq lsp-keymap-prefix "C-c l")
-  :hook (
-         (typescript-mode . lsp)
-		 (rust-mode . lsp)
-		 (python-mode . lsp)
-         )
-  :commands lsp)
-
-(use-package lsp-ui :commands lsp-ui-mode)
-(use-package helm-lsp :commands helm-lsp-workspace-symbol)
-(use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
-(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
-
-
 ;; Treemacs
 (use-package treemacs
   :ensure t
@@ -164,7 +145,7 @@
           treemacs-missing-project-action          'ask
           treemacs-move-files-by-mouse-dragging    t
           treemacs-move-forward-on-expand          nil
-          treemacs-no-png-images                   nil
+          treemacs-no-png-images                   t
           treemacs-no-delete-other-windows         t
           treemacs-project-follow-cleanup          nil
           treemacs-persist-file                    (expand-file-name ".cache/treemacs-persist" user-emacs-directory)
@@ -190,9 +171,9 @@
           treemacs-user-mode-line-format           nil
           treemacs-user-header-line-format         nil
           treemacs-wide-toggle-width               30
-          treemacs-width                           20
-          treemacs-width-increment                 0
-          treemacs-width-is-initially-locked       nil
+          treemacs-width                           35
+          treemacs-width-increment                 1
+          treemacs-width-is-initially-locked       t
           treemacs-workspace-switch-cleanup        nil)
 
     (treemacs-follow-mode t)
@@ -221,16 +202,33 @@
         ("C-x t C-t" . treemacs-find-file)
         ("C-x t M-t" . treemacs-find-tag)))
 
-(use-package treemacs-icons-dired
-  :hook (dired-mode . treemacs-icons-dired-enable-once)
-  :ensure t)
-
 (use-package treemacs-tab-bar
   :after (treemacs)
   :ensure t
   :config (treemacs-set-scope-type 'Tabs))
 
 (treemacs-start-on-boot)
+
+
+;; LSP
+(use-package lsp-mode
+  :ensure t
+  :defer t
+  :init
+  (setq lsp-keymap-prefix "C-c l")
+  :hook (
+         (typescript-mode . lsp)
+		 (rust-mode . lsp)
+		 (python-mode . lsp)
+         )
+  :commands lsp)
+
+(use-package lsp-ui :commands lsp-ui-mode)
+(use-package helm-lsp :commands helm-lsp-workspace-symbol)
+(use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
+(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
+(lsp-treemacs-sync-mode 1)
+
 
 
 ;; Language Modes
