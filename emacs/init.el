@@ -207,6 +207,40 @@
   :ensure t
   :config (treemacs-set-scope-type 'Tabs))
 
+(setq treemacs-follow-mode t)
+(setq treemacs-project-follow-mode t)
+
+(use-package treemacs-projectile
+  :ensure t
+  :defer t
+  :config
+  (setq treemacs-header-function #'treemacs-projectile-create-header))
+
+(defun my-treemacs-refresh-on-project-change ()
+  "Refresh treemacs and switch to the current project."
+  (interactive)
+  (when (project-current)
+    (treemacs-add-and-display-current-project)))
+(add-hook 'projectile-switch-project-hook #'my-treemacs-refresh-on-project-change)
+
+(setq treemacs-project-follow-mode t)
+(setq treemacs-follow-mode t)
+(setq treemacs-is-never-other-window t)
+(defun my-treemacs-update-project-root ()
+  "Update Treemacs to show the correct project root, even when switching disks."
+  (let* ((current-dir (file-truename default-directory))
+         (project-root (if (project-current)
+                           (project-root (project-current))
+                         current-dir)))
+    (treemacs-display-current-project-exclusively)
+    (treemacs-select-window)
+    (treemacs-find-file project-root)))
+
+(add-hook 'find-file-hook #'my-treemacs-update-project-root)
+
+(add-hook 'projectile-after-switch-project-hook #'my-treemacs-update-project-root)
+
+
 ;; LSP
 (use-package lsp-mode
   :ensure t
@@ -282,3 +316,16 @@
 
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(treemacs-projectile typescript-mode treemacs-tab-bar treemacs-icons-dired rust-mode rainbow-mode python-mode lua-mode lsp-ui lsp-treemacs lsp-ivy json-mode helm-lsp flycheck company)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
