@@ -207,9 +207,6 @@
   :ensure t
   :config (treemacs-set-scope-type 'Tabs))
 
-(treemacs-start-on-boot)
-
-
 ;; LSP
 (use-package lsp-mode
   :ensure t
