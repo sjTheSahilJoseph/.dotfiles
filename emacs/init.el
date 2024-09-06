@@ -142,13 +142,13 @@
   :config
   (progn
     (setq treemacs-collapse-dirs                   (if treemacs-python-executable 3 0)
-          treemacs-deferred-git-apply-delay        0.5
+          treemacs-deferred-git-apply-delay        0
           treemacs-directory-name-transformer      #'identity
           treemacs-display-in-side-window          t
           treemacs-eldoc-display                   'simple
           treemacs-file-event-delay                2000
           treemacs-file-extension-regex            treemacs-last-period-regex-value
-          treemacs-file-follow-delay               0.2
+          treemacs-file-follow-delay               0
           treemacs-file-name-transformer           #'identity
           treemacs-follow-after-init               t
           treemacs-expand-after-init               t
@@ -157,7 +157,7 @@
           treemacs-goto-tag-strategy               'refetch-index
           treemacs-header-scroll-indicators        '(nil . "^^^^^^")
           treemacs-hide-dot-git-directory          t
-          treemacs-indentation                     4
+          treemacs-indentation                     2
           treemacs-indentation-string              " "
           treemacs-is-never-other-window           nil
           treemacs-max-git-entries                 5000
@@ -189,9 +189,9 @@
           treemacs-text-scale                      nil
           treemacs-user-mode-line-format           nil
           treemacs-user-header-line-format         nil
-          treemacs-wide-toggle-width               70
-          treemacs-width                           30
-          treemacs-width-increment                 1
+          treemacs-wide-toggle-width               30
+          treemacs-width                           20
+          treemacs-width-increment                 0
           treemacs-width-is-initially-locked       nil
           treemacs-workspace-switch-cleanup        nil)
 
@@ -201,7 +201,7 @@
     (when treemacs-python-executable
       (treemacs-git-commit-diff-mode t))
 
- (pcase (cons (not (null (executable-find "git")))
+	(pcase (cons (not (null (executable-find "git")))
                  (not (null treemacs-python-executable)))
       (`(t . t)
        (treemacs-git-mode 'deferred))
@@ -209,7 +209,7 @@
        (treemacs-git-mode 'simple)))
 
     (treemacs-hide-gitignored-files-mode nil))
-    
+  
 
   :bind
   (:map global-map
