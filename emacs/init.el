@@ -113,6 +113,14 @@
         use-package-expand-minimally t
         warning-minimum-level :error))
 
+;; Which Key
+(use-package which-key
+  :ensure t
+  :defer t)
+(which-key-setup-side-window-bottom)
+(setq which-key-idle-delay 10000)
+(setq which-key-idle-secondary-delay 0.05)
+(which-key-mode)
 
 ;; LSP
 (use-package lsp-mode
@@ -120,6 +128,9 @@
   :defer t
   :init
   (setq lsp-keymap-prefix "C-c l")
+  (setq lsp-diagnostic-package :none)
+  (setq lsp-headerline-breadcrumb-enable nil)
+
   :hook (
          (typescript-mode . lsp)
 		 (rust-mode . lsp)
@@ -186,3 +197,16 @@
 
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(which-key typescript-mode treemacs-tab-bar treemacs-projectile treemacs-icons-dired rust-mode rainbow-mode python-mode lua-mode lsp-ui lsp-treemacs lsp-ivy json-mode helm-lsp flycheck company)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
