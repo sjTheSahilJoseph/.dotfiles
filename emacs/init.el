@@ -115,18 +115,8 @@
 
 ;; LSP
 (use-package lsp-mode
-  :init
-  (setq lsp-keymap-prefix "C-l")
-  :hook (
-         (typescript-mode . lsp)
-		 (cc-mode . lsp)
-		 (python-mode . lsp)
-  :commands lsp)
-
-(use-package lsp-ui :commands lsp-ui-mode)
-(use-package helm-lsp :commands helm-lsp-workspace-symbol)
-(use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
-(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
+  :ensure t
+  :defer t
 )
 
 (use-package json-mode
