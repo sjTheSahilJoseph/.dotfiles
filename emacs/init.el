@@ -149,6 +149,7 @@
   :defer t
   )
 (global-undo-tree-mode)
+(setq undo-tree-history-directory-alist '(("." . "C:/Users/SJ Joseph/AppData/Roaming/.emacs.d/undo")))
 
 ;; Language Modes
 (use-package json-mode
