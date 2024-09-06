@@ -113,13 +113,31 @@
         use-package-expand-minimally t
         warning-minimum-level :error))
 
+;; LSP
+(use-package lsp-mode
+  :init
+  (setq lsp-keymap-prefix "C-l")
+  :hook (
+         (typescript-mode . lsp)
+		 (cc-mode . lsp)
+		 (python-mode . lsp)
+  :commands lsp)
+
+(use-package lsp-ui :commands lsp-ui-mode)
+(use-package helm-lsp :commands helm-lsp-workspace-symbol)
+(use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
+(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
+)
+
 (use-package json-mode
   :ensure t
   :defer t)
 
 (use-package typescript-mode
   :ensure t
-  :defer t)
+  :defer t
+  :config
+  (setq typescript-indent-level 4))
 
 (use-package cc-mode
   :ensure t
@@ -145,6 +163,17 @@
   :ensure t
   :hook (prog-mode . rainbow-mode))
 
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
+
+(use-package company
+  :ensure t
+  :config
+  (add-hook 'after-init-hook 'global-company-mode)
+  (setq company-minimum-prefix-length 1)
+  (setq company-idle-delay 0.0))
+
 ;; Indent
 (setq electric-indent-mode t)
 (setq-default indent-tabs-mode t)
@@ -163,16 +192,6 @@
 (put 'upcase-region 'disabled nil)
 
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(lua-mode rustic-mode rust-mode rainbow-mode python-mode typescript-mode json-mode)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
+
+
