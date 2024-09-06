@@ -131,12 +131,6 @@
          )
   :commands lsp)
 
-(use-package lsp-ui :commands lsp-ui-mode)
-(use-package helm-lsp :commands helm-lsp-workspace-symbol)
-(use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
-(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
-
-
 ;; Language Modes
 (use-package json-mode
   :ensure t
@@ -168,6 +162,7 @@
   :ensure t
   :defer t)
 
+;; Rainbow Mode
 (use-package rainbow-mode
   :ensure t
   :hook (prog-mode . rainbow-mode))
