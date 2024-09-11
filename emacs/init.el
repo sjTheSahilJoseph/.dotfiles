@@ -169,6 +169,7 @@
 (add-to-list 'eglot-server-programs
              '((js-mode typescript-mode) . ("typescript-language-server" "--stdio")))
 
+
 (setq eglot-autoshutdown t)
 (setq eglot-extend-to-xref t)
 
