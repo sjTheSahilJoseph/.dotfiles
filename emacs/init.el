@@ -175,7 +175,12 @@
 (use-package flymake
   :ensure t
   :hook
-  (emacs-lisp-mode . flycheck-mode)
+  (emacs-lisp-mode . flymake-mode)
+  (c++-mode . flymake-mode)
+  (c-mode . flymake-mode)
+  (emacs-lisp-mode . flymake-mode)
+  (js-mode . flymake-mode)
+  (typescript-mode . flymake-mode)
   )
 
 (add-hook 'typescript-mode-hook 'eglot-ensure)
@@ -193,10 +198,19 @@
   :hook (emacs-lisp-mode . eldoc-mode))
 
 ;; Completion
+
 (use-package company
   :ensure t
-  :defer t
-  )
+  :hook (prog-mode . company-mode)
+  :bind (:map company-active-map
+              ("<tab>" . company-complete-common-or-cycle)
+              ("<backtab>" . (lambda ()
+                               (interactive)
+                               (company-complete-common-or-cycle -1))))
+  :config
+  (setq company-tooltip-align-annotations t
+        company-idle-delay 0.2
+        company-minimum-prefix-length 2))
 
 (global-company-mode)
 
