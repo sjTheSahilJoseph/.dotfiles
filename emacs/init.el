@@ -113,37 +113,6 @@
         use-package-expand-minimally t
         warning-minimum-level :error))
 
-;; Which Key
-(use-package which-key
-  :ensure t
-  :defer t)
-(which-key-setup-side-window-bottom)
-(setq which-key-idle-delay 10000)
-(setq which-key-idle-secondary-delay 0.05)
-(which-key-mode)
-
-;; LSP
-(use-package lsp-mode
-  :ensure t
-  :defer t
-  :init
-  (setq lsp-keymap-prefix "C-c l")
-  (setq lsp-diagnostic-package :none)
-  (setq lsp-headerline-breadcrumb-enable nil)
-  (setq gc-cons-threshold 100000000)
-  (setq read-process-output-max (* 1024 1024))
-  :hook (
-         (typescript-mode . lsp)
-		 (rust-mode . lsp)
-		 (python-mode . lsp)
-		 (cc-mode . lsp)
-		 (c-mode . lsp)
-		 (csharp-mode . lsp)
-		 (json-mode . lsp)
-		 (lua-mode . lsp)
-         )
-  :commands lsp)
-
 ;; Undo Tree
 (use-package undo-tree
   :ensure t
@@ -189,6 +158,28 @@
 (use-package lua-mode
   :ensure t
   :defer t)
+
+;; LSP
+(use-package eglot
+  :ensure t
+  :hook ((typescript-mode js-mode c++-mode c-mode) . eglot-ensure))
+
+(add-to-list 'eglot-server-programs
+             '((c++-mode c-mode) . ("clangd")))
+(add-to-list 'eglot-server-programs
+             '((js-mode typescript-mode) . ("typescript-language-server" "--stdio")))
+
+(use-package flymake
+  :ensure t)
+
+(add-hook 'typescript-mode-hook 'eglot-ensure)
+(add-hook 'js-mode-hook 'eglot-ensure)
+(add-hook 'c++-mode-hook 'eglot-ensure)
+(add-hook 'c-mode-hook 'eglot-ensure)
+
+(with-eval-after-load 'eglot
+  (define-key eglot-mode-map (kbd "C-c r") 'eglot-rename)
+  (define-key eglot-mode-map (kbd "C-c a") 'eglot-code-actions))
 
 ;; Completion
 (use-package company
