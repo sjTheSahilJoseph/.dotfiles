@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\SJ Joseph\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "C:\\Users\\SJ Joseph\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "C:\\Users\\SJ Joseph\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
