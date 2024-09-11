@@ -183,11 +183,11 @@
   (typescript-mode . flymake-mode)
   )
 
-(add-hook 'typescript-mode-hook 'eglot-ensure)
-(add-hook 'js-mode-hook 'eglot-ensure)
-(add-hook 'c++-mode-hook 'eglot-ensure)
-(add-hook 'c-mode-hook 'eglot-ensure)
-(add-hook 'emacs-lisp-mode-hook 'eglot-ensure)
+;;(add-hook 'typescript-mode-hook 'eglot-ensure)
+;;(add-hook 'js-mode-hook 'eglot-ensure)
+;;(add-hook 'c++-mode-hook 'eglot-ensure)
+;;(add-hook 'c-mode-hook 'eglot-ensure)
+;;(add-hook 'emacs-lisp-mode-hook 'eglot-ensure)
 
 (with-eval-after-load 'eglot
   (define-key eglot-mode-map (kbd "C-c r") 'eglot-rename)
