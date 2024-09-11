@@ -162,7 +162,7 @@
 ;; LSP
 (use-package eglot
   :ensure t
-  :hook ((typescript-mode js-mode c++-mode c-mode) . eglot-ensure))
+  :hook ((typescript-mode js-mode c++-mode c-mode emacs-lisp-mode) . eglot-ensure))
 
 (add-to-list 'eglot-server-programs
              '((c++-mode c-mode) . ("clangd")))
@@ -170,16 +170,24 @@
              '((js-mode typescript-mode) . ("typescript-language-server" "--stdio")))
 
 (use-package flymake
-  :ensure t)
+  :ensure t
+  :hook
+  (emacs-lisp-mode . flycheck-mode)
+  )
 
 (add-hook 'typescript-mode-hook 'eglot-ensure)
 (add-hook 'js-mode-hook 'eglot-ensure)
 (add-hook 'c++-mode-hook 'eglot-ensure)
 (add-hook 'c-mode-hook 'eglot-ensure)
+(add-hook 'emacs-lisp-mode-hook 'eglot-ensure)
 
 (with-eval-after-load 'eglot
   (define-key eglot-mode-map (kbd "C-c r") 'eglot-rename)
   (define-key eglot-mode-map (kbd "C-c a") 'eglot-code-actions))
+
+(use-package eldoc
+  :ensure t
+  :hook (emacs-lisp-mode . eldoc-mode))
 
 ;; Completion
 (use-package company
