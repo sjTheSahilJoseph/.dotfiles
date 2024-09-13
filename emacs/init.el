@@ -214,6 +214,7 @@
         company-minimum-prefix-length 2))
 
 (global-company-mode)
+(company-mode)
 
 (global-set-key (kbd "<tab>") #'company-indent-or-complete-common)
 (with-eval-after-load 'company
