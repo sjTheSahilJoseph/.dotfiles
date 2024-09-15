@@ -148,6 +148,21 @@
   :ensure t
   :hook (prog-mode . rainbow-mode))
 
+
+(use-package web-mode
+  :ensure t
+  :mode ("\\.js\\'" "\\.jsx\\'" "\\.ts\\'" "\\.tsx\\'")
+  :config
+  (setq web-mode-markup-indent-offset 4
+        web-mode-css-indent-offset 4
+        web-mode-code-indent-offset 4))
+
+(use-package php-mode
+  :ensure t
+  :defer t
+)
+
+
 ;; Indent
 (setq electric-indent-mode t)
 (setq-default indent-tabs-mode t)
@@ -164,4 +179,8 @@
 ;; Case Conversion
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
+
+
+
+
 
