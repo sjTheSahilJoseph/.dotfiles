@@ -113,21 +113,6 @@
         use-package-expand-minimally t
         warning-minimum-level :error))
 
-;; Undo Tree
-(use-package undo-tree
-  :ensure t
-  :defer t
-  )
-(global-undo-tree-mode)
-(setq undo-tree-history-directory-alist '(("." . "C:/Users/SJ Joseph/AppData/Roaming/.emacs.d/undo")))
-
-;; Neotree
-(use-package neotree
-  :ensure t
-  :defer t
-  )
-(global-set-key [f9] 'neotree-toggle)
-
 ;; Language Modes
 (use-package json-mode
   :ensure t
@@ -213,8 +198,7 @@
         company-idle-delay 0.2
         company-minimum-prefix-length 2))
 
-(global-company-mode)
-(company-mode)
+
 
 (global-set-key (kbd "<tab>") #'company-indent-or-complete-common)
 (with-eval-after-load 'company
@@ -234,6 +218,7 @@
   (define-key company-active-map (kbd "M-.") #'company-show-location)
   (define-key company-active-map (kbd "RET") nil))
 
+(global-company-mode)
 ;; Rainbow Mode
 (use-package rainbow-mode
   :ensure t
