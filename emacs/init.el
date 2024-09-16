@@ -160,13 +160,9 @@
   :defer t
   )
 
-(use-package tsx-mode
-  :ensure t
-  :mode "\\.tsx\\'")
-
 (use-package rjsx-mode
   :ensure t
-  :mode "\\.jsx\\'"
+  :mode ("\\.jsx\\'" "\\.tsx\\'")
   :config
   (setq js-indent-level 4))
 
