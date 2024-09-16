@@ -267,7 +267,9 @@
 
 (straight-use-package '(tsx-mode :type git :host github :repo "orzechowskid/tsx-mode.el"))
 
-
+(require 'tsx-mode)
+(tsx-mode t)
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . tsx-mode)
 
 ;; Indent
 (setq electric-indent-mode t)
