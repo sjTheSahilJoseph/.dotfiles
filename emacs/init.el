@@ -151,16 +151,20 @@
 
 (use-package web-mode
   :ensure t
-  :mode ("\\.js\\'" "\\.jsx\\'" "\\.ts\\'" "\\.tsx\\'")
+  :mode ("\\.js\\'" "\\.jsx\\'" "\\.ts\\'" "\\.html\\'"  "\\.tsx\\'")
   :config
   (setq web-mode-markup-indent-offset 4
         web-mode-css-indent-offset 4
         web-mode-code-indent-offset 4))
+(add-to-list 'web-mode-indentation-params '("lineup-args" . nil))
+(add-to-list 'web-mode-indentation-params '("lineup-calls" . nil))
+(add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
+(add-to-list 'web-mode-indentation-params '("lineup-ternary" . nil))
 
 (use-package php-mode
   :ensure t
   :defer t
-)
+  )
 
 
 ;; Indent
