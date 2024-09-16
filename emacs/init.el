@@ -246,30 +246,15 @@
                   ("M-n" . flycheck-next-error)
                   ("M-p" . flycheck-previous-error)))
 
-(defvar bootstrap-version)
-(let ((bootstrap-file
-       (expand-file-name
-        "straight/repos/straight.el/bootstrap.el"
-        (or (bound-and-true-p straight-base-dir)
-            user-emacs-directory)))
-      (bootstrap-version 7))
-  (unless (file-exists-p bootstrap-file)
-    (with-current-buffer
-        (url-retrieve-synchronously
-         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
-         'silent 'inhibit-cookies)
-      (goto-char (point-max))
-      (eval-print-last-sexp)))
-  (load bootstrap-file nil 'nomessage))
+
+(use-package tree-sitter
+  :ensure t
+  :hook ((typescript-mode . tree-sitter-hl-mode)))
+
+(use-package tree-sitter-langs
+  :ensure t)
 
 
-(straight-use-package 'use-package)
-
-(straight-use-package '(tsx-mode :type git :host github :repo "orzechowskid/tsx-mode.el"))
-
-(require 'tsx-mode)
-(tsx-mode t)
-(add-to-list 'auto-mode-alist '("\\.tsx\\'" . tsx-mode)
 
 ;; Indent
 (setq electric-indent-mode t)
