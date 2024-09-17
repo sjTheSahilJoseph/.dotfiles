@@ -166,7 +166,20 @@
   :config
   (setq js-indent-level 4))
 
+;; LSP
+(use-package eglot
+  :ensure t
+  :hook ((typescript-mode js-mode c++-mode c-mode emacs-lisp-mode) . eglot-ensure))
+(setq eglot-events-buffer-size 0)
 
+(add-to-list 'eglot-server-programs
+             '((c++-mode c-mode) . ("clangd")))
+(add-to-list 'eglot-server-programs
+             '((js-mode typescript-mode) . ("typescript-language-server" "--stdio")))
+
+
+(setq eglot-autoshutdown t)
+(setq eglot-extend-to-xref t)
 
 
 (use-package corfu
