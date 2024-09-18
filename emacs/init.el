@@ -248,6 +248,14 @@
               ("M-p" . flycheck-previous-error)))
 
 
+(use-package flycheck-posframe
+  :ensure t
+  :hook (flycheck-mode . flycheck-posframe-mode)
+  :custom
+  (flycheck-posframe-border-width 2)
+  (flycheck-posframe-position 'window-bottom-right-corner))
+
+
 (use-package tree-sitter
   :ensure t
   :hook ((typescript-mode . tree-sitter-hl-mode)))
@@ -278,3 +286,16 @@
 
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(flycheck-posframe which-key web-mode undo-tree typescript-mode treemacs-tab-bar treemacs-projectile treemacs-icons-dired tree-sitter-langs rust-mode rjsx-mode rainbow-mode python-mode php-mode orderless nerd-icons-corfu neotree lua-mode lsp-ui lsp-treemacs lsp-ivy json-mode helm-lsp flycheck corfu company)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
