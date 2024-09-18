@@ -248,6 +248,10 @@
               ("M-p" . flycheck-previous-error)))
 
 
+(use-package flycheck-popup-tip
+  :ensure t
+  :after flycheck
+  :hook (flycheck-mode . flycheck-popup-tip-mode))
 
 
 (use-package tree-sitter
@@ -282,3 +286,16 @@
 
 
 ;;; init.el ends here
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(flycheck-popup-tip which-key web-mode undo-tree typescript-mode treemacs-tab-bar treemacs-projectile treemacs-icons-dired tree-sitter-langs rust-mode rjsx-mode rainbow-mode python-mode php-mode orderless nerd-icons-corfu neotree lua-mode lsp-ui lsp-treemacs lsp-ivy json-mode helm-lsp flycheck-posframe corfu company)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
