@@ -193,19 +193,32 @@
 
 (use-package corfu
 :custom
-(corfu-cycle t)
-(corfu-auto t)
-(corfu-separator ?\s)
+(corfu-cycle nil)
+(corfu-auto nil)
 (corfu-quit-at-boundary nil)
 (corfu-quit-no-match nil)
-(corfu-preview-current nil)
+(corfu-preview-current t)
 (corfu-preselect 'prompt)
 (corfu-on-exact-match nil)
-(corfu-scroll-margin 5)
+(corfu-scroll-margin 0)
+
+:bind
+(:map corfu-map
+        ("TAB" . corfu-next)
+        ([tab] . corfu-next)
+        ("S-TAB" . corfu-previous)
+        ([backtab] . corfu-previous))
 
   :init
   (global-corfu-mode)
   (corfu-popupinfo-mode))
+
+(use-package nerd-icons-corfu
+  :ensure t
+  
+)
+
+(add-to-list 'corfu-margin-formatters #'nerd-icons-corfu-formatter)
 
 (use-package emacs
   :custom
@@ -267,3 +280,8 @@
 ;; Case Conversion
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
+
+
+
+
+
