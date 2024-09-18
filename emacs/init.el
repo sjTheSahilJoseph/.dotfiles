@@ -211,10 +211,20 @@
 
   :init
   (global-corfu-mode)
-  (corfu-popupinfo-mode))
+  (corfu-popupinfo-mode)
 
 :config
-(keymap-unset corfu-map "RET")
+(keymap-unset corfu-map "RET"))
+
+(use-package corfu-doc
+  :ensure t
+  :after corfu
+  :hook (corfu-mode . corfu-doc-mode)
+  :bind (:map corfu-map
+              ("M-d" . corfu-doc-toggle)
+              ("M-n" . corfu-doc-scroll-up)
+              ("M-p" . corfu-doc-scroll-down)))
+
 
 (use-package emacs
   :custom
