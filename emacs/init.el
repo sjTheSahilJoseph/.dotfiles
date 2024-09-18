@@ -202,13 +202,6 @@
   (corfu-on-exact-match nil)
   (corfu-scroll-margin 0)
 
-  :bind
-  (:map corfu-map
-        ("TAB" . corfu-next)
-        ([tab] . corfu-next)
-        ("S-TAB" . corfu-previous)
-        ([backtab] . corfu-previous))
-
   :init
   (global-corfu-mode)
   (corfu-popupinfo-mode)
