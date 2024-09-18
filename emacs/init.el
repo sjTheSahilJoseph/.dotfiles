@@ -169,13 +169,22 @@
 ;; LSP
 (use-package eglot
   :ensure t
-  :hook ((typescript-mode js-mode c++-mode c-mode emacs-lisp-mode) . eglot-ensure))
-(setq eglot-events-buffer-size 0)
+  :hook ((typescript-mode . eglot-ensure)
+         (js-mode . eglot-ensure)
+         (tsx-mode . eglot-ensure)
+         (js-jsx-mode . eglot-ensure)
+         (web-mode . eglot-ensure)
+	 (c++-mode . eglot-ensure)
+	 (c-mode . eglot-ensure)
+	 (emacs-lisp-mode-mode . eglot-ensure)
+         (php-mode . eglot-ensure))
+  :config
+  (add-to-list 'eglot-server-programs '(typescript-mode . ("typescript-language-server" "--stdio")))
+  (add-to-list 'eglot-server-programs '(c++-mode . ("cland")))
+    (add-to-list 'eglot-server-programs '(c-mode . ("cland")))
 
-(add-to-list 'eglot-server-programs
-             '((c++-mode c-mode) . ("clangd")))
-(add-to-list 'eglot-server-programs
-             '((js-mode typescript-mode) . ("typescript-language-server" "--stdio")))
+  )
+
 
 
 (setq eglot-autoshutdown t)
