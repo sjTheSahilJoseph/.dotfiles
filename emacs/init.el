@@ -213,7 +213,8 @@
   (global-corfu-mode)
   (corfu-popupinfo-mode)
   (setq corfu-popupinfo-delay 0.5)
-
+  (setq corfu-min-width 100)
+    (setq corfu-popupinfo-delay 0.5)
   :config
   (keymap-unset corfu-map "RET"))
 
