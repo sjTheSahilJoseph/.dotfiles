@@ -174,14 +174,14 @@
          (tsx-mode . eglot-ensure)
          (js-jsx-mode . eglot-ensure)
          (web-mode . eglot-ensure)
-	 (c++-mode . eglot-ensure)
-	 (c-mode . eglot-ensure)
-	 (emacs-lisp-mode-mode . eglot-ensure)
+		 (c++-mode . eglot-ensure)
+		 (c-mode . eglot-ensure)
+		 (emacs-lisp-mode-mode . eglot-ensure)
          (php-mode . eglot-ensure))
   :config
   (add-to-list 'eglot-server-programs '(typescript-mode . ("typescript-language-server" "--stdio")))
   (add-to-list 'eglot-server-programs '(c++-mode . ("cland")))
-    (add-to-list 'eglot-server-programs '(c-mode . ("cland")))
+  (add-to-list 'eglot-server-programs '(c-mode . ("cland")))
 
   )
 
@@ -192,18 +192,18 @@
 
 
 (use-package corfu
-:custom
-(corfu-cycle nil)
-(corfu-auto nil)
-(corfu-quit-at-boundary nil)
-(corfu-quit-no-match nil)
-(corfu-preview-current t)
-(corfu-preselect 'prompt)
-(corfu-on-exact-match nil)
-(corfu-scroll-margin 0)
+  :custom
+  (corfu-cycle nil)
+  (corfu-auto nil)
+  (corfu-quit-at-boundary nil)
+  (corfu-quit-no-match nil)
+  (corfu-preview-current t)
+  (corfu-preselect 'prompt)
+  (corfu-on-exact-match nil)
+  (corfu-scroll-margin 0)
 
-:bind
-(:map corfu-map
+  :bind
+  (:map corfu-map
         ("TAB" . corfu-next)
         ([tab] . corfu-next)
         ("S-TAB" . corfu-previous)
@@ -213,10 +213,12 @@
   (global-corfu-mode)
   (corfu-popupinfo-mode))
 
+:config
+(keymap-unset corfu-map "RET")
+
 (use-package nerd-icons-corfu
   :ensure t
-  
-)
+  )
 
 (add-to-list 'corfu-margin-formatters #'nerd-icons-corfu-formatter)
 
@@ -247,12 +249,12 @@
                  (bound-and-true-p vertico--input)
                  (eq (current-local-map) read-passwd-map)))))
 
- (use-package flycheck
-      :ensure t
-      :init (global-flycheck-mode)
-      :bind (:map flycheck-mode-map
-                  ("M-n" . flycheck-next-error)
-                  ("M-p" . flycheck-previous-error)))
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode)
+  :bind (:map flycheck-mode-map
+              ("M-n" . flycheck-next-error)
+              ("M-p" . flycheck-previous-error)))
 
 
 (use-package tree-sitter
