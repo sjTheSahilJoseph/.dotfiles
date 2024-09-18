@@ -243,10 +243,31 @@
 (use-package flycheck
   :ensure t
   :init (global-flycheck-mode)
+
+  :config
+(setq flycheck-mode-line
+        '(:eval
+          (pcase flycheck-last-status-change
+            (`finished (if flycheck-current-errors
+                           (let ((count (let-alist (flycheck-count-errors flycheck-current-errors)
+                                          (+ (or .error 0) (or .warning 0) (or .info 0)))))
+                             (format " Flycheck: %s issue(s)" count))
+                         " Flycheck: No issues"))
+            (`running     " Flycheck: Running...")
+            (`no-checker  " Flycheck: No checker")
+            (`not-checked " Flycheck: Not checked")
+            (`errored     " Flycheck: Error")
+            (`interrupted " Flycheck: Interrupted")
+            (`suspicious  " Flycheck: Suspicious"))))
+
+  
   :bind (:map flycheck-mode-map
               ("M-n" . flycheck-next-error)
               ("M-p" . flycheck-previous-error)))
 
+(use-package flycheck-inline
+  :ensure t
+  :hook (flycheck-mode . flycheck-inline-mode))
 
 (use-package flycheck-popup-tip
   :ensure t
@@ -254,8 +275,6 @@
   :hook (flycheck-mode . flycheck-popup-tip-mode))
 
 
-(use-package all-the-icons
-  :ensure t)
 
 
 (use-package tree-sitter
@@ -264,7 +283,6 @@
 
 (use-package tree-sitter-langs
   :ensure t)
-
 
 
 ;; Indent
@@ -283,7 +301,6 @@
 ;; Case Conversion
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
-
 
 
 
