@@ -216,12 +216,6 @@
 :config
 (keymap-unset corfu-map "RET")
 
-(use-package nerd-icons-corfu
-  :ensure t
-  )
-
-(add-to-list 'corfu-margin-formatters #'nerd-icons-corfu-formatter)
-
 (use-package emacs
   :custom
   (tab-always-indent 'complete)
