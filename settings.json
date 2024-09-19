@@ -29,6 +29,8 @@
             "keys": "ctrl+shift+f"
         }
     ],
+    "alwaysShowNotificationIcon": true,
+    "alwaysShowTabs": false,
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
@@ -40,7 +42,20 @@
     ],
     "profiles": 
     {
-        "defaults": {},
+        "defaults": 
+        {
+            "backgroundImage": null,
+            "backgroundImageOpacity": 0.11,
+            "colorScheme": "Love Is An Illusion",
+            "cursorShape": "filledBox",
+            "experimental.retroTerminalEffect": true,
+            "font": 
+            {
+                "face": "Liberation Mono",
+                "size": 13.0
+            },
+            "scrollbarState": "always"
+        },
         "list": 
         [
             {
@@ -62,12 +77,6 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
-                "hidden": false,
-                "name": "Git Bash",
-                "source": "Git"
-            },
-            {
                 "guid": "{06fd1be9-efac-5a70-96b5-31da857c6107}",
                 "hidden": false,
                 "name": "Developer Command Prompt for VS 2022",
@@ -84,35 +93,18 @@
                 "hidden": true,
                 "name": "Visual Studio Debug Console",
                 "source": "VSDebugConsole"
+            },
+            {
+                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+                "hidden": false,
+                "name": "Git Bash",
+                "source": "Git"
             }
         ]
     },
     "schemes": 
     [
         {
-            "background": "#0C0C0C",
-            "black": "#0C0C0C",
-            "blue": "#0037DA",
-            "brightBlack": "#767676",
-            "brightBlue": "#3B78FF",
-            "brightCyan": "#61D6D6",
-            "brightGreen": "#16C60C",
-            "brightPurple": "#B4009E",
-            "brightRed": "#E74856",
-            "brightWhite": "#F2F2F2",
-            "brightYellow": "#F9F1A5",
-            "cursorColor": "#FFFFFF",
-            "cyan": "#3A96DD",
-            "foreground": "#CCCCCC",
-            "green": "#13A10E",
-            "name": "Love Is An Illusion",
-            "purple": "#881798",
-            "red": "#C50F1F",
-            "selectionBackground": "#FFFFFF",
-            "white": "#CCCCCC",
-            "yellow": "#C19C00"
-        },
-		{
             "background": "#0C0C0C",
             "black": "#0C0C0C",
             "blue": "#0037DA",
@@ -159,6 +151,29 @@
             "yellow": "#C19C00"
         },
         {
+            "background": "#060606",
+            "black": "#878787",
+            "blue": "#2090F0",
+            "brightBlack": "#D08F20",
+            "brightBlue": "#2090F0",
+            "brightCyan": "#59FF39",
+            "brightGreen": "#50FF30",
+            "brightPurple": "#B4009E",
+            "brightRed": "#E74856",
+            "brightWhite": "#90B080",
+            "brightYellow": "#D08F20",
+            "cursorColor": "#00EE00",
+            "cyan": "#59FF39",
+            "foreground": "#90B080",
+            "green": "#50FF30",
+            "name": "Love Is An Illusion",
+            "purple": "#881798",
+            "red": "#C50F1F",
+            "selectionBackground": "#3A0000",
+            "white": "#90B080",
+            "yellow": "#D08F20"
+        },
+        {
             "background": "#282C34",
             "black": "#282C34",
             "blue": "#61AFEF",
@@ -200,7 +215,7 @@
             "name": "One Half Light",
             "purple": "#A626A4",
             "red": "#E45649",
-            "selectionBackground": "#FFFFFF",
+            "selectionBackground": "#4F525D",
             "white": "#FAFAFA",
             "yellow": "#C18301"
         },
@@ -246,7 +261,7 @@
             "name": "Solarized Light",
             "purple": "#D33682",
             "red": "#DC322F",
-            "selectionBackground": "#FFFFFF",
+            "selectionBackground": "#073642",
             "white": "#EEE8D5",
             "yellow": "#B58900"
         },
@@ -292,7 +307,7 @@
             "name": "Tango Light",
             "purple": "#75507B",
             "red": "#CC0000",
-            "selectionBackground": "#FFFFFF",
+            "selectionBackground": "#555753",
             "white": "#D3D7CF",
             "yellow": "#C4A000"
         },
@@ -320,5 +335,9 @@
             "yellow": "#808000"
         }
     ],
-    "themes": []
+    "showTabsInTitlebar": false,
+    "tabWidthMode": "equal",
+    "theme": "legacyDark",
+    "themes": [],
+    "useAcrylicInTabRow": true
 }
