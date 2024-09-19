@@ -133,17 +133,17 @@
 
 (use-package emmet-mode
   :ensure t
-  :config
-  (add-hook 'sgml-mode-hook 'emmet-mode)
-  (add-hook 'css-mode-hook  'emmet-mode)
-  (add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 4)))
-  (add-to-list 'emmet-jsx-major-modes 'jsx-mode)
-  (add-to-list 'emmet-jsx-major-modes 'rjsx-mode)
-  (add-to-list 'emmet-jsx-major-modes 'js-jsx-mode)
-  (add-to-list 'emmet-jsx-major-modes 'js2-jsx-mode)
-  (add-to-list 'emmet-jsx-major-modes 'js-mode)
-  
   )
+
+(add-hook 'sgml-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook  'emmet-mode)
+(add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 4)))
+(add-to-list 'emmet-jsx-major-modes 'jsx-mode)
+(add-to-list 'emmet-jsx-major-modes 'rjsx-mode)
+(add-to-list 'emmet-jsx-major-modes 'js-jsx-mode)
+(add-to-list 'emmet-jsx-major-modes 'js2-jsx-mode)
+(add-to-list 'emmet-jsx-major-modes 'js-mode)
+
 
 
 (use-package cc-mode
@@ -281,7 +281,7 @@
   (setq flycheck-indication-mode nil)
 
   :config
-(setq flycheck-mode-line
+  (setq flycheck-mode-line
         '(:eval
           (pcase flycheck-last-status-change
             (`finished (if flycheck-current-errors
