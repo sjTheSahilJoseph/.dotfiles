@@ -137,6 +137,9 @@
 
 (add-hook 'sgml-mode-hook 'emmet-mode)
 (add-hook 'css-mode-hook  'emmet-mode)
+(add-hook 'html-mode-hook  'emmet-mode)
+(add-hook 'rjsx-mode-hook  'emmet-mode)
+(add-hook 'js-mode-hook  'emmet-mode)
 (add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 4)))
 (add-to-list 'emmet-jsx-major-modes 'jsx-mode)
 (add-to-list 'emmet-jsx-major-modes 'rjsx-mode)
