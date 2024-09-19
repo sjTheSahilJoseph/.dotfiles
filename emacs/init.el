@@ -194,8 +194,8 @@
 
 (use-package corfu
   :custom
-  (corfu-cycle nil)
-  (corfu-auto nil)
+  (corfu-cycle t)
+  (corfu-auto t)
   (corfu-quit-at-boundary nil)
   (corfu-quit-no-match nil)
   (corfu-preview-current t)
