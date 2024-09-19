@@ -1,4 +1,5 @@
 
+
 ;; Basic UI changes
 (tool-bar-mode -1)
 (menu-bar-mode -1)
@@ -272,14 +273,6 @@
   :ensure t
   :after flycheck
   :hook (flycheck-mode . flycheck-popup-tip-mode))
-
-
-(use-package tree-sitter
-  :ensure t
-  :hook ((typescript-mode . tree-sitter-hl-mode)))
-
-(use-package tree-sitter-langs
-  :ensure t)
 
 
 ;; Indent
