@@ -213,14 +213,16 @@
 
   )
 
+
 (use-package kind-icon
   :ensure t
   :after corfu
   :custom
-  ((kind-icon-default-face . 'default)
-   (kind-icon-use-icons . nil))
+  (kind-icon-default-face 'default)
+  (kind-icon-use-icons nil)
   :config
   (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
+
 
 (use-package cape
   :ensure t
