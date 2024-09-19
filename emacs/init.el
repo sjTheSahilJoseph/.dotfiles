@@ -181,8 +181,8 @@
          (php-mode . eglot-ensure))
   :config
   (add-to-list 'eglot-server-programs '(typescript-mode . ("typescript-language-server" "--stdio")))
-  (add-to-list 'eglot-server-programs '(c++-mode . ("cland")))
-  (add-to-list 'eglot-server-programs '(c-mode . ("cland")))
+  (add-to-list 'eglot-server-programs '(c++-mode . ("clangd")))
+  (add-to-list 'eglot-server-programs '(c-mode . ("clangd")))
 
   )
 
