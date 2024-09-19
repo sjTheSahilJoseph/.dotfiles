@@ -131,6 +131,20 @@
   :config
   (setq js-indent-level 4))
 
+(use-package emmet-mode
+  :ensure t
+  :config
+  (add-hook 'sgml-mode-hook 'emmet-mode)
+  (add-hook 'css-mode-hook  'emmet-mode)
+  (add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 4)))
+  (add-to-list 'emmet-jsx-major-modes 'jsx-mode)
+  (add-to-list 'emmet-jsx-major-modes 'rjsx-mode)
+  (add-to-list 'emmet-jsx-major-modes 'js-jsx-mode)
+  (add-to-list 'emmet-jsx-major-modes 'js2-jsx-mode)
+  (add-to-list 'emmet-jsx-major-modes 'js-mode)
+  
+  )
+
 
 (use-package cc-mode
   :ensure t
@@ -314,3 +328,16 @@
 
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(emmet-mode which-key web-mode undo-tree typescript-mode treemacs-tab-bar treemacs-projectile treemacs-icons-dired tree-sitter-langs rust-mode rjsx-mode rainbow-mode python-mode php-mode orderless nerd-icons-corfu neotree lua-mode lsp-ui lsp-treemacs lsp-ivy kind-icon json-mode helm-lsp flycheck-posframe flycheck-popup-tip flycheck-inline corfu company cape all-the-icons)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
