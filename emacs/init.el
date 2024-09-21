@@ -44,10 +44,16 @@
 (window-divider-mode)
 
 ;; Setting Fonts
-(set-face-attribute 'default nil
-					:family "Liberation Mono"
-					:height 130
-					:weight 'regular)
+;;(set-face-attribute 'default nil
+;;					:family "Liberation Mono"
+;;					:height 130
+;;					:weight 'regular)
+
+
+
+(set-frame-font "Liberation Mono 13" nil t)
+
+
 
 ;; Theme
 (add-to-list 'custom-theme-load-path "C:/Users/SJ Joseph/.dotfiles/emacs/themes/")
