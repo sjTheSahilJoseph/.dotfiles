@@ -10,11 +10,13 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
+(setq-default frame-title-format '("Emacs - " user-login-name "@" system-name " - %b"))
 
 ;; Small Configs
 (setq echo-keystrokes 0.1)
 (setq-default compilation-always-kill t)
 (setq-default compilation-scroll-output t)
+(global-set-key (kbd "C-z") nil)
 
 
 ;; Cusror Customization
@@ -131,29 +133,22 @@
   :ensure t
   :defer t)
 
+(use-package js2-mode
+  :mode "\\.js\\'"
+  :interpreter "node"
+  :bind (:map js-mode-map ("M-." . nil)))
+
 (use-package typescript-mode
   :ensure t
   :defer t
   :config
   (setq typescript-indent-level 4))
 
-(use-package js
-  :ensure nil
-  :mode ("\\.js\\'")
-  :config
-  (setq js-indent-level 4))
-
 (use-package emmet-mode
   :ensure t
-  )
-
-(add-hook 'sgml-mode-hook 'emmet-mode)
-(add-hook 'css-mode-hook  'emmet-mode)
-(add-hook 'html-mode-hook  'emmet-mode)
-(add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 4)))
-(add-to-list 'emmet-jsx-major-modes 'js-mode)
-
-
+  :defer t
+  :hook ((web-mode . emmet-mode)
+         (css-mode . emmet-mode)))
 
 (use-package cc-mode
   :ensure t
@@ -184,6 +179,15 @@
   :defer t
   )
 
+(use-package web-mode
+  :custom-face
+  (css-selector ((t (:inherit default :foreground "#66CCFF"))))
+  (font-lock-comment-face ((t (:foreground "#828282"))))
+  :mode
+  ("\\.phtml\\'" "\\.tpl\\.php\\'" "\\.[agj]sp\\'" "\\.as[cp]x\\'"
+   "\\.erb\\'" "\\.mustache\\'" "\\.djhtml\\'" "\\.[t]?html?\\'"))
+
+
 (use-package lsp-mode
   :defer t
   :commands lsp
@@ -198,8 +202,8 @@
   (lsp-eldoc-hook nil)
   :bind (:map lsp-mode-map ("C-c C-f" . lsp-format-buffer))
   :hook ((python-mode rust-mode
-          js-mode js2-mode typescript-mode web-mode
-          c-mode c++-mode ) . lsp-deferred)
+					  js-mode js2-mode typescript-mode web-mode
+					  c-mode c++-mode ) . lsp-deferred)
   :config
   (defun lsp-update-server ()
     "Update LSP server."
@@ -243,9 +247,54 @@
 (use-package company
   :ensure t
   :defer t
+  :custom
+  (company-minimum-prefix-length 1)
+  (company-tooltip-align-annotations t)
+  (company-require-match 'never)
+  (company-idle-delay 0.1)
+  (company-show-numbers t)
   )
 
 (add-hook 'after-init-hook 'global-company-mode)
+
+(use-package flycheck
+  :defer t
+  :hook (after-init . global-flycheck-mode)
+  :commands (flycheck-add-mode)
+  :custom
+  (flycheck-global-modes
+   '(not outline-mode diff-mode shell-mode eshell-mode term-mode))
+  (flycheck-emacs-lisp-load-path 'inherit)
+  (flycheck-indication-mode (if (display-graphic-p) 'right-fringe 'right-margin))
+  :init
+  (if (display-graphic-p)
+      (use-package flycheck-posframe
+        :custom-face
+        (flycheck-posframe-face ((t (:foreground ,(face-foreground 'success)))))
+        (flycheck-posframe-info-face ((t (:foreground ,(face-foreground 'success)))))
+        :hook (flycheck-mode . flycheck-posframe-mode)
+        :custom
+        (flycheck-posframe-position 'window-bottom-left-corner)
+        (flycheck-posframe-border-width 3)
+        (flycheck-posframe-inhibit-functions
+         '((lambda (&rest _) (bound-and-true-p company-backend)))))
+    (use-package flycheck-pos-tip
+      :defines flycheck-pos-tip-timeout
+      :hook (flycheck-mode . flycheck-pos-tip-mode)
+      :custom (flycheck-pos-tip-timeout 30)))
+  :config
+  (use-package flycheck-popup-tip
+    :hook (flycheck-mode . flycheck-popup-tip-mode))
+  (when (fboundp 'define-fringe-bitmap)
+    (define-fringe-bitmap 'flycheck-fringe-bitmap-double-arrow
+      [16 48 112 240 112 48 16] nil nil 'center))
+  (when (executable-find "vale")
+    (use-package flycheck-vale
+      :config
+      (flycheck-vale-setup)
+      (flycheck-add-mode 'vale 'latex-mode))))
+
+
 
 
 ;; Indent
