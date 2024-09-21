@@ -1,9 +1,21 @@
 
+;; Memory Threshold
+(setq gc-cons-threshold 100000000)
+
+;; SJ Info
+(setq user-full-name "SJ the Sahil Joseph")
+(setq user-mail-address "sjthesahiljoseph@gmail.com")
 
 ;; Basic UI changes
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
+
+;; Small Configs
+(setq echo-keystrokes 0.1)
+(setq-default compilation-always-kill t)
+(setq-default compilation-scroll-output t)
+
 
 ;; Cusror Customization
 (setq-default cursor-type 'box)
@@ -138,13 +150,7 @@
 (add-hook 'sgml-mode-hook 'emmet-mode)
 (add-hook 'css-mode-hook  'emmet-mode)
 (add-hook 'html-mode-hook  'emmet-mode)
-(add-hook 'rjsx-mode-hook  'emmet-mode)
-(add-hook 'js-mode-hook  'emmet-mode)
 (add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 4)))
-(add-to-list 'emmet-jsx-major-modes 'jsx-mode)
-(add-to-list 'emmet-jsx-major-modes 'rjsx-mode)
-(add-to-list 'emmet-jsx-major-modes 'js-jsx-mode)
-(add-to-list 'emmet-jsx-major-modes 'js2-jsx-mode)
 (add-to-list 'emmet-jsx-major-modes 'js-mode)
 
 
@@ -178,13 +184,68 @@
   :defer t
   )
 
-(use-package rjsx-mode
-  :ensure t
-  :mode ("\\.jsx\\'" "\\.tsx\\'")
+(use-package lsp-mode
+  :defer t
+  :commands lsp
+  :custom
+  (lsp-keymap-prefix "C-x l")
+  (lsp-auto-guess-root nil)
+  (lsp-prefer-flymake nil) ; Use flycheck instead of flymake
+  (lsp-enable-file-watchers nil)
+  (lsp-enable-folding nil)
+  (read-process-output-max (* 1024 1024))
+  (lsp-keep-workspace-alive nil)
+  (lsp-eldoc-hook nil)
+  :bind (:map lsp-mode-map ("C-c C-f" . lsp-format-buffer))
+  :hook ((python-mode rust-mode
+          js-mode js2-mode typescript-mode web-mode
+          c-mode c++-mode ) . lsp-deferred)
   :config
-  (setq js-indent-level 4))
+  (defun lsp-update-server ()
+    "Update LSP server."
+    (interactive)
+    ;; Equals to `C-u M-x lsp-install-server'
+    (lsp-install-server t)))
 
-;; LSP
+(use-package lsp-ui
+  :after lsp-mode
+  :commands lsp-ui-mode
+  :custom-face
+  (lsp-ui-doc-background ((t (:background nil))))
+  (lsp-ui-doc-header ((t (:inherit (font-lock-string-face italic)))))
+  :bind
+  (:map lsp-ui-mode-map
+        ([remap xref-find-definitions] . lsp-ui-peek-find-definitions)
+        ([remap xref-find-references] . lsp-ui-peek-find-references)
+        ("C-c u" . lsp-ui-imenu)
+        ("M-i" . lsp-ui-doc-focus-frame))
+  (:map lsp-mode-map
+        ("M-n" . forward-paragraph)
+        ("M-p" . backward-paragraph))
+  :custom
+  (lsp-ui-doc-header t)
+  (lsp-ui-doc-include-signature t)
+  (lsp-ui-doc-border (face-foreground 'default))
+  (lsp-ui-sideline-enable nil)
+  (lsp-ui-sideline-ignore-duplicate t)
+  (lsp-ui-sideline-show-code-actions nil)
+  :config
+  ;; Use lsp-ui-doc-webkit only in GUI
+  (when (display-graphic-p)
+    (setq lsp-ui-doc-use-webkit t))
+  ;; WORKAROUND Hide mode-line of the lsp-ui-imenu buffer
+  ;; https://github.com/emacs-lsp/lsp-ui/issues/243
+  (defadvice lsp-ui-imenu (after hide-lsp-ui-imenu-mode-line activate)
+    (setq mode-line-format nil))
+  ;; `C-g'to close doc
+  (advice-add #'keyboard-quit :before #'lsp-ui-doc-hide))
+
+(use-package company
+  :ensure t
+  :defer t
+  )
+
+(add-hook 'after-init-hook 'global-company-mode)
 
 
 ;; Indent
@@ -198,6 +259,39 @@
   (save-excursion
 	(indent-region (point-min) (point-max) nil)))
 (global-set-key (kbd "C-<tab>") 'indent-whole-buffer)
+
+(use-package find-file-in-project
+  :if (executable-find "find")
+  :init
+  (when (executable-find "fd")
+    (setq ffip-use-rust-fd t))
+  :bind (("C-z o" . ffap)
+         ("C-z p" . ffip)))
+
+(use-package dired
+  :ensure nil
+  :bind
+  (("C-x C-j" . dired-jump))
+  :custom
+  (dired-listing-switches "-lah")
+  (dired-recursive-deletes 'always)
+  (dired-recursive-copies 'always)
+  (global-auto-revert-non-file-buffers t)
+  (auto-revert-verbose nil)
+  (dired-dwim-target t)
+  (delete-by-moving-to-trash t)
+  (load-prefer-newer t)
+  (auto-revert-use-notify nil)
+  (auto-revert-interval 3)
+  :config
+  (global-auto-revert-mode t)
+  (put 'dired-find-alternate-file 'disabled nil)
+  :hook
+  (dired-mode . (lambda ()
+                  (local-set-key (kbd "<mouse-2>") #'dired-find-alternate-file)
+                  (local-set-key (kbd "RET") #'dired-find-alternate-file)
+                  (local-set-key (kbd "^")
+                                 (lambda () (interactive) (find-alternate-file ".."))))))
 
 
 ;; Case Conversion
