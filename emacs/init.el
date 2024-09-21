@@ -44,13 +44,6 @@
 (window-divider-mode)
 
 ;; Setting Fonts
-;;(set-face-attribute 'default nil
-;;					:family "Liberation Mono"
-;;					:height 130
-;;					:weight 'regular)
-
-
-
 (set-frame-font "Liberation Mono 13" nil t)
 
 
@@ -197,12 +190,18 @@
   :custom
   (lsp-keymap-prefix "C-x l")
   (lsp-auto-guess-root nil)
-  (lsp-prefer-flymake nil) ; Use flycheck instead of flymake
+  (lsp-prefer-flymake nil)
   (lsp-enable-file-watchers nil)
   (lsp-enable-folding nil)
   (read-process-output-max (* 1024 1024))
   (lsp-keep-workspace-alive nil)
   (lsp-eldoc-hook nil)
+  (lsp-diagnostics-mode nil)
+  (lsp-diagnostics--enable nil)
+  (lsp-breadcrumb-go-to-symbol nil)
+  (lsp-breadcrumb-narrow-to-symbol nil)
+  (lsp-headerline-breadcrumb-mode nil)
+  (Info-breadcrumbs nil)
   :bind (:map lsp-mode-map ("C-c C-f" . lsp-format-buffer))
   :hook ((python-mode rust-mode
 					  js-mode js2-mode typescript-mode web-mode
@@ -237,14 +236,8 @@
   (lsp-ui-sideline-ignore-duplicate t)
   (lsp-ui-sideline-show-code-actions nil)
   :config
-  ;; Use lsp-ui-doc-webkit only in GUI
-  (when (display-graphic-p)
-    (setq lsp-ui-doc-use-webkit t))
-  ;; WORKAROUND Hide mode-line of the lsp-ui-imenu buffer
-  ;; https://github.com/emacs-lsp/lsp-ui/issues/243
-  (defadvice lsp-ui-imenu (after hide-lsp-ui-imenu-mode-line activate)
-    (setq mode-line-format nil))
-  ;; `C-g'to close doc
+    (setq lsp-ui-doc-use-webkit t)
+    (setq mode-line-format nil)
   (advice-add #'keyboard-quit :before #'lsp-ui-doc-hide))
 
 (use-package company
@@ -256,6 +249,7 @@
   (company-require-match 'never)
   (company-idle-delay 0.1)
   (company-show-numbers t)
+  (company--show-doc-buffer t)
   )
 
 (add-hook 'after-init-hook 'global-company-mode)
