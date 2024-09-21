@@ -198,10 +198,7 @@
   (lsp-eldoc-hook nil)
   (lsp-diagnostics-mode nil)
   (lsp-diagnostics--enable nil)
-  (lsp-breadcrumb-go-to-symbol nil)
-  (lsp-breadcrumb-narrow-to-symbol nil)
-  (lsp-headerline-breadcrumb-mode nil)
-  (Info-breadcrumbs nil)
+  (lsp-headerline-breadcrumb-mode -1)
   :bind (:map lsp-mode-map ("C-c C-f" . lsp-format-buffer))
   :hook ((python-mode rust-mode
 					  js-mode js2-mode typescript-mode web-mode
@@ -236,8 +233,8 @@
   (lsp-ui-sideline-ignore-duplicate t)
   (lsp-ui-sideline-show-code-actions nil)
   :config
-    (setq lsp-ui-doc-use-webkit t)
-    (setq mode-line-format nil)
+  (setq lsp-ui-doc-use-webkit t)
+  (setq mode-line-format nil)
   (advice-add #'keyboard-quit :before #'lsp-ui-doc-hide))
 
 (use-package company
@@ -271,7 +268,7 @@
         (flycheck-posframe-info-face ((t (:foreground ,(face-foreground 'success)))))
         :hook (flycheck-mode . flycheck-posframe-mode)
         :custom
-        (flycheck-posframe-position 'window-bottom-left-corner)
+        (flycheck-posframe-position 'window-bottom-right-corner)
         (flycheck-posframe-border-width 3)
         (flycheck-posframe-inhibit-functions
          '((lambda (&rest _) (bound-and-true-p company-backend)))))
