@@ -127,17 +127,37 @@
         use-package-expand-minimally t
         warning-minimum-level :error))
 
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name
+        "straight/repos/straight.el/bootstrap.el"
+        (or (bound-and-true-p straight-base-dir)
+            user-emacs-directory)))
+      (bootstrap-version 7))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+(setq package-enable-at-startup nil)
+
 ;; Language Modes
 (use-package json-mode
   :ensure t
+  :straight t
   :defer t)
 
 (use-package js2-mode
+  :straight t
   :mode "\\.js\\'"
   :interpreter "node"
   :bind (:map js-mode-map ("M-." . nil)))
 
 (use-package typescript-mode
+  :straight t
   :ensure t
   :defer t
   :config
@@ -145,60 +165,64 @@
 
 (use-package emmet-mode
   :ensure t
+  :straight t
   :defer t
   :hook ((web-mode . emmet-mode)
          (css-mode . emmet-mode)))
 
 (use-package cc-mode
+  :straight t
   :ensure t
   :defer t)
 
 (use-package csharp-mode
+  :straight t
   :ensure t
   :defer t)
 
 (use-package rust-mode
+  :straight t
   :ensure t
   :defer t)
 
 (use-package python-mode
+  :straight t
   :ensure t
   :defer t)
 
 (use-package lua-mode
+  :straight t
   :ensure t
   :defer t)
 
 (use-package rainbow-mode
+  :straight t
   :ensure t
   :hook (prog-mode . rainbow-mode))
 
 (use-package php-mode
+  :straight t
   :ensure t
   :defer t
   )
 
-(use-package web-mode
-  :mode
-  ("\\.phtml\\'" "\\.tpl\\.php\\'" "\\.[agj]sp\\'" "\\.as[cp]x\\'"
-   "\\.erb\\'" "\\.mustache\\'" "\\.djhtml\\'" "\\.[t]?html?\\'"))
-
+(straight-use-package '(tsx-mode :type git :host github :repo "orzechowskid/tsx-mode.el"))
+(require 'tsx-mode)
+(add-to-list 'auto-mode-alist '("\\.[jt]s[x]?\\'" . tsx-mode)
 
 (use-package lsp-mode
+  :straight t
   :defer t
   :commands lsp
   :custom
   (lsp-keymap-prefix "C-x l")
-  (lsp-auto-guess-root nil)
+  (lsp-auto-guess-root t)
   (lsp-prefer-flymake nil)
   (lsp-enable-file-watchers nil)
   (lsp-enable-folding nil)
   (read-process-output-max (* 1024 1024))
   (lsp-keep-workspace-alive nil)
   (lsp-eldoc-hook nil)
-  (lsp-diagnostics-mode nil)
-  (lsp-diagnostics--enable nil)
-  (lsp-headerline-breadcrumb-mode -1)
   :bind (:map lsp-mode-map ("C-c C-f" . lsp-format-buffer))
   :hook ((python-mode rust-mode
 					  js-mode js2-mode typescript-mode web-mode
@@ -207,10 +231,10 @@
   (defun lsp-update-server ()
     "Update LSP server."
     (interactive)
-    ;; Equals to `C-u M-x lsp-install-server'
     (lsp-install-server t)))
 
 (use-package lsp-ui
+  :straight t
   :after lsp-mode
   :commands lsp-ui-mode
   :custom-face
@@ -238,6 +262,7 @@
   (advice-add #'keyboard-quit :before #'lsp-ui-doc-hide))
 
 (use-package company
+  :straight t
   :ensure t
   :defer t
   :custom
@@ -251,46 +276,6 @@
 
 (add-hook 'after-init-hook 'global-company-mode)
 
-(use-package flycheck
-  :defer t
-  :hook (after-init . global-flycheck-mode)
-  :commands (flycheck-add-mode)
-  :custom
-  (flycheck-global-modes
-   '(not outline-mode diff-mode shell-mode eshell-mode term-mode))
-  (flycheck-emacs-lisp-load-path 'inherit)
-  (flycheck-indication-mode (if (display-graphic-p) 'right-fringe 'right-margin))
-  :init
-  (if (display-graphic-p)
-      (use-package flycheck-posframe
-        :custom-face
-        (flycheck-posframe-face ((t (:foreground ,(face-foreground 'success)))))
-        (flycheck-posframe-info-face ((t (:foreground ,(face-foreground 'success)))))
-        :hook (flycheck-mode . flycheck-posframe-mode)
-        :custom
-        (flycheck-posframe-position 'window-bottom-right-corner)
-        (flycheck-posframe-border-width 3)
-        (flycheck-posframe-inhibit-functions
-         '((lambda (&rest _) (bound-and-true-p company-backend)))))
-    (use-package flycheck-pos-tip
-      :defines flycheck-pos-tip-timeout
-      :hook (flycheck-mode . flycheck-pos-tip-mode)
-      :custom (flycheck-pos-tip-timeout 30)))
-  :config
-  (use-package flycheck-popup-tip
-    :hook (flycheck-mode . flycheck-popup-tip-mode))
-  (when (fboundp 'define-fringe-bitmap)
-    (define-fringe-bitmap 'flycheck-fringe-bitmap-double-arrow
-      [16 48 112 240 112 48 16] nil nil 'center))
-  (when (executable-find "vale")
-    (use-package flycheck-vale
-      :config
-      (flycheck-vale-setup)
-      (flycheck-add-mode 'vale 'latex-mode))))
-
-
-
-
 ;; Indent
 (setq electric-indent-mode t)
 (setq-default indent-tabs-mode t)
@@ -302,40 +287,6 @@
   (save-excursion
 	(indent-region (point-min) (point-max) nil)))
 (global-set-key (kbd "C-<tab>") 'indent-whole-buffer)
-
-(use-package find-file-in-project
-  :if (executable-find "find")
-  :init
-  (when (executable-find "fd")
-    (setq ffip-use-rust-fd t))
-  :bind (("C-z o" . ffap)
-         ("C-z p" . ffip)))
-
-(use-package dired
-  :ensure nil
-  :bind
-  (("C-x C-j" . dired-jump))
-  :custom
-  (dired-listing-switches "-lah")
-  (dired-recursive-deletes 'always)
-  (dired-recursive-copies 'always)
-  (global-auto-revert-non-file-buffers t)
-  (auto-revert-verbose nil)
-  (dired-dwim-target t)
-  (delete-by-moving-to-trash t)
-  (load-prefer-newer t)
-  (auto-revert-use-notify nil)
-  (auto-revert-interval 3)
-  :config
-  (global-auto-revert-mode t)
-  (put 'dired-find-alternate-file 'disabled nil)
-  :hook
-  (dired-mode . (lambda ()
-                  (local-set-key (kbd "<mouse-2>") #'dired-find-alternate-file)
-                  (local-set-key (kbd "RET") #'dired-find-alternate-file)
-                  (local-set-key (kbd "^")
-                                 (lambda () (interactive) (find-alternate-file ".."))))))
-
 
 ;; Case Conversion
 (put 'downcase-region 'disabled nil)
