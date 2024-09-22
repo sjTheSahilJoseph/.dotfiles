@@ -209,6 +209,23 @@
   :defer t
   )
 
+;; LSP
+(use-package lsp-mode
+  :init
+  (setq lsp-keymap-prefix "C-c l")
+  :hook (
+         (cc-mode . lsp)
+         (python-mode . lsp)
+	 (js-mode . lsp)
+	 (typescript-mode . lsp)
+	 (rust-mode . lsp)
+	 (php-mode . lsp)
+	 )
+  :commands lsp)
+
+(use-package lsp-ui :commands lsp-ui-mode)
+
+
 ;; Indent
 (setq electric-indent-mode t)
 (setq-default indent-tabs-mode t)
