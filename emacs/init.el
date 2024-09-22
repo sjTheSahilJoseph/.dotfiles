@@ -206,9 +206,21 @@
   :defer t
   )
 
+
+(use-package coverlay
+  :straight t
+  :ensure t
+  :defer t)
+(use-package origami
+  :straight t
+  :ensure t
+  :defer t)
+(use-package css-in-js-mode :straight '(css-in-js-mode :type git :host github :repo "orzechowskid/tree-sitter-css-in-js"))
 (straight-use-package '(tsx-mode :type git :host github :repo "orzechowskid/tsx-mode.el"))
 (require 'tsx-mode)
 (add-to-list 'auto-mode-alist '("\\.[jt]s[x]?\\'" . tsx-mode)
+
+	     
 
 (use-package lsp-mode
   :straight t
