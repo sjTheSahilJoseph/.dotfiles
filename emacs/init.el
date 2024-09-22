@@ -1,6 +1,6 @@
 
 ;; Memory Threshold
-(setq gc-cons-threshold 100000000)
+(setq gc-cons-threshold 200000000)
 
 ;; SJ Info
 (setq user-full-name "SJ the Sahil Joseph")
@@ -150,7 +150,7 @@
   :straight t
   :defer t)
 
-(use-package js-mode
+(use-package javascript-mode
   :straight t
   :mode "\\.js\\'"
   :defer t
@@ -211,6 +211,9 @@
 
 ;; LSP
 (use-package lsp-mode
+  :straight t
+  :ensure t
+  :defer t
   :init
   (setq lsp-keymap-prefix "C-c l")
   :hook (
@@ -223,7 +226,12 @@
 	 )
   :commands lsp)
 
-(use-package lsp-ui :commands lsp-ui-mode)
+(use-package lsp-ui
+  :straight t
+  :commands lsp-ui-mode
+  :ensure t
+  :defer t
+  )
 
 
 ;; Indent
