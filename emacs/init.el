@@ -150,11 +150,12 @@
   :straight t
   :defer t)
 
-(use-package js2-mode
+(use-package js-mode
   :straight t
   :mode "\\.js\\'"
-  :interpreter "node"
-  :bind (:map js-mode-map ("M-." . nil)))
+  :defer t
+  :ensure t
+  )
 
 (use-package typescript-mode
   :straight t
@@ -167,7 +168,9 @@
   :ensure t
   :straight t
   :defer t
-  :hook ((web-mode . emmet-mode)
+  :hook ((tsx-mode . emmet-mode)
+		 (jsx-mode . emmet-mode)
+		 (html-mode . emmet-mode)
          (css-mode . emmet-mode)))
 
 (use-package cc-mode
@@ -206,88 +209,6 @@
   :defer t
   )
 
-
-(use-package coverlay
-  :straight t
-  :ensure t
-  :defer t)
-(use-package origami
-  :straight t
-  :ensure t
-  :defer t)
-(use-package css-in-js-mode :straight '(css-in-js-mode :type git :host github :repo "orzechowskid/tree-sitter-css-in-js"))
-(straight-use-package '(tsx-mode :type git :host github :repo "orzechowskid/tsx-mode.el"))
-(require 'tsx-mode)
-(add-to-list 'auto-mode-alist '("\\.[jt]s[x]?\\'" . tsx-mode)
-
-	     
-
-(use-package lsp-mode
-  :straight t
-  :defer t
-  :commands lsp
-  :custom
-  (lsp-keymap-prefix "C-x l")
-  (lsp-auto-guess-root t)
-  (lsp-prefer-flymake nil)
-  (lsp-enable-file-watchers nil)
-  (lsp-enable-folding nil)
-  (read-process-output-max (* 1024 1024))
-  (lsp-keep-workspace-alive nil)
-  (lsp-eldoc-hook nil)
-  :bind (:map lsp-mode-map ("C-c C-f" . lsp-format-buffer))
-  :hook ((python-mode rust-mode
-					  js-mode js2-mode typescript-mode web-mode
-					  c-mode c++-mode ) . lsp-deferred)
-  :config
-  (defun lsp-update-server ()
-    "Update LSP server."
-    (interactive)
-    (lsp-install-server t)))
-
-(use-package lsp-ui
-  :straight t
-  :after lsp-mode
-  :commands lsp-ui-mode
-  :custom-face
-  (lsp-ui-doc-background ((t (:background nil))))
-  (lsp-ui-doc-header ((t (:inherit (font-lock-string-face italic)))))
-  :bind
-  (:map lsp-ui-mode-map
-        ([remap xref-find-definitions] . lsp-ui-peek-find-definitions)
-        ([remap xref-find-references] . lsp-ui-peek-find-references)
-        ("C-c u" . lsp-ui-imenu)
-        ("M-i" . lsp-ui-doc-focus-frame))
-  (:map lsp-mode-map
-        ("M-n" . forward-paragraph)
-        ("M-p" . backward-paragraph))
-  :custom
-  (lsp-ui-doc-header t)
-  (lsp-ui-doc-include-signature t)
-  (lsp-ui-doc-border (face-foreground 'default))
-  (lsp-ui-sideline-enable nil)
-  (lsp-ui-sideline-ignore-duplicate t)
-  (lsp-ui-sideline-show-code-actions nil)
-  :config
-  (setq lsp-ui-doc-use-webkit t)
-  (setq mode-line-format nil)
-  (advice-add #'keyboard-quit :before #'lsp-ui-doc-hide))
-
-(use-package company
-  :straight t
-  :ensure t
-  :defer t
-  :custom
-  (company-minimum-prefix-length 1)
-  (company-tooltip-align-annotations t)
-  (company-require-match 'never)
-  (company-idle-delay 0.1)
-  (company-show-numbers t)
-  (company--show-doc-buffer t)
-  )
-
-(add-hook 'after-init-hook 'global-company-mode)
-
 ;; Indent
 (setq electric-indent-mode t)
 (setq-default indent-tabs-mode t)
@@ -298,7 +219,7 @@
   (interactive)
   (save-excursion
 	(indent-region (point-min) (point-max) nil)))
-(global-set-key (kbd "C-<tab>") 'indent-whole-buffer)
+(global-set-key (kbd "C-S-<tab>") 'indent-whole-buffer)
 
 ;; Case Conversion
 (put 'downcase-region 'disabled nil)
