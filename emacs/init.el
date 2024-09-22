@@ -151,14 +151,12 @@
   :defer t)
 
 (use-package javascript-mode
-  :straight t
   :mode "\\.js\\'"
   :defer t
   :ensure t
   )
 
 (use-package typescript-mode
-  :straight t
   :ensure t
   :defer t
   :config
@@ -166,7 +164,6 @@
 
 (use-package emmet-mode
   :ensure t
-  :straight t
   :defer t
   :hook ((tsx-mode . emmet-mode)
 		 (jsx-mode . emmet-mode)
@@ -174,27 +171,22 @@
          (css-mode . emmet-mode)))
 
 (use-package cc-mode
-  :straight t
   :ensure t
   :defer t)
 
 (use-package csharp-mode
-  :straight t
   :ensure t
   :defer t)
 
 (use-package rust-mode
-  :straight t
   :ensure t
   :defer t)
 
 (use-package python-mode
-  :straight t
   :ensure t
   :defer t)
 
 (use-package lua-mode
-  :straight t
   :ensure t
   :defer t)
 
@@ -204,14 +196,12 @@
   :hook (prog-mode . rainbow-mode))
 
 (use-package php-mode
-  :straight t
   :ensure t
   :defer t
   )
 
 ;; LSP
 (use-package lsp-mode
-  :straight t
   :ensure t
   :defer t
   :init
@@ -227,7 +217,6 @@
   :commands lsp)
 
 (use-package lsp-ui
-  :straight t
   :commands lsp-ui-mode
   :ensure t
   :defer t
