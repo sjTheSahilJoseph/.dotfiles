@@ -131,14 +131,7 @@
 ;; Language Modes
 (use-package json-mode
   :ensure t
-  :straight t
   :defer t)
-
-(use-package javascript-mode
-  :mode "\\.js\\'"
-  :defer t
-  :ensure t
-  )
 
 (use-package typescript-mode
   :ensure t
@@ -175,7 +168,6 @@
   :defer t)
 
 (use-package rainbow-mode
-  :straight t
   :ensure t
   :hook (prog-mode . rainbow-mode))
 
@@ -224,3 +216,16 @@
 (put 'upcase-region 'disabled nil)
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(lsp-ui lsp-mode php-mode lua-mode python-mode rust-mode emmet-mode typescript-mode javascript-mode)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
