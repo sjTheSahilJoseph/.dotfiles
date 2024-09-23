@@ -186,7 +186,13 @@
   (yas-global-mode 1))
 
 (use-package eglot
-  :hook ((js-mode typescript-mode tsx-mode json-mode) . eglot-ensure)
+  :hook ((js-mode . eglot-ensure)
+         (typescript-mode . eglot-ensure)
+         (tsx-mode . eglot-ensure)
+         (json-mode . eglot-ensure)
+         (web-mode . eglot-ensure)
+         (c-mode . eglot-ensure)
+         (c++-mode . eglot-ensure))
   :config
   (add-to-list 'eglot-server-programs
                '((typescript-mode js-mode) . ("typescript-language-server" "--stdio")))
@@ -222,3 +228,16 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(web-mode yasnippet company php-mode rainbow-mode lua-mode python-mode rust-mode emmet-mode typescript-mode json-mode)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
