@@ -3,7 +3,6 @@
 (setq gc-cons-threshold 200000000)
 (setq read-process-output-max (* 1024 1024))
 
-
 ;; SJ Info
 (setq user-full-name "SJ the Sahil Joseph")
 (setq user-mail-address "sjthesahiljoseph@gmail.com")
@@ -12,7 +11,6 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
-(setq-default frame-title-format '("Emacs - " user-login-name "@" system-name " - %b"))
 
 ;; Small Configs
 (setq echo-keystrokes 0.1)
@@ -48,8 +46,6 @@
 ;; Setting Fonts
 (set-frame-font "Liberation Mono 13" nil t)
 
-
-
 ;; Theme
 (add-to-list 'custom-theme-load-path "C:/Users/SJ Joseph/.dotfiles/emacs/themes/")
 (load-theme 'loveisanillusion.emacs t)
@@ -70,7 +66,7 @@
 (transient-mark-mode 1)
 (setq mark-even-if-inactive nil)
 
-;; pile
+;; Compile
 (defun run-build-script ()
   "Run the build.bat."
   (interactive)
@@ -129,7 +125,6 @@
         use-package-expand-minimally t
         warning-minimum-level :error))
 
-
 ;; Language Modes
 (use-package json-mode
   :ensure t
@@ -177,49 +172,6 @@
   :ensure t
   :defer t
   )
-
-;; LSP
-(use-package lsp-mode
-  :ensure t
-  :defer t
-  :init
-  (setq lsp-keymap-prefix "C-c l")
-  :hook (
-         (cc-mode . lsp)
-         (python-mode . lsp)
-		 (js-mode . lsp)
-		 (typescript-mode . lsp)
-		 (rust-mode . lsp)
-		 (php-mode . lsp))
-  :config
-  (setq lsp-headerline-breadcrumb-enable nil)
-  (setq lsp-diagnostic-package :none)
-  :commands lsp)
-
-(setenv "LSP_USE_PLISTS" "true")
-(setq lsp-idle-delay 0.500)
-(setq lsp-log-io nil)
-
-(use-package lsp-ui
-  :commands lsp-ui-mode
-  :ensure t
-  :defer t
-  )
-
-(use-package company
-  :ensure t
-  :defer t
-  :config
-  (setq company-minimum-prefix-length 1
-		company-idle-delay 0.0)
-  )
-
-(global-company-mode)
-
-(use-package yasnippet
-  :ensure t
-  :config
-  (yas-global-mode 1))
 
 ;; Indent
 (setq electric-indent-mode t)
