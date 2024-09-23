@@ -70,7 +70,7 @@
 (transient-mark-mode 1)
 (setq mark-even-if-inactive nil)
 
-;; Compile
+;; pile
 (defun run-build-script ()
   "Run the build.bat."
   (interactive)
@@ -205,7 +205,7 @@
   :defer t
   )
 
-(use-package company-mode
+(use-package company
   :ensure t
   :defer t
   :config
