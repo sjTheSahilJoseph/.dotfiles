@@ -192,9 +192,7 @@
 		 (rust-mode . lsp)
 		 (php-mode . lsp))
   :config
-  ;; Disable breadcrumbs
   (setq lsp-headerline-breadcrumb-enable nil)
-  ;; Disable Flymake and use Flycheck for diagnostics
   (setq lsp-diagnostic-package :none)
   :commands lsp)
 
@@ -218,9 +216,10 @@
 
 (global-company-mode)
 
-(with-eval-after-load 'lsp-mode
-  ;; :global/:workspace/:file
-  (setq lsp-modeline-diagnostics-scope :workspace))
+(use-package yasnippet
+  :ensure t
+  :config
+  (yas-global-mode 1))
 
 ;; Indent
 (setq electric-indent-mode t)
