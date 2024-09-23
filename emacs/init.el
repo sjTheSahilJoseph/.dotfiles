@@ -184,15 +184,18 @@
   :defer t
   :init
   (setq lsp-keymap-prefix "C-c l")
-  (lsp-headerline-breadcrumb-mode nil)
   :hook (
          (cc-mode . lsp)
          (python-mode . lsp)
 		 (js-mode . lsp)
 		 (typescript-mode . lsp)
 		 (rust-mode . lsp)
-		 (php-mode . lsp)
-		 )
+		 (php-mode . lsp))
+  :config
+  ;; Disable breadcrumbs
+  (setq lsp-headerline-breadcrumb-enable nil)
+  ;; Disable Flymake and use Flycheck for diagnostics
+  (setq lsp-diagnostic-package :none)
   :commands lsp)
 
 (setenv "LSP_USE_PLISTS" "true")
@@ -210,7 +213,7 @@
   :defer t
   :config
   (setq company-minimum-prefix-length 1
-		company-idle-delay 0.0) ;; default is 0.2
+		company-idle-delay 0.0)
   )
 
 (global-company-mode)
@@ -235,17 +238,3 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(lsp-ui lsp-mode php-mode lua-mode python-mode rust-mode emmet-mode typescript-mode javascript-mode)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
