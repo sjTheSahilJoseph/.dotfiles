@@ -173,6 +173,39 @@
   :defer t
   )
 
+
+;; LSP Stuff
+(use-package company
+  :hook (after-init . global-company-mode)
+  :config
+  (setq company-minimum-prefix-length 1
+        company-idle-delay 0.0))
+
+(use-package yasnippet
+  :config
+  (yas-global-mode 1))
+
+(use-package eglot
+  :hook ((js-mode typescript-mode tsx-mode json-mode) . eglot-ensure)
+  :config
+  (add-to-list 'eglot-server-programs
+               '((typescript-mode js-mode) . ("typescript-language-server" "--stdio")))
+  (add-to-list 'eglot-server-programs
+               '((c-mode c++-mode) . ("clangd"))))
+
+(use-package flymake
+  :hook (prog-mode . flymake-mode))
+
+(use-package web-mode
+  :mode ("\\.tsx\\'" "\\.jsx\\'")
+  :config
+  (setq web-mode-code-indent-offset 2
+        web-mode-markup-indent-offset 2))
+
+(global-set-key (kbd "C-c r") 'eglot-rename)
+(global-set-key (kbd "C-c a") 'eglot-code-actions)
+
+
 ;; Indent
 (setq electric-indent-mode t)
 (setq-default indent-tabs-mode t)
