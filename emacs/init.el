@@ -188,11 +188,11 @@
   :hook (
          (cc-mode . lsp)
          (python-mode . lsp)
-	 (js-mode . lsp)
-	 (typescript-mode . lsp)
-	 (rust-mode . lsp)
-	 (php-mode . lsp)
-	 )
+		 (js-mode . lsp)
+		 (typescript-mode . lsp)
+		 (rust-mode . lsp)
+		 (php-mode . lsp)
+		 )
   :commands lsp)
 
 (setenv "LSP_USE_PLISTS" "true")
@@ -211,8 +211,9 @@
   :config
   (setq company-minimum-prefix-length 1
 		company-idle-delay 0.0) ;; default is 0.2
-  (global-company-mode)
   )
+
+(global-company-mode)
 
 (with-eval-after-load 'lsp-mode
   ;; :global/:workspace/:file
