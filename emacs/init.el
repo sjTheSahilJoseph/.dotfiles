@@ -1,6 +1,8 @@
 
 ;; Memory Threshold
 (setq gc-cons-threshold 200000000)
+(setq read-process-output-max (* 1024 1024))
+
 
 ;; SJ Info
 (setq user-full-name "SJ the Sahil Joseph")
@@ -182,6 +184,7 @@
   :defer t
   :init
   (setq lsp-keymap-prefix "C-c l")
+  (lsp-headerline-breadcrumb-mode nil)
   :hook (
          (cc-mode . lsp)
          (python-mode . lsp)
@@ -192,12 +195,27 @@
 	 )
   :commands lsp)
 
+(setenv "LSP_USE_PLISTS" "true")
+(setq lsp-idle-delay 0.500)
+(setq lsp-log-io nil)
+
 (use-package lsp-ui
   :commands lsp-ui-mode
   :ensure t
   :defer t
   )
 
+(use-package company-mode
+  :ensure t
+  :defer t
+  :config
+  (setq company-minimum-prefix-length 1
+      company-idle-delay 0.0) ;; default is 0.2
+  )
+
+(with-eval-after-load 'lsp-mode
+  ;; :global/:workspace/:file
+  (setq lsp-modeline-diagnostics-scope :workspace))
 
 ;; Indent
 (setq electric-indent-mode t)
