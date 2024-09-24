@@ -126,11 +126,27 @@
   :config
   (setq typescript-indent-level 4))
 
+(use-package php-mode
+  :ensure t
+  :defer t
+  )
+
 (use-package emmet-mode
   :ensure t
   :defer t
   :hook ((html-mode . emmet-mode)
+		 (web-mode . emmet-mode)
          (css-mode . emmet-mode)))
+
+(use-package web-mode
+  :mode "\\.tsx\\'"
+  :config
+  (setq web-mode-content-types-alist '(("tsx" . "\\.tsx\\'")))
+  (setq web-mode-enable-auto-indentation t)
+  (setq web-mode-markup-indent-offset 4)
+  (setq web-mode-css-indent-offset 4)
+  (setq web-mode-code-indent-offset 4)
+  (setq web-mode-enable-part-face nil))
 
 (use-package cc-mode
   :ensure t
@@ -155,13 +171,6 @@
 (use-package rainbow-mode
   :ensure t
   :hook (prog-mode . rainbow-mode))
-
-(use-package php-mode
-  :ensure t
-  :defer t
-  )
-
-
 
 
 ;; Indent
