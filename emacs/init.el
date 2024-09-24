@@ -134,6 +134,9 @@
 (use-package emmet-mode
   :ensure t
   :defer t
+  :config
+  (setq emmet-expand-jsx-className? t)
+  (setq emmet-self-closing-tag-style " /")
   :hook ((html-mode . emmet-mode)
 		 (web-mode . emmet-mode)
          (css-mode . emmet-mode)))
