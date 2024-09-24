@@ -32,12 +32,6 @@
 (setq window-divider-default-left-width 0)
 (setq window-divider-default-bottom-width 0)
 
-;; Frame UI changes
-(setq default-frame-alist
-      '((internal-border-width . 2)
-        (left-fringe . 5)
-        (right-fringe . 5)))
-(window-divider-mode)
 
 ;; Setting Fonts
 (set-frame-font "Liberation Mono 13" nil t)
