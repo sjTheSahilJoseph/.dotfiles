@@ -136,6 +136,7 @@
   :defer t
   :hook ((html-mode . emmet-mode)
 		 (web-mode . emmet-mode)
+		 (typescript-tsx-mode . emmet-mode)
          (css-mode . emmet-mode))
   :config
   (setq emmet-expand-jsx-className? t)
@@ -146,11 +147,14 @@
   :mode "\\.tsx\\'"
   :config
   (setq web-mode-content-types-alist '(("tsx" . "\\.tsx\\'")))
+  (setq web-mode-content-types-alist '(("jsx" . "\\.tsx\\'")))
   (setq web-mode-enable-auto-indentation t)
   (setq web-mode-markup-indent-offset 4)
   (setq web-mode-css-indent-offset 4)
   (setq web-mode-code-indent-offset 4)
-  (setq web-mode-enable-part-face nil))
+  (setq web-mode-enable-part-face nil)
+  (setq web-mode-jsx-syntax t)
+  )
 
 (use-package cc-mode
   :ensure t
