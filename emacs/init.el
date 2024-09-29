@@ -115,7 +115,6 @@
         use-package-expand-minimally t
         warning-minimum-level :error))
 
-;; Language Modes
 (use-package json-mode
   :ensure t
   :defer t)
@@ -129,31 +128,6 @@
 (use-package php-mode
   :ensure t
   :defer t
-  )
-
-(use-package emmet-mode
-  :ensure t
-  :defer t
-  :hook ((html-mode . emmet-mode)
-		 (web-mode . emmet-mode)
-		 (typescript-tsx-mode . emmet-mode)
-         (css-mode . emmet-mode))
-  :config
-  (setq emmet-expand-jsx-className? t)
-  (setq emmet-self-closing-tag-style " /")
-  )
-
-(use-package web-mode
-  :mode "\\.tsx\\'"
-  :config
-  (setq web-mode-content-types-alist '(("tsx" . "\\.tsx\\'")))
-  (setq web-mode-content-types-alist '(("jsx" . "\\.tsx\\'")))
-  (setq web-mode-enable-auto-indentation t)
-  (setq web-mode-markup-indent-offset 4)
-  (setq web-mode-css-indent-offset 4)
-  (setq web-mode-code-indent-offset 4)
-  (setq web-mode-enable-part-face nil)
-  (setq web-mode-jsx-syntax t)
   )
 
 (use-package cc-mode
@@ -178,6 +152,7 @@
 
 (use-package rainbow-mode
   :ensure t
+  :defer t
   :hook (prog-mode . rainbow-mode))
 
 
