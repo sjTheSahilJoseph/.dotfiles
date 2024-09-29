@@ -164,6 +164,8 @@
 (setq company-minimum-prefix-length 1
       company-idle-delay 0.0)
 
+(setq gc-cons-threshold 300000000)
+(setq read-process-output-max (* 3072 3072))
 
 (use-package lsp-mode
   :ensure t
@@ -172,16 +174,23 @@
 	 (lsp-mode . lsp-enable-which-key-integration)
 	 )
   :commands lsp-deferred)
+
 (setq lsp-log-io nil)
 (setq lsp-keymap-prefix "C-c l")
 (setq lsp-ui-sideline-show-diagnostics t)
 (setq lsp-ui-sideline-show-hover t)
 (setq lsp-ui-sideline-show-code-actions t)
 (setq lsp-diagnostics-provider :flymake)
+(setq lsp-headerline-breadcrumb-enable nil)
 (setq lsp-ui-doc-enable t)
 (setq lsp-ui-doc-position 'at-point)
 (global-set-key (kbd "C-.") #'lsp-ui-peek-find-definitions)
 
+(setq lsp-idle-delay 0.500)
+
+(with-eval-after-load 'lsp-mode
+  ;; :global/:workspace/:file
+  (setq lsp-modeline-diagnostics-scope :workspace))
 
 (use-package lsp-ui
   :ensure t
@@ -209,18 +218,6 @@
      (add-hook 'web-mode-hook #'add-node-modules-path)
      (add-hook 'web-mode-hook #'prettier-js-mode)))
 
-
-(use-package editorconfig
-  :ensure t
-  :config
-  (editorconfig-mode 1))
-
-(use-package npm-mode
-  :ensure t
-  :config
-  (npm-global-mode))
-
-
 (setq electric-indent-mode t)
 (setq-default indent-tabs-mode t)
 (setq-default tab-width 4)
@@ -236,16 +233,3 @@
 (put 'upcase-region 'disabled nil)
 
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(npm-mode editorconfig prettier-js lsp-python-ms lsp-ui lsp-mode company web-mode rainbow-mode lua-mode python-mode rust-mode php-mode typescript-mode json-mode)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
