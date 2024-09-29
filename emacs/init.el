@@ -1,21 +1,17 @@
 
-;; SJ Info
 (setq user-full-name "SJ the Sahil Joseph")
 (setq user-mail-address "sjthesahiljoseph@gmail.com")
 
-;; Basic UI changes
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 
-;; Small Configs
 (setq echo-keystrokes 0.1)
 (setq-default compilation-always-kill t)
 (setq-default compilation-scroll-output t)
 (global-set-key (kbd "C-z") nil)
 
 
-;; Cusror Customization
 (setq-default cursor-type 'box)
 (set-cursor-color "#00ee00")
 (blink-cursor-mode t)
@@ -27,52 +23,40 @@
 
 (setq-default truncate-lines t)
 
-;; Window UI changes
 (setq window-divider-default-right-width 0)
 (setq window-divider-default-left-width 0)
 (setq window-divider-default-bottom-width 0)
 
 
-;; Setting Fonts
 (set-frame-font "Liberation Mono 13" nil t)
 
-;; Theme
 (add-to-list 'custom-theme-load-path "C:/Users/SJ Joseph/.dotfiles/emacs/themes/")
 (load-theme 'loveisanillusion.emacs t)
 
-;; Startup Screen
 (setq inhibit-startup-message t)
 
-;; Messages
 (setq inhibit-message nil)
 
-;; Scratch Buffer Message
 (setq initial-scratch-message "\
 ;; SJ Joseph
 
 ")
 
-;; Marking
 (transient-mark-mode 1)
 (setq mark-even-if-inactive nil)
 
-;; Compile
 (defun run-build-script ()
   "Run the build.bat."
   (interactive)
   (compile "build.bat"))
 (global-set-key (kbd "<f5>") 'run-build-script)
 
-;; Count Words
 (global-set-key (kbd "<f6>") 'count-words)
 
-;; Find and Replace
 (global-set-key (kbd "<f7>") 'replace-string)
 
-;; Eval Region
 (global-set-key (kbd "<f8>") 'eval-region)
 
-;; Character Encoding Settings
 (set-language-environment "UTF-8")
 (setq locale-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
@@ -87,7 +71,6 @@
 (setq-default pathname-coding-system 'utf-8)
 (set-file-name-coding-system 'utf-8)
 
-;; Autosave
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
@@ -95,10 +78,8 @@
 (global-auto-revert-mode t)
 
 
-;; Sound
 (set-message-beep 'silent)
 
-;; Package Setup
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives '("gnu"   . "https://elpa.gnu.org/packages/"))
@@ -155,8 +136,6 @@
   :defer t
   :hook (prog-mode . rainbow-mode))
 
-
-;; Indent
 (setq electric-indent-mode t)
 (setq-default indent-tabs-mode t)
 (setq-default tab-width 4)
@@ -168,7 +147,6 @@
 	(indent-region (point-min) (point-max) nil)))
 (global-set-key (kbd "C-S-<tab>") 'indent-whole-buffer)
 
-;; Case Conversion
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
