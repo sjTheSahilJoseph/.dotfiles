@@ -196,8 +196,8 @@
   :config
    (custom-set-faces
    '(lsp-ui-sideline-code-action ((t (:font "Liberation Mono-13"))))
-   '(lsp-ui-sideline-current-symbol ((t (:font "Liberation Mono-13" :box (:line-width -1 :color "#56b6c2")))))
-   '(lsp-ui-sideline-symbol-info ((t (:font "Liberation Mono-13" :box (:line-width -1 :color "#c678dd")))))
+   '(lsp-ui-sideline-current-symbol ((t (:font "Liberation Mono-13"))))
+   '(lsp-ui-sideline-symbol-info ((t (:font "Liberation Mono-13"))))
    '(lsp-ui-sideline-symbol ((t (:font "Liberation Mono-13"))))
    '(lsp-ui-sideline-global ((t (:font "Liberation Mono-13")))))
 
