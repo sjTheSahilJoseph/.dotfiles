@@ -57,6 +57,8 @@
 
 (global-set-key (kbd "<f8>") 'eval-region)
 
+(global-set-key (kbd "<f9>") 'flymake-show-project-diagnostics)
+
 (set-language-environment "UTF-8")
 (setq locale-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
@@ -74,9 +76,7 @@
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
-;; Auto load changed file
 (global-auto-revert-mode t)
-
 
 (set-message-beep 'silent)
 
