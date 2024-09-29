@@ -136,6 +136,89 @@
   :defer t
   :hook (prog-mode . rainbow-mode))
 
+
+(defun sj/webmode-hook ()
+	"Webmode hooks."
+	(setq web-mode-enable-comment-annotation t)
+	(setq web-mode-markup-indent-offset 2)
+	(setq web-mode-code-indent-offset 2)
+	(setq web-mode-css-indent-offset 2)
+	(setq web-mode-attr-indent-offset 0)
+	(setq web-mode-enable-auto-indentation t)
+	(setq web-mode-enable-auto-closing t)
+	(setq web-mode-enable-auto-pairing t)
+	(setq web-mode-enable-css-colorization t)
+)
+(use-package web-mode
+  :ensure t
+  :mode (("\\.jsx?\\'" . web-mode)
+	 ("\\.tsx?\\'" . web-mode)
+	 ("\\.html\\'" . web-mode))
+  :commands web-mode
+	:hook (web-mode . sj/webmode-hook)
+)
+
+(setq company-minimum-prefix-length 1
+      company-idle-delay 0.0)
+(use-package company
+  :ensure t
+  :config (global-company-mode t))
+
+(setq lsp-log-io nil)
+(setq lsp-keymap-prefix "C-c l")
+(setq lsp-ui-sideline-show-diagnostics t)
+(setq lsp-ui-sideline-show-hover t)
+(setq lsp-ui-sideline-show-code-actions t)
+(setq lsp-diagnostics-provider :flymake)
+(setq lsp-ui-doc-enable t)
+(setq lsp-ui-doc-position 'at-point)
+(global-set-key (kbd "C-.") #'lsp-ui-peek-find-definitions)
+
+(use-package lsp-mode
+  :ensure t
+  :hook (
+	 (web-mode . lsp-deferred)
+	 (lsp-mode . lsp-enable-which-key-integration)
+	 )
+  :commands lsp-deferred)
+
+
+(use-package lsp-ui
+  :ensure t
+  :commands lsp-ui-mode)
+
+(use-package lsp-python-ms
+  :ensure t
+  :init (setq lsp-python-ms-auto-install-server t)
+  :hook (python-mode . (lambda ()
+                         (require 'lsp-python-ms)
+                         (lsp))))
+
+
+(eval-after-load 'web-mode
+  '(progn
+     (add-hook 'web-mode-hook #'add-node-modules-path)
+     (add-hook 'web-mode-hook #'prettier-js-mode)))
+
+(use-package prettier-js
+  :ensure t)
+(add-hook 'web-mode-hook #'(lambda ()
+                             (enable-minor-mode
+                              '("\\.jsx?\\'" . prettier-js-mode))
+			     (enable-minor-mode
+                  '("\\.tsx?\\'" . prettier-js-mode))))
+
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
+
+(use-package npm-mode
+  :ensure t
+  :config
+  (npm-global-mode))
+
+
 (setq electric-indent-mode t)
 (setq-default indent-tabs-mode t)
 (setq-default tab-width 4)
