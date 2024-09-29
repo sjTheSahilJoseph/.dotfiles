@@ -143,8 +143,8 @@
 (setq company-minimum-prefix-length 1
       company-idle-delay 0.0)
 
-(setq gc-cons-threshold 300000000)
-(setq read-process-output-max (* 3072 3072))
+(setq gc-cons-threshold 500000000)
+(setq read-process-output-max (* 5072 5072))
 
 (use-package lsp-mode
   :ensure t
