@@ -136,6 +136,21 @@
   :defer t
   :hook (prog-mode . rainbow-mode))
 
+(use-package emmet-mode
+  :ensure t
+  :defer t
+
+  )
+
+(add-hook 'css-mode-hook  'emmet-mode)
+(add-hook 'typescript-mode-hook  'emmet-mode)
+(add-hook 'javascript-mode-hook  'emmet-mode)
+(add-hook 'html-mode-hook  'emmet-mode)
+(add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 4)))
+(setq emmet-move-cursor-between-quotes t)
+(setq emmet-self-closing-tag-style " /")
+(add-to-list 'emmet-jsx-major-modes 'typescript-mode)
+
 (use-package company
   :ensure t
   :config (global-company-mode t))
@@ -148,19 +163,34 @@
 (use-package lsp-mode
   :ensure t
   :hook (
-	 (typescript-mode . lsp-deferred)
-	 )
+		 (typescript-mode . lsp-deferred)
+		 (cc-mode . lsp-deferred)
+		 (c-mode . lsp-deferred)
+		 (c++-mode . lsp-deferred)
+		 (rust-mode . lsp-deferred)
+		 (javascript-mode . lsp-deferred)
+		 (csharp-mode . lsp-deferred)
+		 (lua-mode . lsp-deferred)
+		 (python-mode . lsp-deferred)
+		 (php-mode . lsp-deferred)
+		 )
   :commands lsp-deferred)
 
 (setq lsp-log-io nil)
+
 (setq lsp-keymap-prefix "C-c l")
-(setq lsp-ui-sideline-show-diagnostics nil)
+
+(setq lsp-ui-sideline-show-diagnostics t)
 (setq lsp-ui-sideline-show-hover t)
 (setq lsp-ui-sideline-show-code-actions nil)
+
 (setq lsp-diagnostics-provider :flymake)
+
 (setq lsp-headerline-breadcrumb-enable nil)
+
 (setq lsp-ui-doc-enable t)
 (setq lsp-ui-doc-position 'at-point)
+
 (global-set-key (kbd "C-.") #'lsp-ui-peek-find-definitions)
 
 (setq lsp-idle-delay 0.500)
@@ -194,3 +224,16 @@
 (put 'upcase-region 'disabled nil)
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(emmet-mode web-mode typescript-mode rust-mode rainbow-mode python-mode prettier-js php-mode npm-mode lua-mode lsp-ui lsp-python-ms json-mode editorconfig company)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
