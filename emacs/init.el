@@ -158,12 +158,20 @@
 	:hook (web-mode . sj/webmode-hook)
 )
 
-(setq company-minimum-prefix-length 1
-      company-idle-delay 0.0)
-(use-package company-mode
+(use-package company
   :ensure t
   :config (global-company-mode t))
+(setq company-minimum-prefix-length 1
+      company-idle-delay 0.0)
 
+
+(use-package lsp-mode
+  :ensure t
+  :hook (
+	 (web-mode . lsp-deferred)
+	 (lsp-mode . lsp-enable-which-key-integration)
+	 )
+  :commands lsp-deferred)
 (setq lsp-log-io nil)
 (setq lsp-keymap-prefix "C-c l")
 (setq lsp-ui-sideline-show-diagnostics t)
@@ -173,14 +181,6 @@
 (setq lsp-ui-doc-enable t)
 (setq lsp-ui-doc-position 'at-point)
 (global-set-key (kbd "C-.") #'lsp-ui-peek-find-definitions)
-
-(use-package lsp-mode
-  :ensure t
-  :hook (
-	 (web-mode . lsp-deferred)
-	 (lsp-mode . lsp-enable-which-key-integration)
-	 )
-  :commands lsp-deferred)
 
 
 (use-package lsp-ui
@@ -195,10 +195,6 @@
                          (lsp))))
 
 
-(eval-after-load 'web-mode
-  '(progn
-     (add-hook 'web-mode-hook #'add-node-modules-path)
-     (add-hook 'web-mode-hook #'prettier-js-mode)))
 
 (use-package prettier-js
   :ensure t)
@@ -206,7 +202,13 @@
                              (enable-minor-mode
                               '("\\.jsx?\\'" . prettier-js-mode))
 			     (enable-minor-mode
-                  '("\\.tsx?\\'" . prettier-js-mode))))
+			      '("\\.tsx?\\'" . prettier-js-mode))))
+
+(eval-after-load 'web-mode
+  '(progn
+     (add-hook 'web-mode-hook #'add-node-modules-path)
+     (add-hook 'web-mode-hook #'prettier-js-mode)))
+
 
 (use-package editorconfig
   :ensure t
