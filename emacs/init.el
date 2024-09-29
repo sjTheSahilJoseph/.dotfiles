@@ -160,7 +160,7 @@
 
 (setq company-minimum-prefix-length 1
       company-idle-delay 0.0)
-(use-package company
+(use-package company-mode
   :ensure t
   :config (global-company-mode t))
 
