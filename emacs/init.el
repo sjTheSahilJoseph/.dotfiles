@@ -136,20 +136,6 @@
   :defer t
   :hook (prog-mode . rainbow-mode))
 
-(use-package emmet-mode
-  :ensure t
-  :defer t
-
-  )
-
-(add-hook 'css-mode-hook  'emmet-mode)
-(add-hook 'typescript-mode-hook  'emmet-mode)
-(add-hook 'javascript-mode-hook  'emmet-mode)
-(add-hook 'html-mode-hook  'emmet-mode)
-(add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 4)))
-(setq emmet-move-cursor-between-quotes t)
-(setq emmet-self-closing-tag-style " /")
-(add-to-list 'emmet-jsx-major-modes 'typescript-mode)
 
 (use-package company
   :ensure t
@@ -224,16 +210,3 @@
 (put 'upcase-region 'disabled nil)
 
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(emmet-mode web-mode typescript-mode rust-mode rainbow-mode python-mode prettier-js php-mode npm-mode lua-mode lsp-ui lsp-python-ms json-mode editorconfig company)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
