@@ -144,7 +144,7 @@
       company-idle-delay 0.0)
 
 (setq gc-cons-threshold 900000000)
-(setq read-process-output-max (* 9072 9072))
+(setq read-process-output-max (* 3072 3072))
 
 (use-package lsp-mode
   :ensure t
@@ -195,11 +195,11 @@
   :commands lsp-ui-mode
   :config
    (custom-set-faces
-   '(lsp-ui-sideline-code-action ((t (:font "Arial-13"))))
-   '(lsp-ui-sideline-current-symbol ((t (:font "Arial-13"))))
-   '(lsp-ui-sideline-symbol-info ((t (:font "Arial-13"))))
-   '(lsp-ui-sideline-symbol ((t (:font "Arial-13"))))
-   '(lsp-ui-sideline-global ((t (:font "Arial-13")))))
+   '(lsp-ui-sideline-code-action ((t (:font "Liberation Mono-13"))))
+   '(lsp-ui-sideline-current-symbol ((t (:font "Liberation Mono-13"))))
+   '(lsp-ui-sideline-symbol-info ((t (:font "Liberation Mono-13"))))
+   '(lsp-ui-sideline-symbol ((t (:font "Liberation Mono-13"))))
+   '(lsp-ui-sideline-global ((t (:font "Liberation Mono-13")))))
 
   )
 
