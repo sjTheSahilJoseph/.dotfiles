@@ -202,7 +202,9 @@
    '(lsp-ui-sideline-global ((t (:font "Liberation Mono-13")))))
 
   )
-
+(add-hook 'lsp-ui-doc-frame-hook
+          (lambda (frame _w)
+            (set-face-attribute 'default frame :font "Liberation Mono" :height 130)))
 (use-package lsp-python-ms
   :ensure t
   :init (setq lsp-python-ms-auto-install-server t)
