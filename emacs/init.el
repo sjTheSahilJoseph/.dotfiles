@@ -192,7 +192,7 @@
   :ensure t
   :commands lsp-ui-mode
   :config
-   (custom-set-faces
+  (custom-set-faces
    '(lsp-ui-sideline-code-action ((t (:font "Liberation Mono-13"))))
    '(lsp-ui-sideline-current-symbol ((t (:font "Liberation Mono-13"))))
    '(lsp-ui-sideline-symbol-info ((t (:font "Liberation Mono-13"))))
@@ -223,20 +223,5 @@
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
