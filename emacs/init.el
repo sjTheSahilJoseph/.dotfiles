@@ -57,7 +57,17 @@
 
 (global-set-key (kbd "<f8>") 'eval-region)
 
-(global-set-key (kbd "<f9>") 'flymake-show-project-diagnostics)
+(defun toggle-flymake-diagnostics ()
+  "Toggle the visibility of the Flymake diagnostics window."
+  (interactive)
+  (let ((buf (get-buffer "*Flymake diagnostics*")))
+    (if (get-buffer-window buf)
+        (delete-window (get-buffer-window buf))
+      (progn
+        (flymake-show-diagnostics-buffer)
+        (select-window (get-buffer-window buf))))))
+
+(global-set-key (kbd "<f9>") 'toggle-flymake-diagnostics)
 
 (set-language-environment "UTF-8")
 (setq locale-coding-system 'utf-8)
