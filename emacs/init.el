@@ -9,6 +9,17 @@
 (setq use-dialog-box nil)
 (setq enable-recursive-minibuffers t)
 (setq echo-keystrokes nil)
+(setq-default tab-always-indent t)
+(setq-default word-wrap t)
+(setq-default truncate-lines t)
+(setq truncate-partial-width-windows nil)
+(setq sentence-end-double-space nil)
+(setq require-final-newline t)
+(setq-default cursor-in-non-selected-windows nil)
+(setq highlight-nonselected-windows nil)
+
+(when (bound-and-true-p tooltip-mode)
+  (tooltip-mode -1))
 
 (setq-default compilation-always-kill t)
 (setq-default compilation-scroll-output t)
