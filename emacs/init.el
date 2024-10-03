@@ -145,86 +145,12 @@
   )
 (which-key-mode)
 
-(use-package company
-  :ensure t
-  :config (global-company-mode t))
-(setq company-minimum-prefix-length 1
-      company-idle-delay 0.0)
-
-(setq gc-cons-threshold 900000000)
-(setq read-process-output-max (* 1024 1024))
-
-(setq lsp-keymap-prefix "C-c l")
-(setq lsp-log-io nil)
-
-(use-package lsp-mode
-  :ensure t
-  :hook (
-		 (typescript-mode . lsp-deferred)
-		 (cc-mode . lsp-deferred)
-		 (c-mode . lsp-deferred)
-		 (c++-mode . lsp-deferred)
-		 (rust-mode . lsp-deferred)
-		 (javascript-mode . lsp-deferred)
-		 (csharp-mode . lsp-deferred)
-		 (lua-mode . lsp-deferred)
-		 (python-mode . lsp-deferred)
-		 (php-mode . lsp-deferred)
-		 )
-  :commands lsp-deferred)
-
-(setq lsp-ui-sideline-show-diagnostics t)
-(setq lsp-ui-sideline-show-hover t)
-(setq lsp-ui-sideline-show-code-actions nil)
-(setq lsp-ui-sideline-update-mode 'line)
-(setq lsp-ui-sideline-delay '0.5)
-
-(setq lsp-diagnostics-provider :flymake)
-
-(setq lsp-headerline-breadcrumb-enable nil)
-
-(setq lsp-ui-doc-enable t)
-(setq lsp-ui-doc-position 'at-point)
-(setq lsp-ui-doc-side 'right)
-(setq lsp-ui-doc-delay '0.5)
-(setq lsp-ui-doc-show-with-cursor nil)
-(setq lsp-ui-doc-show-with-mouse t)
-
-(global-set-key (kbd "C-.") #'lsp-ui-peek-find-definitions)
-
-(setq lsp-idle-delay 0.500)
-
-(with-eval-after-load 'lsp-mode
-  (setq lsp-modeline-diagnostics-scope :workspace))
-
-(use-package lsp-ui
-  :ensure t
-  :commands lsp-ui-mode
-  :config
-  (custom-set-faces
-   '(lsp-ui-sideline-code-action ((t (:font "Liberation Mono-13"))))
-   '(lsp-ui-sideline-current-symbol ((t (:font "Liberation Mono-13"))))
-   '(lsp-ui-sideline-symbol-info ((t (:font "Liberation Mono-13"))))
-   '(lsp-ui-sideline-symbol ((t (:font "Liberation Mono-13"))))
-   '(lsp-ui-sideline-global ((t (:font "Liberation Mono-13")))))
-
-  )
-
-(use-package lsp-python-ms
-  :ensure t
-  :init (setq lsp-python-ms-auto-install-server t)
-  :hook (python-mode . (lambda ()
-                         (require 'lsp-python-ms)
-                         (lsp))))
-
-(with-eval-after-load 'lsp-mode
-  (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))
-
 (use-package aggressive-indent
   :defer t
   :ensure t
   )
-(setq electric-indent-mode t)
+
+(setq electric-indent-mode 0)
 (global-aggressive-indent-mode 1)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
