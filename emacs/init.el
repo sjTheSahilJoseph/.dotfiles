@@ -138,14 +138,14 @@
 (use-package which-key
   :ensure t
   :defer t
-  )
-(setq which-key-idle-delay 1000)
-(setq which-key-idle-secondary-delay 0.05)
-(setq which-key-popup-type 'side-window)
-(setq which-key-side-window-location 'right)
-(setq which-key-side-window-max-width 0.33)
-(setq which-key-side-window-max-height 0.25)
-(which-key-mode)
+  :config
+  (setq which-key-idle-delay 0.3)
+  (setq which-key-idle-secondary-delay 0.05)
+  (setq which-key-popup-type 'side-window)
+  (setq which-key-side-window-location 'right)
+  (setq which-key-side-window-max-width 0.33)
+  (setq which-key-side-window-max-height 0.33)
+  (which-key-mode))
 
 (use-package company
   :ensure t
