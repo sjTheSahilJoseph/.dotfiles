@@ -113,7 +113,7 @@
   :ensure t
   :defer t
   :config
-  (setq cc-indent-level 4)
+  (setq c-basic-offset 4)
   )
 
 (use-package csharp-mode
