@@ -6,7 +6,10 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 
-(setq echo-keystrokes 0.1)
+(setq use-dialog-box nil)
+(setq enable-recursive-minibuffers t)
+(setq echo-keystrokes nil)
+
 (setq-default compilation-always-kill t)
 (setq-default compilation-scroll-output t)
 (global-set-key (kbd "C-z") nil)
@@ -137,16 +140,6 @@
 	:ensure t
 	:defer t
 	:hook (prog-mode . rainbow-mode))
-
-(use-package which-key
-	:ensure t
-	:defer t
-	:config
-	(setq which-key-idle-delay 0.3)
-	(setq which-key-idle-secondary-delay 0.05)
-	(setq which-key-popup-type 'minibuffer)
-	)
-(which-key-mode)
 
 (setq electric-indent-mode 1)
 (setq-default indent-tabs-mode t)
