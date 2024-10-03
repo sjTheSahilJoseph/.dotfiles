@@ -141,10 +141,9 @@
   :config
   (setq which-key-idle-delay 0.3)
   (setq which-key-idle-secondary-delay 0.05)
-  (setq which-key-popup-type 'side-window)
-  (setq which-key-side-window-location 'right)
-  (setq which-key-side-window-max-width 0.33)
-  (setq which-key-side-window-max-height 0.33)
+  (setq which-key-popup-type 'frame)
+  (setq which-key-frame-max-width 100)
+  (setq which-key-frame-max-height 100)
   (which-key-mode))
 
 (use-package company
