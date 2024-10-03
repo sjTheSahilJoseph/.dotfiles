@@ -177,7 +177,7 @@
 
 
 
-(setq lsp-ui-sideline-show-diagnostics t)
+(setq lsp-ui-sideline-show-diagnostics nil)
 (setq lsp-ui-sideline-show-hover t)
 (setq lsp-ui-sideline-show-code-actions nil)
 (setq lsp-ui-sideline-update-mode 'line)
