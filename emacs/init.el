@@ -46,9 +46,9 @@
 (setq mark-even-if-inactive nil)
 
 (defun run-build-script ()
-  "Run the build.bat."
-  (interactive)
-  (compile "build.bat"))
+	"Run the build.bat."
+	(interactive)
+	(compile "build.bat"))
 (global-set-key (kbd "<f5>") 'run-build-script)
 
 (global-set-key (kbd "<f6>") 'count-words)
@@ -86,84 +86,78 @@
 (package-initialize)
 
 (unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
+	(package-refresh-contents)
+	(package-install 'use-package))
 
 (eval-and-compile
-  (setq use-package-always-ensure t
+	(setq use-package-always-ensure t
         use-package-expand-minimally t
         warning-minimum-level :error))
 
 (use-package json-mode
-  :ensure t
-  :defer t)
+	:ensure t
+	:defer t)
 
 (use-package typescript-mode
-  :ensure t
-  :defer t
-  :config
-  (setq typescript-indent-level 4))
+	:ensure t
+	:defer t
+	:config
+	(setq typescript-indent-level 4))
 
 (use-package php-mode
-  :ensure t
-  :defer t
-  )
+	:ensure t
+	:defer t
+	)
 
 (use-package cc-mode
-  :ensure t
-  :defer t
-  :config
-  (setq c-basic-offset 4)
-  )
+	:ensure t
+	:defer t
+	:config
+	(setq c-basic-offset 4)
+	)
 
 (use-package csharp-mode
-  :ensure t
-  :defer t)
+	:ensure t
+	:defer t)
 
 (use-package rust-mode
-  :ensure t
-  :defer t)
+	:ensure t
+	:defer t)
 
 (use-package python-mode
-  :ensure t
-  :defer t
-  )
+	:ensure t
+	:defer t
+	)
 
 (use-package lua-mode
-  :ensure t
-  :defer t)
+	:ensure t
+	:defer t)
 
 (use-package rainbow-mode
-  :ensure t
-  :defer t
-  :hook (prog-mode . rainbow-mode))
+	:ensure t
+	:defer t
+	:hook (prog-mode . rainbow-mode))
 
 (use-package which-key
-  :ensure t
-  :defer t
-  :config
-  (setq which-key-idle-delay 0.3)
-  (setq which-key-idle-secondary-delay 0.05)
-  (setq which-key-popup-type 'minibuffer)
-  )
+	:ensure t
+	:defer t
+	:config
+	(setq which-key-idle-delay 0.3)
+	(setq which-key-idle-secondary-delay 0.05)
+	(setq which-key-popup-type 'minibuffer)
+	)
 (which-key-mode)
 
-(defun insert-tab-char ()
-  "Insert a tab character."
-  (interactive)
-  (insert "\t"))
-
-(global-set-key (kbd "TAB") 'insert-tab-char)
-
-(setq electric-indent-mode 0)
+(setq electric-indent-mode 1)
 (setq-default indent-tabs-mode t)
 (setq-default tab-width 4)
+(setq lisp-indent-offset 4)
 
 (defun indent-whole-buffer ()
-  "Indent the entire buffer."
-  (interactive)
-  (save-excursion
-	(indent-region (point-min) (point-max) nil)))
+	"Indent the entire buffer."
+	(interactive)
+	(save-excursion
+		(indent-region (point-min) (point-max) nil)))
 (global-set-key (kbd "C-S-<tab>") 'indent-whole-buffer)
 
 (put 'downcase-region 'disabled nil)
