@@ -145,6 +145,13 @@
   )
 (which-key-mode)
 
+(defun insert-tab-char ()
+  "Insert a tab character."
+  (interactive)
+  (insert "\t"))
+
+(global-set-key (kbd "TAB") 'insert-tab-char)
+
 (use-package aggressive-indent
   :defer t
   :ensure t
