@@ -111,7 +111,10 @@
 
 (use-package cc-mode
   :ensure t
-  :defer t)
+  :defer t
+  :config
+  (setq cc-indent-level 4)
+  )
 
 (use-package csharp-mode
   :ensure t
