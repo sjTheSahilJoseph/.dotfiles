@@ -143,7 +143,7 @@
   (setq which-key-idle-secondary-delay 0.05)
   (setq which-key-popup-type 'minibuffer)
   )
-  (which-key-mode)
+(which-key-mode)
 
 (use-package company
   :ensure t
@@ -154,10 +154,11 @@
 (setq gc-cons-threshold 900000000)
 (setq read-process-output-max (* 1024 1024))
 
+(setq lsp-keymap-prefix "C-c l")
+(setq lsp-log-io nil)
+
 (use-package lsp-mode
   :ensure t
-  :config
-  (setq lsp-keymap-prefix "C-c l")
   :hook (
 		 (typescript-mode . lsp-deferred)
 		 (cc-mode . lsp-deferred)
@@ -172,7 +173,7 @@
 		 )
   :commands lsp-deferred)
 
-(setq lsp-log-io nil)
+
 
 
 
