@@ -173,11 +173,7 @@
 		 )
   :commands lsp-deferred)
 
-
-
-
-
-(setq lsp-ui-sideline-show-diagnostics nil)
+(setq lsp-ui-sideline-show-diagnostics t)
 (setq lsp-ui-sideline-show-hover t)
 (setq lsp-ui-sideline-show-code-actions nil)
 (setq lsp-ui-sideline-update-mode 'line)
@@ -213,9 +209,7 @@
    '(lsp-ui-sideline-global ((t (:font "Liberation Mono-13")))))
 
   )
-(add-hook 'lsp-ui-doc-frame-hook
-          (lambda (frame _w)
-            (set-face-attribute 'default frame :font "Liberation Mono" :height 130)))
+
 (use-package lsp-python-ms
   :ensure t
   :init (setq lsp-python-ms-auto-install-server t)
@@ -226,7 +220,12 @@
 (with-eval-after-load 'lsp-mode
   (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))
 
+(use-package aggressive-indent
+  :defer t
+  :ensure t
+  )
 (setq electric-indent-mode t)
+(global-aggressive-indent-mode 1)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 
