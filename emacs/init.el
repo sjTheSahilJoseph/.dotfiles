@@ -156,6 +156,8 @@
 
 (use-package lsp-mode
   :ensure t
+  :config
+  (setq lsp-keymap-prefix "C-c l")
   :hook (
 		 (typescript-mode . lsp-deferred)
 		 (cc-mode . lsp-deferred)
@@ -172,7 +174,7 @@
 
 (setq lsp-log-io nil)
 
-(setq lsp-keymap-prefix "C-c l")
+
 
 (setq lsp-ui-sideline-show-diagnostics t)
 (setq lsp-ui-sideline-show-hover t)
