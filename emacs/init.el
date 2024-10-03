@@ -152,14 +152,8 @@
 
 (global-set-key (kbd "TAB") 'insert-tab-char)
 
-(use-package aggressive-indent
-  :defer t
-  :ensure t
-  )
-
 (setq electric-indent-mode 0)
-(global-aggressive-indent-mode 1)
-(setq-default indent-tabs-mode nil)
+(setq-default indent-tabs-mode t)
 (setq-default tab-width 4)
 
 (defun indent-whole-buffer ()
