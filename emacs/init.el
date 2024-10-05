@@ -6,6 +6,7 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 
+
 (setq use-dialog-box nil)
 (setq enable-recursive-minibuffers t)
 (setq echo-keystrokes nil)
@@ -19,7 +20,7 @@
 (setq highlight-nonselected-windows nil)
 
 (when (bound-and-true-p tooltip-mode)
-  (tooltip-mode -1))
+	(tooltip-mode -1))
 
 (setq-default compilation-always-kill t)
 (setq-default compilation-scroll-output t)
@@ -153,7 +154,7 @@
 	:hook (prog-mode . rainbow-mode))
 
 (setq electric-indent-mode 1)
-(setq-default indent-tabs-mode t)
+(setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq lisp-indent-offset 4)
 
