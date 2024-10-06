@@ -159,6 +159,8 @@
 
 
 
+(setq dired-listing-switches "-lah --group-directories-first")
+
 (setq electric-indent-mode 1)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
