@@ -153,139 +153,20 @@
 	:defer t
 	:hook (prog-mode . rainbow-mode))
 
+(use-package tide
+  :ensure t
+  :hook ((typescript-mode . tide-setup)
+         (typescript-mode . tide-hl-identifier-mode)
+         (before-save . tide-format-before-save))
+  :config
+  (setq tide-format-options '(:indentSize 4 :tabSize 4))
+  (setq tide-enable-xref nil)
+  (setq tide-completion-enable-autoimport-suggestions nil)
+  (setq tide-always-show-documentation nil))
 
-(use-package corfu
-    :ensure t
-    :custom
-    (corfu-cycle t)
-    (corfu-auto t)
-    (corfu-auto-prefix 1)
-    (corfu-auto-delay 0)
-    (corfu-popupinfo-delay '(0.5 . 0.2))
-    (corfu-preview-current 'insert)
-    (corfu-preselect 'prompt)
-    (corfu-on-exact-match nil)
-    :bind (:map corfu-map
-              ("M-SPC"      . corfu-insert-separator)
-              ("TAB"        . corfu-next)
-              ([tab]        . corfu-next)
-              ("S-TAB"      . corfu-previous)
-              ([backtab]    . corfu-previous)
-              ("S-<return>" . corfu-insert)
-              ("RET"        . corfu-insert)))
-
-(global-corfu-mode)
-(corfu-history-mode)
-(corfu-popupinfo-mode)
-
-(use-package flycheck
-    :ensure t
-    :init (global-flycheck-mode)
-    :bind (:map flycheck-mode-map
-              ("M-n" . flycheck-next-error)
-              ("M-p" . flycheck-previous-error)))
-
-
-(use-package lsp-mode
-    :ensure t
-    :hook ((lsp-mode . lsp-diagnostics-mode)
-              (lsp-mode . lsp-enable-which-key-integration)
-              ((tsx-ts-mode
-                   typescript-ts-mode
-                   js-ts-mode) . lsp-deferred))
-    :custom
-    (lsp-keymap-prefix "C-c l")
-    (lsp-completion-provider :none)
-    (lsp-diagnostics-provider :flycheck)
-    (lsp-session-file (locate-user-emacs-file ".lsp-session"))
-    (lsp-log-io nil)
-    (lsp-keep-workspace-alive nil)
-    (lsp-idle-delay 0.5)
-    (lsp-enable-xref t)
-    (lsp-auto-configure t)
-    (lsp-eldoc-enable-hover t)
-    (lsp-enable-file-watchers nil)
-    (lsp-enable-folding nil)
-    (lsp-enable-imenu t)
-    (lsp-enable-indentation t)
-    (lsp-enable-links nil)
-    (lsp-enable-on-type-formatting t)
-    (lsp-enable-suggest-server-download t)
-    (lsp-enable-symbol-highlighting t)
-    (lsp-enable-text-document-color t)
-
-    (lsp-ui-sideline-show-hover nil)
-    (lsp-ui-sideline-diagnostic-max-lines 20)
-    (lsp-completion-enable t)
-    (lsp-completion-enable-additional-text-edit t)
-    (lsp-enable-snippet t)
-    (lsp-completion-show-kind t)
-    
-    (lsp-headerline-breadcrumb-enable nil)
-    (lsp-headerline-breadcrumb-enable-diagnostics nil)
-    (lsp-headerline-breadcrumb-enable-symbol-numbers nil)
-    (lsp-headerline-breadcrumb-icons-enable nil)
-
-    (lsp-modeline-code-actions-enable nil)
-    (lsp-modeline-diagnostics-enable nil)
-    (lsp-modeline-workspace-status-enable nil)
-    (lsp-signature-doc-lines 1)
-    (lsp-ui-doc-use-childframe t)
-    (lsp-eldoc-render-all nil)
-    
-    (lsp-lens-enable nil)
-
-    (lsp-semantic-tokens-enable nil)
-
-    :preface
-    (defun lsp-booster--advice-json-parse (old-fn &rest args)
-        "Try to parse bytecode instead of json."
-        (or
-            (when (equal (following-char) ?#)
-                (let ((bytecode (read (current-buffer))))
-                    (when (byte-code-function-p bytecode)
-                        (funcall bytecode))))
-            (apply old-fn args)))
-    (defun lsp-booster--advice-final-command (old-fn cmd &optional test?)
-        "Prepend emacs-lsp-booster command to lsp CMD."
-        (let ((orig-result (funcall old-fn cmd test?)))
-            (if (and (not test?)
-                    (not (file-remote-p default-directory))
-                    lsp-use-plists
-                    (not (functionp 'json-rpc-connection))
-                    (executable-find "emacs-lsp-booster"))
-                (progn
-                    (message "Using emacs-lsp-booster for %s!" orig-result)
-                    (cons "emacs-lsp-booster" orig-result))
-                orig-result)))
-
-    :init
-    (setq lsp-use-plists t)
-    (advice-add (if (progn (require 'json)
-                        (fboundp 'json-parse-buffer))
-                    'json-parse-buffer
-                    'json-read)
-        :around
-        #'lsp-booster--advice-json-parse)
-    (advice-add 'lsp-resolve-final-command :around #'lsp-booster--advice-final-command))
-
-
-(use-package lsp-ui
-    :ensure t
-    :commands
-    (lsp-ui-doc-show
-        lsp-ui-doc-glance)
-    :bind (:map lsp-mode-map
-              ("C-c C-d" . 'lsp-ui-doc-glance))
-    :config (setq lsp-ui-doc-enable t
-                lsp-ui-doc-show-with-cursor t
-                lsp-ui-doc-include-signature t
-                lsp-ui-doc-position 'at-point))
-
-(setenv "LSP_USE_PLISTS" "true") ;; in early-init.el
-
-(setq read-process-output-max (* 10 1024 1024)) ;; 10mb
-(setq gc-cons-threshold 200000000)
+(use-package emmet-mode
+  :ensure t
+  :hook ((typescript-mode . emmet-mode)))
 
 
 (setq electric-indent-mode 1)
