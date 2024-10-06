@@ -191,11 +191,7 @@
 		(indent-region (point-min) (point-max) nil)))
 (global-set-key (kbd "C-S-<tab>") 'indent-whole-buffer)
 
-
-(require 'ls-lisp)
-(setq ls-lisp-use-insert-directory-program nil)
-(setq ls-lisp-verbosity nil)
-
+(add-hook 'dired-mode-hook (lambda () (dired-hide-details-mode 1)))
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
