@@ -77,6 +77,22 @@
 (transient-mark-mode 1)
 (setq mark-even-if-inactive nil)
 
+(defun disable-love-is-an-illusion ()
+	"Disable Love Is An Illustion"
+	(interactive)
+    (disable-theme 'loveisanillusion.emacs)
+    )
+
+(defun enable-love-is-an-illusion ()
+	"Disable Love Is An Illustion"
+	(interactive)
+    (load-theme 'loveisanillusion.emacs)
+    (cursor-color-1)
+    )
+
+(global-set-key (kbd "C-c <f9>") 'disable-love-is-an-illusion)
+(global-set-key (kbd "C-c <f10>") 'enable-love-is-an-illusion)
+
 (defun run-build-script ()
 	"Run the build.bat."
 	(interactive)
@@ -205,3 +221,16 @@
 
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+      '("d093a218c01fa1951ac981fc76941c6c9a119ddfad99e4c0c076186ee83945f0" default)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
