@@ -158,54 +158,6 @@
 (setq gc-cons-threshold 200000000)
 
 
-(use-package jtsx
-    :ensure t
-    :mode (("\\.jsx?\\'" . jtsx-jsx-mode)
-              ("\\.tsx\\'" . jtsx-tsx-mode)
-              ("\\.ts\\'" . jtsx-typescript-mode))
-    :commands jtsx-install-treesit-language
-    :hook ((jtsx-jsx-mode . hs-minor-mode)
-              (jtsx-tsx-mode . hs-minor-mode)
-              (jtsx-typescript-mode . hs-minor-mode))
-    :custom
-    (js-indent-level 4)
-    (typescript-ts-mode-indent-offset 4)
-    (jtsx-switch-indent-offset 4)
-    (jtsx-indent-statement-block-regarding-standalone-parent nil)
-    (jtsx-jsx-element-move-allow-step-out t)
-    (jtsx-enable-jsx-electric-closing-element t)
-    (jtsx-enable-electric-open-newline-between-jsx-element-tags t)
-    (jtsx-enable-jsx-element-tags-auto-sync nil)
-    (jtsx-enable-all-syntax-highlighting-features t)
-    :config
-    (defun jtsx-bind-keys-to-mode-map (mode-map)
-        "Bind keys to MODE-MAP."
-        (define-key mode-map (kbd "C-c C-j") 'jtsx-jump-jsx-element-tag-dwim)
-        (define-key mode-map (kbd "C-c j o") 'jtsx-jump-jsx-opening-tag)
-        (define-key mode-map (kbd "C-c j c") 'jtsx-jump-jsx-closing-tag)
-        (define-key mode-map (kbd "C-c j r") 'jtsx-rename-jsx-element)
-        (define-key mode-map (kbd "C-c <down>") 'jtsx-move-jsx-element-tag-forward)
-        (define-key mode-map (kbd "C-c <up>") 'jtsx-move-jsx-element-tag-backward)
-        (define-key mode-map (kbd "C-c C-<down>") 'jtsx-move-jsx-element-forward)
-        (define-key mode-map (kbd "C-c C-<up>") 'jtsx-move-jsx-element-backward)
-        (define-key mode-map (kbd "C-c C-S-<down>") 'jtsx-move-jsx-element-step-in-forward)
-        (define-key mode-map (kbd "C-c C-S-<up>") 'jtsx-move-jsx-element-step-in-backward)
-        (define-key mode-map (kbd "C-c j w") 'jtsx-wrap-in-jsx-element)
-        (define-key mode-map (kbd "C-c j u") 'jtsx-unwrap-jsx)
-        (define-key mode-map (kbd "C-c j d") 'jtsx-delete-jsx-node)
-        (define-key mode-map (kbd "C-c j t") 'jtsx-toggle-jsx-attributes-orientation)
-        (define-key mode-map (kbd "C-c j h") 'jtsx-rearrange-jsx-attributes-horizontally)
-        (define-key mode-map (kbd "C-c j v") 'jtsx-rearrange-jsx-attributes-vertically))
-    
-    (defun jtsx-bind-keys-to-jtsx-jsx-mode-map ()
-        (jtsx-bind-keys-to-mode-map jtsx-jsx-mode-map))
-
-    (defun jtsx-bind-keys-to-jtsx-tsx-mode-map ()
-        (jtsx-bind-keys-to-mode-map jtsx-tsx-mode-map))
-
-    (add-hook 'jtsx-jsx-mode-hook 'jtsx-bind-keys-to-jtsx-jsx-mode-map)
-    (add-hook 'jtsx-tsx-mode-hook 'jtsx-bind-keys-to-jtsx-tsx-mode-map))
-
 
 (setq electric-indent-mode 1)
 (setq-default indent-tabs-mode nil)
@@ -233,16 +185,3 @@
 
 
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-      '(tree-sitter treesit-auto jtsx which-key web-mode typescript-mode tide rust-mode rainbow-mode python-mode prettier-js php-mode npm-mode lua-mode lsp-ui lsp-python-ms json-mode emmet-mode editorconfig corfu company aggressive-indent)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
