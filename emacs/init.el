@@ -67,7 +67,7 @@
 (defun cursor-color-2 ()
 	"Cursor Color 2."
 	(interactive)
-    (set-cursor-color "#ee7700")
+    (set-cursor-color "#00eeff")
     )
 
 (global-set-key (kbd "C-x <f9>") 'cursor-color-1)
@@ -82,7 +82,6 @@
 	"Run the build.bat."
 	(interactive)
 	(compile "build.bat"))
-(global-set-key (kbd "<f5>") 'run-build-script)
 
 (global-set-key (kbd "<f5>") 'run-build-script)
 
