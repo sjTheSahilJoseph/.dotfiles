@@ -91,6 +91,11 @@
 
 (global-set-key (kbd "<f8>") 'eval-region)
 
+(global-set-key (kbd "C-x <f5>") 'global-display-line-numbers-mode)
+
+(global-set-key (kbd "C-x <f6>") 'hl-line-mode)
+
+
 (set-language-environment "UTF-8")
 (setq locale-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
