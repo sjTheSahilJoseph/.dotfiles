@@ -153,20 +153,109 @@
 	:defer t
 	:hook (prog-mode . rainbow-mode))
 
-(use-package tide
-  :ensure t
-  :hook ((typescript-mode . tide-setup)
-         (typescript-mode . tide-hl-identifier-mode)
-         (before-save . tide-format-before-save))
-  :config
-  (setq tide-format-options '(:indentSize 4 :tabSize 4))
-  (setq tide-enable-xref nil)
-  (setq tide-completion-enable-autoimport-suggestions nil)
-  (setq tide-always-show-documentation nil))
 
-(use-package emmet-mode
-  :ensure t
-  :hook ((typescript-mode . emmet-mode)))
+(use-package company
+    :ensure t
+    :config (global-company-mode t))
+
+(setq company-minimum-prefix-length 1
+    company-idle-delay 0.0)
+
+(setenv "LSP_USE_PLISTS" "true")
+
+(setq read-process-output-max (* 10 1024 1024))
+(setq gc-cons-threshold 200000000)
+
+(setq lsp-keymap-prefix "C-c l")
+(setq lsp-log-io nil)
+
+(use-package lsp-mode
+    :ensure t
+    :hook (
+		      (typescript-mode . lsp-deferred)
+		      (cc-mode . lsp-deferred)
+		      (c-mode . lsp-deferred)
+		      (c++-mode . lsp-deferred)
+		      (rust-mode . lsp-deferred)
+		      (javascript-mode . lsp-deferred)
+		      (csharp-mode . lsp-deferred)
+		      (lua-mode . lsp-deferred)
+		      (python-mode . lsp-deferred)
+		      (php-mode . lsp-deferred)
+		      )
+    :commands lsp-deferred
+    :preface
+    (defun lsp-booster--advice-json-parse (old-fn &rest args)
+        "Try to parse bytecode instead of json."
+        (or
+            (when (equal (following-char) ?#)
+
+                (let ((bytecode (read (current-buffer))))
+                    (when (byte-code-function-p bytecode)
+                        (funcall bytecode))))
+            (apply old-fn args)))
+    (defun lsp-booster--advice-final-command (old-fn cmd &optional test?)
+        "Prepend emacs-lsp-booster command to lsp CMD."
+        (let ((orig-result (funcall old-fn cmd test?)))
+            (if (and (not test?)
+                    (not (file-remote-p default-directory))
+                    lsp-use-plists
+                    (not (functionp 'json-rpc-connection))
+                    (executable-find "emacs-lsp-booster"))
+                (progn
+                    (message "Using emacs-lsp-booster for %s!" orig-result)
+                    (cons "emacs-lsp-booster" orig-result))
+                orig-result)))
+    :init
+    (setq lsp-use-plists t)
+    (advice-add (if (progn (require 'json)
+                        (fboundp 'json-parse-buffer))
+                    'json-parse-buffer
+                    'json-read)
+        :around
+        #'lsp-booster--advice-json-parse)
+    (advice-add 'lsp-resolve-final-command :around #'lsp-booster--advice-final-command)
+    )
+(setq lsp-ui-sideline-show-diagnostics t)
+(setq lsp-ui-sideline-show-hover t)
+(setq lsp-ui-sideline-show-code-actions nil)
+(setq lsp-ui-sideline-update-mode 'line)
+(setq lsp-ui-sideline-delay '0.5)
+(setq lsp-diagnostics-provider :flymake)
+(setq lsp-headerline-breadcrumb-enable nil)
+(setq lsp-ui-doc-enable t)
+(setq lsp-ui-doc-position 'at-point)
+(setq lsp-ui-doc-side 'right)
+(setq lsp-ui-doc-delay '0.5)
+(setq lsp-ui-doc-show-with-cursor nil)
+(setq lsp-ui-doc-show-with-mouse t)
+(global-set-key (kbd "C-.") #'lsp-ui-peek-find-definitions)
+(setq lsp-idle-delay 0.500)
+(with-eval-after-load 'lsp-mode
+    (setq lsp-modeline-diagnostics-scope :workspace))
+(use-package lsp-ui
+    :ensure t
+    :commands lsp-ui-mode
+    :config
+    (custom-set-faces
+        '(lsp-ui-sideline-code-action ((t (:font "Liberation Mono-13"))))
+        '(lsp-ui-sideline-current-symbol ((t (:font "Liberation Mono-13"))))
+        '(lsp-ui-sideline-symbol-info ((t (:font "Liberation Mono-13"))))
+        '(lsp-ui-sideline-symbol ((t (:font "Liberation Mono-13"))))
+        '(lsp-ui-sideline-global ((t (:font "Liberation Mono-13")))))
+    )
+(use-package lsp-python-ms
+    :ensure t
+    :init (setq lsp-python-ms-auto-install-server t)
+    :hook (python-mode . (lambda ()
+                             (require 'lsp-python-ms)
+                             (lsp))))
+
+
+
+
+
+
 
 
 (setq electric-indent-mode 1)
@@ -183,6 +272,15 @@
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
+
+
+
+
+
+
+
+
+
 
 
 
