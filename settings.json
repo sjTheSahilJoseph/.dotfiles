@@ -151,7 +151,7 @@
             "yellow": "#C19C00"
         },
         {
-            "background": "#060606",
+            "background": "#0C0C0C",
             "black": "#878787",
             "blue": "#2090F0",
             "brightBlack": "#D08F20",
@@ -169,7 +169,7 @@
             "name": "Love Is An Illusion",
             "purple": "#881798",
             "red": "#C50F1F",
-            "selectionBackground": "#3A0000",
+            "selectionBackground": "#1E1E1E",
             "white": "#90B080",
             "yellow": "#D08F20"
         },
@@ -341,3 +341,25 @@
     "themes": [],
     "useAcrylicInTabRow": true
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
