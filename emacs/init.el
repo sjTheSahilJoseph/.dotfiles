@@ -167,11 +167,6 @@
 	:ensure t
 	:defer t)
 
-(use-package rainbow-mode
-	:ensure t
-	:defer t
-	:hook (prog-mode . rainbow-mode))
-
 
 (setq read-process-output-max (* 10 1024 1024))
 (setq gc-cons-threshold 200000000)
