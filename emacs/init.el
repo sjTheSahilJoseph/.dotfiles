@@ -158,7 +158,6 @@
 (setq gc-cons-threshold 200000000)
 
 
-
 (setq dired-listing-switches "-lah --group-directories-first")
 
 (setq electric-indent-mode 1)
