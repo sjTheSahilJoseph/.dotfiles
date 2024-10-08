@@ -211,4 +211,10 @@
                '(typescript-mode . ("typescript-language-server" "--stdio"))))
 (add-hook 'typescript-mode-hook 'eglot-ensure)
 
+(setq eglot-booster-no-remote-boost t)
+
+(use-package eglot-booster
+	:after eglot
+	:config	(eglot-booster-mode))
+
 
