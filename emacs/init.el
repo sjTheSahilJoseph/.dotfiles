@@ -202,8 +202,13 @@
 
 
 
-
-
-
+(use-package eglot
+    :defer t
+    :ensure t
+    )
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+               '(typescript-mode . ("typescript-language-server" "--stdio"))))
+(add-hook 'typescript-mode-hook 'eglot-ensure)
 
 
