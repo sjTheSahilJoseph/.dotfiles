@@ -201,18 +201,14 @@
     :defer t
     :ensure t
     )
+
+
 (with-eval-after-load 'eglot
-  (add-to-list 'eglot-server-programs
-               '(typescript-mode . ("typescript-language-server" "--stdio"))))
+  (add-to-list 'eglot-server-programs '(typescript-mode . ("typescript-language-server" "--stdio")))
+  (add-to-list 'eglot-server-programs '(c-mode . ("clangd")))
+    (add-to-list 'eglot-server-programs '(c++-mode . ("clangd"))))
+
 (add-hook 'typescript-mode-hook 'eglot-ensure)
-
-  (add-to-list 'eglot-server-programs
-               '(c-mode . ("clangd"))))
 (add-hook 'c-mode-hook 'eglot-ensure)
-
-  (add-to-list 'eglot-server-programs
-               '(c++-mode . ("clangd"))))
 (add-hook 'c++-mode-hook 'eglot-ensure)
-
-
 
