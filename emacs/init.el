@@ -207,9 +207,12 @@
 (add-hook 'typescript-mode-hook 'eglot-ensure)
 
   (add-to-list 'eglot-server-programs
-               '(cc-mode . ("clangd"))))
-(add-hook 'cc-mode-hook 'eglot-ensure)
+               '(c-mode . ("clangd"))))
+(add-hook 'c-mode-hook 'eglot-ensure)
 
+  (add-to-list 'eglot-server-programs
+               '(c++-mode . ("clangd"))))
+(add-hook 'c++-mode-hook 'eglot-ensure)
 
 
 
