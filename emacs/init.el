@@ -196,6 +196,7 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
+(setq eldoc-echo-area-use-multiline-p nil)
 
 (use-package eglot
     :defer t
@@ -212,3 +213,8 @@
 (add-hook 'c-mode-hook 'eglot-ensure)
 (add-hook 'c++-mode-hook 'eglot-ensure)
 
+(use-package eldoc-box
+  :ensure t
+  :hook (eglot--managed-mode . eldoc-box-hover-at-point-mode))
+
+(global-set-key (kbd "<f9>") 'eldoc-box-help-at-point)
