@@ -197,11 +197,6 @@
 (put 'upcase-region 'disabled nil)
 
 
-
-
-
-
-
 (use-package eglot
     :defer t
     :ensure t
@@ -211,10 +206,10 @@
                '(typescript-mode . ("typescript-language-server" "--stdio"))))
 (add-hook 'typescript-mode-hook 'eglot-ensure)
 
-(setq eglot-booster-no-remote-boost t)
+  (add-to-list 'eglot-server-programs
+               '(cc-mode . ("clangd"))))
+(add-hook 'cc-mode-hook 'eglot-ensure)
 
-(use-package eglot-booster
-	:after eglot
-	:config	(eglot-booster-mode))
+
 
 
