@@ -215,6 +215,7 @@
 
 (use-package eldoc-box
   :ensure t
-  :hook (eglot--managed-mode . eldoc-box-hover-at-point-mode))
+)
 
 (global-set-key (kbd "<f9>") 'eldoc-box-help-at-point)
+
