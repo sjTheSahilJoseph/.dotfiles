@@ -191,7 +191,40 @@
 (setq-default indent-tabs-mode t)
 (setq-default tab-width 4)
 (setq lisp-indent-offset 4)
-(setq backward-delete-char-untabify-method 'hungry)
+;;(setq backward-delete-char-untabify-method 'hungry)
+
+
+(defun my-backspace-whitespace-to-tab-stop ()
+	"Delete whitespace backwards to the next tab-stop, otherwise delete one character."
+	(interactive)
+	(if (or indent-tabs-mode (use-region-p)
+			(> (point)
+				(save-excursion
+					(back-to-indentation)
+					(point))))
+		(call-interactively 'backward-delete-char)
+		(let ((step (% (current-column) tab-width))
+				 (pt (point)))
+			(when (zerop step)
+				(setq step tab-width))
+			(setq step (min (- pt 1) step))
+			(save-match-data
+				(if (string-match "[^\t ]*\\([\t ]+\\)$"
+                        (buffer-substring-no-properties
+							(- pt step) pt))
+					(backward-delete-char (- (match-end 1)
+											  (match-beginning 1)))
+					(call-interactively 'backward-delete-char))))))
+
+(global-set-key (kbd "<backspace>") 'my-backspace-whitespace-to-tab-stop)
+
+(defun my-insert-tab ()
+  "Insert a literal tab character (ASCII 9) at point."
+  (interactive)
+  (insert "\t"))
+
+(global-set-key (kbd "TAB") 'my-insert-tab)
+
 
 (defun indent-whole-buffer ()
 	"Indent the entire buffer."
@@ -242,16 +275,10 @@
         org-startup-folded t
         org-edit-src-content-indentation 0))
 
-(use-package ox-gfm
-    :ensure t
-    :defer t
-    :after (org))
-
 (use-package markdown-mode
     :defer t
     :ensure t
     )
-
 
 
 
