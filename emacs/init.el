@@ -233,7 +233,7 @@
     :ensure t
     :defer t
     :config
-    (setq org-adapt-indentation t
+    (setq org-adapt-indentation nil
         org-hide-leading-stars nil
         org-hide-emphasis-markers nil
         org-pretty-entities t
