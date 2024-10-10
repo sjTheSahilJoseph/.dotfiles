@@ -1,3 +1,21 @@
+
+#+title:   .dotfiles
+#+author: SJ the Sahil Joseph
+
 * .dotfiles - SJ the Sahil Joseph
+These are my *personal* /.dotfiles/.
+
+** Emacs
+/emacs
+
+** Windows Terminal
+/settings.json
+
+** Vim
+/vim
+
+** i3
+/i3
+
 
 
