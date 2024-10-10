@@ -5,6 +5,9 @@
 * .dotfiles - SJ the Sahil Joseph
 These are my *personal* /.dotfiles/.
 
+** TODO Neat and Clean
+** DONE setup in ORG mode
+ 
 ** Emacs
 /emacs
 
