@@ -1,4 +1,13 @@
 
+(setq gc-cons-threshold most-positive-fixnum)
+(add-hook 'after-init-hook
+          (lambda ()
+            (setq gc-cons-threshold (* 1024 1024 40))))
+
+
+(setq read-process-output-max (* 10 1024 1024))
+
+
 (setq user-full-name "SJ the Sahil Joseph")
 (setq user-mail-address "sjthesahiljoseph@gmail.com")
 
@@ -173,8 +182,6 @@
 	:defer t)
 
 
-(setq read-process-output-max (* 10 1024 1024))
-(setq gc-cons-threshold 200000000)
 
 
 (setq dired-listing-switches "-lah --group-directories-first")
