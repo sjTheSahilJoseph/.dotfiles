@@ -1,8 +1,8 @@
 
 (setq gc-cons-threshold most-positive-fixnum)
 (add-hook 'after-init-hook
-          (lambda ()
-            (setq gc-cons-threshold (* 1024 1024 40))))
+    (lambda ()
+        (setq gc-cons-threshold (* 1024 1024 40))))
 
 
 (setq read-process-output-max (* 10 1024 1024))
@@ -27,6 +27,7 @@
 (setq require-final-newline t)
 (setq-default cursor-in-non-selected-windows nil)
 (setq highlight-nonselected-windows nil)
+(setq-default scroll-margin 1)
 
 (when (bound-and-true-p tooltip-mode)
 	(tooltip-mode -1))
@@ -212,8 +213,8 @@
 
 
 (with-eval-after-load 'eglot
-  (add-to-list 'eglot-server-programs '(typescript-mode . ("typescript-language-server" "--stdio")))
-  (add-to-list 'eglot-server-programs '(c-mode . ("clangd")))
+    (add-to-list 'eglot-server-programs '(typescript-mode . ("typescript-language-server" "--stdio")))
+    (add-to-list 'eglot-server-programs '(c-mode . ("clangd")))
     (add-to-list 'eglot-server-programs '(c++-mode . ("clangd"))))
 
 (add-hook 'typescript-mode-hook 'eglot-ensure)
@@ -221,14 +222,34 @@
 (add-hook 'c++-mode-hook 'eglot-ensure)
 
 (use-package eldoc-box
-  :ensure t
-)
+    :ensure t
+    )
 
 (global-set-key (kbd "<f9>") 'eldoc-box-help-at-point)
 (set-face-attribute 'eldoc-box-body nil :font "Liberation Mono-13")
 
 
+(use-package org
+    :ensure t
+    :defer t
+    :config
+    (setq org-adapt-indentation t
+        org-hide-leading-stars t
+        org-hide-emphasis-markers t
+        org-pretty-entities t
+        org-src-fontify-natively t
+        org-startup-folded t
+        org-edit-src-content-indentation 0))
 
+(use-package ox-gfm
+    :ensure t
+    :defer t
+    :after (org))
+
+(use-package markdown-mode
+    :defer t
+    :ensure t
+    )
 
 
 
