@@ -188,9 +188,10 @@
 (setq dired-listing-switches "-lah --group-directories-first")
 
 (setq electric-indent-mode 1)
-(setq-default indent-tabs-mode nil)
+(setq-default indent-tabs-mode t)
 (setq-default tab-width 4)
 (setq lisp-indent-offset 4)
+(setq backward-delete-char-untabify-method 'hungry)
 
 (defun indent-whole-buffer ()
 	"Indent the entire buffer."
@@ -250,6 +251,7 @@
     :defer t
     :ensure t
     )
+
 
 
 
