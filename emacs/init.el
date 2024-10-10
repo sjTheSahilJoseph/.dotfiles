@@ -2,10 +2,10 @@
 (setq gc-cons-threshold most-positive-fixnum)
 (add-hook 'after-init-hook
     (lambda ()
-        (setq gc-cons-threshold (* 1024 1024 40))))
+        (setq gc-cons-threshold (* 1024 1024 50))))
 
 
-(setq read-process-output-max (* 10 1024 1024))
+(setq read-process-output-max (* 50 1024 1024))
 
 
 (setq user-full-name "SJ the Sahil Joseph")
