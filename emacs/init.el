@@ -288,8 +288,8 @@
 	:ensure t
 	)
 
-(global-unset-key (kbd "<down-mouse-1>"))
-(global-set-key (kbd "<mouse-1>") 'mc/add-cursor-on-click)
+(global-unset-key (kbd "<down-mouse-3>"))
+(global-set-key (kbd "<mouse-3>") 'mc/add-cursor-on-click)
 
 
 
