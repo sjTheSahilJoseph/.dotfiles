@@ -290,3 +290,7 @@
 
 (global-unset-key (kbd "<down-mouse-1>"))
 (global-set-key (kbd "<mouse-1>") 'mc/add-cursor-on-click)
+
+
+
+
