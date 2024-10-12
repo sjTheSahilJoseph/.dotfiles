@@ -4,9 +4,7 @@
     (lambda ()
         (setq gc-cons-threshold (* 1024 1024 50))))
 
-
 (setq read-process-output-max (* 50 1024 1024))
-
 
 (setq user-full-name "SJ the Sahil Joseph")
 (setq user-mail-address "sjthesahiljoseph@gmail.com")
@@ -14,7 +12,6 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
-
 
 (setq use-dialog-box nil)
 (setq enable-recursive-minibuffers t)
@@ -36,7 +33,6 @@
 (setq-default compilation-scroll-output t)
 (global-set-key (kbd "C-z") nil)
 
-
 (setq-default cursor-type 'box)
 (set-cursor-color "#00ee00")
 (blink-cursor-mode t)
@@ -52,7 +48,6 @@
 (setq window-divider-default-left-width 0)
 (setq window-divider-default-bottom-width 0)
 
-
 (set-frame-font "Liberation Mono 13" nil t)
 
 (add-to-list 'custom-theme-load-path "C:/Users/SJ Joseph/.dotfiles/emacs/themes/")
@@ -66,7 +61,6 @@
 ;; SJ Joseph
 
 ")
-
 
 (defun cursor-color-1 ()
 	"Cursor Color 1."
@@ -83,10 +77,8 @@
 (global-set-key (kbd "C-x <f9>") 'cursor-color-1)
 (global-set-key (kbd "C-x <f10>") 'cursor-color-2)
 
-
 (transient-mark-mode 1)
 (setq mark-even-if-inactive nil)
-
 
 (defun run-build-script ()
 	"Run the build.bat."
@@ -94,17 +86,11 @@
 	(compile "build.bat"))
 
 (global-set-key (kbd "<f5>") 'run-build-script)
-
 (global-set-key (kbd "<f6>") 'count-words)
-
 (global-set-key (kbd "<f7>") 'replace-string)
-
 (global-set-key (kbd "<f8>") 'eval-region)
-
 (global-set-key (kbd "C-x <f5>") 'global-display-line-numbers-mode)
-
 (global-set-key (kbd "C-x <f6>") 'hl-line-mode)
-
 
 (set-language-environment "UTF-8")
 (setq locale-coding-system 'utf-8)
@@ -185,7 +171,6 @@
 (use-package add-node-modules-path
 	:ensure t)
 
-
 (use-package php-mode
 	:ensure t
 	:defer t
@@ -215,9 +200,6 @@
 	:ensure t
 	:defer t)
 
-
-
-
 (setq dired-listing-switches "-lah --group-directories-first")
 
 (setq electric-indent-mode 1)
@@ -225,7 +207,6 @@
 (setq-default tab-width 4)
 (setq lisp-indent-offset 4)
 ;;(setq backward-delete-char-untabify-method 'hungry)
-
 
 (defun my-backspace-whitespace-to-tab-stop ()
 	"Delete whitespace backwards to the next tab-stop, otherwise delete one character."
@@ -258,7 +239,6 @@
 
 (global-set-key (kbd "TAB") 'my-insert-tab)
 
-
 (defun indent-whole-buffer ()
 	"Indent the entire buffer."
 	(interactive)
@@ -278,7 +258,6 @@
     :ensure t
     )
 
-
 (with-eval-after-load 'eglot
     (add-to-list 'eglot-server-programs '(typescript-mode . ("typescript-language-server" "--stdio")))
     (add-to-list 'eglot-server-programs '(c-mode . ("clangd")))
@@ -294,7 +273,6 @@
 
 (global-set-key (kbd "<f9>") 'eldoc-box-help-at-point)
 (set-face-attribute 'eldoc-box-body nil :font "Liberation Mono-13")
-
 
 (use-package org
     :ensure t
