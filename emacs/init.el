@@ -153,6 +153,39 @@
 	:config
 	(setq typescript-indent-level 4))
 
+(defun my/activate-tide-mode ()
+  "Use hl-identifier-mode only on js or ts buffers."
+  (when (and (stringp buffer-file-name)
+             (string-match "\\.[tj]sx?\\'" buffer-file-name))
+	(tide-setup)
+  (tide-hl-identifier-mode)))
+
+(use-package tide
+  :ensure t
+  :config
+  (flycheck-add-next-checker 'tsx-tide 'javascript-eslint)
+  :hook (web-mode . my/activate-tide-mode))
+
+(use-package web-mode
+  :ensure t
+  :mode
+  ("\\.ejs\\'" "\\.hbs\\'" "\\.html\\'" "\\.php\\'" "\\.[jt]sx?\\'")
+  :config
+  (setq web-mode-content-types-alist '(("jsx" . "\\.[jt]sx?\\'")))
+  (setq web-mode-markup-indent-offset 4)
+  (setq web-mode-css-indent-offset 4)
+  (setq web-mode-code-indent-offset 4)
+  (setq web-mode-script-padding 4)
+  (setq web-mode-block-padding 4)
+  (setq web-mode-style-padding 4)
+  (setq web-mode-enable-auto-pairing t)
+  (setq web-mode-enable-auto-closing t)
+  (setq web-mode-enable-current-element-highlight t))
+
+(use-package add-node-modules-path
+  :ensure t)
+
+
 (use-package php-mode
 	:ensure t
 	:defer t
@@ -294,3 +327,16 @@
 
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+	  '(add-node-modules-path which-key web-mode typescript-mode treesit-auto tree-sitter tide rust-mode rainbow-mode python-mode prettier-js php-mode ox-gfm npm-mode multiple-cursors lua-mode lsp-ui lsp-python-ms jtsx json-mode emmet-mode eldoc-box eglot-booster editorconfig corfu company aggressive-indent)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
