@@ -209,7 +209,7 @@
 ;;(setq backward-delete-char-untabify-method 'hungry)
 
 (defun my-backspace-whitespace-to-tab-stop ()
-	"Delete whitespace backwards to the next tab-stop, otherwise delete one character."
+"Delete whitespace backwards to the next tab-stop, otherwise delete one character."
 	(interactive)
 	(if (or indent-tabs-mode (use-region-p)
 			(> (point)
@@ -224,7 +224,7 @@
 			(setq step (min (- pt 1) step))
 			(save-match-data
 				(if (string-match "[^\t ]*\\([\t ]+\\)$"
-                        (buffer-substring-no-properties
+                       (buffer-substring-no-properties
 							(- pt step) pt))
 					(backward-delete-char (- (match-end 1)
 											  (match-beginning 1)))
@@ -233,7 +233,7 @@
 (global-set-key (kbd "<backspace>") 'my-backspace-whitespace-to-tab-stop)
 
 (defun my-insert-tab ()
-	"Insert a literal tab character (ASCII 9) at point."
+	"Tab"
 	(interactive)
 	(insert "\t"))
 
