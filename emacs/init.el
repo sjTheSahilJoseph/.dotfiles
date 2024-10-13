@@ -202,7 +202,7 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq lisp-indent-offset 4)
-;;(setq backward-delete-char-untabify-method 'all)
+;;(setq backward-delete-char-untabify-method 'hungry)
 
 (defun indent-whole-buffer ()
 	"Indent the entire buffer."
