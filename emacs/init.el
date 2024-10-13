@@ -183,10 +183,6 @@
 	(setq c-basic-offset 4)
 	)
 
-(use-package csharp-mode
-	:ensure t
-	:defer t)
-
 (use-package rust-mode
 	:ensure t
 	:defer t)
