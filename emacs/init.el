@@ -183,21 +183,19 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
+
+
 (setq eldoc-echo-area-use-multiline-p nil)
 
-(use-package eglot
-    :defer t
-    :ensure t
-    )
+(use-package lsp-mode
+    :init
+    (setq lsp-keymap-prefix "C-c l")
+    :hook (
+              (typescript-mode . lsp)
+              (c++-mode . lsp)
+              :commands lsp))
 
-(with-eval-after-load 'eglot
-    (add-to-list 'eglot-server-programs '(typescript-mode . ("typescript-language-server" "--stdio")))
-    (add-to-list 'eglot-server-programs '(c-mode . ("clangd")))
-    (add-to-list 'eglot-server-programs '(c++-mode . ("clangd"))))
-
-(add-hook 'typescript-mode-hook 'eglot-ensure)
-(add-hook 'c-mode-hook 'eglot-ensure)
-(add-hook 'c++-mode-hook 'eglot-ensure)
+(use-package lsp-ui :commands lsp-ui-mode)
 
 (use-package eldoc-box
     :ensure t
@@ -206,23 +204,6 @@
 (global-set-key (kbd "<f9>") 'eldoc-box-help-at-point)
 
 (set-face-attribute 'eldoc-box-body nil :font "Liberation Mono-13")
-
-(use-package org
-    :ensure t
-    :defer t
-    :config
-    (setq org-adapt-indentation nil
-        org-hide-leading-stars nil
-        org-hide-emphasis-markers t
-        org-pretty-entities t
-        org-src-fontify-natively t
-        org-startup-folded t
-        org-edit-src-content-indentation 0))
-
-(use-package markdown-mode
-    :defer t
-    :ensure t
-    )
 
 (use-package multiple-cursors
 	:defer t
