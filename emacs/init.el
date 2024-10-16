@@ -183,20 +183,18 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
-
-
 (setq eldoc-echo-area-use-multiline-p nil)
+
+(setq lsp-headerline-breadcrumb-enable nil)
+(setq lsp-modeline-code-actions-enable nil)
 
 (use-package lsp-mode
     :init
     (setq lsp-keymap-prefix "C-c l")
-    :config
-    (setq lsp-modeline-code-actions-mode -1)
-    (setq lsp-headerline-breadcrumb-mode -1)
     :hook (
               (typescript-mode . lsp)
               (c++-mode . lsp))
-              :commands lsp)
+    :commands lsp)
 
 (use-package eldoc-box
     :ensure t
