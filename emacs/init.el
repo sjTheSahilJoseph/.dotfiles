@@ -192,8 +192,8 @@
     (setq lsp-keymap-prefix "C-c l")
     :hook (
               (typescript-mode . lsp)
-              (c++-mode . lsp)
-              :commands lsp))
+              (c++-mode . lsp))
+              :commands lsp)
 
 (use-package lsp-ui :commands lsp-ui-mode)
 
