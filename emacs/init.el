@@ -215,10 +215,6 @@
       orig-result)))
 (advice-add 'lsp-resolve-final-command :around #'lsp-booster--advice-final-command)
 
-(setenv "LSP_USE_PLISTS" "true")
-(setq lsp-idle-delay 0.500)
-(setq lsp-log-io nil)
-
 (setq eldoc-echo-area-use-multiline-p nil)
 
 (setq lsp-headerline-breadcrumb-enable nil)
