@@ -187,6 +187,7 @@
 
 (setq lsp-headerline-breadcrumb-enable nil)
 (setq lsp-modeline-code-actions-enable nil)
+(setq lsp-completion-provider :none)
 
 (use-package lsp-mode
     :init
