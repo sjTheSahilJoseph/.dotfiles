@@ -190,12 +190,13 @@
 (use-package lsp-mode
     :init
     (setq lsp-keymap-prefix "C-c l")
+    :config
+    (setq lsp-modeline-code-actions-mode -1)
+    (setq lsp-headerline-breadcrumb-mode -1)
     :hook (
               (typescript-mode . lsp)
               (c++-mode . lsp))
               :commands lsp)
-
-(use-package lsp-ui :commands lsp-ui-mode)
 
 (use-package eldoc-box
     :ensure t
