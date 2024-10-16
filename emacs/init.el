@@ -193,8 +193,12 @@
     :init
     (setq lsp-keymap-prefix "C-c l")
     :hook (
+              (c-mode . lsp)
+              (c++-mode . lsp)
+              (javascript-mode . lsp)
               (typescript-mode . lsp)
-              (c++-mode . lsp))
+              (python-mode . lsp)
+              )
     :commands lsp)
 
 (use-package eldoc-box
