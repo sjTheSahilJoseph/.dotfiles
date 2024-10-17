@@ -25,6 +25,7 @@
 (setq-default cursor-in-non-selected-windows nil)
 (setq highlight-nonselected-windows nil)
 (setq-default scroll-margin 1)
+(setq scroll-conservatively 101)
 
 (when (bound-and-true-p tooltip-mode)
 	(tooltip-mode -1))
