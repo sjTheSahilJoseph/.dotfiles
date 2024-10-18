@@ -43,6 +43,8 @@
 
 (global-hl-line-mode 0)
 (column-number-mode t)
+(global-subword-mode 1)
+
 
 (setq-default truncate-lines t)
 
@@ -244,10 +246,14 @@
 	)
 
 (global-unset-key (kbd "<down-mouse-3>"))
-(global-set-key (kbd "<mouse-3>") 'mc/add-cursor-on-click)
+(global-set-key (kbd "<down-mouse-3>") 'mc/add-cursor-on-click)
 
 
-
+(use-package org-bullets
+  :ensure t
+  :defer t
+  :config
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 
 
