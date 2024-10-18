@@ -247,4 +247,13 @@
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 
+(global-unset-key (kbd "<mouse-2>"))
+(global-unset-key (kbd "<mouse-3>"))
+
+(global-unset-key (kbd "<down-mouse-2>"))
+(global-unset-key (kbd "<down-mouse-3>"))
+
+(global-unset-key (kbd "<up-mouse-2>"))
+(global-unset-key (kbd "<up-mouse-3>"))
+
 
