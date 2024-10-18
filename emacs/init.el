@@ -240,15 +240,6 @@
 
 (set-face-attribute 'eldoc-box-body nil :font "Liberation Mono-13")
 
-(use-package multiple-cursors
-	:defer t
-	:ensure t
-	)
-
-(global-unset-key (kbd "<down-mouse-3>"))
-(global-set-key (kbd "<down-mouse-3>") 'mc/add-cursor-on-click)
-
-
 (use-package org-bullets
   :ensure t
   :defer t
