@@ -140,11 +140,6 @@
 	:defer t
     )
 
-(use-package php-mode
-	:ensure t
-	:defer t
-	)
-
 (use-package cc-mode
 	:ensure t
 	:defer t
