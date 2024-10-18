@@ -169,6 +169,7 @@
 (setq c-basic-offset 4)
 (setq lisp-indent-offset 4)
 (setq typescript-indent-level 4)
+(setq python-indent-offset 4)
 
 (defun indent-whole-buffer ()
 	"Indent the entire buffer."
@@ -182,6 +183,24 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
+(setq eldoc-echo-area-use-multiline-p nil)
+
+(setq lsp-headerline-breadcrumb-enable nil)
+(setq lsp-modeline-code-actions-enable nil)
+(setq lsp-enable-snippet nil)
+(setq lsp-completion-provider :none)
+
+(use-package lsp-mode
+    :init
+    (setq lsp-keymap-prefix "C-c l")
+    :hook (
+              (c-mode . lsp)
+              (c++-mode . lsp)
+              (javascript-mode . lsp)
+              (typescript-mode . lsp)
+              (python-mode . lsp)
+              )
+    :commands lsp)
 
 (defun lsp-booster--advice-json-parse (old-fn &rest args)
     "Try to parse bytecode instead of json."
@@ -214,24 +233,6 @@
             orig-result)))
 (advice-add 'lsp-resolve-final-command :around #'lsp-booster--advice-final-command)
 
-(setq eldoc-echo-area-use-multiline-p nil)
-
-(setq lsp-headerline-breadcrumb-enable nil)
-(setq lsp-modeline-code-actions-enable nil)
-(setq lsp-enable-snippet nil)
-(setq lsp-completion-provider :none)
-
-(use-package lsp-mode
-    :init
-    (setq lsp-keymap-prefix "C-c l")
-    :hook (
-              (c-mode . lsp)
-              (c++-mode . lsp)
-              (javascript-mode . lsp)
-              (typescript-mode . lsp)
-              (python-mode . lsp)
-              )
-    :commands lsp)
 
 (use-package eldoc-box
     :ensure t
@@ -240,15 +241,6 @@
 (global-set-key (kbd "<f9>") 'eldoc-box-help-at-point)
 
 (set-face-attribute 'eldoc-box-body nil :font "Liberation Mono-13")
-
-
-(use-package lsp-pyright
-  :ensure t
-  :custom (lsp-pyright-langserver-command "pyright")
-  :hook (python-mode . (lambda ()
-                          (require 'lsp-pyright)
-                          (lsp))))
-
 
 (use-package org-bullets
   :ensure t
