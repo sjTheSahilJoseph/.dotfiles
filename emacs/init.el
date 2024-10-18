@@ -123,6 +123,7 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/"))
 (package-initialize)
+(setq url-queue-timeout 30)
 
 (unless (package-installed-p 'use-package)
 	(package-refresh-contents)
@@ -239,6 +240,15 @@
 (global-set-key (kbd "<f9>") 'eldoc-box-help-at-point)
 
 (set-face-attribute 'eldoc-box-body nil :font "Liberation Mono-13")
+
+
+(use-package lsp-pyright
+  :ensure t
+  :custom (lsp-pyright-langserver-command "pyright")
+  :hook (python-mode . (lambda ()
+                          (require 'lsp-pyright)
+                          (lsp))))
+
 
 (use-package org-bullets
   :ensure t
