@@ -198,7 +198,10 @@
               (c++-mode . lsp)
               (javascript-mode . lsp)
               (typescript-mode . lsp)
-              (python-mode . lsp)
+              (python-mode . (lambda ()
+                                 (setq lsp-disabled-clients '(mypy-ls pylsp))
+                                 (require 'lsp-pyright)
+                                 (lsp)))
               )
     :commands lsp)
 
@@ -233,6 +236,16 @@
             orig-result)))
 (advice-add 'lsp-resolve-final-command :around #'lsp-booster--advice-final-command)
 
+(use-package lsp-pyright
+    :ensure t
+    :after lsp-mode
+    :hook (python-mode . (lambda ()
+                             (require 'lsp-pyright)
+                             (lsp))
+              )
+    )
+
+
 
 (use-package eldoc-box
     :ensure t
@@ -243,10 +256,10 @@
 (set-face-attribute 'eldoc-box-body nil :font "Liberation Mono-13")
 
 (use-package org-bullets
-  :ensure t
-  :defer t
-  :config
-  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+    :ensure t
+    :defer t
+    :config
+    (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 
 (global-unset-key (kbd "<mouse-2>"))
