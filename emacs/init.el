@@ -141,11 +141,15 @@
 (use-package typescript-mode
 	:ensure t
 	:defer t
+    :config
+    (setq typescript-indent-level 4)
     )
 
 (use-package cc-mode
 	:ensure t
 	:defer t
+    :config
+    (setq c-basic-offset 4)
 	)
 
 (use-package rust-mode
@@ -155,6 +159,8 @@
 (use-package python-mode
 	:ensure t
 	:defer t
+    :config
+    (setq python-indent-offset 4)    
 	)
 
 (use-package lua-mode
@@ -166,10 +172,8 @@
 (setq electric-indent-mode 1)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
-(setq c-basic-offset 4)
+
 (setq lisp-indent-offset 4)
-(setq typescript-indent-level 4)
-(setq python-indent-offset 4)
 
 (defun indent-whole-buffer ()
 	"Indent the entire buffer."
@@ -189,6 +193,7 @@
 (setq lsp-modeline-code-actions-enable nil)
 (setq lsp-enable-snippet nil)
 (setq lsp-completion-provider :none)
+(setq lsp-hover nil)
 
 (use-package lsp-mode
     :init
