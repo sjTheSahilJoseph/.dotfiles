@@ -240,10 +240,6 @@
               )
     )
 
-(use-package eldoc-box
-    :ensure t
-    )
-
 (global-unset-key (kbd "<mouse-2>"))
 (global-unset-key (kbd "<mouse-3>"))
 
@@ -255,20 +251,20 @@
 
 (global-set-key (kbd "<mouse-3>") 'count-words)
 
-(global-set-key (kbd "<f1>") ')
-(global-set-key (kbd "<f2>") ')
+;;(global-set-key (kbd "<f1>") ')
+;;(global-set-key (kbd "<f2>") ')
 (global-set-key (kbd "<f3>") 'kmacro-start-macro-or-insert-counter)
 (global-set-key (kbd "<f4>") 'kmacro-end-and-call-macro)
 
 (global-set-key (kbd "<f5>") 'run-build-script)
 (global-set-key (kbd "<f6>") 'query-replace)
-(global-set-key (kbd "<f7>") ')
+;;(global-set-key (kbd "<f7>") ')
 (global-set-key (kbd "<f8>") 'eval-region)
 
 
-(global-set-key (kbd "<f9>") 'eldoc-box-help-at-point)
+;;(global-set-key (kbd "<f9>") ')
 (global-set-key (kbd "<f10>") 'toggle-themes)
 (global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
-(global-set-key (kbd "<f12>") ')
+;;(global-set-key (kbd "<f12>") ')
 
 
