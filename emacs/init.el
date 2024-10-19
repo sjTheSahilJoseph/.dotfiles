@@ -72,12 +72,19 @@
 	(interactive)
 	(compile "build.bat"))
 
-(defun open-emacs-config ()
-    "Open Emacs Config."
+(defun toggle-themes-sj ()
+    "Toggle themes SJ."
     (interactive)
-    (find-file "C:/Users/SJ Joseph/.dotfiles/emacs/init.el")
+    (if (member 'loveisanillusion.emacs custom-enabled-themes)
+        (progn
+            (disable-theme 'loveisanillusion.emacs)
+            (load-theme 'loveisanillusion.emacs.light t)
+            (set-cursor-color "#000000"))
+        (progn
+            (disable-theme 'loveisanillusion.emacs.light)
+            (load-theme 'loveisanillusion.emacs t))
+        (set-cursor-color "#00ee00"))
     )
-
 
 
 (set-language-environment "UTF-8")
@@ -268,7 +275,7 @@
 
 
 ;;(global-set-key (kbd "<f9>") ')
-(global-set-key (kbd "<f10>") 'open-emacs-config)
+(global-set-key (kbd "<f10>") 'toggle-themes-sj)
 (global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
 ;;(global-set-key (kbd "<f12>") ')
 
