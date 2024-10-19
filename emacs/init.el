@@ -72,18 +72,12 @@
 	(interactive)
 	(compile "build.bat"))
 
-(defun toggle-themes ()
-    "Toggle themes."
+(defun open-emacs-config ()
+    "Open Emacs Config."
     (interactive)
-    (if (member 'loveisanillusion.emacs custom-enabled-themes)
-        (progn
-            (disable-theme 'loveisanillusion.emacs)
-            (load-theme 'adwaita t))
-        (progn
-            (disable-theme 'adwaita)
-            (load-theme 'loveisanillusion.emacs t))
-        (set-cursor-color "#00ee00"))
+    (find-file "C:/Users/SJ Joseph/.dotfiles/emacs/init.el")
     )
+
 
 
 (set-language-environment "UTF-8")
@@ -184,6 +178,7 @@
 (setq lsp-enable-snippet nil)
 (setq lsp-completion-provider :none)
 (setq lsp-hover nil)
+(setq lsp-ui-doc-enable nil)
 
 (use-package lsp-mode
     :init
@@ -257,13 +252,13 @@
 (global-set-key (kbd "<f4>") 'kmacro-end-and-call-macro)
 
 (global-set-key (kbd "<f5>") 'run-build-script)
-(global-set-key (kbd "<f6>") 'query-replace)
-;;(global-set-key (kbd "<f7>") ')
+(global-set-key (kbd "<f6>") 'hl-line-mode)
+(global-set-key (kbd "<f7>") 'query-replace)
 (global-set-key (kbd "<f8>") 'eval-region)
 
 
 ;;(global-set-key (kbd "<f9>") ')
-(global-set-key (kbd "<f10>") 'toggle-themes)
+(global-set-key (kbd "<f10>") 'open-emacs-config)
 (global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
 ;;(global-set-key (kbd "<f12>") ')
 
