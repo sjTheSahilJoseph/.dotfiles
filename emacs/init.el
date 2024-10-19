@@ -251,20 +251,20 @@
 (global-unset-key (kbd "<up-mouse-2>"))
 (global-unset-key (kbd "<up-mouse-3>"))
 
-(global-set-key (kbd "<f1>") ')
-(global-set-key (kbd "<f2>") ')
+;; (global-set-key (kbd "<f1>") ')
+;; (global-set-key (kbd "<f2>") ')
 (global-set-key (kbd "<f3>") 'kmacro-start-macro-or-insert-counter)
 (global-set-key (kbd "<f4>") 'kmacro-end-and-call-macro)
-
+;; 
 (global-set-key (kbd "<f5>") 'run-build-script)
 (global-set-key (kbd "<f6>") 'query-replace)
 (global-set-key (kbd "<f7>") 'global-display-line-numbers-mode)
 (global-set-key (kbd "<f8>") 'hl-line-mode)
-
+;; 
 (global-set-key (kbd "<f9>") 'eldoc-box-help-at-point)
-(global-set-key (kbd "<f10>") ')
+;; (global-set-key (kbd "<f10>") ')
 (global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
-(global-set-key (kbd "<f12>") ')
+;; (global-set-key (kbd "<f12>") ')
 
 
 
