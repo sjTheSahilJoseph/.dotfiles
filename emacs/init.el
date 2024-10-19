@@ -151,6 +151,16 @@
 	:ensure t
 	:defer t)
 
+(use-package rainbow-mode
+	:ensure t
+	:defer t
+    :hook (prog-mode . (lambda ()
+                             (rainbow-mode))
+              )
+    )
+
+
+
 (setq dired-listing-switches "-lah --group-directories-first")
 
 (setq electric-indent-mode 1)
