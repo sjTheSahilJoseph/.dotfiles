@@ -26,7 +26,6 @@
 (setq highlight-nonselected-windows nil)
 (setq-default scroll-margin 1)
 (setq scroll-conservatively 101)
-;;(setq scroll-step 5)
 
 (when (bound-and-true-p tooltip-mode)
 	(tooltip-mode -1))
@@ -44,7 +43,6 @@
 (global-hl-line-mode 0)
 (column-number-mode t)
 (global-subword-mode 1)
-
 
 (setq-default truncate-lines t)
 
@@ -66,21 +64,6 @@
 
 ")
 
-(defun cursor-color-1 ()
-	"Cursor Color 1."
-	(interactive)
-    (set-cursor-color "#00ee00")
-    )
-
-(defun cursor-color-2 ()
-	"Cursor Color 2."
-	(interactive)
-    (set-cursor-color "#00eeff")
-    )
-
-(global-set-key (kbd "C-x <f9>") 'cursor-color-1)
-(global-set-key (kbd "C-x <f10>") 'cursor-color-2)
-
 (transient-mark-mode 1)
 (setq mark-even-if-inactive nil)
 
@@ -89,12 +72,6 @@
 	(interactive)
 	(compile "build.bat"))
 
-(global-set-key (kbd "<f5>") 'run-build-script)
-(global-set-key (kbd "<f6>") 'count-words)
-(global-set-key (kbd "<f7>") 'replace-string)
-(global-set-key (kbd "<f8>") 'eval-region)
-(global-set-key (kbd "C-x <f5>") 'global-display-line-numbers-mode)
-(global-set-key (kbd "C-x <f6>") 'hl-line-mode)
 
 (set-language-environment "UTF-8")
 (setq locale-coding-system 'utf-8)
@@ -256,8 +233,6 @@
     :ensure t
     )
 
-(global-set-key (kbd "<f9>") 'eldoc-box-help-at-point)
-
 (set-face-attribute 'eldoc-box-body nil :font "Liberation Mono-13")
 
 (use-package org-bullets
@@ -275,5 +250,21 @@
 
 (global-unset-key (kbd "<up-mouse-2>"))
 (global-unset-key (kbd "<up-mouse-3>"))
+
+(global-set-key (kbd "<f1>") ')
+(global-set-key (kbd "<f2>") ')
+(global-set-key (kbd "<f3>") 'kmacro-start-macro-or-insert-counter)
+(global-set-key (kbd "<f4>") 'kmacro-end-and-call-macro)
+
+(global-set-key (kbd "<f5>") 'run-build-script)
+(global-set-key (kbd "<f6>") 'query-replace)
+(global-set-key (kbd "<f7>") 'global-display-line-numbers-mode)
+(global-set-key (kbd "<f8>") 'hl-line-mode)
+
+(global-set-key (kbd "<f9>") 'eldoc-box-help-at-point)
+(global-set-key (kbd "<f10>") ')
+(global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
+(global-set-key (kbd "<f12>") ')
+
 
 
