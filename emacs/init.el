@@ -174,6 +174,7 @@
 
 (use-package lsp-mode
     :init
+    :defer t
     (setq lsp-keymap-prefix "C-c l")
     :hook (
               (c-mode . lsp)
@@ -205,13 +206,13 @@
 (defun lsp-booster--advice-final-command (old-fn cmd &optional test?)
     "Prepend emacs-lsp-booster command to lsp CMD."
     (let ((orig-result (funcall old-fn cmd test?)))
-        (if (and (not test?)                             ;; for check lsp-server-present?
-                (not (file-remote-p default-directory)) ;; see lsp-resolve-final-command, it would add extra shell wrapper
+        (if (and (not test?)
+                (not (file-remote-p default-directory))
                 lsp-use-plists
-                (not (functionp 'json-rpc-connection))  ;; native json-rpc
+                (not (functionp 'json-rpc-connection))
                 (executable-find "emacs-lsp-booster"))
             (progn
-                (when-let ((command-from-exec-path (executable-find (car orig-result))))  ;; resolve command from exec-path (in case not found in $PATH)
+                (when-let ((command-from-exec-path (executable-find (car orig-result))))
                     (setcar orig-result command-from-exec-path))
                 (message "Using emacs-lsp-booster for %s!" orig-result)
                 (cons "emacs-lsp-booster" orig-result))
@@ -227,10 +228,9 @@
               )
     )
 
-
-
 (use-package eldoc-box
     :ensure t
+    :defer t
     )
 
 (set-face-attribute 'eldoc-box-body nil :font "Liberation Mono-13")
@@ -240,7 +240,6 @@
     :defer t
     :config
     (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
-
 
 (global-unset-key (kbd "<mouse-2>"))
 (global-unset-key (kbd "<mouse-3>"))
