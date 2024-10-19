@@ -174,7 +174,6 @@
 
 (use-package lsp-mode
     :init
-    :defer t
     (setq lsp-keymap-prefix "C-c l")
     :hook (
               (c-mode . lsp)
@@ -250,7 +249,7 @@
 (global-unset-key (kbd "<up-mouse-2>"))
 (global-unset-key (kbd "<up-mouse-3>"))
 
-;; (global-set-key (kbd "<f1>") ')
+;; (global-set-key (kbd "<f1>") '(lambda() (interactive) (load-file "C:Users/SJ Joseph/.dotfiles/emacs/init.el")))
 ;; (global-set-key (kbd "<f2>") ')
 (global-set-key (kbd "<f3>") 'kmacro-start-macro-or-insert-counter)
 (global-set-key (kbd "<f4>") 'kmacro-end-and-call-macro)
@@ -258,12 +257,23 @@
 (global-set-key (kbd "<f5>") 'run-build-script)
 (global-set-key (kbd "<f6>") 'query-replace)
 (global-set-key (kbd "<f7>") 'global-display-line-numbers-mode)
-(global-set-key (kbd "<f8>") 'hl-line-mode)
-;; 
+(global-set-key (kbd "<f8>") 'eval-region)
+
+(defun toggle-themes ()
+  "Toggle between 'loveisanillusion.emacs' and 'adwaita' themes."
+  (interactive)
+  (if (member 'loveisanillusion.emacs custom-enabled-themes)
+      (progn
+        (disable-theme 'loveisanillusion.emacs)
+        (load-theme 'adwaita t))
+    (progn
+      (disable-theme 'adwaita)
+      (load-theme 'loveisanillusion.emacs t))))
+
 (global-set-key (kbd "<f9>") 'eldoc-box-help-at-point)
-;; (global-set-key (kbd "<f10>") ')
+(global-set-key (kbd "<f10>") 'toggle-themes)
 (global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
-;; (global-set-key (kbd "<f12>") ')
+;;(global-set-key (kbd "<f12>") ')
 
 
 
