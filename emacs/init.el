@@ -242,14 +242,7 @@
 
 (use-package eldoc-box
     :ensure t
-    :defer t
     )
-
-(use-package org-bullets
-    :ensure t
-    :defer t
-    :config
-    (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 (global-unset-key (kbd "<mouse-2>"))
 (global-unset-key (kbd "<mouse-3>"))
@@ -277,6 +270,5 @@
 (global-set-key (kbd "<f10>") 'toggle-themes)
 (global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
 (global-set-key (kbd "<f12>") ')
-
 
 
