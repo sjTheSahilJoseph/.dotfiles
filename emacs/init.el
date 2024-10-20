@@ -143,7 +143,7 @@
     (setq c-basic-offset 4)
 	)
 
-(use-package c-sharp
+(use-package csharp-mode
     :ensure t
     :defer t
     )
@@ -208,7 +208,7 @@
     :hook (
               (c-mode . lsp)
               (c++-mode . lsp)
-              (c-sharp-mode . lsp)
+              (csharp-mode . lsp)
               (javascript-mode . lsp)
               (typescript-mode . lsp)
               (python-mode . (lambda ()
@@ -286,3 +286,16 @@
 ;;(global-set-key (kbd "<f12>") ')
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+      '(c-sharp which-key web-mode typescript-mode treesit-auto tree-sitter tide rust-mode rainbow-mode python-mode prettier-js php-mode ox-gfm org-bullets npm-mode multiple-cursors lua-mode lsp-ui lsp-python-ms lsp-pyright jtsx json-mode emmet-mode eldoc-box eglot-booster editorconfig corfu company aggressive-indent add-node-modules-path)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
