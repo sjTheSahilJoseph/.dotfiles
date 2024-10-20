@@ -195,6 +195,7 @@
     :hook (
               (c-mode . lsp)
               (c++-mode . lsp)
+              (rust-mode . lsp)
               (csharp-mode . lsp)
               (javascript-mode . lsp)
               (typescript-mode . lsp)
