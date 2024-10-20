@@ -167,7 +167,7 @@
 	:ensure t
 	:defer t
     :hook (prog-mode . (lambda ()
-                             (rainbow-mode))
+                           (rainbow-mode))
               )
     )
 
@@ -195,13 +195,6 @@
 
 (setq eldoc-echo-area-use-multiline-p nil)
 
-(setq lsp-headerline-breadcrumb-enable nil)
-(setq lsp-modeline-code-actions-enable nil)
-(setq lsp-enable-snippet nil)
-(setq lsp-completion-provider :none)
-(setq lsp-hover nil)
-(setq lsp-ui-doc-enable nil)
-
 (use-package lsp-mode
     :init
     (setq lsp-keymap-prefix "C-c l")
@@ -217,6 +210,18 @@
                                  (lsp)))
               )
     :commands lsp)
+
+(with-eval-after-load 'lsp-mode
+    (setq lsp-enable-on-type-formatting nil)
+    (setq lsp-enable-indentation nil)
+    
+    (setq lsp-headerline-breadcrumb-enable nil)
+    (setq lsp-modeline-code-actions-enable nil)
+    (setq lsp-enable-snippet nil)
+    (setq lsp-completion-provider :none)
+    (setq lsp-hover nil)
+    (setq lsp-ui-doc-enable nil)
+    )
 
 (defun lsp-booster--advice-json-parse (old-fn &rest args)
     "Try to parse bytecode instead of json."
