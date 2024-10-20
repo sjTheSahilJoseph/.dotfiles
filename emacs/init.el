@@ -212,14 +212,15 @@
     :commands lsp)
 
 (with-eval-after-load 'lsp-mode
-    (setq lsp-enable-on-type-formatting nil)
-    (setq lsp-enable-indentation nil)    
+    ;;    (setq lsp-enable-on-type-formatting nil)
+    ;;    (setq lsp-enable-indentation nil)
     (setq lsp-headerline-breadcrumb-enable nil)
     (setq lsp-modeline-code-actions-enable nil)
     (setq lsp-enable-snippet nil)
     (setq lsp-completion-provider :none)
     (setq lsp-hover nil)
     (setq lsp-ui-doc-enable nil)
+    (setq c-basic-offset 4)
     )
 
 (defun lsp-booster--advice-json-parse (old-fn &rest args)
@@ -262,19 +263,9 @@
               )
     )
 
-(use-package web-mode
-  :ensure t
-  :mode ("\\.tsx\\'" . web-mode)
-  :config
-  (setq web-mode-markup-indent-offset 4)
-  (setq web-mode-code-indent-offset 4)
-  (setq web-mode-css-indent-offset 4)
-  (add-to-list 'web-mode-content-types-alist '("jsx" . "\\.tsx\\'")))
 
-(add-hook 'web-mode-hook
-          (lambda ()
-            (when (string-equal "tsx" (file-name-extension buffer-file-name))
-              (lsp))))
+
+
 
 (global-unset-key (kbd "<mouse-2>"))
 (global-unset-key (kbd "<mouse-3>"))
@@ -302,7 +293,5 @@
 (global-set-key (kbd "<f10>") 'toggle-themes-sj)
 (global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
 ;;(global-set-key (kbd "<f12>") ')
-
-
 
 
