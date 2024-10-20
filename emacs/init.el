@@ -212,14 +212,16 @@
     :commands lsp)
 
 (with-eval-after-load 'lsp-mode
-    ;;    (setq lsp-enable-on-type-formatting nil)
-    ;;    (setq lsp-enable-indentation nil)
+    (setq lsp-enable-on-type-formatting t)
+    (setq lsp-enable-indentation t)
     (setq lsp-headerline-breadcrumb-enable nil)
     (setq lsp-modeline-code-actions-enable nil)
     (setq lsp-enable-snippet nil)
     (setq lsp-completion-provider :none)
     (setq lsp-hover nil)
     (setq lsp-ui-doc-enable nil)
+    (setq lsp-lens-enable nil)
+    (setq lsp-enable-symbol-highlighting nil)
     (setq c-basic-offset 4)
     )
 
