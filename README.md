@@ -31,8 +31,16 @@ These are my *personal* __.dotfiles__.
 These are the computer softwares I use.
 
 ### Base
+Primarily I use these things.
+
+#### Computer
     - Operating System: Windows 11 x64
     - Terminal: Windows Terminal (Powershell)
+    - Browser: Firefox
+    - Music Player: VLC Media Player
+
+#### Mobile
+    - Operating System: Android 13
     - Browser: Firefox
     - Music Player: VLC Media Player
 
@@ -43,14 +51,14 @@ For programming I don't use so many softwares, just basic stuff.
     - Code Editor: Emacs 29+
     - Terminal
     
-#### C/C++ (Core)
+#### C/C++ (All)
     - Code Editor: Emacs 29+
     - IDE & Debugger: Microsoft Visual Studio 2022 Community
     - Compiler: cl
     - Make System: build.bat
     - Terminal
 
-#### C/C++ (Unreal Engine)
+#### C++ (Unreal Engine)
     - Code Editor: Emacs 29+
     - IDE & Debugger: Microsoft Visual Studio 2022 Community
     - Game Engine: Unreal Engine
@@ -69,38 +77,57 @@ For programming I don't use so many softwares, just basic stuff.
     - IDE & Debugger: Microsoft Visual Studio 2022 Community
     - Terminal
 
-#### Rust
+#### Rust (All)
     - Code Editor: Emacs 29+
     - Make System: build.bat
     - Terminal
 
 #### TypeScript / JavaScript (Core)
     - Code Editor: Emacs 29+
-    - IDE & Debugger: Microsoft Visual Studio Code
+    - IDE & Debugger: Microsoft Visual Studio Code (with Emacs Keymaps)
     - Make System: build.bat
     - Terminal
     
 #### TypeScript / JavaScript (React, NextJs, Angular)
-    - Code Editor: Microsoft Visual Studio Code
-    - IDE & Debugger: Microsoft Visual Studio Code
+    - Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps)
+    - IDE & Debugger: Microsoft Visual Studio Code (with Emacs Keymaps)
     - Terminal
 
 #### Python (Core)
-    - Code Editor: Emacs 29+
-    - IDE & Debugger: PyCharm Community
-    - Make System: PyCharm Community
+    - Code Editor: Emacs 29+, Microsoft Visual Studio Code (with Emacs Keymaps)
+    - IDE & Debugger: Microsoft Visual Studio Code
+    - Make System: build.bat
     - Terminal
 
 #### Python (Data Science, Machine Learning, Artificial Intelligence, Deep Learning)
-    - Code Editor: Jupyter Notebook
-    - IDE & Debugger: Jupyter Notebook
-    - Make System: Jupyter Notebook
+    - Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps), Jupyter Notebook
+    - IDE & Debugger: Microsoft Visual Studio Code
+    - Make System: Microsoft Visual Studio Code
     - Terminal
 
 #### Python (Django, Flask)
-    - Code Editor: Emacs 29+
-    - IDE & Debugger: PyCharm Community
-    - Make System: PyCharm Community
+    - Code Editor: Emacs 29+, Microsoft Visual Studio Code (with Emacs Keymaps)
+    - IDE & Debugger: Microsoft Visual Studio Code
+    - Make System: Microsoft Visual Studio Code
     - Terminal
 
+#### HTML, CSS
+    - Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps)
+    - IDE & Debugger: Microsoft Visual Studio Code
+    - Make System: Microsoft Visual Studio Code
+    - Terminal
+
+#### Mobile Development (React Native)
+    - Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps)
+    - IDE & Debugger: Microsoft Visual Studio Code
+    - Make System: Microsoft Visual Studio Code
+    - Emulator: Android & IOS
+    - Terminal
+
+#### Mobile Development (React Native)
+    - Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps)
+    - IDE & Debugger: Microsoft Visual Studio Code
+    - Make System: Microsoft Visual Studio Code
+    - Emulator: Android & IOS
+    - Terminal
 
