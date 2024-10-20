@@ -143,6 +143,11 @@
     (setq c-basic-offset 4)
 	)
 
+(use-package c-sharp
+    :ensure t
+    :defer t
+    )
+
 (use-package rust-mode
 	:ensure t
 	:defer t)
@@ -203,6 +208,7 @@
     :hook (
               (c-mode . lsp)
               (c++-mode . lsp)
+              (c-sharp-mode . lsp)
               (javascript-mode . lsp)
               (typescript-mode . lsp)
               (python-mode . (lambda ()
