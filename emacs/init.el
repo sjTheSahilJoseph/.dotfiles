@@ -188,6 +188,9 @@
 (setq-default tab-width 4)
 (setq-default tab-always-indent t)
 
+;; Indent Region
+(global-set-key (kbd "C-<tab>") 'indent-region)
+
 ;; LSP
 (use-package lsp-mode
     :init
@@ -208,8 +211,8 @@
 
 ;; After loading LSP Mode, execute
 (with-eval-after-load 'lsp-mode
-    (setq lsp-enable-on-type-formatting t)
-    (setq lsp-enable-indentation t)
+    (setq lsp-enable-on-type-formatting nil)
+    (setq lsp-enable-indentation nil)
     (setq lsp-headerline-breadcrumb-enable nil)
     (setq lsp-modeline-code-actions-enable nil)
     (setq lsp-enable-snippet nil)
