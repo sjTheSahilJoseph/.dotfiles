@@ -191,6 +191,7 @@
 ;; Indent Region
 (global-set-key (kbd "C-<tab>") 'indent-region)
 
+
 ;; LSP
 (use-package lsp-mode
     :init
@@ -223,6 +224,7 @@
     (setq lsp-enable-symbol-highlighting nil)
     )
 
+
 (defun lsp-booster--advice-json-parse (old-fn &rest args)
     "Try to parse bytecode instead of json."
     (or
@@ -253,6 +255,9 @@
                 (cons "emacs-lsp-booster" orig-result))
             orig-result)))
 (advice-add 'lsp-resolve-final-command :around #'lsp-booster--advice-final-command)
+
+
+
 
 (use-package lsp-pyright
     :ensure t
