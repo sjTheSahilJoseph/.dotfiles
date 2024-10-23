@@ -113,6 +113,7 @@
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives '("gnu"   . "https://elpa.gnu.org/packages/"))
+(add-to-list 'package-archives '("org"   . "https://orgmode.org/elpa/"))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/"))
 (package-initialize)
@@ -256,9 +257,6 @@
             orig-result)))
 (advice-add 'lsp-resolve-final-command :around #'lsp-booster--advice-final-command)
 
-
-
-
 (use-package lsp-pyright
     :ensure t
     :after lsp-mode
@@ -271,6 +269,12 @@
 ;; Dired
 (setq dired-listing-switches "-lah --group-directories-first")
 (add-hook 'dired-mode-hook (lambda () (dired-hide-details-mode 1)))
+
+;; Org Mode
+(use-package org
+  :ensure t
+  :defer t
+  )
 
 ;; Keymaps
 ;;(global-set-key (kbd "<f1>") ')
@@ -287,3 +291,16 @@
 ;;(global-set-key (kbd "<f12>") ')
 
 (global-set-key (kbd "C-z") nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(which-key web-mode typescript-mode treesit-auto tree-sitter tide rust-mode rainbow-mode python-mode prettier-js prettier php-mode ox-gfm org-bullets npm-mode multiple-cursors lua-mode lsp-ui lsp-python-ms lsp-pyright jtsx json-mode emmet-mode eldoc-box eglot-booster corfu company aggressive-indent add-node-modules-path)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
