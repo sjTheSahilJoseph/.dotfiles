@@ -41,7 +41,7 @@
 (setq window-divider-default-bottom-width 0)
 
 ;; Font
-(set-frame-font "Liberation Mono 13" nil t)
+(set-frame-font "Liberation Mono 12" nil t)
 
 ;; Theme
 (add-to-list 'custom-theme-load-path "C:/Users/SJ Joseph/.dotfiles/emacs/themes/")
