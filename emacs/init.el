@@ -203,6 +203,7 @@
               (rust-mode . lsp)
               (csharp-mode . lsp)
               (javascript-mode . lsp)
+              (js-mode . lsp)
               (typescript-mode . lsp)
               (python-mode . (lambda ()
                                  (setq lsp-disabled-clients '(mypy-ls pylsp))
