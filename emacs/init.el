@@ -10,7 +10,6 @@
 (global-subword-mode 1)
 (when (bound-and-true-p tooltip-mode)
   (tooltip-mode -1))
-(set-fringe-mode '(0 . 0))
 
 ;; Cursor
 (setq-default cursor-type 'box)
