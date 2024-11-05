@@ -188,10 +188,11 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq-default tab-always-indent t)
+(setq c-basic-offset 4)
+(setq lisp-indent-offset 4)
 
 ;; Indent Region
 (global-set-key (kbd "C-<tab>") 'indent-region)
-
 
 ;; LSP
 (use-package lsp-mode
@@ -222,6 +223,7 @@
     (setq lsp-completion-provider :none)
     (setq lsp-hover nil)
     (setq lsp-ui-doc-enable nil)
+    (setq lsp-ui-mode nil)
     (setq lsp-lens-enable nil)
     (setq lsp-enable-symbol-highlighting nil)
     )
