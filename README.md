@@ -25,7 +25,7 @@ These are my *personal* __.dotfiles__.
     - Name: Infinix 40i
 
 ## S.Joseph Accessories
-    - Handfree: Gionee
+    - Handfree: None
 
 ## S.Joseph Computer Softwares
 These are the computer softwares I use.
