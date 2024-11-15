@@ -93,7 +93,7 @@ For programming I don't use so many softwares, just basic stuff.
     - IDE & Debugger: Microsoft Visual Studio Code (with Emacs Keymaps)
     - Terminal
 
-#### Python (Core)
+#### Python (All)
     - Code Editor: Emacs 29+, Microsoft Visual Studio Code (with Emacs Keymaps)
     - IDE & Debugger: Microsoft Visual Studio Code
     - Build System: build.bat
@@ -111,6 +111,12 @@ For programming I don't use so many softwares, just basic stuff.
     - Build System: Microsoft Visual Studio Code
     - Terminal
 
+#### PHP (Core, Laravel, CodeIgniter, Symfony)
+    - Code Editor: Emacs 29+, Microsoft Visual Studio Code (with Emacs Keymaps)
+    - IDE & Debugger: Microsoft Visual Studio Code
+    - Build System: Microsoft Visual Studio Code
+    - Terminal
+
 #### HTML, CSS
     - Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps)
     - IDE & Debugger: Microsoft Visual Studio Code
@@ -122,12 +128,5 @@ For programming I don't use so many softwares, just basic stuff.
     - IDE & Debugger: Microsoft Visual Studio Code
     - Build System: Microsoft Visual Studio Code
     - Emulator: Android & IOS
-    - Terminal
-
-#### Mobile Development (Kotlin)
-    - Code Editor: Android Studio (with Emacs Keymaps)
-    - IDE & Debugger: Android Studio
-    - Build System: Android Studio
-    - Emulator: Android
     - Terminal
 
