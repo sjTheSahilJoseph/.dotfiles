@@ -34,99 +34,100 @@ These are the computer softwares I use.
 Primarily I use these things.
 
 #### Computer
-    - Operating System: Windows 11 x64
-    - Terminal: Windows Terminal
-    - Browser: Firefox
-    - Music Player: Windows Media Player
+- Operating System: Windows 11 x64
+- Terminal: Windows Terminal
+- Browser: Firefox
+- Music Player: Windows Media Player
 
 #### Mobile
-    - Operating System: Android 13
-    - Browser: Firefox
-    - Music Player: Visha Player
+- Operating System: Android 13
+- Browser: Firefox
+- Music Player: Visha Player
 
 ### Programming
 For programming I don't use so many softwares, just basic stuff.
 
 #### General
-    - Code Editor: Emacs 29+
-    - Terminal
+- Code Editor: Emacs 29+
+- Terminal
     
 #### C/C++ (All)
-    - Code Editor: Emacs 29+
-    - IDE & Debugger: Microsoft Visual Studio 2022 Community
-    - Compiler: cl
-    - Build System: build.bat
-    - Terminal
+- Code Editor: Emacs 29+
+- IDE & Debugger: Microsoft Visual Studio 2022 Community
+- Compiler: cl
+- Build System: build.bat
+- Terminal
 
 #### C++ (Unreal Engine)
-    - Code Editor: Emacs 29+
-    - IDE & Debugger: Microsoft Visual Studio 2022 Community
-    - Game Engine: Unreal Engine
-    - Compiler: cl
-    - Build System: build.bat
-    - Terminal
+- Code Editor: Emacs 29+, Microsoft Visual Studio 2022 Community (with Emacs Keymaps)
+- IDE & Debugger: Microsoft Visual Studio 2022 Community
+- Game Engine: Unreal Engine
+- Compiler: cl
+- Build System: Unreal Engine
+- Terminal
 
 #### C# (Unity)
-    - Code Editor: Emacs 29+, Microsoft Visual Studio 2022 Community (with Emacs Keymaps)
-    - IDE & Debugger: Microsoft Visual Studio 2022 Community
-    - Game Engine: Unity
-    - Terminal
+- Code Editor: Emacs 29+, Microsoft Visual Studio 2022 Community (with Emacs Keymaps)
+- IDE & Debugger: Microsoft Visual Studio 2022 Community
+- Game Engine: Unity
+- Build System: Unity Engine
+- Terminal
 
 #### C#, .NET (All)
-    - Code Editor: Emacs 29+, Microsoft Visual Studio 2022 Community (with Emacs Keymaps)
-    - IDE & Debugger: Microsoft Visual Studio 2022 Community
-    - Terminal
+- Code Editor: Emacs 29+, Microsoft Visual Studio 2022 Community (with Emacs Keymaps)
+- IDE & Debugger: Microsoft Visual Studio 2022 Community
+- Terminal
 
 #### Rust (All)
-    - Code Editor: Emacs 29+
-    - Build System: build.bat
-    - Terminal
+- Code Editor: Emacs 29+
+- Build System: build.bat
+- Terminal
 
 #### TypeScript / JavaScript (Core)
-    - Code Editor: Emacs 29+, Microsoft Visual Studio Code (with Emacs Keymaps)
-    - IDE & Debugger: Microsoft Visual Studio Code (with Emacs Keymaps)
-    - Build System: build.bat
-    - Terminal
+- Code Editor: Emacs 29+, Microsoft Visual Studio Code (with Emacs Keymaps)
+- IDE & Debugger: Microsoft Visual Studio Code (with Emacs Keymaps)
+- Build System: build.bat
+- Terminal
     
 #### TypeScript / JavaScript (React, NextJs, Angular)
-    - Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps)
-    - IDE & Debugger: Microsoft Visual Studio Code (with Emacs Keymaps)
-    - Terminal
+- Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps)
+- IDE & Debugger: Microsoft Visual Studio Code (with Emacs Keymaps)
+- Terminal
 
 #### Python (All)
-    - Code Editor: Emacs 29+, Microsoft Visual Studio Code (with Emacs Keymaps)
-    - IDE & Debugger: Microsoft Visual Studio Code
-    - Build System: build.bat
-    - Terminal
+- Code Editor: Emacs 29+, Microsoft Visual Studio Code (with Emacs Keymaps)
+- IDE & Debugger: Microsoft Visual Studio Code
+- Build System: build.bat
+- Terminal
 
 #### Python (Data Science, Machine Learning, Artificial Intelligence, Deep Learning)
-    - Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps), Jupyter Notebook (in Visual Studio Code)
-    - IDE & Debugger: Microsoft Visual Studio Code
-    - Build System: Microsoft Visual Studio Code
-    - Terminal
+- Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps), Jupyter Notebook (in Visual Studio Code)
+- IDE & Debugger: Microsoft Visual Studio Code
+- Build System: Microsoft Visual Studio Code
+- Terminal
 
 #### Python (Django, Flask)
-    - Code Editor: Emacs 29+, Microsoft Visual Studio Code (with Emacs Keymaps)
-    - IDE & Debugger: Microsoft Visual Studio Code
-    - Build System: Microsoft Visual Studio Code
-    - Terminal
+- Code Editor: Emacs 29+, Microsoft Visual Studio Code (with Emacs Keymaps)
+- IDE & Debugger: Microsoft Visual Studio Code
+- Build System: Microsoft Visual Studio Code
+- Terminal
 
 #### PHP (Core, Laravel, CodeIgniter, Symfony)
-    - Code Editor: Emacs 29+, Microsoft Visual Studio Code (with Emacs Keymaps)
-    - IDE & Debugger: Microsoft Visual Studio Code
-    - Build System: Microsoft Visual Studio Code
-    - Terminal
+- Code Editor: Emacs 29+, Microsoft Visual Studio Code (with Emacs Keymaps)
+- IDE & Debugger: Microsoft Visual Studio Code
+- Build System: Microsoft Visual Studio Code
+- Terminal
 
 #### HTML, CSS
-    - Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps)
-    - IDE & Debugger: Microsoft Visual Studio Code
-    - Build System: Microsoft Visual Studio Code
-    - Terminal
+- Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps)
+- IDE & Debugger: Microsoft Visual Studio Code
+- Build System: Microsoft Visual Studio Code
+- Terminal
 
 #### Mobile Development (React Native)
-    - Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps)
-    - IDE & Debugger: Microsoft Visual Studio Code
-    - Build System: Microsoft Visual Studio Code
-    - Emulator: Android & IOS
-    - Terminal
+- Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps)
+- IDE & Debugger: Microsoft Visual Studio Code
+- Build System: Microsoft Visual Studio Code
+- Emulator: Android & IOS
+- Terminal
 

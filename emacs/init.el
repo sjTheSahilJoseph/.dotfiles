@@ -134,16 +134,17 @@
 	:defer t
 	)
 
+;; Rust Mode
+(use-package rust-mode
+    :ensure t
+    :defer t
+    )
+
 ;; C# Mode
 (use-package csharp-mode
     :ensure t
     :defer t
     )
-
-;; Rust Mode
-(use-package rust-mode
-	:ensure t
-	:defer t)
 
 ;; TypeScript Mode
 (use-package typescript-mode
@@ -162,10 +163,11 @@
 	:defer t
 	)
 
-;; Lua Mode
-(use-package lua-mode
-	:ensure t
-	:defer t)
+;; PHP Mode
+(use-package php-mode
+    :ensure t
+    :defer t
+    )
 
 ;; Rainbow Mode
 (use-package rainbow-mode
@@ -193,81 +195,6 @@
 
 ;; Indent Region
 (global-set-key (kbd "C-<tab>") 'indent-region)
-
-;; LSP
-(use-package lsp-mode
-    :init
-    (setq lsp-keymap-prefix "C-c l")
-    :hook (
-              (c-mode . lsp)
-              (c++-mode . lsp)
-              (rust-mode . lsp)
-              (csharp-mode . lsp)
-              (javascript-mode . lsp)
-              (js-mode . lsp)
-              (typescript-mode . lsp)
-              (python-mode . (lambda ()
-                                 (setq lsp-disabled-clients '(mypy-ls pylsp))
-                                 (require 'lsp-pyright)
-                                 (lsp)))
-              )
-    :commands lsp)
-
-;; After loading LSP Mode, execute
-(with-eval-after-load 'lsp-mode
-    (setq lsp-enable-on-type-formatting nil)
-    (setq lsp-enable-indentation nil)
-    (setq lsp-headerline-breadcrumb-enable nil)
-    (setq lsp-modeline-code-actions-enable nil)
-    (setq lsp-enable-snippet nil)
-    (setq lsp-completion-provider :none)
-    (setq lsp-hover nil)
-    (setq lsp-ui-doc-enable nil)
-    (setq lsp-ui-mode nil)
-    (setq lsp-lens-enable nil)
-    (setq lsp-enable-symbol-highlighting nil)
-    )
-
-
-(defun lsp-booster--advice-json-parse (old-fn &rest args)
-    "Try to parse bytecode instead of json."
-    (or
-        (when (equal (following-char) ?#)
-            (let ((bytecode (read (current-buffer))))
-                (when (byte-code-function-p bytecode)
-                    (funcall bytecode))))
-        (apply old-fn args)))
-(advice-add (if (progn (require 'json)
-                    (fboundp 'json-parse-buffer))
-                'json-parse-buffer
-                'json-read)
-    :around
-    #'lsp-booster--advice-json-parse)
-
-(defun lsp-booster--advice-final-command (old-fn cmd &optional test?)
-    "Prepend emacs-lsp-booster command to lsp CMD."
-    (let ((orig-result (funcall old-fn cmd test?)))
-        (if (and (not test?)
-                (not (file-remote-p default-directory))
-                lsp-use-plists
-                (not (functionp 'json-rpc-connection))
-                (executable-find "emacs-lsp-booster"))
-            (progn
-                (when-let ((command-from-exec-path (executable-find (car orig-result))))
-                    (setcar orig-result command-from-exec-path))
-                (message "Using emacs-lsp-booster for %s!" orig-result)
-                (cons "emacs-lsp-booster" orig-result))
-            orig-result)))
-(advice-add 'lsp-resolve-final-command :around #'lsp-booster--advice-final-command)
-
-(use-package lsp-pyright
-    :ensure t
-    :after lsp-mode
-    :hook (python-mode . (lambda ()
-                             (require 'lsp-pyright)
-                             (lsp))
-              )
-    )
 
 ;; Dired
 (setq dired-listing-switches "-lah --group-directories-first")
