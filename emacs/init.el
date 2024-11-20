@@ -212,8 +212,8 @@
 
 
 ;; Keymaps
-;;(global-set-key (kbd "<f1>") ')
-;;(global-set-key (kbd "<f2>") ')
+(global-set-key (kbd "<f1>") 'next-error)
+(global-set-key (kbd "<f2>") 'previous-error)
 (global-set-key (kbd "<f3>") 'kmacro-start-macro-or-insert-counter)
 (global-set-key (kbd "<f4>") 'kmacro-end-and-call-macro)
 (global-set-key (kbd "<f5>") 'run-build-script)
