@@ -73,23 +73,13 @@ For programming I don't use so many softwares, just basic stuff.
 - Build System: Unity Engine
 - Terminal
 
-#### C#, .NET (All)
-- Code Editor: Emacs 29+, Microsoft Visual Studio 2022 Community (with Emacs Keymaps)
-- IDE & Debugger: Microsoft Visual Studio 2022 Community
-- Terminal
-
-#### Rust (All)
-- Code Editor: Emacs 29+
-- Build System: build.bat
-- Terminal
-
 #### TypeScript / JavaScript (Core)
 - Code Editor: Emacs 29+, Microsoft Visual Studio Code (with Emacs Keymaps)
 - IDE & Debugger: Microsoft Visual Studio Code (with Emacs Keymaps)
 - Build System: build.bat
 - Terminal
     
-#### TypeScript / JavaScript (React, NextJs, Angular)
+#### TypeScript / JavaScript (React, Angular)
 - Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps)
 - IDE & Debugger: Microsoft Visual Studio Code (with Emacs Keymaps)
 - Terminal
@@ -122,12 +112,5 @@ For programming I don't use so many softwares, just basic stuff.
 - Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps)
 - IDE & Debugger: Microsoft Visual Studio Code
 - Build System: Microsoft Visual Studio Code
-- Terminal
-
-#### Mobile Development (React Native)
-- Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps)
-- IDE & Debugger: Microsoft Visual Studio Code
-- Build System: Microsoft Visual Studio Code
-- Emulator: Android & IOS
 - Terminal
 
