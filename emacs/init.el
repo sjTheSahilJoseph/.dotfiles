@@ -223,7 +223,7 @@
 ;;(global-set-key (kbd "<f9>") ')
 (global-set-key (kbd "<f10>") 'toggle-themes-sj)
 (global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
-;;(global-set-key (kbd "<f12>") ')
+(global-set-key (kbd "<f12>") 'bookmark-delete)
 
 (global-set-key (kbd "C-z") nil)
 
