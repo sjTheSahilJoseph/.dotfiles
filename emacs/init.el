@@ -134,12 +134,6 @@
 	:defer t
 	)
 
-;; Rust Mode
-(use-package rust-mode
-    :ensure t
-    :defer t
-    )
-
 ;; C# Mode
 (use-package csharp-mode
     :ensure t
