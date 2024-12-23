@@ -25,7 +25,7 @@ These are my *personal* __.dotfiles__.
     - Name: Infinix 40i
 
 ## S.Joseph Accessories
-    - Handfree: None
+    - Handfree: Airpods
 
 ## S.Joseph Computer Softwares
 These are the computer softwares I use.
@@ -49,68 +49,5 @@ For programming I don't use so many softwares, just basic stuff.
 
 #### General
 - Code Editor: Emacs 29+
-- Terminal
-    
-#### C/C++ (All)
-- Code Editor: Emacs 29+
-- IDE & Debugger: Microsoft Visual Studio 2022 Community
-- Compiler: cl
-- Build System: build.bat
-- Terminal
-
-#### C++ (Unreal Engine)
-- Code Editor: Emacs 29+, Microsoft Visual Studio 2022 Community (with Emacs Keymaps)
-- IDE & Debugger: Microsoft Visual Studio 2022 Community
-- Game Engine: Unreal Engine
-- Compiler: cl
-- Build System: Unreal Engine
-- Terminal
-
-#### C# (Unity)
-- Code Editor: Emacs 29+, Microsoft Visual Studio 2022 Community (with Emacs Keymaps)
-- IDE & Debugger: Microsoft Visual Studio 2022 Community
-- Game Engine: Unity
-- Build System: Unity Engine
-- Terminal
-
-#### TypeScript / JavaScript (Core)
-- Code Editor: Emacs 29+, Microsoft Visual Studio Code (with Emacs Keymaps)
-- IDE & Debugger: Microsoft Visual Studio Code (with Emacs Keymaps)
-- Build System: build.bat
-- Terminal
-    
-#### TypeScript / JavaScript (React, Angular)
-- Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps)
-- IDE & Debugger: Microsoft Visual Studio Code (with Emacs Keymaps)
-- Terminal
-
-#### Python (All)
-- Code Editor: Emacs 29+, Microsoft Visual Studio Code (with Emacs Keymaps)
-- IDE & Debugger: Microsoft Visual Studio Code
-- Build System: build.bat
-- Terminal
-
-#### Python (Data Science, Machine Learning, Artificial Intelligence, Deep Learning)
-- Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps), Jupyter Notebook (in Visual Studio Code)
-- IDE & Debugger: Microsoft Visual Studio Code
-- Build System: Microsoft Visual Studio Code
-- Terminal
-
-#### Python (Django, Flask)
-- Code Editor: Emacs 29+, Microsoft Visual Studio Code (with Emacs Keymaps)
-- IDE & Debugger: Microsoft Visual Studio Code
-- Build System: Microsoft Visual Studio Code
-- Terminal
-
-#### PHP (Core, Laravel, CodeIgniter, Symfony)
-- Code Editor: Emacs 29+, Microsoft Visual Studio Code (with Emacs Keymaps)
-- IDE & Debugger: Microsoft Visual Studio Code
-- Build System: Microsoft Visual Studio Code
-- Terminal
-
-#### HTML, CSS
-- Code Editor: Microsoft Visual Studio Code (with Emacs Keymaps)
-- IDE & Debugger: Microsoft Visual Studio Code
-- Build System: Microsoft Visual Studio Code
 - Terminal
 
