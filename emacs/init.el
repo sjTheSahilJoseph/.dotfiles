@@ -44,23 +44,8 @@
 (set-frame-font "Liberation Mono 12" nil t)
 
 ;; Theme
-(add-to-list 'custom-theme-load-path "C:/Users/SJ Joseph/.dotfiles/emacs/themes/")
+(add-to-list 'custom-theme-load-path "C:/Users/sjthe/work/loveisanillusion.emacs")
 (load-theme 'loveisanillusion.emacs t)
-
-;; Toggle Theme
-(defun toggle-themes-sj ()
-    "Toggle themes SJ."
-    (interactive)
-    (if (member 'loveisanillusion.emacs custom-enabled-themes)
-        (progn
-            (disable-theme 'loveisanillusion.emacs)
-            (load-theme 'loveisanillusion.emacs.light t)
-            (set-cursor-color "#000000"))
-        (progn
-            (disable-theme 'loveisanillusion.emacs.light)
-            (load-theme 'loveisanillusion.emacs t))
-        (set-cursor-color "#00ee00"))
-    )
 
 ;; Startup
 (setq inhibit-startup-message t)
@@ -215,7 +200,7 @@
 (global-set-key (kbd "<f7>") 'query-replace)
 (global-set-key (kbd "<f8>") 'eval-region)
 ;;(global-set-key (kbd "<f9>") ')
-(global-set-key (kbd "<f10>") 'toggle-themes-sj)
+;;(global-set-key (kbd "<f10>") ')
 (global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
 (global-set-key (kbd "<f12>") 'bookmark-delete)
 
