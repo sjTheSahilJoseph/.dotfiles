@@ -119,12 +119,6 @@
 	:defer t
 	)
 
-;; C# Mode
-(use-package csharp-mode
-    :ensure t
-    :defer t
-    )
-
 ;; TypeScript Mode
 (use-package typescript-mode
 	:ensure t
@@ -141,12 +135,6 @@
 	:ensure t
 	:defer t
 	)
-
-;; PHP Mode
-(use-package php-mode
-    :ensure t
-    :defer t
-    )
 
 ;; Rainbow Mode
 (use-package rainbow-mode
