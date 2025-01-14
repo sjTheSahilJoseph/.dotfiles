@@ -1,5 +1,3 @@
-
-;; Basic User Interface and Experience Customization
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
@@ -11,7 +9,6 @@
 (when (bound-and-true-p tooltip-mode)
   (tooltip-mode -1))
 
-;; Cursor
 (setq-default cursor-type 'box)
 (set-cursor-color "#00ee00")
 (blink-cursor-mode t)
@@ -20,34 +17,27 @@
 (setq highlight-nonselected-windows nil)
 (setq-default cursor-in-non-selected-windows nil)
 
-;; Horizontal Line
 (setq-default word-wrap t)
 (setq-default truncate-lines t)
 
-;; Text Editing Basic Experience
 (setq-default truncate-lines t)
 (setq enable-recursive-minibuffers nil)
 (setq truncate-partial-width-windows nil)
 (setq sentence-end-double-space nil)
 (setq require-final-newline t)
 
-;; Scroll in Emacs
 (setq-default scroll-margin 1)
 (setq scroll-conservatively 101)
 
-;; Window
 (setq window-divider-default-right-width 0)
 (setq window-divider-default-left-width 0)
 (setq window-divider-default-bottom-width 0)
 
-;; Font
 (set-frame-font "Liberation Mono 12" nil t)
 
-;; Theme
 (add-to-list 'custom-theme-load-path "C:/Users/sjthe/work/loveisanillusion.emacs")
 (load-theme 'loveisanillusion.emacs t)
 
-;; Startup
 (setq inhibit-startup-message t)
 (setq inhibit-message nil)
 (setq initial-scratch-message "\
@@ -55,21 +45,17 @@
 
 ")
 
-;; Mark
 (transient-mark-mode 1)
 (setq mark-even-if-inactive nil)
 
-;; Compilation
 (setq-default compilation-always-kill t)
 (setq-default compilation-scroll-output t)
 
-;; Run Build.bat file
 (defun run-build-script ()
 	"Run the build.bat."
 	(interactive)
 	(compile "build.bat"))
 
-;; Text System
 (set-language-environment "UTF-8")
 (setq locale-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
@@ -84,17 +70,13 @@
 (setq-default pathname-coding-system 'utf-8)
 (set-file-name-coding-system 'utf-8)
 
-;; Backup and Autosave
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
-;; Auto Revert
 (global-auto-revert-mode t)
 
-;; Don't make noise
 (set-message-beep 'silent)
 
-;; Package
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives '("gnu"   . "https://elpa.gnu.org/packages/"))
@@ -113,46 +95,30 @@
         use-package-expand-minimally t
         warning-minimum-level :error))
 
-;; C/C++ Mode
 (use-package cc-mode
 	:ensure t
 	:defer t
 	)
 
-;; TypeScript Mode
 (use-package typescript-mode
 	:ensure t
 	:defer t
     )
 
-;; Json Mode
 (use-package json-mode
 	:ensure t
 	:defer t)
 
-;; Python Mode
 (use-package python-mode
 	:ensure t
 	:defer t
 	)
 
-;; Rainbow Mode
-(use-package rainbow-mode
-	:ensure t
-	:defer t
-    :hook (prog-mode . (lambda ()
-                           (rainbow-mode))
-              )
-    )
-
-;; Enable Meta-C/L/U
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
-;; Don't use multiline in echo area for eldoc
 (setq eldoc-echo-area-use-multiline-p nil)
 
-;; Indent
 (setq electric-indent-mode 1)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -160,25 +126,11 @@
 (setq c-basic-offset 4)
 (setq lisp-indent-offset 4)
 
-;; Indent Region
 (global-set-key (kbd "C-<tab>") 'indent-region)
 
-;; Dired
 (setq dired-listing-switches "-lah --group-directories-first")
 (add-hook 'dired-mode-hook (lambda () (dired-hide-details-mode 1)))
 
-;; Org Mode
-(use-package org
-  :ensure t
-  :defer t
-  )
-(setq org-log-done 'time)
-(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
-(add-hook 'org-mode-hook 'org-indent-mode)
-(setq org-hide-emphasis-markers t)
-
-
-;; Keymaps
 (global-set-key (kbd "<f1>") 'next-error)
 (global-set-key (kbd "<f2>") 'previous-error)
 (global-set-key (kbd "<f3>") 'kmacro-start-macro-or-insert-counter)
