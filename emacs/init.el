@@ -100,6 +100,11 @@
 	:defer t
 	)
 
+(use-package csharp-mode
+	:ensure t
+	:defer t
+	)
+
 (use-package typescript-mode
 	:ensure t
 	:defer t
