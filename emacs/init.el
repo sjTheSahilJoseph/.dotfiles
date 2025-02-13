@@ -119,6 +119,11 @@
 	:defer t
 	)
 
+(use-package php-mode
+	:ensure t
+	:defer t
+	)
+
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
