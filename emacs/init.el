@@ -124,10 +124,43 @@
 	:defer t
 	)
 
-(put 'downcase-region 'disabled nil)
-(put 'upcase-region 'disabled nil)
+(use-package emmet-mode
+	:ensure t
+	:defer t
+	)
+
+(use-package web-mode
+	:ensure t
+	:defer t
+	)
+
+(use-package js2-mode
+	:ensure t
+	:defer t
+	)
+
+(use-package rjsx-mode
+	:ensure t
+	:defer t
+	)
+
+(add-hook 'web-mode-hook 'emmet-mode)
+(add-hook 'html-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook 'emmet-mode)
+
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . rjsx-mode))
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
+(add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
+
+(setq create-lockfiles nil)
 
 (setq eldoc-echo-area-use-multiline-p nil)
+
+(put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
 
 (setq electric-indent-mode 1)
 (setq-default indent-tabs-mode nil)
@@ -135,6 +168,13 @@
 (setq-default tab-always-indent t)
 (setq c-basic-offset 4)
 (setq lisp-indent-offset 4)
+(setq-default web-mode-markup-indent-offset 4)
+(setq-default web-mode-css-indent-offset 4)
+(setq-default web-mode-code-indent-offset 4)
+(setq-default js-indent-level 4)
+(setq-default typescript-indent-level 4)
+(setq c-default-style "linux")
+(setq-default c-indent-level 4)
 
 (global-set-key (kbd "C-<tab>") 'indent-region)
 
@@ -155,7 +195,5 @@
 (global-set-key (kbd "<f12>") 'bookmark-delete)
 
 (global-set-key (kbd "C-z") nil)
-
-
 
 
