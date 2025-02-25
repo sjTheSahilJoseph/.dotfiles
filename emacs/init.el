@@ -134,24 +134,13 @@
 	:defer t
 	)
 
-(use-package js2-mode
-	:ensure t
-	:defer t
-	)
-
-(use-package rjsx-mode
-	:ensure t
-	:defer t
-	)
-
 (add-hook 'web-mode-hook 'emmet-mode)
 (add-hook 'html-mode-hook 'emmet-mode)
 (add-hook 'css-mode-hook 'emmet-mode)
 
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.css\\'" . css-mode))
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.jsx\\'" . rjsx-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
 
@@ -186,13 +175,13 @@
 (global-set-key (kbd "<f3>") 'kmacro-start-macro-or-insert-counter)
 (global-set-key (kbd "<f4>") 'kmacro-end-and-call-macro)
 (global-set-key (kbd "<f5>") 'run-build-script)
-(global-set-key (kbd "<f6>") 'hl-line-mode)
+;;(global-set-key (kbd "<f6>") ')
 (global-set-key (kbd "<f7>") 'query-replace)
-(global-set-key (kbd "<f8>") 'eval-region)
+;;(global-set-key (kbd "<f8>") ')
 ;;(global-set-key (kbd "<f9>") ')
 ;;(global-set-key (kbd "<f10>") ')
 (global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
-(global-set-key (kbd "<f12>") 'bookmark-delete)
+;;(global-set-key (kbd "<f12>") ')
 
 (global-set-key (kbd "C-z") nil)
 
