@@ -35,7 +35,7 @@
 
 (set-frame-font "Liberation Mono 12" nil t)
 
-(add-to-list 'custom-theme-load-path "C:/Users/sjthe/work/loveisanillusion.emacs")
+(add-to-list 'custom-theme-load-path "C:/Users/sjthe/projects/loveisanillusion.emacs")
 (load-theme 'loveisanillusion.emacs t)
 
 (setq inhibit-startup-message t)
