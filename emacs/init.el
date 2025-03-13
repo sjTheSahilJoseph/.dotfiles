@@ -36,12 +36,13 @@
 (set-frame-font "Liberation Mono 12" nil t)
 
 (add-to-list 'custom-theme-load-path "C:/Users/sjthe/projects/loveisanillusion.emacs")
+(add-to-list 'custom-theme-load-path "C:/Users/sjthe/projects/loveisanillusion.emacs.light")
 (load-theme 'loveisanillusion.emacs t)
 
 (setq inhibit-startup-message t)
 (setq inhibit-message nil)
 (setq initial-scratch-message "\
-;; SJ Joseph
+;; SJ the Sahil Joseph
 
 ")
 
@@ -175,10 +176,10 @@
 (global-set-key (kbd "<f3>") 'kmacro-start-macro-or-insert-counter)
 (global-set-key (kbd "<f4>") 'kmacro-end-and-call-macro)
 (global-set-key (kbd "<f5>") 'run-build-script)
-;;(global-set-key (kbd "<f6>") ')
+(global-set-key (kbd "<f6>") 'hl-line-mode)
 (global-set-key (kbd "<f7>") 'query-replace)
-;;(global-set-key (kbd "<f8>") ')
-;;(global-set-key (kbd "<f9>") ')
+(global-set-key (kbd "<f8>") 'eval-region)
+;;(global-set-key (kbd "<f9>") '(load-theme 'loveisanillusionlight.emacs t))
 ;;(global-set-key (kbd "<f10>") ')
 (global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
 ;;(global-set-key (kbd "<f12>") ')
