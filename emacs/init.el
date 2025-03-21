@@ -36,7 +36,6 @@
 (set-frame-font "Liberation Mono 12" nil t)
 
 (add-to-list 'custom-theme-load-path "C:/Users/sjthe/projects/loveisanillusion.emacs")
-(add-to-list 'custom-theme-load-path "C:/Users/sjthe/projects/loveisanillusion.emacs.light")
 (load-theme 'loveisanillusion.emacs t)
 
 (setq inhibit-startup-message t)
@@ -179,7 +178,7 @@
 (global-set-key (kbd "<f6>") 'hl-line-mode)
 (global-set-key (kbd "<f7>") 'query-replace)
 (global-set-key (kbd "<f8>") 'eval-region)
-;;(global-set-key (kbd "<f9>") '(load-theme 'loveisanillusionlight.emacs t))
+;;(global-set-key (kbd "<f9>") ')
 ;;(global-set-key (kbd "<f10>") ')
 (global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
 ;;(global-set-key (kbd "<f12>") ')
@@ -187,3 +186,15 @@
 (global-set-key (kbd "C-z") nil)
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
