@@ -12,6 +12,11 @@ These are my *personal* __.dotfiles__.
    5. Name Computer "sjjoseph".
    6. Update Windows and Apps.
 
+## Windows Settings
+   1. Change Bettery Performance to "Best Performance" mode.
+   2. Change Wallpaper (Desktop and Lock Screen).
+   3. Change Cursor size to 5.
+
 ## Browser
    1. Download and Install "Google Chrome" from Microsoft Edge.
    2. Make default browser.
@@ -83,6 +88,27 @@ These are my *personal* __.dotfiles__.
 ## Windows Terminal
    1. Copy contenct from "settings.json" and past to the terminal json.
 
+# Things I use
+  1. Laptop
+     15.6 inch FHD display
+     i5 10th Generation
+     1TB NVME SSD
+     64GB DDR4 RAM
+  2. With Laptop
+     60% Mechanical Wireless Keyboard
+     Wireless Mouse
+     USB Hub
+     Wired Headphones (mic inbuilt)
+     Charger & Connectors (Just to fit in any switch board).
+  3. Table
+     Dark Brown Color Wooden Table
+     25 inches from ground
+  4. Chair
+     Ergonomic office chair
+  5. Laptop Bag
+     Black Color Laptop Bag (Back Style).
+     Inside bag:
+            Laptop, Laptop Case, Laptop Charger, Mobile Charger, Keyboard, Mouse, Headphones, Hub, Pendrive (32gb), Connectors.
 
-
-
+# Laptop Use SOPs
+  1. 
