@@ -335,7 +335,7 @@
             "yellow": "#808000"
         }
     ],
-    "showTabsInTitlebar": false,
+    "showTabsInTitlebar": true,
     "tabWidthMode": "equal",
     "theme": "legacyDark",
     "themes": [],
