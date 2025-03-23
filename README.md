@@ -100,6 +100,7 @@ These are my *personal* __.dotfiles__.
      USB Hub
      Wired Headphones (mic inbuilt)
      Charger & Connectors (Just to fit in any switch board).
+     Extra 2x Batteries for Mouse and Keyboard.
   3. Table
      Dark Brown Color Wooden Table
      25 inches from ground
@@ -108,7 +109,7 @@ These are my *personal* __.dotfiles__.
   5. Laptop Bag
      Black Color Laptop Bag (Back Style).
      Inside bag:
-            Laptop, Laptop Case, Laptop Charger, Mobile Charger, Keyboard, Mouse, Headphones, Hub, Pendrive (32gb), Connectors.
+            Laptop, Laptop Case, Laptop Charger, Batteries, Mobile Charger, Keyboard, Mouse, Headphones, Hub, Pendrive (32gb), Connectors.
 
 # Laptop Use SOPs
   1. 
