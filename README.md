@@ -15,7 +15,6 @@ These are my *personal* __.dotfiles__.
 ## Windows Settings
    1. Change Bettery Performance to "Best Performance" mode.
    2. Change Wallpaper (Desktop and Lock Screen).
-   3. Change Cursor size to 5.
 
 ## Browser
    1. Download and Install "Google Chrome" from Microsoft Edge.
