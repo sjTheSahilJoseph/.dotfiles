@@ -59,6 +59,7 @@ These are my *personal* __.dotfiles__.
 
 ## OBS
    1. Download and Install OBS from Official Website.
+   2. Add Circle Mask to Webcam.
 
 ## Microsoft Office 2021
    1. Download and Install Microsoft Office.
@@ -79,4 +80,9 @@ These are my *personal* __.dotfiles__.
    1. Download and Install MPC-HC x64.
    2. Make default media player.
 
-## 
+## Windows Terminal
+   1. Copy contenct from "settings.json" and past to the terminal json.
+
+
+
+

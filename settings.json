@@ -48,7 +48,7 @@
             "backgroundImageOpacity": 0.11,
             "colorScheme": "Love Is An Illusion",
             "cursorShape": "filledBox",
-            "experimental.retroTerminalEffect": true,
+            "experimental.retroTerminalEffect": false,
             "font": 
             {
                 "face": "Liberation Mono",
