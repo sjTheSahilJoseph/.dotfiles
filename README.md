@@ -52,7 +52,8 @@ These are my *personal* __.dotfiles__.
 ## Visual Studio IDE
    1. Download and Install Visual Studio IDE with all components (select all).
    2. Sign In using Github.
-   3. Link .dotfiles/VSSETTINGS1.vssettings.
+   3. Import .dotfiles/VSSETTINGS23022025.vssettings.
+   4. Install "Emacs Emulation" extension.
    
 ## Internet Download Manager
    1. Download and Install "IDM (Internet Download Manager)".
