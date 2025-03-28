@@ -54,10 +54,6 @@ These are my *personal* __.dotfiles__.
    2. Sign In using Github.
    3. Import .dotfiles/VSSETTINGS23022025.vssettings.
    4. Install "Emacs Emulation" extension.
-   
-## Internet Download Manager
-   1. Download and Install "IDM (Internet Download Manager)".
-   2. Install its Chrome extension.
 
 ## Adobe 2025
    1. Download and Install (Photoshop, Illustrator, Premiere Pro, After Effects, Audition).
@@ -72,14 +68,14 @@ These are my *personal* __.dotfiles__.
 ## OneDrive
    1. Install and Setup OneDrive but don't merge with computer. Keep it seperate.
 
-## Game Engines
-   1. Download and Install (Unity & Unreal) Game Engine with all components.
+## Game Engines and 3d
+   1. Download and Install (Blender, Unity & Unreal) Game Engine with all components.
 
 ## Languages
    1. Download and Install (Python & NodeJs).
 
-## Social
-   1. Download and Install (WhatsApp, Skype, Slack).
+## Communicate
+   1. Download and Install (WhatsApp, Microsoft Teams, Zoom).
 
 ## Media Player
    1. Download and Install MPC-HC x64.
