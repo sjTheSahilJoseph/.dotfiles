@@ -55,12 +55,8 @@ These are my *personal* __.dotfiles__.
    3. Import .dotfiles/VSSETTINGS23022025.vssettings.
    4. Install "Emacs Emulation" extension.
 
-## Adobe 2025
-   1. Download and Install (Photoshop, Illustrator, Premiere Pro, After Effects, Audition).
-
-## OBS
-   1. Download and Install OBS from Official Website.
-   2. Add Circle Mask to Webcam.
+## Content Creation
+   1. Download and Install (Photoshop, Davinci Resolve, OBS).
 
 ## Microsoft Office 2021
    1. Download and Install Microsoft Office.
@@ -69,7 +65,7 @@ These are my *personal* __.dotfiles__.
    1. Install and Setup OneDrive but don't merge with computer. Keep it seperate.
 
 ## Game Engines and 3d
-   1. Download and Install (Blender, Unity & Unreal) Game Engine with all components.
+   1. Download and Install (Unity & Unreal) Game Engine with all components.
 
 ## Languages
    1. Download and Install (Python & NodeJs).
@@ -106,4 +102,7 @@ These are my *personal* __.dotfiles__.
      Black Color Laptop Bag (Back Style).
      Inside bag:
             Laptop, Laptop Case, Laptop Charger, Batteries, Mobile Charger, Keyboard, Mouse, Headphones, Hub, Pendrive (32gb), Connectors.
+
+
+
 
