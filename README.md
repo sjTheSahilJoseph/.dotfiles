@@ -11,12 +11,8 @@ These are my *personal* __.dotfiles__.
      1TB NVME SSD
      64GB DDR4 RAM
   2. With Laptop
-     60% Mechanical Wireless Keyboard
-     Wireless Mouse
-     USB Hub
      Calling Wired Headphones (mic inbuilt)
      Charger & Connectors (To fit in any switch board).
-     Extra 2x Batteries for Mouse and Keyboard.
   3. Table
      Dark Brown Color Wooden Table
      25 inches from ground
@@ -25,7 +21,7 @@ These are my *personal* __.dotfiles__.
   5. Laptop Bag
      Black Color Laptop Bag (Back Style).
      Inside bag:
-            Laptop, Laptop Case, Laptop Charger, Batteries, Mobile Charger, Keyboard, Mouse, Headphones, Hub, Pendrive (32gb), Connectors.
+            Laptop, Laptop Case, Laptop Charger, Mobile Charger, Headphones, Pendrive (32gb), Connectors.
 
 ## Operating System
    1. Download Windows 11 Pro x64 ISO.
