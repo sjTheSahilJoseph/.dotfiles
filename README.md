@@ -94,8 +94,8 @@ These are my *personal* __.dotfiles__.
      60% Mechanical Wireless Keyboard
      Wireless Mouse
      USB Hub
-     Wired Headphones (mic inbuilt)
-     Charger & Connectors (Just to fit in any switch board).
+     Calling Wired Headphones (mic inbuilt)
+     Charger & Connectors (To fit in any switch board).
      Extra 2x Batteries for Mouse and Keyboard.
   3. Table
      Dark Brown Color Wooden Table
@@ -107,5 +107,3 @@ These are my *personal* __.dotfiles__.
      Inside bag:
             Laptop, Laptop Case, Laptop Charger, Batteries, Mobile Charger, Keyboard, Mouse, Headphones, Hub, Pendrive (32gb), Connectors.
 
-# Laptop Use SOPs
-  1. 
