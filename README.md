@@ -80,8 +80,9 @@ These are my *personal* __.dotfiles__.
 ## Microsoft Office 2021
    1. Download and Install Microsoft Office.
 
-## OneDrive
-   1. Install and Setup OneDrive but don't merge with computer. Keep it seperate.
+## Dropbox
+   1. Install and Setup Dropbox but don't merge with computer. Keep it seperate.
+   2. Remove (Uninstall) OneDrive.
 
 ## Game Engines and 3d
    1. Download and Install (Unity & Unreal) Game Engine with all components.
@@ -98,6 +99,12 @@ These are my *personal* __.dotfiles__.
 
 ## Windows Terminal
    1. Copy contenct from "settings.json" and past to the terminal json.
+
+## Figma
+   1. Download and Install Figma.
+
+## Notion
+   1. Download and Install Notion.
 
 
 
