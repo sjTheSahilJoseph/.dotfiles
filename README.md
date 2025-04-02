@@ -33,7 +33,8 @@ These are my *personal* __.dotfiles__.
 
 ## Windows Settings
    1. Change Bettery Performance to "Best Performance" mode.
-   2. Change Wallpaper (Desktop and Lock Screen).
+   2. Change Wallpaper (Desktop and Lock Screen). (special one's choice / self choice).
+   3. Place the wallpaper to "assets" folder.
 
 ## Browser
    1. Download and Install "Google Chrome" from Microsoft Edge.
@@ -47,12 +48,8 @@ These are my *personal* __.dotfiles__.
    1. git clone .dotfiles (this repository).
 
 ## Fonts Install
-   1. Extract fonts from "assets" folder.
-   2. Install the fonts.
-
-## Wallpaper
-   1. Go to "assets" folder, select wallpaper from there.
-   2. Same wallpaper for lock screen and desktop.
+   1. Extract coding fonts from "assets" folder.
+   2. Install the fonts (Liberation Mono).
 
 ## Emacs 30.1+
    1. Download and Install Emacs 30.1+.
@@ -80,18 +77,18 @@ These are my *personal* __.dotfiles__.
 ## Microsoft Office 2021
    1. Download and Install Microsoft Office.
 
-## Dropbox
-   1. Install and Setup Dropbox but don't merge with computer. Keep it seperate.
-   2. Remove (Uninstall) OneDrive.
+## Google Drive
+   1. Use google drive web version. Don't install desktop app.
+   2. Add files manually.
 
-## Game Engines and 3d
+## Game Engines
    1. Download and Install (Unity & Unreal) Game Engine with all components.
 
 ## Languages
    1. Download and Install (Python & NodeJs).
 
 ## Communicate
-   1. Download and Install (WhatsApp, Microsoft Teams, Zoom).
+   1. Download and Install (WhatsApp, Zoom).
 
 ## Media Player
    1. Download and Install MPC-HC x64.
