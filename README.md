@@ -14,14 +14,19 @@ These are my *personal* __.dotfiles__.
      Calling Wired Headphones (mic inbuilt)
      Charger & Connectors (To fit in any switch board).
   3. Table
+     Any table, but generally
      Dark Brown Color Wooden Table
      25 inches from ground
   4. Chair
+     Any chair, but generally
      Ergonomic office chair
   5. Laptop Bag
      Black Color Laptop Bag (Back Style).
      Inside bag:
-            Laptop, Laptop Case, Laptop Charger, Mobile Charger, Headphones, Pendrive (32gb), Connectors.
+            Laptop, Laptop Case, Laptop Charger, Mobile Charger, Headphones, Pendrive (32gb), Connectors, Notebook, Pen.
+  6. Don't use:
+     External monitor, external keyboard, mouse, etc... Just plain laptop with charger and a headphone.
+
 
 ## Operating System
    1. Download Windows 11 Pro x64 ISO.
