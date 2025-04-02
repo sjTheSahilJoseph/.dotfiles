@@ -10,7 +10,7 @@
   (tooltip-mode -1))
 
 (setq-default cursor-type 'box)
-(set-cursor-color "#00ee00")
+(set-cursor-color "#40ff40")
 (blink-cursor-mode t)
 (setq blink-cursor-blinks 0)
 (setq blink-cursor-interval 0.5)
@@ -191,3 +191,15 @@
 (global-set-key (kbd "C-z") nil)
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
