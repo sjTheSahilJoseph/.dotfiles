@@ -77,7 +77,7 @@ These are my *personal* __.dotfiles__.
    4. Install "Emacs Emulation" extension.
 
 ## Content Creation
-   1. Download and Install (Photoshop, Davinci Resolve, OBS).
+   1. Download and Install (Photoshop, Premiere Pro, After Effects, OBS).
 
 ## Microsoft Office 2021
    1. Download and Install Microsoft Office.
@@ -102,11 +102,6 @@ These are my *personal* __.dotfiles__.
 ## Windows Terminal
    1. Copy contenct from "settings.json" and past to the terminal json.
 
-## Figma
-   1. Download and Install Figma.
-
-## Notion
-   1. Download and Install Notion.
 
 
 
