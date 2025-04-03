@@ -11,7 +11,8 @@ These are my *personal* __.dotfiles__.
      1TB NVME SSD
      64GB DDR4 RAM
   2. With Laptop
-     Calling Wired Headphones (mic inbuilt)
+     Collar Mic (wireless).
+     Airpods.
      Charger & Connectors (To fit in any switch board).
   3. Table
      Any table, but generally
@@ -23,9 +24,9 @@ These are my *personal* __.dotfiles__.
   5. Laptop Bag
      Black Color Laptop Bag (Back Style).
      Inside bag:
-            Laptop, Laptop Case, Laptop Charger, Mobile Charger, Headphones, Pendrive (32gb), Connectors, Notebook, Pen.
+            Laptop, Laptop Case, Laptop Charger, Mobile Charger, Airpods, Collar Mic, Pendrive (32gb), Connectors, Notebook, Pen.
   6. Don't use:
-     External monitor, external keyboard, mouse, etc... Just plain laptop with charger and a headphone.
+     External monitor, external keyboard, mouse, headphones, etc... Just plain laptop with charger.
 
 
 ## Operating System
