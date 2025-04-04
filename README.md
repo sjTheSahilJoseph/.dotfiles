@@ -11,8 +11,8 @@ These are my *personal* __.dotfiles__.
      1TB NVME SSD
      64GB DDR4 RAM
   2. With Laptop
-     Collar Mic (wireless).
-     Airpods.
+     Collar Mic (Wired).
+     Airpods (Wireless).
      Charger & Connectors (To fit in any switch board).
   3. Table
      Any table, but generally
