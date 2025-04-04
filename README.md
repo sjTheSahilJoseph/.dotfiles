@@ -39,6 +39,7 @@ These are my *personal* __.dotfiles__.
    1. Change Bettery Performance to "Best Performance" mode.
    2. Change Wallpaper (Desktop and Lock Screen). (special one's choice / self choice).
    3. Place the wallpaper to "assets" folder.
+   4. Enable Dark Mode everywhere.
 
 ## Browser
    1. Download and Install "Google Chrome" from Microsoft Edge.
