@@ -8,14 +8,13 @@ These are my *personal* __.dotfiles__.
   1. Laptop
      15.6 inch FHD display
      i5 10th Generation
-     1TB NVME SSD
+     500GB NVME SSD
      64GB DDR4 RAM
   2. With Laptop
      Calling Headphones (Wired).
      Charger & Connectors (To fit in any switch board).
   3. Table
      Any table, but generally
-     Dark Brown Color Wooden Table
      25 inches from ground
   4. Chair
      Any chair, but generally
@@ -33,7 +32,7 @@ These are my *personal* __.dotfiles__.
    2. Create bootable USB Pendrive.
    3. Install Windows 11 Pro x64.
    4. Activate.
-   5. Name Computer "sjjoseph".
+   5. Name Computer "sjthe", "sjjoseph".
    6. Update Windows and Apps.
 
 ## Windows Settings
