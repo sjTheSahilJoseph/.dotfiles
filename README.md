@@ -6,13 +6,17 @@ These are my *personal* __.dotfiles__.
 
 # Things I use
   1. Laptop
-     15.6 inch FHD display
+     15.6 inch UHD display (1920 x 1080)
      i5 10th Generation
      500GB NVME SSD
      64GB DDR4 RAM
   2. With Laptop
-     Calling Headphones (Wired).
-     Charger & Connectors (To fit in any switch board).
+     AirPods (Wireless).
+     Collar Mic (Wired).
+     Laptop Charger.
+     USB Hub.
+     External Wired 60% Mechanical Keyboard.
+     External Wired Mouse..
   3. Table
      Any table, but generally
      25 inches from ground
@@ -22,10 +26,9 @@ These are my *personal* __.dotfiles__.
   5. Laptop Bag
      Black Color Laptop Bag (Back Style).
      Inside bag:
-            Laptop, Laptop Case, Laptop Charger, Mobile Charger, Headphones, Pendrive (32gb), Connectors, Notebook, Pen.
-  6. Don't use:
-     External monitor, external keyboard, mouse, etc... Just plain laptop with charger.
-
+            Laptop, Laptop Case, Laptop Charger, Mobile Charger, AirPods,
+            AirPods Charger, Pendrive (32gb), Connectors, USB Hub, Notebook, Pen,
+            External Wired 60% Mechanical Keyboad, External Wired Mouse,
 
 ## Operating System
    1. Download Windows 11 Pro x64 ISO.
@@ -77,7 +80,7 @@ These are my *personal* __.dotfiles__.
    4. Install "Emacs Emulation" extension.
 
 ## Content Creation
-   1. Download and Install (Photoshop, Premiere Pro, After Effects, CapCut, Camtasia).
+   1. Download and Install (Illustrator, Photoshop, Premiere Pro, After Effects, Audition, CapCut, Camtasia).
 
 ## Microsoft Office 2021
    1. Download and Install Microsoft Office.
@@ -89,8 +92,11 @@ These are my *personal* __.dotfiles__.
 ## Game Engines
    1. Download and Install (Unity & Unreal) Game Engine with all components.
 
-## Languages
-   1. Download and Install (Python & NodeJs).
+## More Languages
+   1. Download and Install (Python, NodeJs, PHP).
+
+## Databases
+   1. Download and Install MongoDB, PostgreSQL, MySQL.
 
 ## Communicate
    1. Download and Install (WhatsApp, Zoom).
