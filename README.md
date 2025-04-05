@@ -77,7 +77,7 @@ These are my *personal* __.dotfiles__.
    4. Install "Emacs Emulation" extension.
 
 ## Content Creation
-   1. Download and Install (Photoshop, Premiere Pro, After Effects, CapCut, OBS).
+   1. Download and Install (Photoshop, Premiere Pro, After Effects, CapCut, Camtasia).
 
 ## Microsoft Office 2021
    1. Download and Install Microsoft Office.
