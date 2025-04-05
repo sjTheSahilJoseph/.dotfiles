@@ -95,10 +95,6 @@ These are my *personal* __.dotfiles__.
 ## Communicate
    1. Download and Install (WhatsApp, Zoom).
 
-## Media Player
-   1. Download and Install MPC-HC x64.
-   2. Make default media player.
-
 ## Windows Terminal
    1. Copy contenct from "settings.json" and past to the terminal json.
 
