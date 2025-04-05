@@ -38,7 +38,7 @@ These are my *personal* __.dotfiles__.
 ## Windows Settings
    1. Change Bettery Performance to "Best Performance" mode.
    2. Change Wallpaper (Desktop and Lock Screen). (special one's choice / self choice).
-   3. Place the wallpaper to "assets" folder.
+   3. Place the wallpaper to "assets" folder. But personal preference = windows Default.
    4. Enable Dark Mode everywhere.
 
 ## Browser
