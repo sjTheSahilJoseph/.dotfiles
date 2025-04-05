@@ -16,7 +16,8 @@ These are my *personal* __.dotfiles__.
      Laptop Charger.
      USB Hub.
      External Wired 60% Mechanical Keyboard.
-     External Wired Mouse..
+     External Wired Mouse.
+     External Monitor 27 Inches.
   3. Table
      Any table, but generally
      25 inches from ground
@@ -93,7 +94,7 @@ These are my *personal* __.dotfiles__.
    1. Download and Install (Unity & Unreal) Game Engine with all components.
 
 ## More Languages
-   1. Download and Install (Python, NodeJs, PHP).
+   1. Download and Install (Python, NodeJs, PHP, React Native).
 
 ## Databases
    1. Download and Install MongoDB, PostgreSQL, MySQL.
