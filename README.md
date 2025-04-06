@@ -40,7 +40,7 @@ These are my *personal* __.dotfiles__.
    6. Update Windows and Apps.
 
 ## Windows Settings
-   1. Change Bettery Performance to "Best Performance" mode.
+   1. Change Bettery Performance to "Best Performance" mode on charging or battery.
    2. Change Wallpaper (Desktop and Lock Screen). (special one's choice / self choice).
    3. Place the wallpaper to "assets" folder. But personal preference = windows Default.
    4. Enable Dark Mode everywhere.
