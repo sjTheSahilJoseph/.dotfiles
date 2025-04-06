@@ -17,6 +17,7 @@ These are my *personal* __.dotfiles__.
      USB Hub.
      External Wired 60% Mechanical Keyboard.
      External Wired Mouse.
+     External Monitor 27 inch 1920 x 1080.
   3. Table
      Any table, but generally
      25 inches from ground
@@ -26,9 +27,9 @@ These are my *personal* __.dotfiles__.
   5. Laptop Bag
      Black Color Laptop Bag (Back Style).
      Inside bag:
-            Laptop, Laptop Case, Laptop Charger, Mobile Charger, AirPods,
-            AirPods Charger, Pendrive (32gb), Connectors, USB Hub, Notebook, Pen,
-            External Wired 60% Mechanical Keyboad, External Wired Mouse,
+            Laptop, Laptop Case, Laptop Charger, Mobile Charger, Collar Mic,
+            Wired Headphones, Pendrive (32gb), Connectors, USB Hub, Notebook, Pen,
+            External Wired 60% Mechanical Keyboad, External Wired Mouse.
 
 ## Operating System
    1. Download Windows 11 Pro x64 ISO.
