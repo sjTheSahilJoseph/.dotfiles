@@ -17,7 +17,6 @@ These are my *personal* __.dotfiles__.
      USB Hub.
      External Wired 60% Mechanical Keyboard.
      External Wired Mouse.
-     External Monitor 27 inch 1920 x 1080.
   3. Table
      Any table, but generally
      25 inches from ground
