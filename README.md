@@ -4,12 +4,15 @@ These are my *personal* __.dotfiles__.
 
 # Computer
 
-# Things I use
+# Things I use __generally__:
+// These are the things I use generally, but no problem at all without anything.
+
   1. Laptop
      15.6 inch UHD display (1920 x 1080)
      i5 10th Generation
      500GB NVME SSD
      64GB DDR4 RAM
+
   2. With Laptop
      Headphones (Wired).
      Laptop Charger.
@@ -17,12 +20,13 @@ These are my *personal* __.dotfiles__.
      External 60% Mechanical Keyboard. (Wired).
      External Mouse. (Wireless).
      USB Hub.
+
   3. Table
-     Any table, but generally
      27 inches from ground
+
   4. Chair
-     Any chair, but generally
      Ergonomic office chair
+
   5. Laptop Bag
      Black Color Laptop Bag (Back Style).
      Inside bag:
