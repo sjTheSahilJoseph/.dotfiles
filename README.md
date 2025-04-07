@@ -11,18 +11,23 @@ These are my *personal* __.dotfiles__.
      500GB NVME SSD
      64GB DDR4 RAM
   2. With Laptop
-     Earphones (Wired).
+     Headphones (Wired).
      Laptop Charger.
+     LCD 27 Inch 1920 x 1080.
+     External 60% Mechanical Keyboard. (Wired).
+     External Mouse. (Wireless).
+     USB Hub.
   3. Table
      Any table, but generally
-     25 inches from ground
+     27 inches from ground
   4. Chair
      Any chair, but generally
      Ergonomic office chair
   5. Laptop Bag
      Black Color Laptop Bag (Back Style).
      Inside bag:
-            Laptop, Laptop Case, Laptop Charger, Mobile Charger, Earphones, Connectors, Notebook, Pen.
+            Laptop, Laptop Case, Laptop Charger, Mobile Charger, Headphones, Connectors, Notebook, Pen,
+            External Keyboard, External Mouse, USB Hub, Extra batteries.
 
 ## Operating System
    1. Download Windows 11 Pro x64 ISO.
