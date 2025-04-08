@@ -141,6 +141,7 @@
 	)
 
 (add-hook 'web-mode-hook 'emmet-mode)
+(add-hook 'prog-mode-hook 'rainbow-mode)
 (add-hook 'html-mode-hook 'emmet-mode)
 (add-hook 'css-mode-hook 'emmet-mode)
 
