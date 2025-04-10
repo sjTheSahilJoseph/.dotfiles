@@ -145,6 +145,8 @@
 (add-hook 'html-mode-hook 'emmet-mode)
 (add-hook 'css-mode-hook 'emmet-mode)
 
+(setq web-mode-enable-auto-pairing nil)
+
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.css\\'" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
@@ -171,6 +173,11 @@
 (setq-default typescript-indent-level 4)
 (setq c-default-style "linux")
 (setq-default c-indent-level 4)
+
+(defun insert-4-spaces ()
+    (interactive)
+    (insert "    "))
+(global-set-key (kbd "TAB") 'insert-4-spaces)
 
 (global-set-key (kbd "C-<tab>") 'indent-region)
 

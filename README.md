@@ -22,10 +22,10 @@ These are my *personal* __.dotfiles__.
      USB Hub.
 
   3. Table
-     27 inches from ground
+     27 inches from ground office table.
 
   4. Chair
-     Ergonomic office chair
+     Ergonomic office chair.
 
   5. Laptop Bag
      Black Color Laptop Bag (Back Style).
