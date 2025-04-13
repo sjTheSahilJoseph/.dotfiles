@@ -157,8 +157,8 @@
 
 (global-set-key (kbd "C-<tab>") 'indent-region)
 
-;;(setq dired-listing-switches "-lah --group-directories-first")
-;;(add-hook 'dired-mode-hook (lambda () (dired-hide-details-mode 1)))
+(setq dired-listing-switches "-lah --group-directories-first")
+(add-hook 'dired-mode-hook (lambda () (dired-hide-details-mode 1)))
 
 (global-set-key (kbd "<f1>") 'next-error)
 (global-set-key (kbd "<f2>") 'previous-error)
