@@ -125,33 +125,12 @@
 	:defer t
 	)
 
-(use-package emmet-mode
-	:ensure t
-	:defer t
-	)
-
-(use-package web-mode
-	:ensure t
-	:defer t
-	)
-
 (use-package rainbow-mode
 	:ensure t
 	:defer t
 	)
 
-(add-hook 'web-mode-hook 'emmet-mode)
 (add-hook 'prog-mode-hook 'rainbow-mode)
-(add-hook 'html-mode-hook 'emmet-mode)
-(add-hook 'css-mode-hook 'emmet-mode)
-
-(setq web-mode-enable-auto-pairing nil)
-
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.css\\'" . css-mode))
-(add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
-(add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
 
 (setq create-lockfiles nil)
 
@@ -166,9 +145,6 @@
 (setq-default tab-always-indent t)
 (setq c-basic-offset 4)
 (setq lisp-indent-offset 4)
-(setq-default web-mode-markup-indent-offset 4)
-(setq-default web-mode-css-indent-offset 4)
-(setq-default web-mode-code-indent-offset 4)
 (setq-default js-indent-level 4)
 (setq-default typescript-indent-level 4)
 (setq c-default-style "linux")
@@ -181,8 +157,8 @@
 
 (global-set-key (kbd "C-<tab>") 'indent-region)
 
-(setq dired-listing-switches "-lah --group-directories-first")
-(add-hook 'dired-mode-hook (lambda () (dired-hide-details-mode 1)))
+;;(setq dired-listing-switches "-lah --group-directories-first")
+;;(add-hook 'dired-mode-hook (lambda () (dired-hide-details-mode 1)))
 
 (global-set-key (kbd "<f1>") 'next-error)
 (global-set-key (kbd "<f2>") 'previous-error)
