@@ -9,8 +9,8 @@
 (when (bound-and-true-p tooltip-mode)
     (tooltip-mode -1))
 
-(setq-default cursor-type 'bar)
-(set-cursor-color "#000000")
+(setq-default cursor-type 'box)
+(set-cursor-color "#ff4040")
 (blink-cursor-mode t)
 (setq blink-cursor-blinks 0)
 (setq blink-cursor-interval 0.5)
@@ -123,13 +123,6 @@
 	:ensure t
 	:defer t
 	)
-
-(use-package rainbow-mode
-	:ensure t
-	:defer t
-	)
-
-(add-hook 'prog-mode-hook 'rainbow-mode)
 
 (setq create-lockfiles nil)
 
