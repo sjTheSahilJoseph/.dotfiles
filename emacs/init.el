@@ -9,11 +9,7 @@
 (when (bound-and-true-p tooltip-mode)
     (tooltip-mode -1))
 
-;;(setq-default cursor-type 'box)
 (setq-default cursor-type 'bar)
-
-;;(set-cursor-color "#40ff40")
-;;(set-cursor-color "#ff4040")
 (set-cursor-color "#000000")
 (blink-cursor-mode t)
 (setq blink-cursor-blinks 0)
