@@ -47,12 +47,12 @@
             "backgroundImage": null,
             "backgroundImageOpacity": 0.11,
             "colorScheme": "Love Is An Illusion",
-            "cursorShape": "filledBox",
+            "cursorShape": "vintage",
             "experimental.retroTerminalEffect": false,
             "font": 
             {
                 "face": "Liberation Mono",
-                "size": 12.0
+                "size": 15
             },
             "scrollbarState": "always"
         },

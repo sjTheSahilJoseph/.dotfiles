@@ -9,8 +9,8 @@
 (when (bound-and-true-p tooltip-mode)
     (tooltip-mode -1))
 
-(setq-default cursor-type 'box)
-(set-cursor-color "#ff4040")
+(setq-default cursor-type 'bar)
+(set-cursor-color "#ff0000")
 (blink-cursor-mode t)
 (setq blink-cursor-blinks 0)
 (setq blink-cursor-interval 0.5)
@@ -33,7 +33,7 @@
 (setq window-divider-default-left-width 0)
 (setq window-divider-default-bottom-width 0)
 
-(set-frame-font "Liberation Mono 12" nil t)
+(set-frame-font "Liberation Mono 15" nil t)
 
 (add-to-list 'custom-theme-load-path "C:/Users/sjthe/projects/loveisanillusion.emacs")
 (load-theme 'loveisanillusion.emacs t)
