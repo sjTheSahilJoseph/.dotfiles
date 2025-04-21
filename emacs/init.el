@@ -33,7 +33,7 @@
 (setq window-divider-default-left-width 0)
 (setq window-divider-default-bottom-width 0)
 
-(set-frame-font "Liberation Mono 15" nil t)
+(set-frame-font "Liberation Mono 12" nil t)
 
 (add-to-list 'custom-theme-load-path "C:/Users/sjthe/projects/loveisanillusion.emacs")
 (load-theme 'loveisanillusion.emacs t)
