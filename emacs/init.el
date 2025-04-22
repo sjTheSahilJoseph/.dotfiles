@@ -124,6 +124,23 @@
 	:defer t
 	)
 
+(use-package web-mode
+    :ensure t
+    :mode
+    (("\\.jsx\\'" . web-mode)
+        ("\\.tsx\\'" . web-mode))
+    )
+
+(defun my-web-mode-hook ()
+    "Hooks for Web mode."
+    (setq web-mode-markup-indent-offset 4)
+    (setq web-mode-css-indent-offset 4)
+    (setq web-mode-code-indent-offset 4)
+    (setq web-mode-enable-auto-pairing 0)
+    )
+
+(add-hook 'web-mode-hook  'my-web-mode-hook)
+
 (setq create-lockfiles nil)
 
 (setq eldoc-echo-area-use-multiline-p nil)
