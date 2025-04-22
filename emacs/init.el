@@ -136,11 +136,11 @@
     (setq web-mode-markup-indent-offset 4)
     (setq web-mode-css-indent-offset 4)
     (setq web-mode-code-indent-offset 4)
-    (setq web-mode-enable-auto-pairing 0)
-    (setq web-mode-enable-auto-closing 0)
-    (setq web-mode-enable-auto-indentation 0)
-    (setq web-mode-enable-auto-opening 0)
-    (setq web-mode-enable-auto-quoting  0)
+    (setq web-mode-enable-auto-pairing nil)
+    (setq web-mode-enable-auto-closing nil)
+    (setq web-mode-enable-auto-indentation nil)
+    (setq web-mode-enable-auto-opening nil)
+    (setq web-mode-enable-auto-quoting  nil)
     )
 
 
