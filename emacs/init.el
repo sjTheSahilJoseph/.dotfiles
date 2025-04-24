@@ -190,9 +190,4 @@
 (global-set-key (kbd "C-z") nil)
 
 
-
-
-
-
-
 (put 'dired-find-alternate-file 'disabled nil)
