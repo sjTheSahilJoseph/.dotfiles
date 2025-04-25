@@ -190,6 +190,10 @@
 (setq dired-listing-switches "-lah --group-directories-first")
 (add-hook 'dired-mode-hook (lambda () (dired-hide-details-mode 1)))
 
+(put 'dired-find-alternate-file 'disabled nil)
+(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
+(define-key dired-mode-map (kbd "/") (lambda () (interactive) (find-alternate-file "..")))
+
 (global-set-key (kbd "<f1>") 'next-error)
 (global-set-key (kbd "<f2>") 'previous-error)
 (global-set-key (kbd "<f3>") 'kmacro-start-macro-or-insert-counter)
