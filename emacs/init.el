@@ -178,11 +178,6 @@
 (setq c-default-style "linux")
 (setq-default c-indent-level 4)
 
-(defun insert-4-spaces ()
-    (interactive)
-    (insert "    "))
-(global-set-key (kbd "TAB") 'insert-4-spaces)
-
 (global-set-key (kbd "C-<tab>") 'indent-region)
 
 (setq dired-listing-switches "-lah --group-directories-first")
