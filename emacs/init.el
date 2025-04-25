@@ -80,6 +80,15 @@
 
 (set-message-beep 'silent)
 
+(setq inhibit-message t)
+
+(defun suppress-all-messages (orig-fun &rest args)
+  "Completely silence the message system."
+  (let ((inhibit-message t))
+    (apply orig-fun args)))
+
+(advice-add 'message :around #'suppress-all-messages)
+
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives '("gnu"   . "https://elpa.gnu.org/packages/"))
