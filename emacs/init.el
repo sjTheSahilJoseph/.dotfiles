@@ -196,6 +196,8 @@
     (interactive)
     (indent-region (point-min) (point-max)))
 
+(setq isearch-lazy-highlight nil)
+
 (global-set-key (kbd "C-1") 'next-error)
 (global-set-key (kbd "C-2") 'previous-error)
 (global-set-key (kbd "C-3") 'kmacro-start-macro-or-insert-counter)
@@ -206,8 +208,6 @@
 (global-set-key (kbd "C-8") 'eval-region)
 ;;(global-set-key (kbd "C-9") ')
 (global-set-key (kbd "C-0") 'indent-whole-buffer)
-
-
 
 (global-set-key (kbd "<f1>") 'next-error)
 (global-set-key (kbd "<f2>") 'previous-error)
