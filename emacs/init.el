@@ -9,6 +9,10 @@
 (when (bound-and-true-p tooltip-mode)
     (tooltip-mode -1))
 
+;;(add-to-list 'default-frame-alist '(fullscreen . maximized))
+(add-hook 'window-setup-hook 'toggle-frame-fullscreen t)
+
+
 (setq-default cursor-type 'box)
 (set-cursor-color "#40ff40")
 (blink-cursor-mode t)
@@ -134,6 +138,14 @@
         ("\\.css\\'" . web-mode)
         )
     )
+
+
+(use-package emmet-mode
+    :ensure t
+    :defer t
+    )
+
+(add-hook 'web-mode-hook 'emmet-mode)
 
 (defun my-web-mode-hook ()
     "Hooks for Web mode."
