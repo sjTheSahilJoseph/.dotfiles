@@ -1,4 +1,3 @@
-(modify-frame-parameters (selected-frame) (list (cons 'name "SJ the Sahil Joseph")))
 
 (tool-bar-mode -1)
 (menu-bar-mode -1)
