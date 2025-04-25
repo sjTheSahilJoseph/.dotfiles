@@ -127,8 +127,12 @@
 (use-package web-mode
     :ensure t
     :mode
-    (("\\.jsx\\'" . web-mode)
-        ("\\.tsx\\'" . web-mode))
+    (
+        ("\\.jsx\\'" . web-mode)
+        ("\\.tsx\\'" . web-mode)
+        ("\\.html\\'" . web-mode)
+        ("\\.css\\'" . web-mode)
+        )
     )
 
 (defun my-web-mode-hook ()
