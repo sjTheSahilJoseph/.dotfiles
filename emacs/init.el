@@ -9,8 +9,8 @@
 (when (bound-and-true-p tooltip-mode)
     (tooltip-mode -1))
 
-;;(add-to-list 'default-frame-alist '(fullscreen . maximized))
-(add-hook 'window-setup-hook 'toggle-frame-fullscreen t)
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+;;(add-hook 'window-setup-hook 'toggle-frame-fullscreen t)
 
 
 (setq-default cursor-type 'box)
