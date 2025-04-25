@@ -10,6 +10,7 @@
     (tooltip-mode -1))
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+(split-window-horizontally)
 
 (setq-default cursor-type 'box)
 (set-cursor-color "#40ff40")
