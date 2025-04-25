@@ -10,8 +10,6 @@
     (tooltip-mode -1))
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
-;;(add-hook 'window-setup-hook 'toggle-frame-fullscreen t)
-
 
 (setq-default cursor-type 'box)
 (set-cursor-color "#40ff40")
@@ -191,8 +189,29 @@
 (add-hook 'dired-mode-hook (lambda () (dired-hide-details-mode 1)))
 
 (put 'dired-find-alternate-file 'disabled nil)
-(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
-(define-key dired-mode-map (kbd "/") (lambda () (interactive) (find-alternate-file "..")))
+(with-eval-after-load 'dired
+    (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
+    (define-key dired-mode-map (kbd "/") 
+        (lambda () (interactive) (find-alternate-file "..")))
+    )
+
+(defun indent-whole-buffer ()
+    "Indent the entire buffer."
+    (interactive)
+    (indent-region (point-min) (point-max)))
+
+(global-set-key (kbd "C-1") 'next-error)
+(global-set-key (kbd "C-2") 'previous-error)
+(global-set-key (kbd "C-3") 'kmacro-start-macro-or-insert-counter)
+(global-set-key (kbd "C-4") 'kmacro-end-and-call-macro)
+(global-set-key (kbd "C-5") 'run-build-script)
+(global-set-key (kbd "C-6") 'hl-line-mode)
+(global-set-key (kbd "C-7") 'query-replace)
+(global-set-key (kbd "C-8") 'eval-region)
+;;(global-set-key (kbd "C-9") ')
+(global-set-key (kbd "C-0") 'indent-whole-buffer)
+
+
 
 (global-set-key (kbd "<f1>") 'next-error)
 (global-set-key (kbd "<f2>") 'previous-error)
@@ -203,11 +222,8 @@
 (global-set-key (kbd "<f7>") 'query-replace)
 (global-set-key (kbd "<f8>") 'eval-region)
 ;;(global-set-key (kbd "<f9>") ')
-;;(global-set-key (kbd "<f10>") ')
+(global-set-key (kbd "<f10>") 'indent-whole-buffer)
 (global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
 ;;(global-set-key (kbd "<f12>") ')
 
 (global-set-key (kbd "C-z") nil)
-
-
-(put 'dired-find-alternate-file 'disabled nil)
