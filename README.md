@@ -16,48 +16,48 @@ These are my *personal* __.dotfiles__.
 ### IDEs and Software Development Stuff
 // I don't write code using IDEs, I write code using Emacs.
 // Keep open IDEs side by side. But write code in Emacs.
-    - Microsoft Visual Studio Community (just for compiler)
-    - PyCharm
-    - CLion
-    - WebStrom
-    - Rider
-    - PhpStrom
-    - IntelliJ Idea
-    - Microsoft Visual Studio Code (Just keep in computer, not use)
-    - Unity Engine
-    - Unreal Engine
-    - Godot Engine
+- Microsoft Visual Studio Community (just for compiler)
+- PyCharm
+- CLion
+- WebStrom
+- Rider
+- PhpStrom
+- IntelliJ Idea
+- Microsoft Visual Studio Code (Just keep in computer, not use)
+- Unity Engine
+- Unreal Engine
+- Godot Engine
 
 ### Media
-    - Windows Default Media Player
-    - Adobe Photoshop
-    - Adobe Illustrator
-    - Adobe Audition
-    - Adobe After Effects
-    - Adobe Premiere Pro
-    - Adobe Lightroom
-    - FL Studio
-    - OBS Studio
+- Windows Default Media Player
+- Adobe Photoshop
+- Adobe Illustrator
+- Adobe Audition
+- Adobe After Effects
+- Adobe Premiere Pro
+- Adobe Lightroom
+- FL Studio
+- OBS Studio
 
 ### Management, Communication & Social
-    - Gmail
-    - WhatsApp
-    - Discord
-    - Instagram
-    - Facebook
-    - Massenger
-    - Zoom
-    - Google Meet
-    - Slack
-    - YouTube
-    - Threads
-    - LinkedIn
-    - GitHub
-    - Stack Overflow
-    - Reddit
-    - Google GSuit (Docs, Sheets, Slides, etc...)
+- Gmail
+- WhatsApp
+- Discord
+- Instagram
+- Facebook
+- Massenger
+- Zoom
+- Google Meet
+- Slack
+- YouTube
+- Threads
+- LinkedIn
+- GitHub
+- Stack Overflow
+- Reddit
+- Google GSuit (Docs, Sheets, Slides, etc...)
         
 ### Personal
-    - Wallpaper & Coding fonts (/assets)
-    - Dark Mode whenever possible
+- Wallpaper & Coding fonts (/assets)
+- Dark Mode whenever possible
 
