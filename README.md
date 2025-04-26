@@ -5,13 +5,13 @@ These are my *personal* __.dotfiles__.
 ## Softwares I use:
 
 ### Operating System
-    - Microsoft Windows 11 x64
+- Microsoft Windows 11 x64
     
 ### Terminal
-    - Microsoft Terminal
+- Microsoft Terminal
     
 ### Text Editor
-    - Emacs
+- Emacs
     
 ### IDEs and Software Development Stuff
 // I don't write code using IDEs, I write code using Emacs.
