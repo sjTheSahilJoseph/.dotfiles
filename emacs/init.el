@@ -153,6 +153,11 @@
     :defer t
     )
 
+(use-package magit
+    :ensure t
+    :defer t
+    )
+
 (add-hook 'web-mode-hook 'emmet-mode)
 
 (defun my-web-mode-hook ()
