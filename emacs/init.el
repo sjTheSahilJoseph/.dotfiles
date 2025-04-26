@@ -6,7 +6,7 @@
 (setq echo-keystrokes nil)
 (global-hl-line-mode 0)
 (column-number-mode t)
-(global-subword-mode 1)
+(global-subword-mode -1)
 (when (bound-and-true-p tooltip-mode)
     (tooltip-mode -1))
 
@@ -148,7 +148,6 @@
         )
     )
 
-
 (use-package emmet-mode
     :ensure t
     :defer t
@@ -230,6 +229,9 @@
 ;;(global-set-key (kbd "<f9>") ')
 (global-set-key (kbd "<f10>") 'indent-whole-buffer)
 (global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
-;;(global-set-key (kbd "<f12>") ')
 
+;;(global-set-key (kbd "<f12>") ')
 (global-set-key (kbd "C-z") nil)
+
+
+
