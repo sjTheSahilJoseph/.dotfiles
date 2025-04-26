@@ -13,17 +13,20 @@ These are my *personal* __.dotfiles__.
 ### Text Editor
     - Emacs
     
-### IDEs
+### IDEs and Software Development Stuff
 // I don't write code using IDEs, I write code using Emacs.
 // Keep open IDEs side by side. But write code in Emacs.
     - Microsoft Visual Studio Community (just for compiler)
-    - PyCharm for Python
-    - CLion for C/C++
-    - WebStrom for JavaScript, TypeScript
-    - Rider for C#, .NET, Game Programming
-    - PhpStrom for PHP
-    - IntelliJ Idea for Java & Kotlin
-    - Microsoft Visual Studio Code (For React Native & Small HTML stuff)
+    - PyCharm
+    - CLion
+    - WebStrom
+    - Rider
+    - PhpStrom
+    - IntelliJ Idea
+    - Microsoft Visual Studio Code (Just keep in computer, not use)
+    - Unity Engine
+    - Unreal Engine
+    - Godot Engine
 
 ### Media
     - Windows Default Media Player
