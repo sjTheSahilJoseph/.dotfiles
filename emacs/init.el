@@ -153,11 +153,6 @@
     :defer t
     )
 
-(use-package magit
-    :ensure t
-    :defer t
-    )
-
 (add-hook 'web-mode-hook 'emmet-mode)
 
 (defun my-web-mode-hook ()
@@ -237,6 +232,8 @@
 
 ;;(global-set-key (kbd "<f12>") ')
 (global-set-key (kbd "C-z") nil)
+
+
 
 
 
