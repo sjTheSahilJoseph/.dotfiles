@@ -2,8 +2,7 @@
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": [],
-    "alwaysShowNotificationIcon": true,
-    "alwaysShowTabs": false,
+    "centerOnLaunch": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
@@ -12,10 +11,6 @@
         {
             "id": "Terminal.CopyToClipboard",
             "keys": "ctrl+c"
-        },
-        {
-            "id": "Terminal.FindText",
-            "keys": "ctrl+shift+f"
         },
         {
             "id": "Terminal.PasteFromClipboard",
@@ -36,17 +31,13 @@
     {
         "defaults": 
         {
-            "backgroundImage": null,
-            "backgroundImageOpacity": 0.11,
-            "colorScheme": "Love Is An Illusion",
-            "cursorShape": "vintage",
+            "colorScheme": "Campbell",
+            "cursorShape": "filledBox",
             "experimental.retroTerminalEffect": false,
             "font": 
             {
-                "face": "Liberation Mono",
-                "size": 12
-            },
-            "scrollbarState": "always"
+                "face": "Liberation Mono"
+            }
         },
         "list": 
         [
@@ -69,63 +60,25 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "guid": "{06fd1be9-efac-5a70-96b5-31da857c6107}",
+                "guid": "{d3d6ac1f-ef94-543c-b146-33eb4cda5000}",
                 "hidden": false,
                 "name": "Developer Command Prompt for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
-                "guid": "{8107d849-c355-5955-a7a5-171932539502}",
+                "guid": "{df74752c-5129-5c3f-8f60-a48d0636ae28}",
                 "hidden": false,
                 "name": "Developer PowerShell for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
-                "hidden": true,
-                "name": "Visual Studio Debug Console",
-                "source": "VSDebugConsole"
-            },
-            {
-                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
-                "hidden": false,
-                "name": "Git Bash",
-                "source": "Git"
             }
         ]
     },
-    "schemes": 
-    [
-        {
-            "background": "#000000",
-            "black": "#000000",
-            "blue": "#C0C0C0",
-            "brightBlack": "#C0C0C0",
-            "brightBlue": "#C0C0C0",
-            "brightCyan": "#C0C0C0",
-            "brightGreen": "#C0C0C0",
-            "brightPurple": "#C0C0C0",
-            "brightRed": "#C0C0C0",
-            "brightWhite": "#C0C0C0",
-            "brightYellow": "#C0C0C0",
-            "cursorColor": "#C0C0C0",
-            "cyan": "#C0C0C0",
-            "foreground": "#C0C0C0",
-            "green": "#C0C0C0",
-            "name": "Love Is An Illusion",
-            "purple": "#C0C0C0",
-            "red": "#C0C0C0",
-            "selectionBackground": "#161616",
-            "white": "#C0C0C0",
-            "yellow": "#C0C0C0"
-        }
-    ],
-    "showTabsInTitlebar": true,
-    "tabWidthMode": "equal",
-    "theme": "legacyDark",
-    "themes": [],
-    "useAcrylicInTabRow": true
+    "schemes": [],
+    "theme": "dark",
+    "themes": []
 }
+
+
 
 
 
