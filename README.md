@@ -2,6 +2,19 @@
 # .dotfiles - SJ the Sahil Joseph
 These are my *personal* __.dotfiles__.
 
+## Settings:
+
+### Emacs
+- emacs directory
+### Terminal
+- terminal_settings.json
+### IntelliJ IDEs
+- Online Sync
+### VS Code
+- Just use default
+### Microsoft Visual Studio
+- Just use default
+
 ## Softwares I use:
 
 ### Operating System
