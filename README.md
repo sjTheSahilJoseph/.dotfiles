@@ -8,7 +8,7 @@ These are my *personal* __.dotfiles__.
 - emacs directory
 ### Terminal
 - terminal_settings.json
-### IntelliJ IDEs
+### Jetbrains IDEs
 - Online Sync
 ### VS Code
 - Just use default
