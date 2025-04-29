@@ -13,7 +13,7 @@ These are my *personal* __.dotfiles__.
 ### VS Code
 - Just use default
 ### Microsoft Visual Studio
-- Just use default
+- visual_studio_settings.vssettings
 
 ## Softwares I use:
 
@@ -29,13 +29,11 @@ These are my *personal* __.dotfiles__.
 ### IDEs and Software Development Stuff
 // I don't write code using IDEs, I write code using Emacs.
 // Keep open IDEs side by side. But write code in Emacs.
-- Microsoft Visual Studio Community (just for compiler)
-- PyCharm
-- CLion
-- WebStrom
-- Rider
-- PhpStrom
-- IntelliJ Idea
+- Microsoft Visual Studio Community (for C/C++/C#)
+- PyCharm (for all kind of python thing)
+- WebStrom (for javascript and typescript development)
+- PhpStrom (for php)
+- IntelliJ Idea (for java and kotlin)
 - Microsoft Visual Studio Code (Just keep in computer, not use)
 - Unity Engine
 - Unreal Engine
