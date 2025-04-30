@@ -10,8 +10,6 @@ These are my *personal* __.dotfiles__.
 - terminal_settings.json
 ### Jetbrains IDEs
 - Online Sync
-### VS Code
-- Online Sync
 ### Microsoft Visual Studio
 - visual_studio_settings.vssettings
 
@@ -31,7 +29,7 @@ These are my *personal* __.dotfiles__.
 // Keep open IDEs side by side. But write code in Emacs.
 - Microsoft Visual Studio Community (for C/C++/C#)
 - PyCharm (for all kind of python thing)
-- Microsoft Visual Studio Code (for javascript and typescript development)
+- WebStrom (for javascript and typescript development)
 - Unity Engine
 - Unreal Engine
 - Godot Engine
