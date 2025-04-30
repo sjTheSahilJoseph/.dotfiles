@@ -11,7 +11,7 @@ These are my *personal* __.dotfiles__.
 ### Jetbrains IDEs
 - Online Sync
 ### VS Code
-- Just use default
+- Online Sync
 ### Microsoft Visual Studio
 - visual_studio_settings.vssettings
 
@@ -31,10 +31,7 @@ These are my *personal* __.dotfiles__.
 // Keep open IDEs side by side. But write code in Emacs.
 - Microsoft Visual Studio Community (for C/C++/C#)
 - PyCharm (for all kind of python thing)
-- WebStrom (for javascript and typescript development)
-- PhpStrom (for php)
-- IntelliJ Idea (for java and kotlin)
-- Microsoft Visual Studio Code (Just keep in computer, not use)
+- Microsoft Visual Studio Code (for javascript and typescript development)
 - Unity Engine
 - Unreal Engine
 - Godot Engine
