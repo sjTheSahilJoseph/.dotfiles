@@ -27,9 +27,10 @@ These are my *personal* __.dotfiles__.
 ### IDEs and Software Development Stuff
 // I don't write code using IDEs, I write code using Emacs.
 // Keep open IDEs side by side. But write code in Emacs.
-- Microsoft Visual Studio Community (for C/C++/C#)
+- Microsoft Visual Studio Community (for C/C++ & Installing some stuff)
 - PyCharm (for all kind of python thing)
 - WebStrom (for javascript and typescript development)
+- Rider (for C# .NET)
 - Unity Engine
 - Unreal Engine
 - Godot Engine
