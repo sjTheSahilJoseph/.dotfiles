@@ -84,9 +84,9 @@
 (setq inhibit-message t)
 
 (defun suppress-all-messages (orig-fun &rest args)
-  "Completely silence the message system."
-  (let ((inhibit-message t))
-    (apply orig-fun args)))
+    "Completely silence the message system."
+    (let ((inhibit-message t))
+        (apply orig-fun args)))
 
 (advice-add 'message :around #'suppress-all-messages)
 
@@ -155,6 +155,38 @@
 
 (add-hook 'web-mode-hook 'emmet-mode)
 
+
+
+(defvar my/html-class-overlay-list nil
+    "List of overlays hiding long class attributes.")
+
+(defvar my/html-class-names-hidden nil
+    "Flag to track whether class names are currently hidden.")
+
+(defun my/html-toggle-long-class-names ()
+    "Toggle visibility of long class or className attributes in web-mode."
+    (interactive)
+    (if my/html-class-names-hidden
+        (progn
+            (mapc 'delete-overlay my/html-class-overlay-list)
+            (setq my/html-class-overlay-list nil)
+            (setq my/html-class-names-hidden nil)
+            (message "Class names shown."))
+        (save-excursion
+            (goto-char (point-min))
+            (setq my/html-class-overlay-list nil)
+            (while (re-search-forward
+                       ;; Match: class="...", className="...", className={"..."}, className={`...`}
+                       "\\(class\\|className\\)=\\(?:\"\\([^\"]\\{20,\\}\\)\"\\|{\\(?:\"\\([^\"]\\{20,\\}\\)\"\\|`\\([^`]\\{20,\\}\\)`\\)}\\)"
+                       nil t)
+                (let ((ov (make-overlay (match-beginning 2) (match-end 2))))
+                    (overlay-put ov 'invisible t)
+                    (push ov my/html-class-overlay-list)))
+            (setq my/html-class-names-hidden t)
+            (message "Long class names hidden."))))
+
+
+
 (defun my-web-mode-hook ()
     "Hooks for Web mode."
     (setq web-mode-markup-indent-offset 4)
@@ -165,6 +197,7 @@
     (setq web-mode-enable-auto-indentation nil)
     (setq web-mode-enable-auto-opening nil)
     (setq web-mode-enable-auto-quoting  nil)
+    (define-key web-mode-map (kbd "C-c t") #'my/html-toggle-long-class-names)
     )
 
 
@@ -232,6 +265,7 @@
 
 ;;(global-set-key (kbd "<f12>") ')
 (global-set-key (kbd "C-z") nil)
+
 
 
 
