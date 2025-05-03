@@ -43,7 +43,8 @@
 (load-theme 'loveisanillusion.emacs t)
 
 (setq inhibit-startup-message t)
-(setq inhibit-message nil)
+(setq inhibit-message t)
+(set-message-beep 'silent)
 (setq initial-scratch-message "\
 ;; SJ the Sahil Joseph
 
@@ -78,17 +79,6 @@
 (setq make-backup-files nil)
 
 (global-auto-revert-mode t)
-
-(set-message-beep 'silent)
-
-(setq inhibit-message t)
-
-(defun suppress-all-messages (orig-fun &rest args)
-    "Completely silence the message system."
-    (let ((inhibit-message t))
-        (apply orig-fun args)))
-
-(advice-add 'message :around #'suppress-all-messages)
 
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -169,7 +159,7 @@
             (mapc #'delete-overlay my/html-class-overlay-list)
             (setq my/html-class-overlay-list nil)
             (setq my/html-class-names-hidden nil)
-            (message "Class names shown."))
+            )
         (save-excursion
             (goto-char (point-min))
             (setq my/html-class-overlay-list nil)
@@ -185,7 +175,7 @@
                                 (push ov my/html-class-overlay-list)
                                 (setq count (1+ count))))))
                 (setq my/html-class-names-hidden t)
-                (message "Hid %d long class names." count)))))
+                ))))
 
 (defun my-web-mode-hook ()
     "Hooks for Web mode."
@@ -223,9 +213,6 @@
 
 (global-set-key (kbd "C-<tab>") 'indent-region)
 
-(setq dired-listing-switches "-lah --group-directories-first")
-(add-hook 'dired-mode-hook (lambda () (dired-hide-details-mode 1)))
-
 (put 'dired-find-alternate-file 'disabled nil)
 (with-eval-after-load 'dired
     (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
@@ -248,7 +235,7 @@
 (global-set-key (kbd "C-6") 'hl-line-mode)
 (global-set-key (kbd "C-7") 'query-replace)
 (global-set-key (kbd "C-8") 'eval-region)
-;;(global-set-key (kbd "C-9") ')
+(global-set-key (kbd "C-9") 'visual-line-mode)
 (global-set-key (kbd "C-0") 'indent-whole-buffer)
 
 (global-set-key (kbd "<f1>") 'next-error)
@@ -259,7 +246,7 @@
 (global-set-key (kbd "<f6>") 'hl-line-mode)
 (global-set-key (kbd "<f7>") 'query-replace)
 (global-set-key (kbd "<f8>") 'eval-region)
-;;(global-set-key (kbd "<f9>") ')
+(global-set-key (kbd "<f9>") #'visual-line-mode)
 (global-set-key (kbd "<f10>") 'indent-whole-buffer)
 (global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
 
