@@ -31,7 +31,7 @@
     {
         "defaults": 
         {
-            "colorScheme": "loveisanillusion",
+            "colorScheme": "LoveIsAnIllusion",
             "cursorShape": "underscore",
             "experimental.retroTerminalEffect": false,
             "font": 
@@ -75,29 +75,29 @@
     },
     "schemes": 
     [
-        {
-            "background": "#000000",
-            "black": "#0C0C0C",
-            "blue": "#0037DA",
-            "brightBlack": "#767676",
-            "brightBlue": "#3B78FF",
-            "brightCyan": "#61D6D6",
-            "brightGreen": "#16C60C",
-            "brightPurple": "#B4009E",
-            "brightRed": "#E74856",
-            "brightWhite": "#F2F2F2",
-            "brightYellow": "#F9F1A5",
-            "cursorColor": "#40FF40",
-            "cyan": "#3A96DD",
-            "foreground": "#C0C0C0",
-            "green": "#13A10E",
-            "name": "loveisanillusion",
-            "purple": "#881798",
-            "red": "#C50F1F",
-            "selectionBackground": "#FFFFFF",
-            "white": "#CCCCCC",
-            "yellow": "#C19C00"
-        }
+ {
+            "background": "#071307",
+            "black": "#000000",
+            "blue": "#2090f0",
+            "brightBlack": "#2090f0",
+            "brightBlue": "#2090f0",
+            "brightCyan": "#2090f0",
+            "brightGreen": "#00DD00",
+            "brightPurple": "#00DD00",
+            "brightRed": "#FF0000",
+            "brightWhite": "#C7C7C7",
+            "brightYellow": "#FF9900",
+            "cursorColor": "#40ff40",
+            "cyan": "#2090f0",
+            "foreground": "#90b080",
+            "green": "#00DD00",
+            "name": "LoveIsAnIllusion",
+            "purple": "#00DD00",
+            "red": "#FF0000",
+            "selectionBackground": "#0b0b0b",
+            "white": "#C7C7C7",
+            "yellow": "#d08f20"
+        },
     ],
     "theme": "dark",
     "themes": []
