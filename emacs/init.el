@@ -213,6 +213,7 @@
 
 (global-set-key (kbd "C-<tab>") 'indent-region)
 
+(add-hook 'dired-mode-hook #'dired-hide-details-mode)
 (put 'dired-find-alternate-file 'disabled nil)
 (with-eval-after-load 'dired
     (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
