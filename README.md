@@ -5,7 +5,7 @@ These are my *personal* __.dotfiles__.
 ## Softwares and Settings:
 
 ### Operating System
-- Microsoft Windows 10 x64
+- Microsoft Windows 10 Pro x64
     
 ### Terminal
 - CMD (Windows Terminal (old windows 10))
@@ -14,7 +14,7 @@ These are my *personal* __.dotfiles__.
 - Screen Size = 120 x 30, 
     
 ### Text Editor
-- Emacs
+- Emacs 30.1
     
 ### IDEs and Software Development Stuff
 // I don't write code using IDEs, I write code using Emacs.
@@ -29,11 +29,11 @@ These are my *personal* __.dotfiles__.
 
 ### Media
 - Windows Default Media Player 2025
-- Adobe Photoshop CC 2017
-- Adobe Audition CC 2017
-- Adobe After Effects CC 2017
-- Adobe Premiere Pro CC 2017
-- Adobe Lightroom CC 2017
+- Adobe Photoshop 2025
+- Adobe Audition 2025
+- Adobe After Effects 2025
+- Adobe Premiere Pro 2025
+- Adobe Lightroom 2025
 - FL Studio 2025
 - OBS Studio 2025
 
