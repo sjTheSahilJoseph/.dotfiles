@@ -75,34 +75,33 @@
     },
     "schemes": 
     [
-		{
+        {
             "background": "#071307",
-			"black": "#000000",
-			"blue": "#2090f0",
-			"brightBlack": "#2090f0",
-			"brightBlue": "#2090f0",
-			"brightCyan": "#50ff30",
-			"brightGreen": "#50ff30",
-			"brightPurple": "#d08f20",
-			"brightRed": "#FF0000",
-			"brightWhite": "#C7C7C7",
-			"brightYellow": "#d08f20",
-			"cursorColor": "#40ff40",
-			"cyan": "#50ff30",
-			"foreground": "#90b080",
-			"green": "#50ff30",
-			"name": "LoveIsAnIllusion",
-			"purple": "#d08f20",
-			"red": "#FF0000",
-			"selectionBackground": "#0b0b0b",
-			"white": "#C7C7C7",
-			"yellow": "#d08f20"
-		}
+            "black": "#000000",
+            "blue": "#2090F0",
+            "brightBlack": "#2090F0",
+            "brightBlue": "#2090F0",
+            "brightCyan": "#50FF30",
+            "brightGreen": "#50FF30",
+            "brightPurple": "#D08F20",
+            "brightRed": "#FF0000",
+            "brightWhite": "#C7C7C7",
+            "brightYellow": "#D08F20",
+            "cursorColor": "#40FF40",
+            "cyan": "#50FF30",
+            "foreground": "#90B080",
+            "green": "#50FF30",
+            "name": "LoveIsAnIllusion",
+            "purple": "#D08F20",
+            "red": "#FF0000",
+            "selectionBackground": "#0B0B0B",
+            "white": "#C7C7C7",
+            "yellow": "#D08F20"
+        }
     ],
     "theme": "dark",
     "themes": []
 }
-
 
 
 
