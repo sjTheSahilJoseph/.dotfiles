@@ -2,24 +2,16 @@
 # .dotfiles - SJ the Sahil Joseph
 These are my *personal* __.dotfiles__.
 
-## Settings:
-
-### Emacs
-- emacs directory
-### Terminal
-- terminal_settings.json
-### Jetbrains IDEs
-- Online Sync
-### Microsoft Visual Studio
-- visual_studio_settings.vssettings
-
-## Softwares I use:
+## Softwares and Settings:
 
 ### Operating System
-- Microsoft Windows 11 x64
+- Microsoft Windows 10 x64
     
 ### Terminal
-- Microsoft Terminal
+- CMD (Windows Terminal (old windows 10))
+- Fonts: Liberation Mono 16px
+- BG Color = #071307, FG Color = #90B080, Cursor = Block #40ff40.
+- Screen Size = 120 x 30, 
     
 ### Text Editor
 - Emacs
@@ -36,15 +28,14 @@ These are my *personal* __.dotfiles__.
 - Godot Engine
 
 ### Media
-- Windows Default Media Player
-- Adobe Photoshop
-- Adobe Illustrator
-- Adobe Audition
-- Adobe After Effects
-- Adobe Premiere Pro
-- Adobe Lightroom
-- FL Studio
-- OBS Studio
+- Windows Default Media Player 2025
+- Adobe Photoshop CC 2017
+- Adobe Audition CC 2017
+- Adobe After Effects CC 2017
+- Adobe Premiere Pro CC 2017
+- Adobe Lightroom CC 2017
+- FL Studio 2025
+- OBS Studio 2025
 
 ### Management, Communication & Social
 - Gmail
@@ -66,5 +57,5 @@ These are my *personal* __.dotfiles__.
         
 ### Personal
 - Wallpaper & Coding fonts (/assets)
-- Dark Mode whenever possible
+- Mostly Light Mode. Other than IDEs, Code Editor, and Terminals.
 
