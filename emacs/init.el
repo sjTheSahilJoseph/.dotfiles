@@ -258,5 +258,11 @@
 (require 'ido)
 (ido-mode t)
 
+
 (global-set-key (kbd "C-x C-f") 'ido-find-file)
 (global-set-key (kbd "C-x b") 'ido-switch-buffer)
+(global-set-key (kbd "C-x C-b") 'ido-switch-buffer-other-window)
+
+
+
+
