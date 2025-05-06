@@ -9,7 +9,7 @@ These are my *personal* __.dotfiles__.
     
 ### Terminal
 - CMD (Windows Terminal (old windows 10))
-- Fonts: Liberation Mono 16px
+- Fonts: Liberation Mono 18px
 - BG Color = #071307, FG Color = #90B080, Cursor = Block #40ff40.
 - Screen Size = 120 x 30, 
     
