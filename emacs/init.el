@@ -266,5 +266,7 @@
 
 (setq kill-do-not-save-duplicates t)
 (setq save-interprogram-paste-before-kill nil)
+(setq kill-ring-max 0)
+
 
 
