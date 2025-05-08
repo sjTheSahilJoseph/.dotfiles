@@ -266,7 +266,24 @@
 
 (setq kill-do-not-save-duplicates t)
 (setq save-interprogram-paste-before-kill nil)
-(setq kill-ring-max 0)
+(setq select-enable-clipboard t)
+
+(defun suppress-kill-ring (orig-fun &rest args)
+  "Prevent text from being saved to the kill-ring."
+  (let ((kill-ring nil)
+        (kill-ring-yank-pointer nil)
+        (interprogram-cut-function nil))
+    (apply orig-fun args)))
+
+(advice-add 'kill-word :around #'suppress-kill-ring)
+(advice-add 'backward-kill-word :around #'suppress-kill-ring)
+
+
+
+
+
+
+
 
 
 
