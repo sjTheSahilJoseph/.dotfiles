@@ -264,5 +264,7 @@
 (global-set-key (kbd "C-x C-b") 'ido-switch-buffer-other-window)
 
 
+(setq kill-do-not-save-duplicates t)
+(setq save-interprogram-paste-before-kill nil)
 
 
