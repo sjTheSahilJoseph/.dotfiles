@@ -250,9 +250,17 @@
 (global-set-key (kbd "<f9>") #'visual-line-mode)
 (global-set-key (kbd "<f10>") 'indent-whole-buffer)
 (global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
-
 ;;(global-set-key (kbd "<f12>") ')
-(global-set-key (kbd "C-z") nil)
+;;(global-set-key (kbd "C-z") 'e)
+
+(global-set-key (kbd "C-z")
+                (lambda () (interactive)
+                  (point-to-register ?r)
+                  (message "Saved position to register r")))
+
+(global-set-key (kbd "<f12>")
+                (lambda () (interactive)
+                  (jump-to-register ?r)))
 
 
 (require 'ido)
@@ -277,6 +285,10 @@
 
 (advice-add 'kill-word :around #'suppress-kill-ring)
 (advice-add 'backward-kill-word :around #'suppress-kill-ring)
+
+
+
+
 
 
 
