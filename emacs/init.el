@@ -262,6 +262,7 @@
                 (lambda () (interactive)
                   (jump-to-register ?r)))
 
+
 (require 'ido)
 (ido-mode t)
 
