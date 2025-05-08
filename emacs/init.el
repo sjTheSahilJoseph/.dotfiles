@@ -258,7 +258,7 @@
                   (point-to-register ?r)
                   (message "Saved position to register r")))
 
-(global-set-key (kbd "<f12>")
+(global-set-key (kbd "C-S-z")
                 (lambda () (interactive)
                   (jump-to-register ?r)))
 
