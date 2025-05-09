@@ -250,17 +250,58 @@
 (global-set-key (kbd "<f9>") #'visual-line-mode)
 (global-set-key (kbd "<f10>") 'indent-whole-buffer)
 (global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
-;;(global-set-key (kbd "<f12>") ')
-;;(global-set-key (kbd "C-z") 'e)
+(global-set-key (kbd "<f12>") 'point-to-register)
 
-(global-set-key (kbd "C-z")
-                (lambda () (interactive)
-                  (point-to-register ?r)
-                  (message "Saved position to register r")))
+(define-prefix-command 'my-position-map)
+(global-set-key (kbd "C-c p") 'my-position-map)
 
-(global-set-key (kbd "C-S-z")
-                (lambda () (interactive)
-                  (jump-to-register ?r)))
+(define-key my-position-map (kbd "s 1")
+  (lambda () (interactive)
+    (point-to-register ?1)
+    (message "Saved position to register 1")))
+
+(define-key my-position-map (kbd "s 2")
+  (lambda () (interactive)
+    (point-to-register ?2)
+    (message "Saved position to register 2")))
+
+(define-key my-position-map (kbd "s 3")
+  (lambda () (interactive)
+    (point-to-register ?3)
+    (message "Saved position to register 3")))
+
+
+(define-key my-position-map (kbd "s 4")
+  (lambda () (interactive)
+    (point-to-register ?4)
+    (message "Saved position to register 4")))
+
+(define-key my-position-map (kbd "j 1")
+  (lambda () (interactive)
+    (jump-to-register ?1)))
+
+(define-key my-position-map (kbd "j 2")
+  (lambda () (interactive)
+    (jump-to-register ?2)))
+
+
+(define-key my-position-map (kbd "j 3")
+  (lambda () (interactive)
+    (jump-to-register ?3)))
+
+(define-key my-position-map (kbd "j 4")
+  (lambda () (interactive)
+    (jump-to-register ?4)))
+
+
+;;(global-set-key (kbd "C-j") 'indent-whole-buffer)
+;;(global-set-key (kbd "C-h") 'indent-whole-buffer)
+;;(global-set-key (kbd "C-<return>") 'indent-whole-buffer)
+;;(global-set-key (kbd "C-\\") 'indent-whole-buffer)
+;;(global-set-key (kbd "C-;") 'indent-whole-buffer)
+;;(global-set-key (kbd "C-'") 'indent-whole-buffer)
+;;(global-set-key (kbd "C-[") 'indent-whole-buffer)
+;;(global-set-key (kbd "C-]") 'indent-whole-buffer)
 
 
 (require 'ido)
@@ -277,11 +318,11 @@
 (setq select-enable-clipboard t)
 
 (defun suppress-kill-ring (orig-fun &rest args)
-  "Prevent text from being saved to the kill-ring."
-  (let ((kill-ring nil)
-        (kill-ring-yank-pointer nil)
-        (interprogram-cut-function nil))
-    (apply orig-fun args)))
+    "Prevent text from being saved to the kill-ring."
+    (let ((kill-ring nil)
+             (kill-ring-yank-pointer nil)
+             (interprogram-cut-function nil))
+        (apply orig-fun args)))
 
 (advice-add 'kill-word :around #'suppress-kill-ring)
 (advice-add 'backward-kill-word :around #'suppress-kill-ring)
