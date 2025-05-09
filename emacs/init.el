@@ -256,42 +256,42 @@
 (global-set-key (kbd "C-c p") 'my-position-map)
 
 (define-key my-position-map (kbd "s 1")
-  (lambda () (interactive)
-    (point-to-register ?1)
-    (message "Saved position to register 1")))
+    (lambda () (interactive)
+        (point-to-register ?1)
+        (message "Saved position to register 1")))
 
 (define-key my-position-map (kbd "s 2")
-  (lambda () (interactive)
-    (point-to-register ?2)
-    (message "Saved position to register 2")))
+    (lambda () (interactive)
+        (point-to-register ?2)
+        (message "Saved position to register 2")))
 
 (define-key my-position-map (kbd "s 3")
-  (lambda () (interactive)
-    (point-to-register ?3)
-    (message "Saved position to register 3")))
+    (lambda () (interactive)
+        (point-to-register ?3)
+        (message "Saved position to register 3")))
 
 
 (define-key my-position-map (kbd "s 4")
-  (lambda () (interactive)
-    (point-to-register ?4)
-    (message "Saved position to register 4")))
+    (lambda () (interactive)
+        (point-to-register ?4)
+        (message "Saved position to register 4")))
 
 (define-key my-position-map (kbd "j 1")
-  (lambda () (interactive)
-    (jump-to-register ?1)))
+    (lambda () (interactive)
+        (jump-to-register ?1)))
 
 (define-key my-position-map (kbd "j 2")
-  (lambda () (interactive)
-    (jump-to-register ?2)))
+    (lambda () (interactive)
+        (jump-to-register ?2)))
 
 
 (define-key my-position-map (kbd "j 3")
-  (lambda () (interactive)
-    (jump-to-register ?3)))
+    (lambda () (interactive)
+        (jump-to-register ?3)))
 
 (define-key my-position-map (kbd "j 4")
-  (lambda () (interactive)
-    (jump-to-register ?4)))
+    (lambda () (interactive)
+        (jump-to-register ?4)))
 
 
 ;;(global-set-key (kbd "C-j") ')
