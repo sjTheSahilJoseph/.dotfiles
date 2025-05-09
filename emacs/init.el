@@ -294,14 +294,12 @@
     (jump-to-register ?4)))
 
 
-;;(global-set-key (kbd "C-j") 'indent-whole-buffer)
-;;(global-set-key (kbd "C-h") 'indent-whole-buffer)
-;;(global-set-key (kbd "C-<return>") 'indent-whole-buffer)
-;;(global-set-key (kbd "C-\\") 'indent-whole-buffer)
-;;(global-set-key (kbd "C-;") 'indent-whole-buffer)
-;;(global-set-key (kbd "C-'") 'indent-whole-buffer)
-;;(global-set-key (kbd "C-[") 'indent-whole-buffer)
-;;(global-set-key (kbd "C-]") 'indent-whole-buffer)
+;;(global-set-key (kbd "C-j") ')
+;;(global-set-key (kbd "C-h") ')
+;;(global-set-key (kbd "C-<return>") ')
+;;(global-set-key (kbd "C-\\") ')
+;;(global-set-key (kbd "C-;") ')
+;;(global-set-key (kbd "C-'") ')
 
 
 (require 'ido)
