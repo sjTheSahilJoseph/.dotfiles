@@ -294,13 +294,6 @@
         (jump-to-register ?4)))
 
 
-;;(global-set-key (kbd "C-j") ')
-;;(global-set-key (kbd "C-h") ')
-;;(global-set-key (kbd "C-<return>") ')
-;;(global-set-key (kbd "C-\\") ')
-;;(global-set-key (kbd "C-;") ')
-;;(global-set-key (kbd "C-'") ')
-
 (use-package ido
   :init
     (setq ido-enable-flex-matching t
@@ -349,5 +342,22 @@
 
 (advice-add 'move-text-down :after 'indent-region-advice)
 (advice-add 'move-text-up :after 'indent-region-advice)
+
+(defun my/pulse-line-or-region ()
+  "Pulse the current line if no region is selected, or pulse the region if selected."
+  (interactive)
+  (if (use-region-p)
+      (pulse-momentary-highlight-region (region-beginning) (region-end))
+    (pulse-momentary-highlight-one-line (line-beginning-position))))
+
+(global-set-key (kbd "C-<return>") 'my/pulse-line-or-region)
+
+
+;;(global-set-key (kbd "C-j") ')
+;;(global-set-key (kbd "C-h") ')
+;;(global-set-key (kbd "C-<return>") ')
+;;(global-set-key (kbd "C-\\") ')
+;;(global-set-key (kbd "C-;") ')
+;;(global-set-key (kbd "C-'") ')
 
 
