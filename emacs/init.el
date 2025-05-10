@@ -325,8 +325,22 @@
 (advice-add 'kill-word :around #'suppress-kill-ring)
 (advice-add 'backward-kill-word :around #'suppress-kill-ring)
 
+(use-package move-text
+    :ensure t
+    )
 
+(global-set-key (kbd "C-m") 'move-text-up)
+(global-set-key (kbd "C-,") 'move-text-down)
 
+(defun indent-region-advice (&rest ignored)
+  (let ((deactivate deactivate-mark))
+    (if (region-active-p)
+        (indent-region (region-beginning) (region-end))
+      (indent-region (line-beginning-position) (line-end-position)))
+    (setq deactivate-mark deactivate)))
+
+(advice-add 'move-text-down :after 'indent-region-advice)
+(advice-add 'move-text-up :after 'indent-region-advice)
 
 
 
