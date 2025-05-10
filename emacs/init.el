@@ -353,11 +353,6 @@
 (global-set-key (kbd "C-<return>") 'my/pulse-line-or-region)
 
 
-;;(global-set-key (kbd "C-j") ')
-;;(global-set-key (kbd "C-h") ')
-;;(global-set-key (kbd "C-<return>") ')
-;;(global-set-key (kbd "C-\\") ')
-;;(global-set-key (kbd "C-;") ')
-;;(global-set-key (kbd "C-'") ')
+
 
 
