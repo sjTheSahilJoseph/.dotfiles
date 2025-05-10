@@ -303,7 +303,8 @@
 
 (use-package ido
   :init
-  (setq ido-enable-flex-matching t
+    (setq ido-enable-flex-matching t
+        ido-max-window-height 1
         ido-everywhere t)
   :config
   (ido-mode 1))
@@ -348,7 +349,6 @@
 
 (advice-add 'move-text-down :after 'indent-region-advice)
 (advice-add 'move-text-up :after 'indent-region-advice)
-
 
 
 
