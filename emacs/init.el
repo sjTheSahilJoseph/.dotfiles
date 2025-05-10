@@ -301,14 +301,21 @@
 ;;(global-set-key (kbd "C-;") ')
 ;;(global-set-key (kbd "C-'") ')
 
-
-(require 'ido)
-(ido-mode t)
-
+(use-package ido
+  :init
+  (setq ido-enable-flex-matching t
+        ido-everywhere t)
+  :config
+  (ido-mode 1))
 
 (global-set-key (kbd "C-x C-f") 'ido-find-file)
 (global-set-key (kbd "C-x b") 'ido-switch-buffer)
 (global-set-key (kbd "C-x C-b") 'ido-switch-buffer-other-window)
+
+(use-package ido-completing-read+
+  :ensure t
+  :config
+  (ido-ubiquitous-mode 1))
 
 
 (setq kill-do-not-save-duplicates t)
@@ -341,11 +348,6 @@
 
 (advice-add 'move-text-down :after 'indent-region-advice)
 (advice-add 'move-text-up :after 'indent-region-advice)
-
-
-
-
-
 
 
 
