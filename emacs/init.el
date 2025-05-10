@@ -351,6 +351,3 @@
 (advice-add 'move-text-up :after 'indent-region-advice)
 
 
-
-
-
