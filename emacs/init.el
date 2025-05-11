@@ -355,14 +355,15 @@
 (use-package vertico
     :ensure t
     :init
+    (vertico-mode)
     (vertico-buffer-mode)
     )
 
 (use-package orderless
-  :custom
-  (completion-styles '(orderless basic))
-  (completion-category-defaults nil)
-  (completion-category-overrides '((file (styles partial-completion)))))
+    :custom
+    (completion-styles '(orderless basic))
+    (completion-category-defaults nil)
+    (completion-category-overrides '((file (styles partial-completion)))))
 
 
 
