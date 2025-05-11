@@ -294,22 +294,22 @@
         (jump-to-register ?4)))
 
 
-(use-package ido
-  :init
-    (setq ido-enable-flex-matching t
-        ido-max-window-height 1
-        ido-everywhere t)
-  :config
-  (ido-mode 1))
+;; (use-package ido
+;;   :init
+;;     (setq ido-enable-flex-matching t
+;;         ido-max-window-height 1
+;;         ido-everywhere t)
+;;   :config
+;;   (ido-mode 1))
 
-(global-set-key (kbd "C-x C-f") 'ido-find-file)
-(global-set-key (kbd "C-x b") 'ido-switch-buffer)
-(global-set-key (kbd "C-x C-b") 'ido-switch-buffer-other-window)
+;; (global-set-key (kbd "C-x C-f") 'ido-find-file)
+;; (global-set-key (kbd "C-x b") 'ido-switch-buffer)
+;; (global-set-key (kbd "C-x C-b") 'ido-switch-buffer-other-window)
 
-(use-package ido-completing-read+
-  :ensure t
-  :config
-  (ido-ubiquitous-mode 1))
+;; (use-package ido-completing-read+
+;;   :ensure t
+;;   :config
+;;   (ido-ubiquitous-mode 1))
 
 
 (setq kill-do-not-save-duplicates t)
@@ -334,25 +334,35 @@
 (global-set-key (kbd "M-n") 'move-text-down)
 
 (defun indent-region-advice (&rest ignored)
-  (let ((deactivate deactivate-mark))
-    (if (region-active-p)
-        (indent-region (region-beginning) (region-end))
-      (indent-region (line-beginning-position) (line-end-position)))
-    (setq deactivate-mark deactivate)))
+    (let ((deactivate deactivate-mark))
+        (if (region-active-p)
+            (indent-region (region-beginning) (region-end))
+            (indent-region (line-beginning-position) (line-end-position)))
+        (setq deactivate-mark deactivate)))
 
 (advice-add 'move-text-down :after 'indent-region-advice)
 (advice-add 'move-text-up :after 'indent-region-advice)
 
 (defun my/pulse-line-or-region ()
-  "Pulse the current line if no region is selected, or pulse the region if selected."
-  (interactive)
-  (if (use-region-p)
-      (pulse-momentary-highlight-region (region-beginning) (region-end))
-    (pulse-momentary-highlight-one-line (line-beginning-position))))
+    "Pulse the current line if no region is selected, or pulse the region if selected."
+    (interactive)
+    (if (use-region-p)
+        (pulse-momentary-highlight-region (region-beginning) (region-end))
+        (pulse-momentary-highlight-one-line (line-beginning-position))))
 
 (global-set-key (kbd "C-<return>") 'my/pulse-line-or-region)
 
+(use-package vertico
+    :ensure t
+    :init
+    (vertico-buffer-mode)
+    )
 
+(use-package orderless
+  :custom
+  (completion-styles '(orderless basic))
+  (completion-category-defaults nil)
+  (completion-category-overrides '((file (styles partial-completion)))))
 
 
 
