@@ -25,15 +25,11 @@ These are my *personal* __.dotfiles__.
 - Rider (for C# .NET)
 - Unity Engine
 - Unreal Engine
-- Godot Engine
 
 ### Media
-- Windows Default Media Player 2025
-- Adobe Photoshop 2025
-- Adobe Audition 2025
-- Adobe After Effects 2025
-- Adobe Premiere Pro 2025
-- Adobe Lightroom 2025
+- VLC Media Player
+- Adobe Photoshop cs6 x64
+- CapCut 2025 x64
 - FL Studio 2025
 - OBS Studio 2025
 
@@ -53,7 +49,7 @@ These are my *personal* __.dotfiles__.
 - GitHub
 - Stack Overflow
 - Reddit
-- Google GSuit (Docs, Sheets, Slides, etc...)
+- Microsoft Office (Excel, Word, PowerPoint, ...)
         
 ### Personal
 - Wallpaper & Coding fonts (/assets)
