@@ -365,5 +365,8 @@
     (completion-category-defaults nil)
     (completion-category-overrides '((file (styles partial-completion)))))
 
+(setq-default display-buffer-base-action
+              '((display-buffer-reuse-window
+                 display-buffer-same-window)))
 
 
