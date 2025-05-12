@@ -228,17 +228,6 @@
 
 (setq isearch-lazy-highlight nil)
 
-(global-set-key (kbd "C-1") 'next-error)
-(global-set-key (kbd "C-2") 'previous-error)
-(global-set-key (kbd "C-3") 'kmacro-start-macro-or-insert-counter)
-(global-set-key (kbd "C-4") 'kmacro-end-and-call-macro)
-(global-set-key (kbd "C-5") 'run-build-script)
-(global-set-key (kbd "C-6") 'hl-line-mode)
-(global-set-key (kbd "C-7") 'query-replace)
-(global-set-key (kbd "C-8") 'eval-region)
-(global-set-key (kbd "C-9") 'visual-line-mode)
-(global-set-key (kbd "C-0") 'indent-whole-buffer)
-
 (global-set-key (kbd "<f1>") 'next-error)
 (global-set-key (kbd "<f2>") 'previous-error)
 (global-set-key (kbd "<f3>") 'kmacro-start-macro-or-insert-counter)
@@ -292,25 +281,6 @@
 (define-key my-position-map (kbd "j 4")
     (lambda () (interactive)
         (jump-to-register ?4)))
-
-
-;; (use-package ido
-;;   :init
-;;     (setq ido-enable-flex-matching t
-;;         ido-max-window-height 1
-;;         ido-everywhere t)
-;;   :config
-;;   (ido-mode 1))
-
-;; (global-set-key (kbd "C-x C-f") 'ido-find-file)
-;; (global-set-key (kbd "C-x b") 'ido-switch-buffer)
-;; (global-set-key (kbd "C-x C-b") 'ido-switch-buffer-other-window)
-
-;; (use-package ido-completing-read+
-;;   :ensure t
-;;   :config
-;;   (ido-ubiquitous-mode 1))
-
 
 (setq kill-do-not-save-duplicates t)
 (setq save-interprogram-paste-before-kill nil)
@@ -366,3 +336,14 @@
     (completion-category-defaults nil)
     (completion-category-overrides '((file (styles partial-completion)))))
 
+
+(global-set-key (kbd "C-1") 'next-error)
+(global-set-key (kbd "C-2") 'previous-error)
+(global-set-key (kbd "C-3") 'kmacro-start-macro-or-insert-counter)
+(global-set-key (kbd "C-4") 'kmacro-end-and-call-macro)
+(global-set-key (kbd "C-5") 'run-build-script)
+(global-set-key (kbd "C-6") 'hl-line-mode)
+(global-set-key (kbd "C-7") 'query-replace)
+(global-set-key (kbd "C-8") 'eval-region)
+(global-set-key (kbd "C-9") 'visual-line-mode)
+(global-set-key (kbd "C-0") 'indent-whole-buffer)
