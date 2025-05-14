@@ -6,7 +6,6 @@
 (setq echo-keystrokes nil)
 (global-hl-line-mode 0)
 (column-number-mode t)
-(global-subword-mode -1)
 (when (bound-and-true-p tooltip-mode)
     (tooltip-mode -1))
 
@@ -24,11 +23,10 @@
 (setq-default word-wrap t)
 (setq-default truncate-lines t)
 
-(setq-default truncate-lines t)
 (setq enable-recursive-minibuffers nil)
 (setq truncate-partial-width-windows nil)
 (setq sentence-end-double-space nil)
-(setq require-final-newline t)
+(setq require-final-newline nil)
 
 (setq-default scroll-margin 1)
 (setq scroll-conservatively 101)
