@@ -96,6 +96,13 @@
         use-package-expand-minimally t
         warning-minimum-level :error))
 
+
+(use-package markdown-mode
+	:ensure t
+	:defer t
+	)
+
+
 (use-package cc-mode
 	:ensure t
 	:defer t
@@ -345,3 +352,6 @@
 (global-set-key (kbd "C-8") 'eval-region)
 (global-set-key (kbd "C-9") 'visual-line-mode)
 (global-set-key (kbd "C-0") 'indent-whole-buffer)
+
+
+
