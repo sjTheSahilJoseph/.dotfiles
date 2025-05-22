@@ -327,20 +327,27 @@
 
 (global-set-key (kbd "C-<return>") 'my/pulse-line-or-region)
 
-(use-package vertico
-    :ensure t
+(use-package ido
     :init
-    (vertico-mode)
-    (vertico-buffer-mode)
-    )
+    (setq ido-enable-flex-matching t
+        ido-max-window-height 1
+        ido-everywhere t)
+    :config
 
-(use-package orderless
+    (define-key ido-completion-map (kbd "<backtab>") 'ido-prev-match)
+    (define-key ido-completion-map (kbd "<tab>") 'ido-next-match) 
+
+    (ido-mode 1))
+
+(use-package ido-completing-read+
     :ensure t
-    :custom
-    (completion-styles '(orderless basic))
-    (completion-category-defaults nil)
-    (completion-category-overrides '((file (styles partial-completion)))))
+    :config
+    (ido-ubiquitous-mode 1))
 
+
+(global-set-key (kbd "C-x C-f") 'ido-find-file)
+(global-set-key (kbd "C-x b") 'ido-switch-buffer)
+(global-set-key (kbd "C-x C-b") 'ido-switch-buffer-other-window)
 
 (global-set-key (kbd "C-1") 'next-error)
 (global-set-key (kbd "C-2") 'previous-error)
