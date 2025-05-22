@@ -334,9 +334,6 @@
         ido-everywhere t)
     :config
 
-    (define-key ido-completion-map (kbd "<backtab>") 'ido-prev-match)
-    (define-key ido-completion-map (kbd "<tab>") 'ido-next-match) 
-
     (ido-mode 1))
 
 (use-package ido-completing-read+
