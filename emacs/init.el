@@ -340,6 +340,7 @@
     :ensure t
     :config
     (ido-ubiquitous-mode 1))
+(setq ido-auto-merge-work-directories-length -1)
 
 
 (global-set-key (kbd "C-x C-f") 'ido-find-file)
