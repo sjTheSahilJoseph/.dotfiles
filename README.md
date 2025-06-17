@@ -19,12 +19,18 @@ These are my *personal* __.dotfiles__.
 ### IDEs and Software Development Stuff
 // I don't write code using IDEs, I write code using Emacs.
 // Keep open IDEs side by side. But write code in Emacs.
-- Microsoft Visual Studio Community (for C/C++ & Installing some stuff)
-- PyCharm (for all kind of python thing)
-- WebStrom (for javascript and typescript development)
-- Rider (for C# .NET)
-- Unity Engine
-- Unreal Engine
+- Microsoft Visual Studio Community (C/C++/C#).
+- PyCharm (Python).
+- WebStrom (Javascript and Typescript).
+- PhpStorm (PHP).
+- Unity Engine.
+- Unreal Engine.
+
+### Browser
+- Firefox
+
+### Cloud Backup
+- Dropbox for everything.
 
 ### Media
 - VLC Media Player
@@ -44,14 +50,18 @@ These are my *personal* __.dotfiles__.
 - Google Meet
 - Slack
 - YouTube
-- Threads
 - LinkedIn
 - GitHub
 - Stack Overflow
 - Reddit
-- Microsoft Office (Excel, Word, PowerPoint, ...)
+- Microsoft Office (Excel, Word, PowerPoint, Teams, ...)
         
 ### Personal
 - Wallpaper & Coding fonts (/assets)
 - Mostly Light Mode. Other than IDEs, Code Editor, and Terminals.
+
+### Mobile
+- Mostly Light Mode.
+- Mobile ringtone sound 100%, notification silent, alarm tone same as ringtone.
+- Mobile wallpaper and ringtone in /sj_mobile.
 
