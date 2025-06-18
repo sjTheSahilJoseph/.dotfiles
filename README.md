@@ -6,6 +6,7 @@ These are my *personal* __.dotfiles__.
 
 ### Operating System
 - Microsoft Windows 10 Pro x64
+- Pin almost every mostly used software on taskbar. Desktop empty.
     
 ### Terminal
 - CMD (Windows Terminal (old windows 10))
@@ -30,7 +31,7 @@ These are my *personal* __.dotfiles__.
 - Firefox
 
 ### Cloud Backup
-- Dropbox for everything.
+- Google Drive for everything.
 
 ### Media
 - VLC Media Player
@@ -58,10 +59,13 @@ These are my *personal* __.dotfiles__.
         
 ### Personal
 - Wallpaper & Coding fonts (/assets)
-- Mostly Light Mode. Other than IDEs, Code Editor, and Terminals.
+- Mostly Light theme. Other than IDEs, Code Editor, and Terminal.
 
 ### Mobile
 - Mostly Light Mode.
 - Mobile ringtone sound 100%, notification silent, alarm tone same as ringtone.
 - Mobile wallpaper and ringtone in /sj_mobile.
+- Mobile phone sync with computer as much as possible. (install almost everything on phone as well but use all things from laptop mostly).
+
+
 
