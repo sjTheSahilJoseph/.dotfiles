@@ -48,15 +48,14 @@ These are my *personal* __.dotfiles__.
 - Facebook
 - Massenger
 - Zoom
-- Google Meet
 - Slack
 - YouTube
 - LinkedIn
 - GitHub
 - Stack Overflow
 - Reddit
-- Microsoft Office (Excel, Word, PowerPoint, Teams, ...)
-        
+- Google Office GSuit (Docs, Sheets, Keep Notes, Google Meet, and more...)
+
 ### Personal
 - Wallpaper & Coding fonts (/assets)
 - Mostly Light theme. Other than IDEs, Code Editor, and Terminal.
