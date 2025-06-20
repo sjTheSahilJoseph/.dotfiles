@@ -15,7 +15,7 @@ These are my *personal* __.dotfiles__.
 - Screen Size = 120 x 30, 
     
 ### Text Editor
-- Emacs 30.1
+- Emacs 30.1 <
     
 ### IDEs and Software Development Stuff
 // I don't write code using IDEs, I write code using Emacs.
@@ -23,7 +23,6 @@ These are my *personal* __.dotfiles__.
 - Microsoft Visual Studio Community (C/C++/C#).
 - PyCharm (Python).
 - WebStrom (Javascript and Typescript).
-- PhpStorm (PHP).
 - Unity Engine.
 - Unreal Engine.
 
@@ -35,8 +34,10 @@ These are my *personal* __.dotfiles__.
 
 ### Media
 - VLC Media Player
-- Adobe Photoshop cs6 x64
-- CapCut 2025 x64
+- Adobe Photoshop 2025
+- Adobe Premiere Pro 2025
+- Adobe After Effects 2025
+- Adobe Audition 2025
 - FL Studio 2025
 - OBS Studio 2025
 
