@@ -27,7 +27,7 @@ These are my *personal* __.dotfiles__.
 - Unreal Engine.
 
 ### Browser
-- Firefox
+- Google Chrome
 
 ### Cloud Backup
 - Google Drive for everything.
