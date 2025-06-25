@@ -216,6 +216,20 @@
 (setq c-default-style "linux")
 (setq-default c-indent-level 4)
 
+(defun insert-tab ()
+  "Insert a tab character, even when a region is active."
+  (interactive)
+  (if (use-region-p)
+      (let ((deactivate-mark nil))
+        (save-excursion
+          (goto-char (region-beginning))
+          (while (< (point) (region-end))
+            (insert "\t")
+            (forward-line 1))))
+    (insert "\t")))
+
+(global-set-key (kbd "TAB") 'insert-tab)
+
 (global-set-key (kbd "C-<tab>") 'indent-region)
 
 (add-hook 'dired-mode-hook #'dired-hide-details-mode)
