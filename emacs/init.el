@@ -96,12 +96,10 @@
         use-package-expand-minimally t
         warning-minimum-level :error))
 
-
 (use-package markdown-mode
 	:ensure t
 	:defer t
 	)
-
 
 (use-package cc-mode
 	:ensure t
@@ -127,11 +125,6 @@
 	:defer t
 	)
 
-(use-package php-mode
-	:ensure t
-	:defer t
-	)
-
 (use-package web-mode
     :ensure t
     :mode
@@ -139,7 +132,6 @@
         ("\\.jsx\\'" . web-mode)
         ("\\.tsx\\'" . web-mode)
         ("\\.html\\'" . web-mode)
-        ("\\.css\\'" . web-mode)
         )
     )
 
@@ -149,38 +141,6 @@
     )
 
 (add-hook 'web-mode-hook 'emmet-mode)
-
-(defvar my/html-class-overlay-list nil
-    "List of overlays hiding long class attributes.")
-
-(defvar my/html-class-names-hidden nil
-    "Flag to track whether class names are currently hidden.")
-
-(defun my/html-toggle-long-class-names ()
-    "Toggle visibility of long class or className attributes in web-mode."
-    (interactive)
-    (if my/html-class-names-hidden
-        (progn
-            (mapc #'delete-overlay my/html-class-overlay-list)
-            (setq my/html-class-overlay-list nil)
-            (setq my/html-class-names-hidden nil)
-            )
-        (save-excursion
-            (goto-char (point-min))
-            (setq my/html-class-overlay-list nil)
-            (let ((count 0))
-                (while (re-search-forward
-                           "\\(class\\|className\\)=\\(?:\"\\([^\"]\\{20,\\}\\)\"\\|{\\(?:\"\\([^\"]\\{20,\\}\\)\"\\|`\\([^`]\\{20,\\}\\)`\\)}\\)"
-                           nil t)
-                    (let ((start (or (match-beginning 2) (match-beginning 3) (match-beginning 4)))
-                             (end   (or (match-end 2)     (match-end 3)     (match-end 4))))
-                        (when (and start end)
-                            (let ((ov (make-overlay start end)))
-                                (overlay-put ov 'invisible t)
-                                (push ov my/html-class-overlay-list)
-                                (setq count (1+ count))))))
-                (setq my/html-class-names-hidden t)
-                ))))
 
 (defun my-web-mode-hook ()
     "Hooks for Web mode."
@@ -192,7 +152,6 @@
     (setq web-mode-enable-auto-indentation nil)
     (setq web-mode-enable-auto-opening nil)
     (setq web-mode-enable-auto-quoting  nil)
-    (define-key web-mode-map (kbd "C-c t") #'my/html-toggle-long-class-names)
     )
 
 
@@ -217,16 +176,16 @@
 (setq-default c-indent-level 4)
 
 (defun insert-tab ()
-  "Insert a tab character, even when a region is active."
-  (interactive)
-  (if (use-region-p)
-      (let ((deactivate-mark nil))
-        (save-excursion
-          (goto-char (region-beginning))
-          (while (< (point) (region-end))
-            (insert "\t")
-            (forward-line 1))))
-    (insert "\t")))
+    "Insert a tab character, even when a region is active."
+    (interactive)
+    (if (use-region-p)
+        (let ((deactivate-mark nil))
+            (save-excursion
+                (goto-char (region-beginning))
+                (while (< (point) (region-end))
+                    (insert "\t")
+                    (forward-line 1))))
+        (insert "\t")))
 
 (global-set-key (kbd "TAB") 'insert-tab)
 
