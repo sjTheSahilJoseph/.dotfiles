@@ -206,19 +206,6 @@
 
 (setq isearch-lazy-highlight nil)
 
-(global-set-key (kbd "<f1>") 'next-error)
-(global-set-key (kbd "<f2>") 'previous-error)
-(global-set-key (kbd "<f3>") 'kmacro-start-macro-or-insert-counter)
-(global-set-key (kbd "<f4>") 'kmacro-end-and-call-macro)
-(global-set-key (kbd "<f5>") 'run-build-script)
-(global-set-key (kbd "<f6>") 'hl-line-mode)
-(global-set-key (kbd "<f7>") 'query-replace)
-(global-set-key (kbd "<f8>") 'eval-region)
-(global-set-key (kbd "<f9>") #'visual-line-mode)
-(global-set-key (kbd "<f10>") 'indent-whole-buffer)
-(global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
-(global-set-key (kbd "<f12>") 'point-to-register)
-
 (define-prefix-command 'my-position-map)
 (global-set-key (kbd "C-c p") 'my-position-map)
 
@@ -327,9 +314,20 @@
 (global-set-key (kbd "C-5") 'run-build-script)
 (global-set-key (kbd "C-6") 'hl-line-mode)
 (global-set-key (kbd "C-7") 'query-replace)
-(global-set-key (kbd "C-8") 'eval-region)
+(global-set-key (kbd "C-8") 'dired)
 (global-set-key (kbd "C-9") 'visual-line-mode)
 (global-set-key (kbd "C-0") 'indent-whole-buffer)
 
-
+(global-set-key (kbd "<f1>") 'next-error)
+(global-set-key (kbd "<f2>") 'previous-error)
+(global-set-key (kbd "<f3>") 'kmacro-start-macro-or-insert-counter)
+(global-set-key (kbd "<f4>") 'kmacro-end-and-call-macro)
+(global-set-key (kbd "<f5>") 'run-build-script)
+(global-set-key (kbd "<f6>") 'hl-line-mode)
+(global-set-key (kbd "<f7>") 'query-replace)
+(global-set-key (kbd "<f8>") 'dired)
+(global-set-key (kbd "<f9>") #'visual-line-mode)
+(global-set-key (kbd "<f10>") 'indent-whole-buffer)
+(global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
+(global-set-key (kbd "<f12>") 'point-to-register)
 
