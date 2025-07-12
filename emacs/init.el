@@ -9,12 +9,14 @@
 (when (bound-and-true-p tooltip-mode)
     (tooltip-mode -1))
 
+(subword-mode t)
+
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (split-window-horizontally)
 
 (setq-default cursor-type 'box)
-(set-cursor-color "#40ff40")
-;;(set-cursor-color "#ff4040")
+;;(set-cursor-color "#40ff40")
+(set-cursor-color "#ff4040")
 (blink-cursor-mode t)
 (setq blink-cursor-blinks 0)
 (setq blink-cursor-interval 0.5)
