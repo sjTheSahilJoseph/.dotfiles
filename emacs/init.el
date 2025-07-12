@@ -20,7 +20,7 @@
 (blink-cursor-mode t)
 (setq blink-cursor-blinks 0)
 (setq blink-cursor-interval 0.5)
-(setq highlight-nonselected-windows nil)
+(setq highlight-nonselected-windows t)
 (setq-default cursor-in-non-selected-windows nil)
 
 (setq-default word-wrap t)
@@ -157,6 +157,10 @@
     (setq web-mode-enable-auto-quoting  nil)
     )
 
+(use-package aggressive-indent
+    :ensure t
+    :defer t
+    )
 
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
@@ -167,7 +171,9 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
-(setq electric-indent-mode 1)
+(global-aggressive-indent-mode 1)
+
+(setq electric-indent-mode nil)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq-default tab-always-indent t)
@@ -177,22 +183,6 @@
 (setq-default typescript-indent-level 4)
 (setq c-default-style "linux")
 (setq-default c-indent-level 4)
-
-(defun insert-tab ()
-    "Insert a tab character, even when a region is active."
-    (interactive)
-    (if (use-region-p)
-        (let ((deactivate-mark nil))
-            (save-excursion
-                (goto-char (region-beginning))
-                (while (< (point) (region-end))
-                    (insert "\t")
-                    (forward-line 1))))
-        (insert "\t")))
-
-(global-set-key (kbd "TAB") 'insert-tab)
-
-(global-set-key (kbd "C-<tab>") 'indent-region)
 
 (add-hook 'dired-mode-hook #'dired-hide-details-mode)
 (put 'dired-find-alternate-file 'disabled nil)
@@ -334,3 +324,15 @@
 (global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
 (global-set-key (kbd "<f12>") 'point-to-register)
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
