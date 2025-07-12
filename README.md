@@ -11,7 +11,8 @@ These are my *personal* __.dotfiles__.
 ### Terminal
 - CMD (Windows Terminal (old windows 10))
 - Fonts: Liberation Mono 18px
-- BG Color = #071307, FG Color = #90B080, Cursor = Block #40ff40.
+- If v1 -> BG Color = #071307, FG Color = #90B080, Cursor = Block #40ff40.
+- If v2 BG Color = #161616, FG Color = #a08563, Cursor = Block #ff4040.
 - Screen Size = 120 x 30, 
     
 ### Text Editor
