@@ -12,7 +12,7 @@ These are my *personal* __.dotfiles__.
 - CMD (Windows Terminal (old windows 10))
 - Fonts: Liberation Mono 18px
 - If v1 -> BG Color = #071307, FG Color = #90B080, Cursor = Block #40ff40.
-- If v2 BG Color = #161616, FG Color = #a08563, Cursor = Block #ff4040.
+- If v2 -> BG Color = #161616, FG Color = #a08563, Cursor = Block #ff4040.
 - Screen Size = 120 x 30, 
     
 ### Text Editor
@@ -38,9 +38,11 @@ These are my *personal* __.dotfiles__.
 - Adobe Photoshop 2025
 - Adobe Premiere Pro 2025
 - Adobe After Effects 2025
+- Adobe Illustrator 2025
 - Adobe Audition 2025
 - FL Studio 2025
 - OBS Studio 2025
+- Microsoft Paint
 
 ### Management, Communication & Social
 - Gmail
@@ -64,7 +66,7 @@ These are my *personal* __.dotfiles__.
 
 ### Mobile
 - Mostly Light Mode.
-- Mobile ringtone sound 100%, notification silent, alarm tone same as ringtone.
+- Mobile ringtone sound 100%, notification sound silent, alarm tone same as ringtone.
 - Mobile wallpaper and ringtone in /sj_mobile.
 - Mobile phone sync with computer as much as possible. (install almost everything on phone as well but use all things from laptop mostly).
 
