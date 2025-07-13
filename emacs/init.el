@@ -9,7 +9,7 @@
 (when (bound-and-true-p tooltip-mode)
     (tooltip-mode -1))
 
-(subword-mode t)
+(global-subword-mode t)
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (split-window-horizontally)
