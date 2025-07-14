@@ -128,6 +128,11 @@
 	:defer t
 	)
 
+(use-package go-mode
+	:ensure t
+	:defer t
+	)
+
 (use-package web-mode
     :ensure t
     :mode
