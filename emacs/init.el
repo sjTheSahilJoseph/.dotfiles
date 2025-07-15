@@ -207,43 +207,24 @@
 (define-prefix-command 'my-position-map)
 (global-set-key (kbd "C-c p") 'my-position-map)
 
-(define-key my-position-map (kbd "s 1")
+(define-key my-position-map (kbd "<C-1>")
     (lambda () (interactive)
         (point-to-register ?1)
         (message "Saved position to register 1")))
 
-(define-key my-position-map (kbd "s 2")
+(define-key my-position-map (kbd "<C-2>")
     (lambda () (interactive)
         (point-to-register ?2)
         (message "Saved position to register 2")))
 
-(define-key my-position-map (kbd "s 3")
-    (lambda () (interactive)
-        (point-to-register ?3)
-        (message "Saved position to register 3")))
-
-
-(define-key my-position-map (kbd "s 4")
-    (lambda () (interactive)
-        (point-to-register ?4)
-        (message "Saved position to register 4")))
-
-(define-key my-position-map (kbd "j 1")
+(define-key my-position-map (kbd "<C-S-1>")
     (lambda () (interactive)
         (jump-to-register ?1)))
 
-(define-key my-position-map (kbd "j 2")
+(define-key my-position-map (kbd "<C-S-2>")
     (lambda () (interactive)
         (jump-to-register ?2)))
 
-
-(define-key my-position-map (kbd "j 3")
-    (lambda () (interactive)
-        (jump-to-register ?3)))
-
-(define-key my-position-map (kbd "j 4")
-    (lambda () (interactive)
-        (jump-to-register ?4)))
 
 (setq kill-do-not-save-duplicates t)
 (setq save-interprogram-paste-before-kill nil)
@@ -305,8 +286,8 @@
 (global-set-key (kbd "C-x b") 'ido-switch-buffer)
 (global-set-key (kbd "C-x C-b") 'ido-switch-buffer-other-window)
 
-(global-set-key (kbd "C-1") 'next-error)
-(global-set-key (kbd "C-2") 'previous-error)
+;;(global-set-key (kbd "C-1") ')
+;;(global-set-key (kbd "C-2") ')
 (global-set-key (kbd "C-3") 'kmacro-start-macro-or-insert-counter)
 (global-set-key (kbd "C-4") 'kmacro-end-and-call-macro)
 (global-set-key (kbd "C-5") 'run-build-script)
