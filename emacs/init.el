@@ -204,27 +204,27 @@
 
 (setq isearch-lazy-highlight nil)
 
-(define-prefix-command 'my-position-map)
-(global-set-key (kbd "C-c p") 'my-position-map)
-
-(define-key my-position-map (kbd "<C-1>")
-    (lambda () (interactive)
+(global-set-key (kbd "C-1")
+    (lambda ()
+        (interactive)
         (point-to-register ?1)
         (message "Saved position to register 1")))
 
-(define-key my-position-map (kbd "<C-2>")
-    (lambda () (interactive)
+(global-set-key (kbd "C-2")
+    (lambda ()
+        (interactive)
         (point-to-register ?2)
         (message "Saved position to register 2")))
 
-(define-key my-position-map (kbd "<C-S-1>")
-    (lambda () (interactive)
+(global-set-key (kbd "C-!")
+    (lambda ()
+        (interactive)
         (jump-to-register ?1)))
 
-(define-key my-position-map (kbd "<C-S-2>")
-    (lambda () (interactive)
+(global-set-key (kbd "C-@")
+    (lambda ()
+        (interactive)
         (jump-to-register ?2)))
-
 
 (setq kill-do-not-save-duplicates t)
 (setq save-interprogram-paste-before-kill nil)
@@ -286,8 +286,10 @@
 (global-set-key (kbd "C-x b") 'ido-switch-buffer)
 (global-set-key (kbd "C-x C-b") 'ido-switch-buffer-other-window)
 
+;; Already set for registers.
 ;;(global-set-key (kbd "C-1") ')
 ;;(global-set-key (kbd "C-2") ')
+
 (global-set-key (kbd "C-3") 'kmacro-start-macro-or-insert-counter)
 (global-set-key (kbd "C-4") 'kmacro-end-and-call-macro)
 (global-set-key (kbd "C-5") 'run-build-script)
