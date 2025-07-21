@@ -204,24 +204,24 @@
 
 (setq isearch-lazy-highlight nil)
 
-(global-set-key (kbd "C-1")
+(global-set-key (kbd "C-!")
     (lambda ()
         (interactive)
         (point-to-register ?1)
         (message "Saved position to register 1")))
 
-(global-set-key (kbd "C-2")
+(global-set-key (kbd "C-@")
     (lambda ()
         (interactive)
         (point-to-register ?2)
         (message "Saved position to register 2")))
 
-(global-set-key (kbd "C-!")
+(global-set-key (kbd "C-1")
     (lambda ()
         (interactive)
         (jump-to-register ?1)))
 
-(global-set-key (kbd "C-@")
+(global-set-key (kbd "C-2")
     (lambda ()
         (interactive)
         (jump-to-register ?2)))
