@@ -11,7 +11,9 @@
 
 (global-subword-mode t)
 
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
+;;(add-to-list 'default-frame-alist '(fullscreen . maximized))
+(add-to-list 'default-frame-alist '(fullscreen . fullboth))
+
 (split-window-horizontally)
 
 (setq-default cursor-type 'box)
@@ -129,6 +131,11 @@
 	)
 
 (use-package go-mode
+	:ensure t
+	:defer t
+	)
+
+(use-package php-mode
 	:ensure t
 	:defer t
 	)
