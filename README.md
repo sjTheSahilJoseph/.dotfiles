@@ -21,8 +21,7 @@ These are my *personal* __.dotfiles__.
 // I don't write code using IDEs, I write code using Emacs.
 // Keep open IDEs side by side. But write code in Emacs.
 - Microsoft Visual Studio Community (C/C++/C#).
-- PyCharm (Python).
-- WebStrom (Javascript and Typescript).
+- Microsoft Visual Studio Code (Python, JavaScript, TypeScript, PHP).
 - Unity Engine.
 - Unreal Engine.
 
@@ -41,7 +40,6 @@ These are my *personal* __.dotfiles__.
 - Adobe Audition 2025
 - FL Studio 2025
 - OBS Studio 2025
-- Microsoft Paint
 
 ### Management, Communication & Social
 - Gmail
@@ -69,5 +67,13 @@ These are my *personal* __.dotfiles__.
 - Mobile wallpaper and ringtone in /sj_mobile.
 - Mobile phone sync with computer as much as possible. (install almost everything on phone as well but use all things from laptop mostly).
 
-
-
+### Hardware
+- Laptop ().
+- LCD ().
+- Keyboard ().
+- Mouse ().
+- Headphones ().
+- Earphones ().
+- Table ().
+- Chair ().
+- Mobile ().
