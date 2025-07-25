@@ -11,8 +11,8 @@
 
 (global-subword-mode t)
 
-;;(add-to-list 'default-frame-alist '(fullscreen . maximized))
-(add-to-list 'default-frame-alist '(fullscreen . fullboth))
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+;;(add-to-list 'default-frame-alist '(fullscreen . fullboth))
 
 (split-window-horizontally)
 
