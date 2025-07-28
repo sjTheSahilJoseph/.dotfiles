@@ -101,11 +101,6 @@
         use-package-expand-minimally t
         warning-minimum-level :error))
 
-(use-package markdown-mode
-	:ensure t
-	:defer t
-	)
-
 (use-package cc-mode
 	:ensure t
 	:defer t
@@ -126,11 +121,6 @@
 	:defer t)
 
 (use-package python-mode
-	:ensure t
-	:defer t
-	)
-
-(use-package go-mode
 	:ensure t
 	:defer t
 	)
@@ -272,26 +262,6 @@
         (pulse-momentary-highlight-one-line (line-beginning-position))))
 
 (global-set-key (kbd "C-<return>") 'my/pulse-line-or-region)
-
-(use-package ido
-    :init
-    (setq ido-enable-flex-matching t
-        ido-max-window-height 1
-        ido-everywhere t)
-    :config
-
-    (ido-mode 1))
-
-(use-package ido-completing-read+
-    :ensure t
-    :config
-    (ido-ubiquitous-mode 1))
-(setq ido-auto-merge-work-directories-length -1)
-
-
-(global-set-key (kbd "C-x C-f") 'ido-find-file)
-(global-set-key (kbd "C-x b") 'ido-switch-buffer)
-(global-set-key (kbd "C-x C-b") 'ido-switch-buffer-other-window)
 
 ;; Already set for registers.
 ;;(global-set-key (kbd "C-1") ')
