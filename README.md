@@ -62,7 +62,7 @@ These are my *personal* __.dotfiles__.
 - Mostly Light theme. Other than IDEs, Code Editor, and Terminal.
 
 ### Mobile
-- Mostly Light Mode.
+- Mostly Dark Mode.
 - Mobile ringtone sound 100%, notification sound silent, alarm tone same as ringtone.
 - Mobile wallpaper and ringtone in /sj_mobile.
 - Mobile phone sync with computer as much as possible. (install almost everything on phone as well but use all things from laptop mostly).
@@ -72,8 +72,11 @@ These are my *personal* __.dotfiles__.
 - LCD ().
 - Keyboard ().
 - Mouse ().
-- Headphones ().
 - Earphones ().
+- Mic ().
+- Camera ().
 - Table ().
 - Chair ().
 - Mobile ().
+
+
