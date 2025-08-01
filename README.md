@@ -59,7 +59,7 @@ These are my *personal* __.dotfiles__.
 
 ### Personal
 - Wallpaper & Coding fonts (/assets)
-- Mostly Light theme. Other than IDEs, Code Editor, and Terminal.
+- Mostly Dark theme.
 
 ### Mobile
 - Mostly Dark Mode.
