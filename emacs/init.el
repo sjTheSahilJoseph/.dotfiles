@@ -122,11 +122,6 @@
 	:ensure t
 	:defer t)
 
-(use-package python-mode
-	:ensure t
-	:defer t
-	)
-
 (use-package web-mode
     :ensure t
     :mode
