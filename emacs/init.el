@@ -113,6 +113,11 @@
 	:defer t
 	)
 
+(use-package java-mode
+    :ensure t
+    :defer t
+    )
+
 (use-package typescript-mode
 	:ensure t
 	:defer t
