@@ -44,6 +44,8 @@
 
 (set-frame-font "Liberation Mono 12" nil t)
 
+(setq frame-title-format '("SJ the Sahil Joseph's Writing System"))
+
 (add-to-list 'custom-theme-load-path "C:/Users/sjthe/projects/loveisanillusion.emacs")
 (load-theme 'loveisanillusion.emacs t)
 
@@ -112,11 +114,6 @@
 	:ensure t
 	:defer t
 	)
-
-(use-package java-mode
-    :ensure t
-    :defer t
-    )
 
 (use-package typescript-mode
 	:ensure t
@@ -289,3 +286,15 @@
 
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
