@@ -120,6 +120,9 @@
 (use-package json-mode
     )
 
+(use-package php-mode
+    )
+
 (use-package web-mode
     :mode
     (
