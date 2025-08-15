@@ -106,26 +106,21 @@
         warning-minimum-level :error))
 
 (use-package cc-mode
-	:ensure t
-	:defer t
 	)
 
+;;(use-package java-mode
+;;	)
+
 (use-package csharp-mode
-	:ensure t
-	:defer t
 	)
 
 (use-package typescript-mode
-	:ensure t
-	:defer t
     )
 
 (use-package json-mode
-	:ensure t
-	:defer t)
+    )
 
 (use-package web-mode
-    :ensure t
     :mode
     (
         ("\\.jsx\\'" . web-mode)
@@ -135,8 +130,6 @@
     )
 
 (use-package emmet-mode
-    :ensure t
-    :defer t
     )
 
 (add-hook 'web-mode-hook 'emmet-mode)
@@ -154,8 +147,6 @@
     )
 
 (use-package aggressive-indent
-    :ensure t
-    :defer t
     )
 
 (add-hook 'web-mode-hook  'my-web-mode-hook)
@@ -285,16 +276,3 @@
 
 
 
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
