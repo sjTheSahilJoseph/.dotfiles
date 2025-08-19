@@ -106,24 +106,36 @@
         warning-minimum-level :error))
 
 (use-package cc-mode
-	)
+	  :ensure t
+  :defer t
+)
 
 ;;(use-package java-mode
 ;;	)
 
 (use-package csharp-mode
-	)
+	  :ensure t
+  :defer t
+)
 
 (use-package typescript-mode
-    )
+      :ensure t
+  :defer t
+)
 
 (use-package json-mode
-    )
+      :ensure t
+  :defer t
+)
 
 (use-package php-mode
-    )
+      :ensure t
+  :defer t
+)
 
 (use-package web-mode
+  :ensure t
+  :defer t
     :mode
     (
         ("\\.jsx\\'" . web-mode)
@@ -133,6 +145,8 @@
     )
 
 (use-package emmet-mode
+  :ensure t
+  :defer t
     )
 
 (add-hook 'web-mode-hook 'emmet-mode)
@@ -276,6 +290,5 @@
 (global-set-key (kbd "<f10>") 'indent-whole-buffer)
 (global-set-key (kbd "<f11>") 'toggle-frame-fullscreen)
 (global-set-key (kbd "<f12>") 'point-to-register)
-
 
 
