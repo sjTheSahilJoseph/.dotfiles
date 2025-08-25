@@ -106,36 +106,36 @@
         warning-minimum-level :error))
 
 (use-package cc-mode
-	  :ensure t
-  :defer t
-)
+	:ensure t
+    :defer t
+    )
 
 ;;(use-package java-mode
 ;;	)
 
 (use-package csharp-mode
-	  :ensure t
-  :defer t
-)
+	:ensure t
+    :defer t
+    )
 
 (use-package typescript-mode
-      :ensure t
-  :defer t
-)
+    :ensure t
+    :defer t
+    )
 
 (use-package json-mode
-      :ensure t
-  :defer t
-)
+    :ensure t
+    :defer t
+    )
 
 (use-package php-mode
-      :ensure t
-  :defer t
-)
+    :ensure t
+    :defer t
+    )
 
 (use-package web-mode
-  :ensure t
-  :defer t
+    :ensure t
+    :defer t
     :mode
     (
         ("\\.jsx\\'" . web-mode)
@@ -145,8 +145,8 @@
     )
 
 (use-package emmet-mode
-  :ensure t
-  :defer t
+    :ensure t
+    :defer t
     )
 
 (add-hook 'web-mode-hook 'emmet-mode)
@@ -163,9 +163,6 @@
     (setq web-mode-enable-auto-quoting  nil)
     )
 
-(use-package aggressive-indent
-    )
-
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
 (setq create-lockfiles nil)
@@ -175,9 +172,7 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
-(global-aggressive-indent-mode 1)
-
-(setq electric-indent-mode nil)
+(setq electric-indent-mode t)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq-default tab-always-indent t)
@@ -256,14 +251,8 @@
 (advice-add 'move-text-down :after 'indent-region-advice)
 (advice-add 'move-text-up :after 'indent-region-advice)
 
-(defun my/pulse-line-or-region ()
-    "Pulse the current line if no region is selected, or pulse the region if selected."
-    (interactive)
-    (if (use-region-p)
-        (pulse-momentary-highlight-region (region-beginning) (region-end))
-        (pulse-momentary-highlight-one-line (line-beginning-position))))
 
-(global-set-key (kbd "C-<return>") 'my/pulse-line-or-region)
+;;(global-set-key (kbd "C-<return>") ')
 
 ;; Already set for registers.
 ;;(global-set-key (kbd "C-1") ')
