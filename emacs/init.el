@@ -165,6 +165,86 @@
 
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
+
+
+
+(use-package vertico
+    :ensure t
+    :defer t
+    :init
+    (vertico-mode)
+    :custom
+    (vertico-cycle t))
+
+(use-package vertico-posframe
+    :after vertico
+    :ensure t
+    :custom
+    (vertico-posframe-width 100)
+    (vertico-posframe-height 30)
+    (vertico-posframe-parameters '((left-fringe . 8) (right-fringe . 8)))
+    :config
+    (vertico-posframe-mode 1))
+
+(use-package orderless
+    :ensure t
+    :defer t
+    :init
+    (setq completion-styles '(orderless)
+        completion-category-defaults nil
+        completion-category-overrides '((file (styles partial-completion)))))
+
+(use-package consult
+    :ensure t
+    :defer t
+    :bind (("C-c F" . consult-find)
+              ("C-c g" . consult-ripgrep))
+    )
+
+(setq consult-preview-key 'any)
+(setq consult-find-command "fd . -H -0") ;; fast file search
+
+(use-package marginalia
+    :ensure t
+    :defer t
+    :init
+    (marginalia-mode))
+
+(use-package project
+    :ensure t
+    :defer t
+    :config
+    (setq project-switch-commands '("fd" "git")))
+
+(defun my/consult-find-project-root ()
+    "Run `consult-find` at the project root."
+    (interactive)
+    (let ((root (if (fboundp 'project-root)
+                    (project-root (project-current))
+                    default-directory)))
+        (consult-find root)))
+
+(global-set-key (kbd "C-c p f") 'my/consult-find-project-root)
+
+(defun my/consult-fd-project-files ()
+  "Fuzzy-find any file in the project using fd."
+  (interactive)
+  (let* ((root (if (fboundp 'project-root)
+                   (project-root (project-current))
+                 default-directory))
+         ;; On Windows, make sure to call fd.exe and quote the path
+         (cmd (format "fd.exe -H --type f --exclude .git . \"%s\"" root))
+         (files (split-string (shell-command-to-string cmd) "\n" t)))
+    (consult--read files
+                   :prompt "Project files: "
+                   :sort nil
+                   :require-match t
+                   :history 'file-name-history
+                   :category 'file)))
+
+(global-set-key (kbd "C-c C-f") 'my/consult-fd-project-files)
+
+
 (setq create-lockfiles nil)
 
 (setq eldoc-echo-area-use-multiline-p nil)
