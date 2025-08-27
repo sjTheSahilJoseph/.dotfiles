@@ -165,10 +165,6 @@
 
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
-
-
-
-
 (use-package vertico
     :ensure t
     :defer t
@@ -200,8 +196,7 @@
 (use-package consult
     :ensure t
     :defer t
-    :bind (("C-c C-f" . consult-find)
-              ("C-c C-g" . consult-ripgrep))
+    :bind (("C-c C-f" . consult-find))
     )
 
 (setq consult-preview-key 'any)
@@ -264,6 +259,19 @@
         (point-to-register ?2)
         (message "Saved position to register 2")))
 
+(global-set-key (kbd "C-#")
+    (lambda ()
+        (interactive)
+        (point-to-register ?3)
+        (message "Saved position to register 3")))
+
+(global-set-key (kbd "C-$")
+    (lambda ()
+        (interactive)
+        (point-to-register ?4)
+        (message "Saved position to register 4")))
+
+
 (global-set-key (kbd "C-1")
     (lambda ()
         (interactive)
@@ -273,6 +281,16 @@
     (lambda ()
         (interactive)
         (jump-to-register ?2)))
+
+(global-set-key (kbd "C-3")
+    (lambda ()
+        (interactive)
+        (jump-to-register ?3)))
+
+(global-set-key (kbd "C-4")
+    (lambda ()
+        (interactive)
+        (jump-to-register ?4)))
 
 (setq kill-do-not-save-duplicates t)
 (setq save-interprogram-paste-before-kill nil)
@@ -306,20 +324,20 @@
 (advice-add 'move-text-up :after 'indent-region-advice)
 
 
-;;(global-set-key (kbd "C-<return>") ')
+(global-set-key (kbd "C-<return>") 'indent-whole-buffer)
 
 ;; Already set for registers.
 ;;(global-set-key (kbd "C-1") ')
 ;;(global-set-key (kbd "C-2") ')
+;;(global-set-key (kbd "C-3") ')
+;;(global-set-key (kbd "C-4") ')
 
-(global-set-key (kbd "C-3") 'kmacro-start-macro-or-insert-counter)
-(global-set-key (kbd "C-4") 'kmacro-end-and-call-macro)
 (global-set-key (kbd "C-5") 'run-build-script)
 (global-set-key (kbd "C-6") 'hl-line-mode)
 (global-set-key (kbd "C-7") 'query-replace)
-(global-set-key (kbd "C-8") 'dired)
-(global-set-key (kbd "C-9") 'visual-line-mode)
-(global-set-key (kbd "C-0") 'indent-whole-buffer)
+(global-set-key (kbd "C-8") 'consult-ripgrep)
+(global-set-key (kbd "C-9") 'kmacro-start-macro-or-insert-counter)
+(global-set-key (kbd "C-0") 'kmacro-end-and-call-macro)
 
 (global-set-key (kbd "<f1>") 'next-error)
 (global-set-key (kbd "<f2>") 'previous-error)
