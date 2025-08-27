@@ -168,11 +168,14 @@
 
 
 
+
 (use-package vertico
     :ensure t
     :defer t
     :init
     (vertico-mode)
+    :config
+    (setq vertico-count 30)
     :custom
     (vertico-cycle t))
 
