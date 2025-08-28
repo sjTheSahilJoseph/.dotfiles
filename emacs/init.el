@@ -243,7 +243,7 @@
 
 (setq isearch-lazy-highlight nil)
 
-(global-set-key (kbd "C-SPC")
+(global-set-key (kbd "M-SPC")
   (lambda ()
     (interactive)
     (let* ((input (read-char-choice "Save position to register (1-4): " '(?1 ?2 ?3 ?4)))
