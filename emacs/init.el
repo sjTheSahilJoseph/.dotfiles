@@ -244,12 +244,12 @@
 (setq isearch-lazy-highlight nil)
 
 (global-set-key (kbd "M-SPC")
-  (lambda ()
-    (interactive)
-    (let* ((input (read-char-choice "Save position to register (1-4): " '(?1 ?2 ?3 ?4)))
-           (reg (string-to-char (char-to-string input))))
-      (point-to-register reg)
-      (message "Saved position to register %c" reg))))
+    (lambda ()
+        (interactive)
+        (let* ((input (read-char-choice "Save position to register (1-4): " '(?1 ?2 ?3 ?4)))
+                  (reg (string-to-char (char-to-string input))))
+            (point-to-register reg)
+            (message "Saved position to register %c" reg))))
 
 (global-set-key (kbd "C-1")
     (lambda ()
@@ -303,7 +303,7 @@
 (advice-add 'move-text-up :after 'indent-region-advice)
 
 
-(global-set-key (kbd "C-RET") 'indent-whole-buffer)
+(global-set-key (kbd "C-<return>") 'indent-whole-buffer)
 
 ;; Already set for registers.
 ;;(global-set-key (kbd "C-1") ')
