@@ -303,7 +303,7 @@
 (advice-add 'move-text-up :after 'indent-region-advice)
 
 
-(global-set-key (kbd "C-<return>") 'indent-whole-buffer)
+(global-set-key (kbd "C-RET") 'indent-whole-buffer)
 
 ;; Already set for registers.
 ;;(global-set-key (kbd "C-1") ')
