@@ -161,10 +161,6 @@
 
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
-
-;; ===============================
-;; Vertico + UI
-;; ===============================
 (use-package vertico
     :ensure t
     :defer t
@@ -204,8 +200,8 @@
 (use-package consult
     :ensure t
     :defer t
-    :bind (("C-x C-f" . consult-fd)
-              ("C-x C-g" . consult-ripgrep)))
+    :bind (("C-c C-f" . consult-fd)
+              ("C-c C-g" . consult-ripgrep)))
 
 (use-package marginalia
     :ensure t
@@ -261,13 +257,29 @@
 
 (setq isearch-lazy-highlight nil)
 
-(global-set-key (kbd "M-SPC")
+(global-set-key (kbd "M-1")
     (lambda ()
         (interactive)
-        (let* ((input (read-char-choice "Save position to register (1-4): " '(?1 ?2 ?3 ?4)))
-                  (reg (string-to-char (char-to-string input))))
-            (point-to-register reg)
-            (message "Saved position to register %c" reg))))
+        (point-to-register ?1)
+        (message "Saved position to register 1")))
+
+(global-set-key (kbd "M-2")
+    (lambda ()
+        (interactive)
+        (point-to-register ?2)
+        (message "Saved position to register 2")))
+
+(global-set-key (kbd "M-3")
+    (lambda ()
+        (interactive)
+        (point-to-register ?3)
+        (message "Saved position to register 3")))
+
+(global-set-key (kbd "M-4")
+    (lambda ()
+        (interactive)
+        (point-to-register ?4)
+        (message "Saved position to register 4")))
 
 (global-set-key (kbd "C-1")
     (lambda ()
