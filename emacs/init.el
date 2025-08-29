@@ -200,8 +200,8 @@
 (use-package consult
     :ensure t
     :defer t
-    :bind (("C-c C-f" . consult-fd)
-              ("C-c C-g" . consult-ripgrep)))
+    :bind (("C-x C-f" . consult-fd)
+              ("C-x C-g" . consult-ripgrep)))
 
 (use-package marginalia
     :ensure t
@@ -333,7 +333,6 @@
 (advice-add 'move-text-up :after 'indent-region-advice)
 
 
-(global-set-key (kbd "M-<return>") 'indent-whole-buffer)
 
 ;; Already set for registers.
 ;;(global-set-key (kbd "C-1") ')
@@ -362,3 +361,6 @@
 (global-set-key (kbd "<f12>") 'point-to-register)
 
 
+(global-set-key (kbd "M-<return>") 'indent-whole-buffer)
+(global-set-key (kbd "M-<SPC>") 'dired)
+(global-set-key (kbd "M-S-<SPC>") 'dired-create-empty-file)
