@@ -157,6 +157,8 @@
     (setq web-mode-enable-auto-indentation nil)
     (setq web-mode-enable-auto-opening nil)
     (setq web-mode-enable-auto-quoting  nil)
+    (with-eval-after-load 'web-mode
+        (define-key web-mode-map (kbd "C-<return>") nil))
     )
 
 (add-hook 'web-mode-hook  'my-web-mode-hook)
