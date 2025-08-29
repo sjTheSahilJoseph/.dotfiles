@@ -161,6 +161,10 @@
 
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
+
+;; ===============================
+;; Vertico + UI
+;; ===============================
 (use-package vertico
     :ensure t
     :defer t
@@ -189,14 +193,19 @@
         completion-category-defaults nil
         completion-category-overrides '((file (styles partial-completion)))))
 
+
+(setq consult-find-command
+    "fd --type f --hidden --color=never --exclude .git --exclude node_modules
+ --exclude vendor --exclude dist --exclude build \"%s\"")
+
+
+(setq consult-preview-key 'any)
+
 (use-package consult
     :ensure t
     :defer t
-    :bind (("C-c C-f" . consult-find))
-    )
-
-(setq consult-preview-key 'any)
-(setq consult-find-command "fd . -H -0")
+    :bind (("C-x C-f" . consult-fd)
+              ("C-x C-g" . consult-ripgrep)))
 
 (use-package marginalia
     :ensure t
@@ -204,11 +213,20 @@
     :init
     (marginalia-mode))
 
+(defun my/project-find-file ()
+    "Find file in current project using consult-find + fd."
+    (interactive)
+    (consult-find (project-root (project-current t))))
+
 (use-package project
     :ensure t
     :defer t
     :config
-    (setq project-switch-commands '("fd" "git")))
+    (setq project-switch-commands
+        '((my/project-find-file "Find file (fd)")
+             (consult-ripgrep "Search project (rg)")
+             (consult-fd "Search project (fd)")
+             (project-dired "Dired"))))
 
 (setq create-lockfiles nil)
 
