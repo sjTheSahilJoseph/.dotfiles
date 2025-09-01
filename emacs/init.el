@@ -21,9 +21,10 @@
 (set-cursor-color "#40ff40")
 ;;(set-cursor-color "#ff4040")
 
-(blink-cursor-mode t)
-(setq blink-cursor-blinks 0)
-(setq blink-cursor-interval 0.5)
+;; 1 = blink, 0 = don't blink
+(blink-cursor-mode 0)
+;;(setq blink-cursor-blinks 0)
+;;(setq blink-cursor-interval 0.5)
 (setq highlight-nonselected-windows nil)
 (setq-default cursor-in-non-selected-windows t)
 
