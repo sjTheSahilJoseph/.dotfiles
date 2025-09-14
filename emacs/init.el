@@ -162,69 +162,6 @@
 
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
-(use-package vertico
-    :ensure t
-    :defer t
-    :init
-    (vertico-mode)
-    :config
-    (setq vertico-count 30)
-    :custom
-    (vertico-cycle t))
-
-(use-package vertico-posframe
-    :after vertico
-    :ensure t
-    :custom
-    (vertico-posframe-width 100)
-    (vertico-posframe-height 30)
-    (vertico-posframe-parameters '((left-fringe . 8) (right-fringe . 8)))
-    :config
-    (vertico-posframe-mode 1))
-
-(use-package orderless
-    :ensure t
-    :defer t
-    :init
-    (setq completion-styles '(orderless)
-        completion-category-defaults nil
-        completion-category-overrides '((file (styles partial-completion)))))
-
-
-(setq consult-find-command
-    "fd --type f --hidden --color=never --exclude .git --exclude node_modules
- --exclude vendor --exclude dist --exclude build \"%s\"")
-
-
-(setq consult-preview-key 'any)
-
-(use-package consult
-    :ensure t
-    :defer t
-    :bind (("C-x C-f" . consult-fd)
-              ("C-x C-g" . consult-ripgrep)))
-
-(use-package marginalia
-    :ensure t
-    :defer t
-    :init
-    (marginalia-mode))
-
-(defun my/project-find-file ()
-    "Find file in current project using consult-find + fd."
-    (interactive)
-    (consult-find (project-root (project-current t))))
-
-(use-package project
-    :ensure t
-    :defer t
-    :config
-    (setq project-switch-commands
-        '((my/project-find-file "Find file (fd)")
-             (consult-ripgrep "Search project (rg)")
-             (consult-fd "Search project (fd)")
-             (project-dired "Dired"))))
-
 (setq create-lockfiles nil)
 
 (setq eldoc-echo-area-use-multiline-p nil)
@@ -341,12 +278,13 @@
 ;;(global-set-key (kbd "C-3") ')
 ;;(global-set-key (kbd "C-4") ')
 
-(global-set-key (kbd "C-5") 'run-build-script)
-(global-set-key (kbd "C-6") 'hl-line-mode)
-(global-set-key (kbd "C-7") 'query-replace)
-(global-set-key (kbd "C-8") 'consult-ripgrep)
-(global-set-key (kbd "C-9") 'kmacro-start-macro-or-insert-counter)
-(global-set-key (kbd "C-0") 'kmacro-end-and-call-macro)
+;; Available
+;;(global-set-key (kbd "C-5") ')
+;;(global-set-key (kbd "C-6") ')
+;;(global-set-key (kbd "C-7") ')
+;;(global-set-key (kbd "C-8") ')
+;;(global-set-key (kbd "C-9") ')
+;;(global-set-key (kbd "C-0") ')
 
 (global-set-key (kbd "<f1>") 'next-error)
 (global-set-key (kbd "<f2>") 'previous-error)
@@ -363,5 +301,11 @@
 
 
 (global-set-key (kbd "M-<return>") 'indent-whole-buffer)
-(global-set-key (kbd "M-<SPC>") 'dired)
-(global-set-key (kbd "M-S-<SPC>") 'dired-create-empty-file)
+
+
+
+
+
+
+
+
