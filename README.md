@@ -6,22 +6,23 @@ These are my *personal* __.dotfiles__.
 
 ### Operating System
 - Microsoft Windows 10 Pro x64
-- Pin almost every mostly used software on taskbar. Desktop empty.
+- Pin almost every mostly used software on taskbar.
+- Create shortcut of almost every mostly used software on desktop.
     
 ### Terminal
 - CMD (Windows Terminal (old windows 10))
 - Fonts: Liberation Mono 18px
-- BG Color = #0c0c0c, FG Color = #cccccc, Cursor = Block #cccccc.
-- Screen Size = 120 x 30, 
+- BG Color = #071307, FG Color = #90b080, Cursor = Block #40ff40.
+- Screen Size = 120 x 30.
     
 ### Text Editor
-- Emacs 30.1 <
+- Emacs 30.
     
 ### IDEs and Software Development Stuff
 // I don't write code using IDEs, I write code using Emacs.
 // Keep open IDEs side by side. But write code in Emacs.
 - Microsoft Visual Studio Community (C/C++/C#).
-- Microsoft Visual Studio Code (Python, JavaScript, TypeScript, PHP).
+- Microsoft Visual Studio Code (Java, Python, JavaScript, TypeScript, PHP).
 - Unity Engine.
 - Unreal Engine.
 
@@ -33,10 +34,7 @@ These are my *personal* __.dotfiles__.
 
 ### Media
 - VLC Media Player
-- Adobe Photoshop 2025
-- Adobe Premiere Pro 2025
-- Adobe After Effects 2025
-- Adobe Illustrator 2025
+- Adobe Photoshop CC 2019
 - Adobe Audition 2025
 - FL Studio 2025
 - OBS Studio 2025
