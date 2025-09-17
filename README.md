@@ -14,15 +14,16 @@ These are my *personal* __.dotfiles__.
 - Fonts: Liberation Mono 18px
 - BG Color = #071307, FG Color = #90b080, Cursor = Block #40ff40.
 - Screen Size = 120 x 30.
-    
+
 ### Text Editor
 - Emacs 30.
     
 ### IDEs and Software Development Stuff
 // I don't write code using IDEs, I write code using Emacs.
 // Keep open IDEs side by side. But write code in Emacs.
+- Emacs (Editor).
 - Microsoft Visual Studio Community (C/C++/C#).
-- Microsoft Visual Studio Code (Java, Python, JavaScript, TypeScript, PHP).
+- Microsoft Visual Studio Code (Java, Python, JavaScript, TypeScript, PHP, HTML, CSS).
 - Unity Engine.
 - Unreal Engine.
 
@@ -30,7 +31,7 @@ These are my *personal* __.dotfiles__.
 - Google Chrome
 
 ### Cloud Backup
-- Google Drive for everything.
+- Microsoft One Drive for everything.
 
 ### Media
 - VLC Media Player
@@ -39,8 +40,16 @@ These are my *personal* __.dotfiles__.
 - FL Studio 2025
 - OBS Studio 2025
 
-### Management, Communication & Social
-- Gmail
+### Office Management
+- Microsoft 360 (PowerPoint, Excel, OutLook, Word, etc...)
+- (but with sjthesahiljoseph@gmail.com).
+
+### Personal Notes
+- 
+
+### Communication & Social
+- Gmail (in Microsoft OutLook).
+- Microsoft Teams.
 - WhatsApp
 - Discord
 - Instagram
@@ -53,16 +62,15 @@ These are my *personal* __.dotfiles__.
 - GitHub
 - Stack Overflow
 - Reddit
-- Google Office GSuit (Docs, Sheets, Keep Notes, Google Meet, and more...)
 
 ### Personal
 - Wallpaper & Coding fonts (/assets)
-- Mostly Dark theme.
+- Mostly Light Theme.
 
 ### Mobile
-- Mostly Dark Mode.
+- Mostly Light Mode.
 - Mobile ringtone sound 100%, notification sound silent, alarm tone same as ringtone.
-- Mobile wallpaper and ringtone in /sj_mobile.
+- Mobile ringtone in /sj_mobile.
 - Mobile phone sync with computer as much as possible. (install almost everything on phone as well but use all things from laptop mostly).
 
 ### Hardware
