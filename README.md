@@ -35,17 +35,19 @@ These are my *personal* __.dotfiles__.
 
 ### Media
 - VLC Media Player
-- Adobe Photoshop CC 2019
+- Adobe Photoshop 2025
+- Adobe Premiere Pro 2025
 - Adobe Audition 2025
+- Microsoft Paint
 - FL Studio 2025
 - OBS Studio 2025
 
 ### Office Management
 - Microsoft 360 (PowerPoint, Excel, OutLook, Word, etc...)
-- (but with sjthesahiljoseph@gmail.com).
+- (with sjthesahiljoseph@gmail.com).
 
 ### Personal Notes
-- 
+- Notion
 
 ### Communication & Social
 - Gmail (in Microsoft OutLook).
