@@ -125,6 +125,11 @@
     :defer t
     )
 
+(use-package rust-mode
+    :ensure t
+    :defer t
+    )
+
 (use-package php-mode
     :ensure t
     :defer t
@@ -301,7 +306,6 @@
 
 
 (global-set-key (kbd "M-<return>") 'indent-whole-buffer)
-
 
 
 
