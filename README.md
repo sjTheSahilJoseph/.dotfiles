@@ -79,7 +79,7 @@ These are my *personal* __.dotfiles__.
 - Mostly Light Mode.
 - Mobile ringtone sound 100%, notification sound silent, alarm tone same as ringtone.
 - Mobile ringtone in /sj_mobile.
-- Mobile phone sync with computer as much as possible. (install almost everything on phone as well but use all things from laptop mostly).
+- Use mobile phone only for main things and as less as possible. (use computer more).
 
 ### Hardware
 - Laptop ().
