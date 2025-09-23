@@ -25,7 +25,7 @@ These are my *personal* __.dotfiles__.
 - Emacs (Editor).
 - Microsoft Visual Studio Community (C/C++/C#).
   - Just use Liberation Mono 13, rest default settings.
-- Microsoft Visual Studio Code (Java, Python, JavaScript, TypeScript, PHP, HTML, CSS).
+- Microsoft Visual Studio Code (Python, JavaScript, TypeScript, HTML, CSS).
   - Just use Liberation Mono 13, rest default settings.
 - Unity Engine.
 - Unreal Engine.
