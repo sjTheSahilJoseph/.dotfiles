@@ -12,19 +12,14 @@
 (global-subword-mode t)
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
-;;(add-to-list 'default-frame-alist '(fullscreen . fullboth))
 
 (split-window-horizontally)
 
 (setq-default cursor-type 'box)
 
 (set-cursor-color "#40ff40")
-;;(set-cursor-color "#ff4040")
 
-;; 1 = blink, 0 = don't blink
 (blink-cursor-mode 0)
-;;(setq blink-cursor-blinks 0)
-;;(setq blink-cursor-interval 0.5)
 (setq highlight-nonselected-windows nil)
 (setq-default cursor-in-non-selected-windows t)
 
@@ -107,9 +102,6 @@
     :defer t
     )
 
-;;(use-package java-mode
-;;	)
-
 (use-package csharp-mode
 	:ensure t
     :defer t
@@ -121,16 +113,6 @@
     )
 
 (use-package json-mode
-    :ensure t
-    :defer t
-    )
-
-(use-package rust-mode
-    :ensure t
-    :defer t
-    )
-
-(use-package php-mode
     :ensure t
     :defer t
     )
