@@ -19,7 +19,9 @@
 
 (set-cursor-color "#40ff40")
 
-(blink-cursor-mode 0)
+(blink-cursor-mode 1)
+(setq blink-cursor-blinks 0)
+(setq blink-cursor-interval 0.5)
 (setq highlight-nonselected-windows nil)
 (setq-default cursor-in-non-selected-windows t)
 
