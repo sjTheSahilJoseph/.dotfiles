@@ -15,7 +15,7 @@
 
 (split-window-horizontally)
 
-(setq-default cursor-type 'box)
+(setq-default cursor-type 'bar)
 
 (set-cursor-color "#40ff40")
 

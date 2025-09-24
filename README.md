@@ -12,7 +12,7 @@ These are my *personal* __.dotfiles__.
 ### Terminal
 - CMD (Windows Terminal (old windows 10))
   - Fonts: Liberation Mono 18px
-  - BG Color = #071307, FG Color = #90b080, Cursor = Block #40ff40, Blink Default Speed.
+  - BG Color = #071307, FG Color = #90b080, Cursor = Line #40ff40, Blink Default Speed.
   - Screen Size = 120 x 30.
 
 ### Text Editor
