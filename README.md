@@ -73,10 +73,10 @@ These are my *personal* __.dotfiles__.
 
 ### Personal
 - Wallpaper & Coding fonts (/assets)
-- Mostly Light Theme.
+- Dark Theme.
 
 ### Mobile
-- Mostly Light Mode.
+- Dark Mode.
 - Mobile ringtone sound 100%, notification sound silent, alarm tone same as ringtone.
 - Mobile ringtone in /sj_mobile.
 - Use mobile phone only for main things and as less as possible. (use computer more).
