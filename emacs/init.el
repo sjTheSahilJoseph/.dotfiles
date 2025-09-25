@@ -129,9 +129,11 @@
     :defer t
     :mode
     (
+        ("\\.html\\'" . web-mode)
         ("\\.jsx\\'" . web-mode)
         ("\\.tsx\\'" . web-mode)
-        ("\\.html\\'" . web-mode)
+        ("\\.cshtml\\'" . web-mode)
+        ("\\.css\\'" . web-mode)
         )
     )
 
