@@ -5,16 +5,14 @@ These are my *personal* __.dotfiles__.
 ## Softwares and Settings:
 
 ### Operating System
-- Microsoft Windows 10 Pro x64
-  - Pin almost every mostly used software on taskbar.
-  - Create shortcut of almost every mostly used software on desktop.
+- Microsoft Windows 11 Pro x64
+  - Taskbar should be empty (no pinned items).
+  - Desktop should be empty.
     
 ### Terminal
-- CMD (Windows Terminal (old windows 10))
-  - Fonts: Liberation Mono 18px
-  - BG Color = #071307, FG Color = #90b080, Cursor = Line #40ff40, Blink Default Speed.
-  - Screen Size = 120 x 30.
-
+- Windows Terminal
+  - Settings -> settings.json.
+  
 ### Text Editor
 - Emacs 30.
   - Config files in .dotfiles/emacs.
@@ -37,14 +35,20 @@ These are my *personal* __.dotfiles__.
 ### Cloud Backup
 - Microsoft One Drive for everything.
   - Personal, Professional, each and everything.
-  - Store photos, videos in old way folders.
+  - Store photos, videos in folder structure.
+
+### Contacts
+- Google Contacts
 
 ### Media
 - VLC Media Player
 - Adobe Photoshop 2025
+- Adobe Illustrator 2025
+- Adobe Lightroom 2025
 - Adobe Premiere Pro 2025
+- Adobe After Effects 2025
 - Adobe Audition 2025
-- Microsoft Paint
+- Eraser IO.
 - FL Studio 2025
 - OBS Studio 2025
 
