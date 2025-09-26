@@ -83,7 +83,7 @@ These are my *personal* __.dotfiles__.
 ### Mobile
 - Dark Mode.
 - Mobile ringtone sound 100%, notification sound silent, alarm tone same as ringtone.
-- Mobile ringtone in /sj_mobile.
+- Mobile ringtone in /assets.
 - Use mobile phone only for main things and as less as possible. (use computer more).
 
 ### Hardware
