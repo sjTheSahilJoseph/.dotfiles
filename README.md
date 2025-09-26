@@ -7,11 +7,12 @@ These are my *personal* __.dotfiles__.
 ### Operating System
 - Microsoft Windows 11 Pro x64
   - Taskbar should be empty (no pinned items).
+  - Start should have some pinned items.
   - Desktop should be empty.
     
 ### Terminal
 - Windows Terminal
-  - Settings -> settings.json.
+  - Settings -> terminal_settings.json.
   
 ### Text Editor
 - Emacs 30.
@@ -33,7 +34,7 @@ These are my *personal* __.dotfiles__.
   - Sign In account, and sync.
 
 ### Cloud Backup
-- Microsoft One Drive for everything.
+- DropBox for everything.
   - Personal, Professional, each and everything.
   - Store photos, videos in folder structure.
 
@@ -48,7 +49,7 @@ These are my *personal* __.dotfiles__.
 - Adobe Premiere Pro 2025
 - Adobe After Effects 2025
 - Adobe Audition 2025
-- Eraser IO.
+- Eraser Io.
 - FL Studio 2025
 - OBS Studio 2025
 
