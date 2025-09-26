@@ -44,7 +44,7 @@
         "defaults": 
         {
             "colorScheme": "Love Is An Illusion",
-            "cursorShape": "filledBox",
+            "cursorShape": "bar",
             "font": 
             {
                 "face": "Liberation Mono",
