@@ -133,6 +133,7 @@
         ("\\.jsx\\'" . web-mode)
         ("\\.tsx\\'" . web-mode)
         ("\\.cshtml\\'" . web-mode)
+        ("\\.astro\\'" . web-mode)
         ("\\.css\\'" . web-mode)
         )
     )
