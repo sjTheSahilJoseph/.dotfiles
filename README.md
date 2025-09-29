@@ -54,14 +54,14 @@ These are my *personal* __.dotfiles__.
 - OBS Studio 2025
 
 ### Office Management
-- Microsoft 360 (PowerPoint, Excel, OutLook, Word, etc...)
+- Microsoft 360 (PowerPoint, Excel, Word, etc...).
 - (with sjthesahiljoseph@gmail.com).
 
 ### Personal Notes
 - Notion
 
 ### Communication & Social
-- Gmail (in Microsoft OutLook).
+- ThunderBird (Gmail).
 - Microsoft Teams.
 - WhatsApp
 - Discord
