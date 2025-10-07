@@ -24,13 +24,12 @@ These are my *personal* __.dotfiles__.
 - Emacs (Editor).
   - Config Files in .dotfiles/emacs.
 - Microsoft Visual Studio Community (C/C++/C#).
-  - Just Sign In & use Liberation Mono 13, rest default settings.
-- JetBrains.
-  - Just Sign In & use Liberation Mono 13, rest default settings.
-  - WebStorm (JavaScript, TypeScript, HTML, CSS).
-  - IntelliJ (Java / Kotlin).
-  - PyCharm (Python).
-  - PhpStorm (PHP).
+  - Theme (Light Default).
+  - Just Sign In & use Liberation Mono 13.
+- Microsoft Visual Studio Code (JavaScript/TypeScript/Java/Kotlin/PHP/Python/etc...).
+  - Theme (Light Default).
+  - Just Sign In & use Liberation Mono 13.
+  - Disable Automatic Folder Folding in Sidebar Navigation.
 - Unity Engine.
   - Defaults.
 - Unreal Engine.
