@@ -18,16 +18,23 @@ These are my *personal* __.dotfiles__.
 - Emacs 30.
   - Config files in .dotfiles/emacs.
     
-### IDEs and Software Development Stuff
+### IDEs and Development Stuff.
 // I don't write code using IDEs, I write code using Emacs.
 // Keep open IDEs side by side. But write code in Emacs.
 - Emacs (Editor).
+  - Config Files in .dotfiles/emacs.
 - Microsoft Visual Studio Community (C/C++/C#).
-  - Just use Liberation Mono 13, rest default settings.
-- Microsoft Visual Studio Code (Python, JavaScript, TypeScript, HTML, CSS).
-  - Just use Liberation Mono 13, rest default settings.
+  - Just Sign In & use Liberation Mono 13, rest default settings.
+- JetBrains.
+  - Just Sign In & use Liberation Mono 13, rest default settings.
+  - WebStorm (JavaScript, TypeScript, HTML, CSS).
+  - IntelliJ (Java / Kotlin).
+  - PyCharm (Python).
+  - PhpStorm (PHP).
 - Unity Engine.
+  - Defaults.
 - Unreal Engine.
+  - Defaults.
 
 ### Browser
 - Google Chrome.
@@ -50,15 +57,16 @@ These are my *personal* __.dotfiles__.
 - Adobe After Effects 2025
 - Adobe Audition 2025
 - Eraser Io.
+- Blender.
 - FL Studio 2025
 - OBS Studio 2025
 
 ### Office Management
-- Google Office GSuit (Sheets, Docs, etc...).
+- Microsoft Office (Word, Excel, PowerPoint, Teams, etc...).
 - (with sjthesahiljoseph@gmail.com).
 
 ### Personal Notes
-- Notion
+- Google Keep Notes.
 
 ### Communication & Social
 - Gmail.
@@ -98,6 +106,7 @@ These are my *personal* __.dotfiles__.
 - Chair ().
 - Mobile ().
 - Laptop Bag ().
+- Lights ().
 
 
 
