@@ -124,6 +124,11 @@
     :defer t
     )
 
+(use-package php-mode
+    :ensure t
+    :defer t
+    )
+
 (use-package web-mode
     :ensure t
     :defer t
@@ -134,6 +139,7 @@
         ("\\.tsx\\'" . web-mode)
         ("\\.cshtml\\'" . web-mode)
         ("\\.css\\'" . web-mode)
+        ("\\.blade.php\\'" . web-mode)
         )
     )
 
