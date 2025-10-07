@@ -24,12 +24,12 @@ These are my *personal* __.dotfiles__.
 - Emacs (Editor).
   - Config Files in .dotfiles/emacs.
 - Microsoft Visual Studio Community (C/C++/C#).
-  - Theme (Light Default).
-  - Just Sign In & use Liberation Mono 13.
-- Microsoft Visual Studio Code (JavaScript/TypeScript/Java/Kotlin/PHP/Python/etc...).
-  - Theme (Light Default).
-  - Just Sign In & use Liberation Mono 13.
-  - Disable Automatic Folder Folding in Sidebar Navigation.
+  - Theme (Dark Default).
+  - Just Sign In & use Liberation Mono 16 px.
+  - Rest Defaults.
+- Microsoft Visual Studio Code (JavaScript/TypeScript/Java/PHP/Python/etc...).
+  - Theme (Default Dark Modern).
+  - Just Sign In Sync.
 - Unity Engine.
   - Defaults.
 - Unreal Engine.
