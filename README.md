@@ -21,15 +21,10 @@ These are my *personal* __.dotfiles__.
 ### IDEs and Development Stuff.
 // I don't write code using IDEs, I write code using Emacs.
 // Keep open IDEs side by side. But write code in Emacs.
-- Emacs (Editor).
-  - Config Files in .dotfiles/emacs.
 - Microsoft Visual Studio Community (C/C++/C#).
-  - Theme (Dark Default).
-  - Just Sign In & use Liberation Mono 16 px.
-  - Rest Defaults.
-- Microsoft Visual Studio Code (JavaScript/TypeScript/Java/PHP/Python/etc...).
-  - Theme (Default Dark Modern).
-  - Just Sign In Sync.
+  - Just Sign In & use Liberation Mono 16, Default Dark Theme, rest default.
+- Microsoft Visual Studio Code (JavaScript/TypeScript/Python/etc...).
+  - Just Sign In & use Liberation Mono 16, Default Dark Theme, rest default.
 - Unity Engine.
   - Defaults.
 - Unreal Engine.
@@ -38,6 +33,7 @@ These are my *personal* __.dotfiles__.
 ### Browser
 - Google Chrome.
   - Sign In account, and sync.
+  - Vimium Extension.
 
 ### Cloud Backup
 - DropBox for everything.
@@ -48,17 +44,17 @@ These are my *personal* __.dotfiles__.
 - Google Contacts
 
 ### Media
-- VLC Media Player
-- Adobe Photoshop 2025
-- Adobe Illustrator 2025
-- Adobe Lightroom 2025
-- Adobe Premiere Pro 2025
-- Adobe After Effects 2025
-- Adobe Audition 2025
-- Eraser Io.
+- VLC Media Player.
+- Adobe Photoshop.
+- Adobe Illustrator.
+- Adobe Lightroom.
+- Adobe Premiere Pro.
+- Adobe After Effects.
+- Adobe Audition.
+- SJ Draw.
 - Blender.
-- FL Studio 2025
-- OBS Studio 2025
+- FL Studio.
+- OBS Studio.
 
 ### Office Management
 - Microsoft Office (Word, Excel, PowerPoint, Teams, etc...).
@@ -106,6 +102,15 @@ These are my *personal* __.dotfiles__.
 - Mobile ().
 - Laptop Bag ().
 - Lights ().
+- Speakers ().
 
+## Habits
+- Always Maximized Screen.
+- Alt + Tab to switch programs.
+- Mouse as less as possible.
+- FaceCam on bottom right (300 px x 300 px).
+-
+-
+- 
 
 
