@@ -15,7 +15,7 @@
 
 ;;(split-window-horizontally)
 
-(setq-default cursor-type 'bar)
+(setq-default cursor-type 'box)
 
 (set-cursor-color "#40ff40")
 
@@ -40,7 +40,7 @@
 (setq window-divider-default-left-width 0)
 (setq window-divider-default-bottom-width 0)
 
-(set-frame-font "Liberation Mono 12" nil t)
+(set-frame-font "Liberation Mono 13" nil t)
 
 (setq frame-title-format '("SJ the Sahil Joseph's Writing System"))
 
@@ -308,15 +308,4 @@
 
 
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
