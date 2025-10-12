@@ -1,3 +1,6 @@
+
+
+
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
@@ -9,22 +12,23 @@
     "keybindings": 
     [
         {
-            "id": "Terminal.CopyToClipboard",
-            "keys": "ctrl+c"
+            "id": "Terminal.DuplicateTab",
+            "keys": "ctrl+shift+d"
         },
         {
-            "id": "Terminal.PasteFromClipboard",
-            "keys": "ctrl+v"
+            "id": "Terminal.CopyToClipboard",
+            "keys": "ctrl+c"
         },
         {
             "id": "Terminal.FindText",
             "keys": "ctrl+shift+f"
         },
         {
-            "id": "Terminal.DuplicatePaneAuto",
-            "keys": "alt+shift+d"
+            "id": "Terminal.PasteFromClipboard",
+            "keys": "ctrl+v"
         }
     ],
+    "launchMode": "maximized",
     "newTabMenu": 
     [
         {
@@ -121,11 +125,9 @@
             "yellow": "#D08F20"
         }
     ],
+    "startupActions": "split-pane",
     "themes": []
 }
-
-
-
 
 
 
