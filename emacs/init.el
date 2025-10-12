@@ -13,7 +13,7 @@
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
-;;(split-window-horizontally)
+(split-window-horizontally)
 
 (setq-default cursor-type 'box)
 
@@ -22,7 +22,7 @@
 (blink-cursor-mode 1)
 (setq blink-cursor-blinks 0)
 (setq blink-cursor-interval 0.5)
-(setq highlight-nonselected-windows nil)
+(setq highlight-nonselected-windows t)
 (setq-default cursor-in-non-selected-windows t)
 
 (setq-default word-wrap t)
@@ -56,6 +56,7 @@
 ")
 
 (transient-mark-mode 1)
+
 (setq mark-even-if-inactive nil)
 
 (setq-default compilation-always-kill t)
@@ -65,16 +66,6 @@
 	"Run the build.bat."
 	(interactive)
 	(compile "build.bat"))
-
-(set-language-environment "UTF-8")
-(prefer-coding-system 'utf-8)
-
-(setq-default buffer-file-coding-system 'utf-8-unix)
-
-(set-clipboard-coding-system 'utf-8)
-(set-selection-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(set-terminal-coding-system 'utf-8)
 
 (setq auto-save-default nil)
 (setq make-backup-files nil)
@@ -119,16 +110,6 @@
     :defer t
     )
 
-(use-package python-mode
-    :ensure t
-    :defer t
-    )
-
-(use-package php-mode
-    :ensure t
-    :defer t
-    )
-
 (use-package web-mode
     :ensure t
     :defer t
@@ -139,7 +120,6 @@
         ("\\.tsx\\'" . web-mode)
         ("\\.cshtml\\'" . web-mode)
         ("\\.css\\'" . web-mode)
-        ("\\.blade.php\\'" . web-mode)
         )
     )
 
