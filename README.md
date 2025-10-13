@@ -123,7 +123,7 @@ $out = ""
 - Always Maximized Screen.
 - Alt + Tab to switch programs.
 - Mouse as less as possible.
-- FaceCam on bottom right (300 px x 300 px).
+- FaceCam on bottom right/left (300 px x 300 px).
 -
 -
 - 
