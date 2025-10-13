@@ -27,7 +27,8 @@ $out = ""
   }
   $out += "PS $loc$('>' * ($nestedPromptLevel + 1)) ";
   return $out
-}```
+}
+```
   
 ### Text Editor
 - Emacs 30.
