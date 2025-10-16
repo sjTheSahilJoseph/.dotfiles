@@ -9,8 +9,10 @@ These are my *personal* __.dotfiles__.
 ## Operating System
 ### Microsoft Windows 11 Pro x64
   - Taskbar should be empty (no pinned items).
+  - Taskbar should be on left side.
+  - Hide search, task view, & widgets.
   - Start should not have any pinned items.
-  - Desktop should be empty.
+  - Desktop should be empty except: (This PC, File Explorer, Control Panel, Recycle Bin, Network).
     
 ## Terminal
 ### Windows Terminal
@@ -140,7 +142,7 @@ $out = ""
 - Speakers ().
 
 ## Habits
-- Always Maximized Screen.
+- Windows Width Height Size based on Wallpaper Structure but fixed according to that.
 - Alt + Tab to switch programs.
 - Mouse as less as possible.
 - FaceCam on bottom right/left (300 px x 300 px).
