@@ -40,9 +40,9 @@ $out = ""
 // I don't write code using IDEs, I write code using Emacs.
 // Keep open IDEs side by side. But write code in Emacs.
 ### Microsoft Visual Studio Community (C/C++/C#).
-  - Just Sign In & use Liberation Mono 16, Default Dark Theme, rest default.
+  - Just Sign In & use Liberation Mono 16, Default Light Theme, rest default.
 ### Microsoft Visual Studio Code (JavaScript/TypeScript/etc...).
-  - Just Sign In & use Liberation Mono 16, Default Dark Theme, rest default.
+  - Just Sign In & use Liberation Mono 16, Default Light Theme, rest default.
 ### Unity Engine.
   - Defaults.
 ### Unreal Engine.
@@ -113,13 +113,13 @@ $out = ""
 
 ### Personal
 - Wallpaper & Fonts (/assets)
-- Dark Theme with transparency default.
+- Light Theme with transparency default.
 - Show sidebar always.
 - Show file extensions and show hidden stuff.
 - No pinned items in file explorer.
 
 ### Mobile
-- Dark Mode.
+- Light Mode.
 - Mobile ringtone sound 100%, notification sound silent, alarm tone same as ringtone.
 - Mobile ringtone in /assets.
 - Use mobile phone only for main things and as less as possible. (use computer more).
