@@ -17,22 +17,6 @@ These are my *personal* __.dotfiles__.
 ## Terminal
 ### Windows Terminal
   - Settings -> terminal_settings.json.
-
-// call that function powershell:
-``` powershell
-
-function prompt {
-  $loc = $executionContext.SessionState.Path.CurrentLocation;
-
-$out = ""
-  if ($loc.Provider.Name -eq "FileSystem") {
-    $out += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
-  }
-  $out += "PS $loc$('>' * ($nestedPromptLevel + 1)) ";
-  return $out
-}
-
-```
   
 ## Text Editor
 ### Emacs 30 <.
@@ -69,7 +53,7 @@ $out = ""
 ### VLC Media Player.
   - 
 ### Adobe Photoshop.
-  - 
+  - Light Theme.
 ### Adobe Illustrator.
   - 
 ### Adobe Lightroom.
@@ -142,7 +126,8 @@ $out = ""
 - Speakers ().
 
 ## Habits
-- Windows Width Height Size based on Wallpaper Structure but fixed according to that.
+- All Windows Width Height Size based on Wallpaper Structure but fixed according to that.
+- Only Emacs in maximized.
 - Alt + Tab to switch programs.
 - Mouse as less as possible.
 - FaceCam on bottom right/left (300 px x 300 px).
