@@ -130,10 +130,8 @@ These are my *personal* __.dotfiles__.
 - Only Emacs in maximized.
 - Alt + Tab to switch programs.
 - Mouse as less as possible.
-- FaceCam on bottom right/left (300 px x 300 px).
--
--
-- 
+- FaceCam on top right (300 px x 300 px).
+- Metapad always open on bottom right under the facecam.
 
 ## Code Stye
 - Max column length = 80.
