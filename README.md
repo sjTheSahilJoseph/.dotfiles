@@ -4,20 +4,21 @@
 # .dotfiles - SJ the Sahil Joseph
 These are my *personal* __.dotfiles__.
 
-## Softwares and Settings:
+# Softwares and Settings:
 
-### Operating System
-- Microsoft Windows 11 Pro x64
+## Operating System
+### Microsoft Windows 11 Pro x64
   - Taskbar should be empty (no pinned items).
-  - Start should have some pinned items.
+  - Start should not have any pinned items.
   - Desktop should be empty.
     
-### Terminal
-- Windows Terminal
+## Terminal
+### Windows Terminal
   - Settings -> terminal_settings.json.
 
 // call that function powershell:
 ``` powershell
+
 function prompt {
   $loc = $executionContext.SessionState.Path.CurrentLocation;
 
@@ -28,56 +29,71 @@ $out = ""
   $out += "PS $loc$('>' * ($nestedPromptLevel + 1)) ";
   return $out
 }
+
 ```
   
-### Text Editor
-- Emacs 30.
+## Text Editor
+### Emacs 30 <.
   - Config files in .dotfiles/emacs.
     
-### IDEs and Development Stuff.
+## IDEs and Development Stuff.
 // I don't write code using IDEs, I write code using Emacs.
 // Keep open IDEs side by side. But write code in Emacs.
-- Microsoft Visual Studio Community (C/C++/C#).
+### Microsoft Visual Studio Community (C/C++/C#).
   - Just Sign In & use Liberation Mono 16, Default Dark Theme, rest default.
-- Microsoft Visual Studio Code (JavaScript/TypeScript/Python/etc...).
+### Microsoft Visual Studio Code (JavaScript/TypeScript/etc...).
   - Just Sign In & use Liberation Mono 16, Default Dark Theme, rest default.
-- Unity Engine.
+### Unity Engine.
   - Defaults.
-- Unreal Engine.
+### Unreal Engine.
   - Defaults.
 
-### Browser
-- Google Chrome.
+## Browser
+### Google Chrome.
   - Sign In account, and sync.
+  - Have some bookmarks and folders.
   - Vimium Extension.
 
-### Cloud Backup
-- DropBox for everything.
+## Cloud Backup
+### DropBox for everything.
   - Personal, Professional, each and everything.
   - Store photos, videos in folder structure.
 
-### Contacts
-- Google Contacts
+## Contacts
+### Google Contacts
+  - 
 
-### Media
-- VLC Media Player.
-- Adobe Photoshop.
-- Adobe Illustrator.
-- Adobe Lightroom.
-- Adobe Premiere Pro.
-- Adobe After Effects.
-- Adobe Audition.
-- SJ Draw.
-- Blender.
-- FL Studio.
-- OBS Studio.
+## Media
+### VLC Media Player.
+  - 
+### Adobe Photoshop.
+  - 
+### Adobe Illustrator.
+  - 
+### Adobe Lightroom.
+  - 
+### Adobe Premiere Pro.
+  - 
+### Adobe After Effects.
+  - 
+### Adobe Audition.
+  - 
+### SJoseph Paint.
+  - 
+### Blender.
+  - 
+### FL Studio.
+  - 
+### OBS.
+  - 
 
-### Office Management
-- Microsoft Office (Word, Excel, PowerPoint, Teams, etc...).
-- (with sjthesahiljoseph@gmail.com).
+## Office Management
+### Microsoft Office (Word, Excel, PowerPoint, Teams, etc...).
+  - (with sjthesahiljoseph@gmail.com).
 
-### Personal Notes
-- Google Keep Notes.
+## Personal Notes
+### Google Keep Notes.
+  - 
 
 ### Communication & Social
 - Gmail.
@@ -96,8 +112,11 @@ $out = ""
 - Reddit
 
 ### Personal
-- Wallpaper & Coding fonts (/assets)
-- Dark Theme.
+- Wallpaper & Fonts (/assets)
+- Dark Theme with transparency default.
+- Show sidebar always.
+- Show file extensions and show hidden stuff.
+- No pinned items in file explorer.
 
 ### Mobile
 - Dark Mode.
@@ -129,4 +148,5 @@ $out = ""
 -
 - 
 
-
+## Code Stye
+- Max column length = 80.
