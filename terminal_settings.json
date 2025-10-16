@@ -1,34 +1,35 @@
 
 
-
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": [],
+    "alwaysShowTabs": false,
     "centerOnLaunch": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "initialPosition": ",",
     "keybindings": 
     [
-        {
-            "id": "Terminal.DuplicateTab",
-            "keys": "ctrl+shift+d"
-        },
         {
             "id": "Terminal.CopyToClipboard",
             "keys": "ctrl+c"
         },
         {
-            "id": "Terminal.FindText",
-            "keys": "ctrl+shift+f"
+            "id": "Terminal.DuplicateTab",
+            "keys": "ctrl+shift+d"
         },
         {
             "id": "Terminal.PasteFromClipboard",
             "keys": "ctrl+v"
+        },
+        {
+            "id": "Terminal.FindText",
+            "keys": "ctrl+shift+f"
         }
     ],
-    "launchMode": "maximized",
+    "launchMode": "default",
     "newTabMenu": 
     [
         {
@@ -46,7 +47,8 @@
                 "face": "Liberation Mono",
                 "size": 13,
                 "weight": "normal"
-            }
+            },
+            "scrollbarState": "always"
         },
         "list": 
         [
@@ -73,60 +75,46 @@
                 "hidden": false,
                 "name": "Git Bash",
                 "source": "Git"
+            },
+            {
+                "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
+                "hidden": true,
+                "name": "Visual Studio Debug Console",
+                "source": "VSDebugConsole"
             }
         ]
     },
     "schemes": 
     [
         {
-            "background": "#071307",
-            "black": "#0C0C0C",
-            "blue": "#0037DA",
-            "brightBlack": "#767676",
-            "brightBlue": "#3B78FF",
-            "brightCyan": "#61D6D6",
-            "brightGreen": "#16C60C",
-            "brightPurple": "#B4009E",
-            "brightRed": "#E74856",
-            "brightWhite": "#F2F2F2",
-            "brightYellow": "#F9F1A5",
-            "cursorColor": "#FFFFFF",
-            "cyan": "#3A96DD",
-            "foreground": "#CCCCCC",
-            "green": "#13A10E",
-            "name": "Campbell (modified)",
-            "purple": "#881798",
-            "red": "#C50F1F",
-            "selectionBackground": "#FFFFFF",
-            "white": "#CCCCCC",
-            "yellow": "#C19C00"
-        },
-        {
-            "background": "#071307",
-            "black": "#878787",
-            "blue": "#2090F0",
-            "brightBlack": "#D08F20",
-            "brightBlue": "#2090F0",
-            "brightCyan": "#59FF39",
-            "brightGreen": "#50FF30",
-            "brightPurple": "#B4009E",
-            "brightRed": "#E74856",
-            "brightWhite": "#90B080",
-            "brightYellow": "#D08F20",
-            "cursorColor": "#00EE00",
-            "cyan": "#59FF39",
-            "foreground": "#90B080",
-            "green": "#50FF30",
+            "background": "#000000",
+            "black": "#C0C0C0",
+            "blue": "#C0C0C0",
+            "brightBlack": "#C0C0C0",
+            "brightBlue": "#C0C0C0",
+            "brightCyan": "#C0C0C0",
+            "brightGreen": "#C0C0C0",
+            "brightPurple": "#C0C0C0",
+            "brightRed": "#C0C0C0",
+            "brightWhite": "#C0C0C0",
+            "brightYellow": "#C0C0C0",
+            "cursorColor": "#C0C0C0",
+            "cyan": "#C0C0C0",
+            "foreground": "#C0C0C0",
+            "green": "#C0C0C0",
             "name": "Love Is An Illusion",
-            "purple": "#881798",
-            "red": "#C50F1F",
-            "selectionBackground": "#1E1E1E",
-            "white": "#90B080",
-            "yellow": "#D08F20"
+            "purple": "#C0C0C0",
+            "red": "#C0C0C0",
+            "selectionBackground": "#C0C0C0",
+            "white": "#C0C0C0",
+            "yellow": "#C0C0C0"
         }
     ],
+    "showTabsInTitlebar": false,
+    "theme": "system",
     "themes": []
 }
+
 
 
 
