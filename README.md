@@ -131,7 +131,8 @@ These are my *personal* __.dotfiles__.
 - Alt + Tab to switch programs.
 - Mouse as less as possible.
 - FaceCam on top right (300 px x 300 px).
-- Metapad always open on bottom right under the facecam.
+- Keyboard HandCam on middle right under the facecam (300 px x 300 px).
+- 
 
 ## Code Stye
 - Max column length = 80.
