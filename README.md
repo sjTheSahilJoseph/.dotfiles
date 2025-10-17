@@ -133,6 +133,7 @@ These are my *personal* __.dotfiles__.
 - FaceCam on top right (300 px x 300 px).
 - Keyboard HandCam on middle right under the facecam (300 px x 300 px).
 - Below Keyboard HandCam, a notepad window, current activity written. (Plus Taskbar).
+- Notepad 300% Zoom, 2 Spaces Indent.
 
 ## Code Stye
 - Max column length = 80.
