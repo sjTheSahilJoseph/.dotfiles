@@ -17,7 +17,8 @@
 
 (setq-default cursor-type 'box)
 
-(set-cursor-color "#40ff40")
+;; (set-cursor-color "#40ff40")
+(set-cursor-color "#ff4040")
 
 (blink-cursor-mode 1)
 (setq blink-cursor-blinks 0)
