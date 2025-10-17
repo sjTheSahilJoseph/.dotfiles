@@ -132,7 +132,7 @@ These are my *personal* __.dotfiles__.
 - Mouse as less as possible.
 - FaceCam on top right (300 px x 300 px).
 - Keyboard HandCam on middle right under the facecam (300 px x 300 px).
-- 
+- Below Keyboard HandCam, a notepad window, current activity written. (Plus Taskbar).
 
 ## Code Stye
 - Max column length = 80.
