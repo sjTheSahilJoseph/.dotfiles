@@ -51,27 +51,27 @@ These are my *personal* __.dotfiles__.
 
 ## Media
 ### VLC Media Player.
-  - 
+  - Light Theme.
 ### Adobe Photoshop.
   - Light Theme.
 ### Adobe Illustrator.
-  - 
+  - Light Theme.
 ### Adobe Lightroom.
-  - 
+  - Light Theme.
 ### Adobe Premiere Pro.
-  - 
+  - Light Theme.
 ### Adobe After Effects.
-  - 
+  - Light Theme.
 ### Adobe Audition.
-  - 
+  - Light Theme.
 ### SJoseph Paint.
-  - 
+  - Light Theme.
 ### Blender.
-  - 
+  - Light Theme.
 ### FL Studio.
-  - 
+  - Light Theme.
 ### OBS.
-  - 
+  - Light Theme.
 
 ## Office Management
 ### Microsoft Office (Word, Excel, PowerPoint, Teams, etc...).
@@ -81,36 +81,50 @@ These are my *personal* __.dotfiles__.
 ### Google Keep Notes.
   - 
 
-### Communication & Social
-- Gmail.
-- Microsoft Teams.
-- WhatsApp
-- Discord
-- Instagram
-- Facebook
-- Massenger
-- Zoom
-- Slack
-- YouTube
-- LinkedIn
-- GitHub
-- Stack Overflow
-- Reddit
+## Communication & Social
+### Gmail.
+- 
+### Microsoft Teams.
+- 
+### WhatsApp
+- 
+### Discord
+- 
+### Instagram
+- 
+### Facebook
+- 
+### Massenger
+- 
+### Zoom
+- 
+### Slack
+- 
+### YouTube
+- 
+### LinkedIn
+- 
+### GitHub
+- 
+### Stack Overflow
+- 
+### Reddit
+- 
 
-### Personal
+## Personal
 - Wallpaper & Fonts (/assets)
 - Light Theme with transparency default.
 - Show sidebar always.
 - Show file extensions and show hidden stuff.
 - No pinned items in file explorer.
 
-### Mobile
+## Mobile
 - Light Mode.
 - Mobile ringtone sound 100%, notification sound silent, alarm tone same as ringtone.
 - Mobile ringtone in /assets.
 - Use mobile phone only for main things and as less as possible. (use computer more).
 
-### Hardware
+## Hardware
 - Laptop ().
 - LCD ().
 - Keyboard ().
