@@ -26,9 +26,9 @@ These are my *personal* __.dotfiles__.
 // I don't write code using IDEs, I write code using Emacs.
 // Keep open IDEs side by side. But write code in Emacs.
 ### Microsoft Visual Studio Community (C/C++/C#).
-  - Just Sign In & use Liberation Mono 16, Default Light Theme, rest default.
+  - Just Sign In & use Liberation Mono 16, Default Dark Theme, rest default.
 ### Microsoft Visual Studio Code (JavaScript/TypeScript/etc...).
-  - Just Sign In & use Liberation Mono 16, Default Light Theme, rest default.
+  - Just Sign In & use Liberation Mono 16, Default Dark Theme, rest default.
 ### Unity Engine.
   - Defaults.
 ### Unreal Engine.
@@ -51,27 +51,27 @@ These are my *personal* __.dotfiles__.
 
 ## Media
 ### VLC Media Player.
-  - Light Theme.
+  - Dark Theme.
 ### Adobe Photoshop.
-  - Light Theme.
+  - Darkest Theme.
 ### Adobe Illustrator.
-  - Light Theme.
-### Adobe Lightroom.
-  - Light Theme.
+  - Darkest Theme.
+### Adobe Darkroom.
+  - Darkest Theme.
 ### Adobe Premiere Pro.
-  - Light Theme.
+  - Darkest Theme.
 ### Adobe After Effects.
-  - Light Theme.
+  - Darkest Theme.
 ### Adobe Audition.
-  - Light Theme.
+  - Darkest Theme.
 ### SJoseph Paint.
-  - Light Theme.
+  - Dark Theme.
 ### Blender.
-  - Light Theme.
+  - Darkest Theme.
 ### FL Studio.
-  - Light Theme.
+  - Darkest Theme.
 ### OBS.
-  - Light Theme.
+  - Darkest Theme.
 
 ## Office Management
 ### Microsoft Office (Word, Excel, PowerPoint, Teams, etc...).
@@ -113,13 +113,13 @@ These are my *personal* __.dotfiles__.
 
 ## Personal
 - Wallpaper & Fonts (/assets)
-- Light Theme with transparency default.
+- Always Dark Theme with transparency effect.
 - Show sidebar always.
 - Show file extensions and show hidden stuff.
 - No pinned items in file explorer.
 
 ## Mobile
-- Light Mode.
+- Dark Mode.
 - Mobile ringtone sound 100%, notification sound silent, alarm tone same as ringtone.
 - Mobile ringtone in /assets.
 - Use mobile phone only for main things and as less as possible. (use computer more).
@@ -151,3 +151,5 @@ These are my *personal* __.dotfiles__.
 
 ## Code Stye
 - Max column length = 80.
+
+
