@@ -18,7 +18,6 @@
 (setq-default cursor-type 'box)
 
 (set-cursor-color "#40ff40")
-;;(set-cursor-color "#ff4040")
 
 (blink-cursor-mode 1)
 (setq blink-cursor-blinks 0)
@@ -59,19 +58,6 @@
 (transient-mark-mode 1)
 
 (setq mark-even-if-inactive nil)
-
-;; flash region
-;; (defun flash-region ()
-;;     (interactive)
-;;     (when (use-region-p)
-;;         (let ((ov (make-overlay
-;;                       (region-beginning) (region-end))))
-;;             (overlay-put ov 'face 'isearch)
-;;             (run-with-timer 0.15 nil
-;;                 #'delete-overlay ov))))
-;; (advice-add 'kill-ring-save :after
-;;     (lambda (&rest _) (flash-region)))
-;; (advice-add 'kill-region :after (lambda (&rest _) (flash-region)))
 
 (setq-default compilation-always-kill t)
 (setq-default compilation-scroll-output t)
