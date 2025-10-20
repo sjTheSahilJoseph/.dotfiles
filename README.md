@@ -7,7 +7,7 @@ These are my *personal* __.dotfiles__.
 # Softwares and Settings:
 
 ## Operating System
-### Microsoft Windows 11 Pro x64
+### Microsoft Windows 10 Pro x64
   - Taskbar should be empty (no pinned items).
   - Taskbar should be on left side.
   - Hide search, task view, & widgets.
