@@ -36,10 +36,14 @@ These are my *personal* __.dotfiles__.
   - Defaults.
 
 ## Browser
-### Google Chrome.
+### Microsoft Edge.
   - Sign In account, and sync.
-  - Have some bookmarks and folders.
-  - Vimium Extension.
+  - Have some bookmarks and folders always show.
+  - Extensions: Vimium, uBlock Origin.
+  - Show every optino in toolbar.
+  - Horizontal Tabs.
+  - New Tab Page empty.
+  - Default Light Theme.
 
 ## Cloud Backup
 ### DropBox for everything.
@@ -114,13 +118,14 @@ These are my *personal* __.dotfiles__.
 
 ## Personal
 - Wallpaper & Fonts (/assets)
-- Always Dark Theme with transparency effect.
+- Always Light Theme with transparency effect.
+- But Windows 10 Dark Theme.
 - Show sidebar always.
 - Show file extensions and show hidden stuff.
 - No pinned items in file explorer.
 
 ## Mobile
-- Dark Mode.
+- Light Mode.
 - Mobile ringtone sound 100%, notification sound silent, alarm tone same as ringtone.
 - Mobile ringtone in /assets.
 - Use mobile phone only for main things and as less as possible. (use computer more).
