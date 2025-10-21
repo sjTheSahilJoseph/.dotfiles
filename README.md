@@ -44,6 +44,7 @@ These are my *personal* __.dotfiles__.
   - Horizontal Tabs.
   - New Tab Page empty.
   - Default Light Theme.
+  - Alwasy open a link in new seperate tab.
 
 ## Cloud Backup
 ### DropBox for everything.
