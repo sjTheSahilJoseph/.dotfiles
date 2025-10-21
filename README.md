@@ -15,8 +15,10 @@ These are my *personal* __.dotfiles__.
   - Desktop should be empty except: (This PC, File Explorer, Control Panel, Recycle Bin, Network).
     
 ## Terminal
-### Windows Terminal
-  - Settings -> terminal_settings.json.
+### CMD
+  - Font: Liberation Mono 18px.
+  - Foreground: #c0c0c0 & Background: #000000.
+  - Cursor Solid Box.
   
 ## Text Editor
 ### Emacs 30 <.
