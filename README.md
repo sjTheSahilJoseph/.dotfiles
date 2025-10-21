@@ -8,11 +8,10 @@ These are my *personal* __.dotfiles__.
 
 ## Operating System
 ### Microsoft Windows 10 Pro x64
-  - Taskbar should be empty (no pinned items).
-  - Taskbar should be on left side.
-  - Hide search, task view, & widgets.
-  - Start should not have any pinned items.
-  - Desktop should be empty except: (This PC, File Explorer, Control Panel, Recycle Bin, Network).
+  - Taskbar should pin default + every user installed app.
+  - Show search input, task view, & widgets.
+  - Start should have default pinned items.
+  - Desktop contain almost every software shortcut: (This PC, File Explorer, Control Panel, Recycle Bin, Network).
     
 ## Terminal
 ### CMD
