@@ -11,7 +11,7 @@ These are my *personal* __.dotfiles__.
   - Taskbar should pin default + every user installed app.
   - Show search input, task view, & widgets.
   - Start should have default pinned items.
-  - Desktop should be empty, except: (This PC, File Explorer, Control Panel, Recycle Bin, Network).
+  - Desktop should contain almost every software shortcut.
     
 ## Terminal
 ### CMD
@@ -57,12 +57,10 @@ These are my *personal* __.dotfiles__.
 
 ## Media
 ### VLC Media Player.
-  - Dark Theme.
-### Adobe Photoshop.
+  - Default Theme.
+### Adobe Photoshop CS6 Extended x64.
   - Darkest Theme.
-### Adobe Illustrator.
-  - Darkest Theme.
-### Adobe Darkroom.
+### Adobe Lightroom.
   - Darkest Theme.
 ### Adobe Premiere Pro.
   - Darkest Theme.
@@ -77,7 +75,7 @@ These are my *personal* __.dotfiles__.
 ### FL Studio.
   - Darkest Theme.
 ### OBS.
-  - Darkest Theme.
+  - Yami Acri Theme.
 
 ## Office Management
 ### Microsoft Office (Word, Excel, PowerPoint, Teams, etc...).
