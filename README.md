@@ -40,6 +40,7 @@ These are my *personal* __.dotfiles__.
 ### Microsoft Visual Studio Code (JavaScript/TypeScript/etc...).
   - Just Sign In & use Liberation Mono 16, Default Dark Theme, rest default.
   - Turn Off all AI stuff.
+  - Terminal Split at bottom (10 lines height).
 ### Unity Engine.
   - Defaults.
 ### Unreal Engine.
