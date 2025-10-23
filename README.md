@@ -36,8 +36,10 @@ These are my *personal* __.dotfiles__.
 // Keep open IDEs side by side. But write code in Emacs.
 ### Microsoft Visual Studio Community (C/C++/C#).
   - Just Sign In & use Liberation Mono 16, Default Dark Theme, rest default.
+  - Turn Off all AI stuff.
 ### Microsoft Visual Studio Code (JavaScript/TypeScript/etc...).
   - Just Sign In & use Liberation Mono 16, Default Dark Theme, rest default.
+  - Turn Off all AI stuff.
 ### Unity Engine.
   - Defaults.
 ### Unreal Engine.
