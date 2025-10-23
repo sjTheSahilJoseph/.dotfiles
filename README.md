@@ -32,20 +32,28 @@ These are my *personal* __.dotfiles__.
   - Config files in .dotfiles/emacs.
     
 ## IDEs and Development Stuff.
+
 // Keep open Visual Studio Code or Visual Studio Community. But write code in Emacs.
+
 ### Microsoft Visual Studio Community (C/C++/C#).
   - Just Sign In & use Liberation Mono 16, Default Dark Theme, rest default.
   - Turn Off all AI stuff.
-### Microsoft Visual Studio Code (JavaScript/TypeScript/Angularetc...).
+
+### Microsoft Visual Studio Code (JavaScript/TypeScript/Angular/etc...).
+  - Use Visual Studio Code to write code only for JavaScript/TypeScript/Angular/HTML/CSS/etc...
   - Just Sign In & use Liberation Mono 16, Default Dark Theme, rest default.
   - Turn Off all AI stuff.
   - Terminal Split at bottom (10 lines height).
-  - Install Extensions: (Emacs Friendly Keymap, Angular Language Service).
+  - Install Extensions: (Emacs Friendly Keymap, Angular Language Service, ParagraphJump).
   - Set Keymap "Alt + n" for Move Line Down.
   - Set Keymap "Alt + p" for Move Line Up.
   - Set Keymap "F5" to toggel Terminal.
+  - Set Keymap "Alt + Shift + [" to Jump Paragraph Up.
+  - Set Keymap "Alt + Shift + ]" to Jump Paragraph Down.
+
 ### Unity Engine.
   - Defaults.
+
 ### Unreal Engine.
   - Defaults.
 
