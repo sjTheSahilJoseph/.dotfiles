@@ -104,33 +104,33 @@ These are my *personal* __.dotfiles__.
 
 ## Communication & Social
 ### Gmail.
-- 
+  - SignIn in Outlook on Laptop and Mobile both.
 ### Microsoft Teams.
-- 
+  - 
 ### WhatsApp
-- 
+  - 
 ### Discord
-- 
+  - 
 ### Instagram
-- 
+  - 
 ### Facebook
-- 
+  - 
 ### Massenger
-- 
+  - 
 ### Zoom
-- 
+  - 
 ### Slack
-- 
+  - 
 ### YouTube
-- 
+  - 
 ### LinkedIn
-- 
+  - 
 ### GitHub
-- 
+  - 
 ### Stack Overflow
-- 
+  - 
 ### Reddit
-- 
+  - 
 
 ## Mobile
 - Light Mode.
