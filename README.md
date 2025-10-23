@@ -8,11 +8,19 @@ These are my *personal* __.dotfiles__.
 
 ## Operating System
 ### Microsoft Windows 10 Pro x64
+  - Wallpaper & Fonts (/assets).
   - Taskbar should pin default + every user installed app.
   - Show search input, task view, & widgets.
   - Start should have default pinned items.
   - Desktop should contain almost every software shortcut.
-    
+  - Remove (CoPilot, OneDrive, uTorrent) from Startup Apps.
+  - Always Light Theme with transparency effect.
+  - But Windows 10 Dark Theme.
+  - Show sidebar always.
+  - Show file extensions and show hidden stuff.
+  - No pinned items in file explorer.
+  - 
+
 ## Terminal
 ### CMD
   - Font: Liberation Mono 18px.
@@ -50,6 +58,7 @@ These are my *personal* __.dotfiles__.
 ### DropBox for everything.
   - Personal, Professional, each and everything.
   - Store photos, videos in folder structure.
+  - Add to Startup apps.
 
 ## Contacts
 ### Google Contacts
@@ -57,7 +66,10 @@ These are my *personal* __.dotfiles__.
 
 ## Utilities
 ### WinRar
-  - 
+  -
+### uTorrent
+  -
+### 
 
 ## Media
 ### VLC Media Player.
@@ -84,6 +96,7 @@ These are my *personal* __.dotfiles__.
 ## Office Management
 ### Microsoft Office (Word, Excel, PowerPoint, Teams, etc...).
   - (with sjthesahiljoseph@gmail.com).
+  - In DropBox.
 
 ## Personal Notes
 ### Google Keep Notes.
@@ -118,14 +131,6 @@ These are my *personal* __.dotfiles__.
 - 
 ### Reddit
 - 
-
-## Personal
-- Wallpaper & Fonts (/assets)
-- Always Light Theme with transparency effect.
-- But Windows 10 Dark Theme.
-- Show sidebar always.
-- Show file extensions and show hidden stuff.
-- No pinned items in file explorer.
 
 ## Mobile
 - Light Mode.
