@@ -121,6 +121,8 @@
         ("\\.cshtml\\'" . web-mode)
         ("\\.css\\'" . web-mode)
         )
+    :config
+    (setq web-mode-engines-alist '(("angular" . "\\.html\\'")))
     )
 
 (use-package emmet-mode
