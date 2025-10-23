@@ -40,11 +40,11 @@ These are my *personal* __.dotfiles__.
   - Turn Off all AI stuff.
 
 ### Microsoft Visual Studio Code (JavaScript/TypeScript/Angular/etc...).
-  - Use Visual Studio Code to write code only for JavaScript/TypeScript/Angular/HTML/CSS/etc...
+  - Don't Use Visual Studio Code to write code, but keep it open just as an IDE.
   - Just Sign In & use Liberation Mono 16, Default Dark Theme, rest default.
   - Turn Off all AI stuff.
   - Terminal Split at bottom (10 lines height).
-  - Install Extensions: (Emacs Friendly Keymap, Angular Language Service, ParagraphJump).
+  - Install Extensions: (Emacs Friendly Keymap, Angular Language Service, ParagraphJump, Tailwind CSS IntelliSense, Material Icon Theme).
   - Set Keymap "Alt + n" for Move Line Down.
   - Set Keymap "Alt + p" for Move Line Up.
   - Set Keymap "F5" to toggel Terminal.
