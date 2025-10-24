@@ -52,12 +52,12 @@ These are my *personal* __.dotfiles__.
   - Just Sign In & use Liberation Mono 16, Default Dark Theme, rest default.
   - Turn Off all AI stuff.
 
-### Microsoft Visual Studio Code (JavaScript/TypeScript/Angular/etc...).
-  - Don't Use Visual Studio Code to write code, but keep it open just as an IDE. And run JavaScript TypeScript stuff from VS Code Terminal. Can be used to write code but only for educational purpose or using this as an IDE for some time.
+### Microsoft Visual Studio Code (JavaScript/TypeScript/Angular/PHP/VueJs/etc...).
+  - Don't Use Visual Studio Code to write code, but keep it open just as an IDE. And run JavaScript TypeScript PHP Angular VueJs stuff from VS Code Terminal. Can be used to write code but only for educational purpose or using this as an IDE for some time.
   - Just Sign In & use Liberation Mono 16, Tokyo Night Theme, rest default.
   - Turn Off all AI stuff.
   - Terminal Split at bottom (10 lines height).
-  - Install Extensions: (Emacs Friendly Keymap, Angular Language Service, ParagraphJump, Tailwind CSS IntelliSense, Material Icon Theme, Tokyo Night).
+  - Install Extensions: (Emacs Friendly Keymap, Angular Language Service, ParagraphJump, Tailwind CSS IntelliSense, Material Icon Theme, Tokyo Night, Laravel, PHP IntelliSense, Vue (Official)).
   - Set Keymap "Alt + n" for Move Line Down.
   - Set Keymap "Alt + p" for Move Line Up.
   - Set Keymap "F5" to toggel Terminal.
