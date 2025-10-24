@@ -16,7 +16,8 @@ These are my *personal* __.dotfiles__.
   - Remove (CoPilot, OneDrive, uTorrent) from Startup Apps.
   - Always Light Theme with transparency effect.
   - But Windows 10 Dark Theme.
-  - Show sidebar always.
+  - Blue Default Color.
+  - Show scrollbar always.
   - Show file extensions and show hidden stuff.
   - No pinned items in file explorer.
   - All Windows Width Height Size based on Wallpaper Structure but fixed according to that.
@@ -27,6 +28,7 @@ These are my *personal* __.dotfiles__.
   - Keyboard HandCam on middle right under the facecam (300 px x 300 px).
   - Below Keyboard HandCam, a notepad window, current activity written. (Plus Taskbar).
   - Notepad 200% Zoom.
+  - 
 
 ## Terminal
 
