@@ -19,7 +19,7 @@ These are my *personal* __.dotfiles__.
   - Blue Default Color.
   - Show scrollbar always.
   - Show file extensions and show hidden stuff.
-  - No pinned items in file explorer.
+  - No pinned items in Quick Access file explorer, except (sjthe, .dotfiles, projects).
   - All Windows Width Height Size based on Wallpaper Structure but fixed according to that.
   - Only Emacs in maximized.
   - Alt + Tab to switch programs.
@@ -59,7 +59,7 @@ These are my *personal* __.dotfiles__.
   - Just Sign In & use Liberation Mono 16, Tokyo Night Theme, rest default.
   - Turn Off all AI stuff.
   - Terminal Split at bottom (10 lines height).
-  - Install Extensions: (Emacs Friendly Keymap, Angular Language Service, ParagraphJump, Tailwind CSS IntelliSense, Material Icon Theme, Tokyo Night, Laravel, PHP IntelliSense, Vue (Official)).
+  - Install Extensions: (Emacs Friendly Keymap, Angular Language Service, ParagraphJump, Tailwind CSS IntelliSense, Material Icon Theme, Tokyo Night).
   - Set Keymap "Alt + n" for Move Line Down.
   - Set Keymap "Alt + p" for Move Line Up.
   - Set Keymap "F5" to toggel Terminal.
