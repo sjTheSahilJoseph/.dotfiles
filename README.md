@@ -83,11 +83,14 @@ These are my *personal* __.dotfiles__.
   - Horizontal Tabs.
   - New Tab Page empty.
   - Default Light Theme.
-  - Alwasy open a link in new seperate tab.
+  - Always open a link in new seperate tab.
+  - f12 = Developer Options bottom.
 
 ## Cloud Backup
 
 ### DropBox for everything.
+  - Download Desktop Application.
+  - Add to startup Apps.
   - Personal, Professional, each and everything.
   - Store photos, videos in folder structure.
   - Add to Startup apps.
@@ -103,7 +106,8 @@ These are my *personal* __.dotfiles__.
   -
 
 ### uTorrent
-  -
+  - Download Classic App.
+  - Turn off from startup Apps.
 
 ### 
 
@@ -112,19 +116,19 @@ These are my *personal* __.dotfiles__.
 ### VLC Media Player.
   - Default Theme.
 
-### Adobe Photoshop CS6 Extended x64.
+### Adobe Photoshop 2025.
   - Darkest Theme.
 
-### Adobe Lightroom.
+### Adobe Lightroom 2025.
   - Darkest Theme.
 
-### Adobe Premiere Pro.
+### Adobe Premiere Pro 2025.
   - Darkest Theme.
 
-### Adobe After Effects.
+### Adobe After Effects 2025.
   - Darkest Theme.
 
-### Adobe Audition.
+### Adobe Audition 2025.
   - Darkest Theme.
 
 ### SJoseph Paint.
@@ -148,42 +152,52 @@ These are my *personal* __.dotfiles__.
 ## Personal Notes
 
 ### Google Keep Notes.
-  - 
+  - Use From Browser.
 
 ## Communication & Social
 
 ### Gmail.
   - SignIn in Outlook on Laptop and Mobile both.
+  - Turn Off Notifications when app is closed.
+  - Remove from Startup Apps.
 
 ### Microsoft Teams.
   - 
 
 ### WhatsApp
-  - 
+  - Download Official Desktop App.
+  - Turn Off Notifications.
+  - Just show task bar dot.
+  - Only when app is opened.
 
 ### Discord
-  - 
+  - Use From Browser.
+  - Darkest Theme.
 
 ### Instagram
-  - 
+  - Use From Browser.
+  - Light Theme.
 
 ### Facebook
-  - 
+  - Use From Browser.
+  - Light Theme.
 
 ### Massenger
-  - 
-
+  - Use From Browser.
+  - Light Theme.
+  
 ### Zoom
   - 
 
 ### Slack
-  - 
-
+  - Use From Browser.
+  - Light Theme.
+  
 ### YouTube
   - 
 
 ### LinkedIn
-  - 
+  - Use From Browser.
 
 ### GitHub
   - 
